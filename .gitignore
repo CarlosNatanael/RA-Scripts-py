@@ -9,6 +9,7 @@ __pycache__/
 .racache_path
 
 # Distribution / packaging
+output/
 core/
 models/
 utils/
