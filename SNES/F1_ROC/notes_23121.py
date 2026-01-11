@@ -1,7 +1,7 @@
 # Code Notes for Game ID 23121
 # Source: 23121-Notes.json
 
-from core.helpers import *
+from pycheevos.core.helpers import * # type: ignore
 
 # 0x000032: [USA] [EU] [JP] [8-bit] Qualifying Grid Position Block
 qualifying_grid_position_block = byte(0x000032)

@@ -1,7 +1,7 @@
 # Code Notes for Game ID 16444
 # Source: 16444-User.txt
 
-from core.helpers import *
+from pycheevos.core.helpers import * # type: ignore
 
 # 0x000032: [8-bit] Screen ID 
 # Values:
