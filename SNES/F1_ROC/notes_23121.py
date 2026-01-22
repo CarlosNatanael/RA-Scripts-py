@@ -1,7 +1,7 @@
 # Code Notes for Game ID 23121
-# Source: 23121-Notes.json
+# Source: RA Server (Synced)
 
-from pycheevos.core.helpers import * # type: ignore
+from pycheevos.core.helpers import *
 
 # 0x000032: [USA] [EU] [JP] [8-bit] Qualifying Grid Position Block
 qualifying_grid_position_block = byte(0x000032)
@@ -35,7 +35,7 @@ player_input = byte(0x000048)
 #0x80 = Nitro
 
 # 0x000049: [USA] [EU] [JP] [8-bit] [Bitmask] Player Input (Controls)
-player_input_0x000049 = byte(0x000049)
+player_input_2 = byte(0x000049)
 #This tracks the player's controller input.
 #0x01 = Right
 #0x02 = Left
@@ -49,7 +49,7 @@ shop_menu_cursor = byte(0x00006f)
 #This tracks the horizontal cursor, but only for the first 4 items (values 0x00 to 0x03). For items 5 and 6, this address locks at 0x03. This address must be used WITH 0x000075
 
 # 0x000073: [USA] [EU] [JP] [8-bit] Shop Menu Cursor (Y-Axis)
-shop_menu_cursor_0x000073 = byte(0x000073)
+shop_menu_cursor_2 = byte(0x000073)
 #0x00 = Chassis
 #0x01 = Mission (Gearbox)
 #0x02 = Brake
@@ -89,11 +89,11 @@ game_cutscene_event_id_block = byte(0x0000a3)
 #0x3b, 0xaa, 0x1c = Rank Driver Screen (Post-Race)
 
 # 0x0000a4: [USA] [EU] [JP] [8-bit] Game Cutscene/Event ID Block
-game_cutscene_event_id_block_0x0000a4 = byte(0x0000a4)
+game_cutscene_event_id_block_2 = byte(0x0000a4)
 #These 3 bytes work together to identify the current fullscreen cutscene/event.
 
 # 0x0000a5: [USA] [EU] [JP] [8-bit] Game Cutscene/Event ID Block
-game_cutscene_event_id_block_0x0000a5 = byte(0x0000a5)
+game_cutscene_event_id_block_3 = byte(0x0000a5)
 #These 3 bytes work together to identify the current fullscreen cutscene/event.
 
 # 0x0000a9: [USA] [EU] [JP] [8-bit] Lap Counter / Race Status Flag
@@ -109,11 +109,11 @@ total_race_timer = byte(0x0000ad)
 #- Minutes (e.g., 0x02)
 
 # 0x0000ae: [USA] [EU] [JP] [8-bit] [BCD] Total Race Timer
-total_race_timer_0x0000ae = byte(0x0000ae)
+total_race_timer_2 = byte(0x0000ae)
 #- Seconds (e.g., 0x28)
 
 # 0x0000b0: [USA] [EU] [JP] [JP] [8-bit] [BCD] Total Race Timer
-total_race_timer_0x0000b0 = byte(0x0000b0)
+total_race_timer_3 = byte(0x0000b0)
 #Centiseconds/Milliseconds (e.g., 0x78)
 
 # 0x00059b: [USA] [EU] [JP] [8-bit] Player Car Upgrade Levels Block (Chassis)
@@ -124,7 +124,7 @@ player_car_upgrade_levels_block = byte(0x00059b)
 #0x02 = TYPE 3
 
 # 0x00059c: [USA] [EU] [JP] [8-bit] Player Car Upgrade Levels Block (Transmission/Gearbox Level)
-player_car_upgrade_levels_block_0x00059c = byte(0x00059c)
+player_car_upgrade_levels_block_2 = byte(0x00059c)
 #Tracks the current purchased level for each upgrade part.
 #0x00 = 4SPEED
 #0x01 = 5SPEED
@@ -132,21 +132,21 @@ player_car_upgrade_levels_block_0x00059c = byte(0x00059c)
 #0x03 = 7SPEED
 
 # 0x00059d: [USA] [EU] [JP] [8-bit] Player Car Upgrade Levels Block (Brake Level)
-player_car_upgrade_levels_block_0x00059d = byte(0x00059d)
+player_car_upgrade_levels_block_3 = byte(0x00059d)
 #Tracks the current purchased level for each upgrade part.
 #0x00 = NORNAL
 #0x01 = CARBON
 #0x02 = ANTILOCK
 
 # 0x00059e: [USA] [EU] [JP] [8-bit] Player Car Upgrade Levels Block (Suspension Level)
-player_car_upgrade_levels_block_0x00059e = byte(0x00059e)
+player_car_upgrade_levels_block_4 = byte(0x00059e)
 #Tracks the current purchased level for each upgrade part.
 #0x00 = SOFT
 #0x01 = HARD
 #0x02 = ACTIVE
 
 # 0x00059f: [USA] [EU] [JP] [8-bit] Player Car Upgrade Levels Block (Diffuser Level)
-player_car_upgrade_levels_block_0x00059f = byte(0x00059f)
+player_car_upgrade_levels_block_5 = byte(0x00059f)
 #Tracks the current purchased level for each upgrade part.
 #0x00 = SMALL
 #0x01 = NORMAL
@@ -154,7 +154,7 @@ player_car_upgrade_levels_block_0x00059f = byte(0x00059f)
 #0x03 = SPECIAL
 
 # 0x0005a0: [USA] [EU] [JP] [8-bit] Player Car Upgrade Levels Block (Front Wing Level)
-player_car_upgrade_levels_block_0x0005a0 = byte(0x0005a0)
+player_car_upgrade_levels_block_6 = byte(0x0005a0)
 #Tracks the current purchased level for each upgrade part.
 #0x00 = LOW D.F
 #0x01 = NORMAL
@@ -163,14 +163,14 @@ player_car_upgrade_levels_block_0x0005a0 = byte(0x0005a0)
 #0x04 = SPECIAL.W
 
 # 0x0005a1: [USA] [EU] [JP] [8-bit] Player Car Upgrade Levels Block (Rear Wing Level)
-player_car_upgrade_levels_block_0x0005a1 = byte(0x0005a1)
+player_car_upgrade_levels_block_7 = byte(0x0005a1)
 #Tracks the current purchased level for each upgrade part.
 #0x00 = LOW D.F
 #0x01 = NORMAL
 #0x02 = HI D.F
 
 # 0x0005a2: [USA] [EU] [JP] [8-bit] Player Car Upgrade Levels Block (Tire Level)
-player_car_upgrade_levels_block_0x0005a2 = byte(0x0005a2)
+player_car_upgrade_levels_block_8 = byte(0x0005a2)
 #Tracks the current purchased level for each upgrade part.
 #0x00 = SPARE
 #0x01 = RAIN
@@ -179,7 +179,7 @@ player_car_upgrade_levels_block_0x0005a2 = byte(0x0005a2)
 #0x04 = SPECIAL
 
 # 0x0005a3: [USA] [EU] [JP] [8-bit] Player Car Upgrade Levels Block (Engine Level)
-player_car_upgrade_levels_block_0x0005a3 = byte(0x0005a3)
+player_car_upgrade_levels_block_9 = byte(0x0005a3)
 #Tracks the current purchased level for each upgrade part.
 #0x00 = JADD V8
 #0x01 = FORO V8
@@ -189,7 +189,7 @@ player_car_upgrade_levels_block_0x0005a3 = byte(0x0005a3)
 #0x05 = HOMDA V12
 
 # 0x0005a4: [USA] [EU] [JP] [8-bit] Player Car Upgrade Levels Block (Nitro Level ('Nitro'))
-player_car_upgrade_levels_block_0x0005a4 = byte(0x0005a4)
+player_car_upgrade_levels_block_10 = byte(0x0005a4)
 #Tracks the current purchased level for each upgrade part.
 
 # 0x0005c7: [USA] [EU] [JP] [8-bit] Nitro Fuel Level
@@ -216,42 +216,42 @@ player_lap_times_block___start = byte(0x000731)
 #Lap 1 (Minutes)
 
 # 0x000732: [USA] [EU] [JP] [8-bit BCD per segment] Player Lap Times Block - Start
-player_lap_times_block___start_0x000732 = byte(0x000732)
+player_lap_times_block___start_2 = byte(0x000732)
 #Stores the player's completed lap times. Appears to be BCD format.
 #Lap 1 (Seconds)
 
 # 0x000733: [USA] [EU] [JP] [8-bit BCD per segment] Player Lap Times Block - Start
-player_lap_times_block___start_0x000733 = byte(0x000733)
+player_lap_times_block___start_3 = byte(0x000733)
 #Stores the player's completed lap times. Appears to be BCD format.
 #Lap 1 (Centiseconds/Miliseconds)
 
 # 0x000735: [USA] [EU] [JP] [8-bit BCD per segment] Player Lap Times Block - Start
-player_lap_times_block___start_0x000735 = byte(0x000735)
+player_lap_times_block___start_4 = byte(0x000735)
 #Stores the player's completed lap times. Appears to be BCD format.
 #Lap 2 (Minutes)
 
 # 0x000736: [USA] [EU] [JP] [8-bit BCD per segment] Player Lap Times Block - Start
-player_lap_times_block___start_0x000736 = byte(0x000736)
+player_lap_times_block___start_5 = byte(0x000736)
 #Stores the player's completed lap times. Appears to be BCD format.
 #Lap 2 (Seconds)
 
 # 0x000737: [USA] [EU] [JP] [8-bit BCD per segment] Player Lap Times Block - Start
-player_lap_times_block___start_0x000737 = byte(0x000737)
+player_lap_times_block___start_6 = byte(0x000737)
 #Stores the player's completed lap times. Appears to be BCD format.
 #Lap 2 (Centiseconds/Miliseconds)
 
 # 0x000739: [USA] [EU] [JP] [8-bit BCD per segment] Player Lap Times Block - Start
-player_lap_times_block___start_0x000739 = byte(0x000739)
+player_lap_times_block___start_7 = byte(0x000739)
 #Stores the player's completed lap times. Appears to be BCD format.
 #Lap 3 (Minutes)
 
 # 0x00073a: [USA] [EU] [JP] [8-bit BCD per segment] Player Lap Times Block - Start
-player_lap_times_block___start_0x00073a = byte(0x00073a)
+player_lap_times_block___start_8 = byte(0x00073a)
 #Stores the player's completed lap times. Appears to be BCD format.
 #Lap 3 (Seconds)
 
 # 0x00073b: [USA] [EU] [JP] [8-bit BCD per segment] Player Lap Times Block - Start
-player_lap_times_block___start_0x00073b = byte(0x00073b)
+player_lap_times_block___start_9 = byte(0x00073b)
 #Stores the player's completed lap times. Appears to be BCD format.
 #Lap 3 (Centiseconds/Miliseconds)
 
@@ -260,27 +260,27 @@ ai_opponent_lap_times_block___start = byte(0x000741)
 #Appears to store completed lap times for AI opponents, structured similarly to the player block (0x000741) / (0x00074b). Seems active during Race mode.
 
 # 0x000751: [USA] [EU] [JP] [8-bit BCD per segment] AI Opponent Lap Times Block - Start
-ai_opponent_lap_times_block___start_0x000751 = byte(0x000751)
+ai_opponent_lap_times_block___start_2 = byte(0x000751)
 #Appears to store completed lap times for AI opponents, structured similarly to the player block (0x000751) / (0x00075b). Seems active during Race mode.
 
 # 0x000761: [USA] [EU] [JP] [8-bit BCD per segment] AI Opponent Lap Times Block - Start
-ai_opponent_lap_times_block___start_0x000761 = byte(0x000761)
+ai_opponent_lap_times_block___start_3 = byte(0x000761)
 #Appears to store completed lap times for AI opponents, structured similarly to the player block (0x000761) / (0x00076b). Seems active during Race mode.
 
 # 0x000771: [USA] [EU] [JP] [8-bit BCD per segment] AI Opponent Lap Times Block - Start
-ai_opponent_lap_times_block___start_0x000771 = byte(0x000771)
+ai_opponent_lap_times_block___start_4 = byte(0x000771)
 #Appears to store completed lap times for AI opponents, structured similarly to the player block (0x000771) / (0x00077b). Seems active during Race mode.
 
 # 0x000781: [USA] [EU] [JP] [8-bit BCD per segment] AI Opponent Lap Times Block - Start
-ai_opponent_lap_times_block___start_0x000781 = byte(0x000781)
+ai_opponent_lap_times_block___start_5 = byte(0x000781)
 #Appears to store completed lap times for AI opponents, structured similarly to the player block (0x000781) /  (0x00078b). Seems active during Race mode.
 
 # 0x000791: [USA] [EU] [JP] [8-bit BCD per segment] AI Opponent Lap Times Block - Start
-ai_opponent_lap_times_block___start_0x000791 = byte(0x000791)
+ai_opponent_lap_times_block___start_6 = byte(0x000791)
 #Appears to store completed lap times for AI opponents, structured similarly to the player block (0x000791) /  (0x00079b). Seems active during Race mode.
 
 # 0x0007a1: [USA] [EU] [JP] [8-bit BCD per segment] AI Opponent Lap Times Block - Start
-ai_opponent_lap_times_block___start_0x0007a1 = byte(0x0007a1)
+ai_opponent_lap_times_block___start_7 = byte(0x0007a1)
 #Appears to store completed lap times for AI opponents, structured similarly to the player block (0x0007a1) / (0x0007ab) . Seems active during Race mode.
 
 # 0x0007b1: [USA] [EU] [JP] [8-bit] AI Race Position Block (WRAM)
@@ -288,27 +288,27 @@ ai_race_position_block = byte(0x0007b1)
 #- Position for FER (T. PHILIPS)
 
 # 0x0007b2: [USA] [EU] [JP] [8-bit] AI Race Position Block (WRAM)
-ai_race_position_block_0x0007b2 = byte(0x0007b2)
+ai_race_position_block_2 = byte(0x0007b2)
 #- Position for LEY (M. OWEM)
 
 # 0x0007b3: [USA] [EU] [JP] [8-bit] AI Race Position Block (WRAM)
-ai_race_position_block_0x0007b3 = byte(0x0007b3)
+ai_race_position_block_3 = byte(0x0007b3)
 #- Position for MCL (A. SETA)
 
 # 0x0007b4: [USA] [EU] [JP] [8-bit] AI Race Position Block (WRAM)
-ai_race_position_block_0x0007b4 = byte(0x0007b4)
+ai_race_position_block_4 = byte(0x0007b4)
 #- Position for WIL (N.J. MYDEN)
 
 # 0x0007b5: [USA] [EU] [JP] [8-bit] AI Race Position Block (WRAM)
-ai_race_position_block_0x0007b5 = byte(0x0007b5)
+ai_race_position_block_5 = byte(0x0007b5)
 #- Position for TYR (J. SPOHN)
 
 # 0x0007b6: [USA] [EU] [JP] [8-bit] AI Race Position Block (WRAM)
-ai_race_position_block_0x0007b6 = byte(0x0007b6)
+ai_race_position_block_6 = byte(0x0007b6)
 #- Position for BEN (R. PALUKA)
 
 # 0x0007b7: [USA] [EU] [JP] [8-bit] AI Race Position Block (WRAM)
-ai_race_position_block_0x0007b7 = byte(0x0007b7)
+ai_race_position_block_7 = byte(0x0007b7)
 #- Position for JOR (M. FLAERTY)
 
 # 0x0007d9: [USA] [EU] [JP] [8-bit] Player Race Position (0-Based)
@@ -492,22 +492,22 @@ eu_championship_points = byte(0x001318)
 eu_championship_points_ia = byte(0x001319)
 
 # 0x00131a: [EU] [JP] [8-bit] Championship Points IA (I. CAPYS)
-eu_championship_points_ia_0x00131a = byte(0x00131a)
+eu_championship_points_ia_2 = byte(0x00131a)
 
 # 0x00131b: [EU] [JP] [8-bit] Championship Points IA (A. SETH)
-eu_championship_points_ia_0x00131b = byte(0x00131b)
+eu_championship_points_ia_3 = byte(0x00131b)
 
 # 0x00131c: [EU] [JP] [8-bit] Championship Points IA (N. MANSON)
-eu_championship_points_ia_0x00131c = byte(0x00131c)
+eu_championship_points_ia_4 = byte(0x00131c)
 
 # 0x00131d: [EU] [JP] [8-bit] Championship Points IA (S. NAKADA)
-eu_championship_points_ia_0x00131d = byte(0x00131d)
+eu_championship_points_ia_5 = byte(0x00131d)
 
 # 0x00131e: [EU] [JP] [8-bit] Championship Points IA (N. PIOUS)
-eu_championship_points_ia_0x00131e = byte(0x00131e)
+eu_championship_points_ia_6 = byte(0x00131e)
 
 # 0x00131f: [EU] [JP] [8-bit] Championship Points IA (A. CHESTER)
-eu_championship_points_ia_0x00131f = byte(0x00131f)
+eu_championship_points_ia_7 = byte(0x00131f)
 
 # 0x001334: [EU] [JP] [8-bit] Driver Name Edit Selector
 eu_driver_name_edit_selector = byte(0x001334)
@@ -592,7 +592,7 @@ eu_name_ia_opponents_char_1_9 = byte(0x001378)
 #0x001378 - 0x001380 = A.PROTEUS
 
 # 0x001388: [EU] [JP] [8-bit ASCII] Name IA opponents Char 1-9
-eu_name_ia_opponents_char_1_9_0x001388 = byte(0x001388)
+eu_name_ia_opponents_char_1_9_2 = byte(0x001388)
 #0x001388 - 0x001390 = I. CAPYS
 
 # 0x001390: [USA] [8-bit] Overall Championship Standings Block
@@ -630,11 +630,11 @@ value_holds_id_of_driver_in_7th_place = byte(0x001396)
 value_holds_id_of_driver_in_8th_place = byte(0x001397)
 
 # 0x001398: [EU] [JP] [8-bit ASCII] Name IA opponents Char 1-9
-eu_name_ia_opponents_char_1_9_0x001398 = byte(0x001398)
+eu_name_ia_opponents_char_1_9_3 = byte(0x001398)
 #0x001398 - 0x0013a0 = A. SETH
 
 # 0x0013a8: [EU] [JP] [8-bit ASCII] Name IA opponents Char 1-9
-eu_name_ia_opponents_char_1_9_0x0013a8 = byte(0x0013a8)
+eu_name_ia_opponents_char_1_9_4 = byte(0x0013a8)
 #0x0013a8 - 0x0013b0 = N. MANSON
 
 # 0x0013b4: [USA] [8-bit] Driver Name Edit Selector
@@ -651,15 +651,15 @@ driver_name_edit_selector = byte(0x0013b4)
 #0x70 = M. FIAERTY (JOR)
 
 # 0x0013b8: [EU] [JP] [8-bit ASCII] Name IA opponents Char 1-9
-eu_name_ia_opponents_char_1_9_0x0013b8 = byte(0x0013b8)
+eu_name_ia_opponents_char_1_9_5 = byte(0x0013b8)
 #0x0013b8 - 0x0013c0 = S. NAKADA
 
 # 0x0013c8: [EU] [JP] [8-bit ASCII] Name IA opponents Char 1-9
-eu_name_ia_opponents_char_1_9_0x0013c8 = byte(0x0013c8)
+eu_name_ia_opponents_char_1_9_6 = byte(0x0013c8)
 #0x0013c8 - 0x0013d0 = N.PIOUS
 
 # 0x0013d8: [EU] [JP] [8-bit ASCII] Name IA opponents Char 1-9
-eu_name_ia_opponents_char_1_9_0x0013d8 = byte(0x0013d8)
+eu_name_ia_opponents_char_1_9_7 = byte(0x0013d8)
 #0x0013d8 - 0x0013e0 = A. CHESTE
 
 # 0x0013de: [USA] [8-bit] Current Circuit
@@ -732,27 +732,27 @@ name_ia_opponents_char_1_9 = byte(0x0013f8)
 #0x0013f8 - 0x001400 = T.PHILIPS
 
 # 0x001408: [USA] [8-bit ASCII] Name IA opponents Char 1-9
-name_ia_opponents_char_1_9_0x001408 = byte(0x001408)
+name_ia_opponents_char_1_9_2 = byte(0x001408)
 #0x001408 - 0x001410 = M.OWEM
 
 # 0x001418: [USA] [8-bit ASCII] Name IA opponents Char 1-9
-name_ia_opponents_char_1_9_0x001418 = byte(0x001418)
+name_ia_opponents_char_1_9_3 = byte(0x001418)
 #0x001418 - 0x001421 = A.SETA
 
 # 0x001428: [USA] [8-bit ASCII] Name IA opponents Char 1-9
-name_ia_opponents_char_1_9_0x001428 = byte(0x001428)
+name_ia_opponents_char_1_9_4 = byte(0x001428)
 #0x001428 - 0x001430 = N.J.MYDEN
 
 # 0x001438: [USA] [8-bit ASCII] Name IA opponents Char 1-9
-name_ia_opponents_char_1_9_0x001438 = byte(0x001438)
+name_ia_opponents_char_1_9_5 = byte(0x001438)
 #0x001438 - 0x001440 = J.SPOHN
 
 # 0x001448: [USA] [8-bit ASCII] Name IA opponents Char 1-9
-name_ia_opponents_char_1_9_0x001448 = byte(0x001448)
+name_ia_opponents_char_1_9_6 = byte(0x001448)
 #0x001448 - 0x001450 = R.PALUKA
 
 # 0x001458: [USA] [8-bit ASCII] Name IA opponents Char 1-9
-name_ia_opponents_char_1_9_0x001458 = byte(0x001458)
+name_ia_opponents_char_1_9_7 = byte(0x001458)
 #0x001458 - 0x001460 = M.FLAERTY
 
 # 0x001468: [USA] [8-bit] Championship Points (Player)
@@ -769,22 +769,22 @@ championship_points = byte(0x001468)
 championship_points_ia = byte(0x001469)
 
 # 0x00146a: [USA] [8-bit] Championship Points IA (M. OWEM)
-championship_points_ia_0x00146a = byte(0x00146a)
+championship_points_ia_2 = byte(0x00146a)
 
 # 0x00146b: [USA] [8-bit] Championship Points IA (A. SETA)
-championship_points_ia_0x00146b = byte(0x00146b)
+championship_points_ia_3 = byte(0x00146b)
 
 # 0x00146c: [USA] [8-bit] Championship Points IA (N.J. MYDEN)
-championship_points_ia_0x00146c = byte(0x00146c)
+championship_points_ia_4 = byte(0x00146c)
 
 # 0x00146d: [USA] [8-bit] Championship Points IA (J. SPOHN)
-championship_points_ia_0x00146d = byte(0x00146d)
+championship_points_ia_5 = byte(0x00146d)
 
 # 0x00146e: [USA] [8-bit] Championship Points IA (R. PALUKA)
-championship_points_ia_0x00146e = byte(0x00146e)
+championship_points_ia_6 = byte(0x00146e)
 
 # 0x00146f: [USA] [8-bit] Championship Points IA (M. FLAERTY)
-championship_points_ia_0x00146f = byte(0x00146f)
+championship_points_ia_7 = byte(0x00146f)
 
 # 0x001471: [EU] [JP] [8-bit ASCII] Recycled ASCII Display Buffer - Start (approx. 7 bytes: 0x14f1-0x14f7)
 eu_recycled_ascii_display_buffer___start = byte(0x001471)
