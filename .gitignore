@@ -10,9 +10,6 @@ __pycache__/
 
 # Distribution / packaging
 output/
-core/
-models/
-utils/
 .Python
 build/
 develop-eggs/
