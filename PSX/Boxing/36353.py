@@ -23,6 +23,7 @@ ach_block.add_core([
     kojiromaru___scout == 2,
     spice___scout == 2,
     asteka___scout == 2,
+    mr == 2
 ])
 meu_set.add_achievement(ach_block)
 meu_set.save()
