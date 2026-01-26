@@ -1,12 +1,11 @@
-from notes_36353 import *
 from pycheevos.core.condition import *
 from pycheevos.core.value import *
 from pycheevos.core.helpers import *
+from pycheevos.core.constants import *
 from pycheevos.models.achievement import *
 from pycheevos.models.set import *
 from pycheevos.models.achievement import *
-from pycheevos.core.helpers import *
-from pycheevos.core.constants import *
+from notes_36353 import *
 
 meu_set = AchievementSet(game_id=36353, title="Boxing")
 
