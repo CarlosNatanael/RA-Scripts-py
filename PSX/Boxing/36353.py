@@ -8,10 +8,9 @@ from pycheevos.models.achievement import *
 from pycheevos.core.helpers import *
 from pycheevos.core.constants import *
 
-meu_set = AchievementSet(game_id=36353, title="F1 ROC: Champions of Race")
+meu_set = AchievementSet(game_id=36353, title="Boxing")
 
-ach_block = Achievement(id=1, title="Enciclopédia do Ringue", points=25, badge="0", type=AchievementType.WIN_CONDITION,
-    description="Desbloqueie todas as notas e segredos biográficos de todos os lutadores")
+ach_block = Achievement(id=1, title="Enciclopédia do Ringue", points=10, badge="0", description="Desbloqueie todas as notas e segredos biográficos de todos os lutadores")
 ach_block.add_core([
     tanaka___scout == 2,
     ryoko___scout == 2,
