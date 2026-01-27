@@ -55,4 +55,41 @@ for index, (addr, title, desc) in enumerate(UNLOCK_DATA):
         delta(indicador_de_localio_ele_armazena_aonde_o_player_esta) == 1
     ])
     meu_set.add_achievement(ach)
+
+ach_block = Achievement(title="Mestre das Técnicas", points=10, badge="0", description="Execute com sucesso o movimento especial de cada um dos 13 personagens")
+ach_block.add_core([
+    tanaka___sign1 == 1,
+    tanaka___sign2 == 1,
+    tanaka___sign3 == 1,
+    ryoko___sign1 == 1,
+    ryoko___sign2 == 1,
+    ryoko___sign3 == 1,
+    red___sign1 == 1,
+    red___sign2 == 1,
+    b_2 == 1,
+    b_3 == 1,
+    b_4 == 1,
+    b_5 == 1,
+    puma___sign1 == 1,
+    prince___sign1 == 1,
+    prince___sign2 == 1,
+    prince___sign3 == 1,
+    misha___sign1 == 1,
+    misha___sign2 == 1,
+    silver_man___sign1 == 1,
+    gio___sign1 == 1,
+    gio___sign2 == 1,
+    gio___sign3 == 1,
+    kojiromaru___sign1 == 1,
+    kojiromaru___sign2 == 1,
+    spice___sign1 == 1,
+    spice___sign2 == 1,
+    spice___sign3 == 1,
+    asteka___sign1 == 1,
+    mr_2 == 1,
+    mr_3 == 1,
+    delta(indicador_de_localio_ele_armazena_aonde_o_player_esta) == 4
+])
+meu_set.add_achievement(ach_block)
+
 meu_set.save()
