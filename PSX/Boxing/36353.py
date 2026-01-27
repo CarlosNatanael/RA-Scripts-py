@@ -5,12 +5,12 @@ from notes_36353 import *
 
 mem_loc = indicador_de_localio_ele_armazena_aonde_o_player_esta
 
-meu_set = AchievementSet(game_id=36353, title="Boxing")
+meu_set = AchievementSet(game_id=36353, title="Boxing importer")
 
 scout_vars = [
-    tanaka___scout, ryoko___scout, red___scout, b, puma___scout,
+    tanaka___scout, ryoko___scout, red___scout, bt___scout, puma___scout,
     prince___scout, misha___scout, silver_man___scout, gio___scout,
-    kojiromaru___scout, spice___scout, asteka___scout, mr
+    kojiromaru___scout, spice___scout, asteka___scout, mrcrown___scout
 ]
 
 ach_enciclopedia = Achievement(
@@ -53,7 +53,7 @@ sign_vars = [
     tanaka___sign1, tanaka___sign2, tanaka___sign3,
     ryoko___sign1, ryoko___sign2, ryoko___sign3,
     red___sign1, red___sign2,
-    b_2, b_3, b_4, b_5,
+    bt___sign1, bt___sign2, bt___sign3, bt___sign4,
     puma___sign1,
     prince___sign1, prince___sign2, prince___sign3,
     misha___sign1, misha___sign2,
@@ -62,7 +62,7 @@ sign_vars = [
     kojiromaru___sign1, kojiromaru___sign2,
     spice___sign1, spice___sign2, spice___sign3,
     asteka___sign1,
-    mr_2, mr_3
+    mrcrown___sign1, mrcrown___sign2
 ]
 
 ach_mestre = Achievement(

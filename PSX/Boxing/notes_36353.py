@@ -93,7 +93,7 @@ red___scout = byte(0x1fe6d2)
 #0x02 = Revanche (Notas Extras Unlocked)
 
 # 0x1fe6d3: [8-bit] B.T. - Scout
-b = byte(0x1fe6d3)
+bt___scout = byte(0x1fe6d3)
 #0x00 = Bloqueado
 #0x01 = Desbloqueado
 #0x02 = Revanche (Notas Extras Unlocked)
@@ -147,7 +147,7 @@ asteka___scout = byte(0x1fe6db)
 #0x02 = Revanche (Notas Extras Unlocked)
 
 # 0x1fe6dc: [8-bit] Mr.Crown - Scout
-mr = byte(0x1fe6dc)
+mrcrown___scout = byte(0x1fe6dc)
 #0x00 = Bloqueado
 #0x01 = Desbloqueado
 #0x02 = Revanche (Notas Extras Unlocked)
@@ -193,22 +193,22 @@ red___sign2 = byte(0x1fe6ea)
 #0x01 = Desbloqueado
 
 # 0x1fe6ef: [8-bit] B.T. - Sign1
-b_2 = byte(0x1fe6ef)
+bt___sign1 = byte(0x1fe6ef)
 #0x00 = Bloqueado
 #0x01 = Desbloqueado
 
 # 0x1fe6f0: [8-bit] B.T. - Sign2
-b_3 = byte(0x1fe6f0)
+bt___sign2 = byte(0x1fe6f0)
 #0x00 = Bloqueado
 #0x01 = Desbloqueado
 
 # 0x1fe6f1: [8-bit] B.T. - Sign3
-b_4 = byte(0x1fe6f1)
+bt___sign3 = byte(0x1fe6f1)
 #0x00 = Bloqueado
 #0x01 = Desbloqueado
 
 # 0x1fe6f2: [8-bit] B.T. - Sign4
-b_5 = byte(0x1fe6f2)
+bt___sign4 = byte(0x1fe6f2)
 #0x00 = Bloqueado
 #0x01 = Desbloqueado
 
@@ -293,12 +293,12 @@ asteka___sign1 = byte(0x1fe71f)
 #0x01 = Desbloqueado
 
 # 0x1fe725: [8-bit] Mr.Crown - Sign1
-mr_2 = byte(0x1fe725)
+mrcrown___sign1 = byte(0x1fe725)
 #0x00 = Bloqueado
 #0x01 = Desbloqueado
 
 # 0x1fe726: [8-bit] Mr.Crown - Sign2
-mr_3 = byte(0x1fe726)
+mrcrown___sign2 = byte(0x1fe726)
 #0x00 = Bloqueado
 #0x01 = Desbloqueado
 
@@ -615,7 +615,7 @@ red___cinturo_secret_heavy___contador_de_vitrias_e_defesas = byte(0x1fe7f6)
 red___total_de_pontos = word(0x1fe800)
 
 # 0x1fe820: [8-bit] B.T. - Competição Desbloqueada
-b_6 = byte(0x1fe820)
+bt___competio_desbloqueada = byte(0x1fe820)
 #0x00 = Local
 #0x01 = Nacional
 #0x02 = Mundial
@@ -623,100 +623,100 @@ b_6 = byte(0x1fe820)
 #0x04 = Secreto Final
 
 # 0x1fe823: [8-bit] B.T. - Categoria do lutador
-b_7 = byte(0x1fe823)
+bt___categoria_do_lutador = byte(0x1fe823)
 #0x00 até 0x31 = novato
 #0x32 = Pro
 #0x65 = Veteran
 
 # 0x1fe824: [16-bit] B.T. - Quantidade de Lutas (Championship mode)
-b_8 = word(0x1fe824)
+bt___quantidade_de_lutas = word(0x1fe824)
 
 # 0x1fe826: [16-bit] B.T. - Quantidade de Vitorias (Championship mode)
-b_9 = word(0x1fe826)
+bt___quantidade_de_vitorias = word(0x1fe826)
 
 # 0x1fe828: [16-bit] B.T. - Quantidade de Derrotas (Championship mode)
-b_10 = word(0x1fe828)
+bt_10 = word(0x1fe828)
 
 # 0x1fe82a: [16-bit] B.T. - Quantidade de K.O (Championship mode)
-b_11 = word(0x1fe82a)
+bt_11 = word(0x1fe82a)
 
 # 0x1fe82c: [16-bit] B.T. - Ponto de Personagem (Championship mode)
-b_12 = word(0x1fe82c)
+bt_12 = word(0x1fe82c)
 
 # 0x1fe830: [8-bit] B.T. - Cinturão Local Light - Contador de Vitórias e Defesas
-b_13 = byte(0x1fe830)
+bt_13 = byte(0x1fe830)
 #0x00 =  Nunca conquistou este título
 #0x01 = Primeira conquista do cinturão
 #0x02+ = Defesas de título bem-sucedidas ou novas conquistas no mesmo save
 
 # 0x1fe832: [8-bit] B.T. - Cinturão Nacional Light - Contador de Vitórias e Defesas
-b_14 = byte(0x1fe832)
+bt_14 = byte(0x1fe832)
 #0x00 =  Nunca conquistou este título
 #0x01 = Primeira conquista do cinturão
 #0x02+ = Defesas de título bem-sucedidas ou novas conquistas no mesmo save
 
 # 0x1fe834: [8-bit] B.T. - Cinturão Mundial Light - Contador de Vitórias e Defesas
-b_15 = byte(0x1fe834)
+bt_15 = byte(0x1fe834)
 #0x00 =  Nunca conquistou este título
 #0x01 = Primeira conquista do cinturão
 #0x02+ = Defesas de título bem-sucedidas ou novas conquistas no mesmo save
 
 # 0x1fe836: [8-bit] B.T. - Cinturão Secret Light - Contador de Vitórias e Defesas
-b_16 = byte(0x1fe836)
+bt_16 = byte(0x1fe836)
 #0x00 =  Nunca conquistou este título
 #0x01 = Primeira conquista do cinturão
 #0x02+ = Defesas de título bem-sucedidas ou novas conquistas no mesmo save
 
 # 0x1fe838: [8-bit] B.T. - Cinturão Local Middle - Contador de Vitórias e Defesas
-b_17 = byte(0x1fe838)
+bt_17 = byte(0x1fe838)
 #0x00 =  Nunca conquistou este título
 #0x01 = Primeira conquista do cinturão
 #0x02+ = Defesas de título bem-sucedidas ou novas conquistas no mesmo save
 
 # 0x1fe83a: [8-bit] B.T. - Cinturão Nacional Middle - Contador de Vitórias e Defesas
-b_18 = byte(0x1fe83a)
+bt_18 = byte(0x1fe83a)
 #0x00 =  Nunca conquistou este título
 #0x01 = Primeira conquista do cinturão
 #0x02+ = Defesas de título bem-sucedidas ou novas conquistas no mesmo save
 
 # 0x1fe83c: [8-bit] B.T. - Cinturão Mundial Middle - Contador de Vitórias e Defesas
-b_19 = byte(0x1fe83c)
+bt_19 = byte(0x1fe83c)
 #0x00 =  Nunca conquistou este título
 #0x01 = Primeira conquista do cinturão
 #0x02+ = Defesas de título bem-sucedidas ou novas conquistas no mesmo save
 
 # 0x1fe83e: [8-bit] B.T. - Cinturão Secret Middle - Contador de Vitórias e Defesas
-b_20 = byte(0x1fe83e)
+bt_20 = byte(0x1fe83e)
 #0x00 =  Nunca conquistou este título
 #0x01 = Primeira conquista do cinturão
 #0x02+ = Defesas de título bem-sucedidas ou novas conquistas no mesmo save
 
 # 0x1fe840: [8-bit] B.T. - Cinturão Local Heavy - Contador de Vitórias e Defesas
-b_21 = byte(0x1fe840)
+bt_21 = byte(0x1fe840)
 #0x00 =  Nunca conquistou este título
 #0x01 = Primeira conquista do cinturão
 #0x02+ = Defesas de título bem-sucedidas ou novas conquistas no mesmo save
 
 # 0x1fe842: [8-bit] B.T. - Cinturão Nacional Heavy - Contador de Vitórias e Defesas
-b_22 = byte(0x1fe842)
+bt_22 = byte(0x1fe842)
 #0x00 =  Nunca conquistou este título
 #0x01 = Primeira conquista do cinturão
 #0x02+ = Defesas de título bem-sucedidas ou novas conquistas no mesmo save
 
 # 0x1fe844: [8-bit] B.T. - Cinturão Mundial Heavy - Contador de Vitórias e Defesas
-b_23 = byte(0x1fe844)
+bt_23 = byte(0x1fe844)
 #0x00 =  Nunca conquistou este título
 #0x01 = Primeira conquista do cinturão
 #0x02+ = Defesas de título bem-sucedidas ou novas conquistas no mesmo save
 
 # 0x1fe846: [8-bit] B.T. - Cinturão Secret Heavy - Contador de Vitórias e Defesas
-b_24 = byte(0x1fe846)
+bt_24 = byte(0x1fe846)
 #0x00 =  Nunca conquistou este título
 #0x01 = Primeira conquista do cinturão
 #0x02+ = Defesas de título bem-sucedidas ou novas conquistas no mesmo save
 
 # 0x1fe850: [16-bit] B.T. - Total de Pontos (Championship mode)
-b_25 = word(0x1fe850)
+bt_25 = word(0x1fe850)
 
 # 0x1fe870: [8-bit] Puma - Competição Desbloqueada
 puma___competio_desbloqueada = byte(0x1fe870)
