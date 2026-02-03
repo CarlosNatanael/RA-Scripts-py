@@ -7,34 +7,25 @@ from pycheevos.core.constants import *
 meu_set = AchievementSet(game_id=23121, title="F1 ROC: Champions of Race")
 
 # 2. MAPEAMENTO DE MEMÓRIA (VARIABLES)
-
-# Endereços extraídos das Code Notes
-mem_state       = byte(0x0007dd)  # 13=Corrida, 7=Vitoria, 17=Shop, 16=Nome
-mem_circuit     = byte(0x0013de)  # ID da Pista
-mem_position    = byte(0x0007d9)  # 0 = 1º Lugar
-mem_qualify     = byte(0x00009e)  # Luz Verde / Grid
-mem_damage      = byte(0x000076)  # Dano
-mem_rain        = byte(0x0013e0)  # Clima (>0 chuva)
-mem_tires       = byte(0x0005a2)  # Pneus (1=Rain)
-mem_mode        = byte(0x000032)  # Modo de jogo / Grid Pos
-mem_start_pos   = byte(0x000039)  # Posição de largada 8th?
-mem_money_hi    = word(0x0013e2)  # Dinheiro
-mem_season_wins = byte(0x001468)  # Pontos/Vitórias
-mem_champ_pts   = byte(0x0000a3)  # Cutscene ID ou Pontos? (Usado no ID 555915)
-
-# Slots Minigame
+mem_state       = byte(0x0007dd)
+mem_circuit     = byte(0x0013de)
+mem_position    = byte(0x0007d9)
+mem_qualify     = byte(0x00009e)
+mem_damage      = byte(0x000076)
+mem_rain        = byte(0x0013e0)
+mem_tires       = byte(0x0005a2)
+mem_mode        = byte(0x000032)
+mem_start_pos   = byte(0x000039)
+mem_money_hi    = word(0x0013e2)
+mem_season_wins = byte(0x001468)
+mem_champ_pts   = byte(0x0000a3)
 mem_slots_state = byte(0x0006d0)
-mem_slots_w1    = byte(0x001222) # Win digit
+mem_slots_w1    = byte(0x001222)
 
-# 3. HELPERS (Lógica Reutilizável)
+# 3. HELPERS
 def win_condition():
-    """
-    Padrão de vitória encontrado nas conquistas:
-    Posição = 0 (1º), Estado = 7 (Vitória), Veio do estado 13 (Corrida)
-    """
     return (mem_position == 0) & (mem_state == 7) & (delta(mem_state) == 13)
 
-# 4. CONQUISTAS DE PISTAS (LOOP)
 TRACKS = {
     0:  {"id": 554324, "badge": "640397", "pts": 1, "title": "Tifosi's Hero",         "desc": "Italian"},
     1:  {"id": 554334, "badge": "640398", "pts": 1, "title": "Silverstone Conqueror", "desc": "Great Britain"},
@@ -65,7 +56,6 @@ for track_id, data in TRACKS.items():
     ])
     meu_set.add_achievement(ach)
 
-# 5. CONQUISTAS DE UPGRADES (LOOP)
 UPGRADES = {
     'chassis':    {'mem': byte(0x00059b), 'max': 2, 'id': 555219, 'badge': '640414', 'pts': 5, 'name': 'Type 3 chassis'},
     'gearbox':    {'mem': byte(0x00059c), 'max': 3, 'id': 555218, 'badge': '640415', 'pts': 2, 'name': '7Speed transmission'},
@@ -116,7 +106,6 @@ conds_perf.append(delta(mem_state) == 17)
 ach_perfect.add_core(conds_perf)
 meu_set.add_achievement(ach_perfect)
 
-# 6. CONQUISTAS ESPECÍFICAS
 
 # Pole Position
 ach_pole = Achievement(id=555894, title="Pole Position", points=1, badge="640254", type=AchievementType.PROGRESSION,
@@ -220,7 +209,7 @@ ach_777 = Achievement(id=563375, title="[VOID]Big Luck 777", points=10, badge="6
     description="Win the top prize Jackpot of 4000 on the slot machine in Monaco")
 ach_777.add_core([
     mem_state == 10,
-    mem_slots_w1 == 244, # Raw value from note
+    mem_slots_w1 == 244,
     byte(0x001223) == 240,
     byte(0x001224) == 240,
     byte(0x001225) == 240,
@@ -232,7 +221,7 @@ meu_set.add_achievement(ach_777)
 ach_dream = Achievement(id=555915, title="The Dream Comes True", points=25, badge="640429", type=AchievementType.WIN_CONDITION,
     description="Win the F1 World Championship for the first time")
 ach_dream.add_core([
-    byte(0x0000a3) == 32, # Cutscene ID para vitória
+    byte(0x0000a3) == 32,
     delta(byte(0x0000a3)) != 32,
     byte(0x0000a4) == 144,
     byte(0x0000a5) == 29,
@@ -259,5 +248,4 @@ ach_legend = Achievement(id=555916, title="[VOID] Legend of the Asphalt", points
 ach_legend.add_core(byte(0x0013e6) == 2) # Season 2
 meu_set.add_achievement(ach_legend)
 
-# 7. EXPORTAÇÃO
 meu_set.save()
