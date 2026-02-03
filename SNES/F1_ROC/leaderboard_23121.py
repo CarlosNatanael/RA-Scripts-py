@@ -57,7 +57,7 @@ for track_val, country, adjective, lb_id in leaderboard_data:
     lb.set_cancel(value(0) == value(1))
 
     # --- Lógica (Submit) ---
-    lb.set_submit(value(0) == value(1))
+    lb.set_submit(value(1) == value(1))
 
     # --- Lógica (Value) ---
     lb.set_value(
