@@ -40,7 +40,7 @@ for track_val, country, adjective, lb_id in leaderboard_data:
     lb = Leaderboard(
         id=lb_id,
         title=f"Fastest Race - {country}",
-        description=f"Best total race time on the {adjective} circuit.",
+        description=f"Best total race time on the {adjective} circuit",
         format=LeaderboardFormat.MILLISECS,
         lower_is_better=True
     )
