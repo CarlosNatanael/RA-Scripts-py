@@ -1,254 +1,265 @@
-from pycheevos.core.helpers import byte
+from pycheevos.core.helpers import byte, bit0, word, dword, tbyte, value, and_next, reset_if, reset_next_if, pause_if, trigger, measured, add_hits, add_source, sub_source
+from pycheevos.core.constants import AchievementType
 from pycheevos.models.achievement import Achievement
 from pycheevos.models.set import AchievementSet
-from pycheevos.core.constants import AchievementType
+import operator
+from functools import reduce
 
-meu_set = AchievementSet(game_id=36353, title="Veteran Rank")
-
-# =======================================================================
-# 1. ALIAS DE MEMÓRIA (Core)
-# =======================================================================
-mem_screen = byte(0x1feff0) # Screen ID / Game State
-mem_char   = byte(0x1fef66) # P1 Character ID (Championship/Ranking)
+my_set = AchievementSet(game_id=36353, title="Boxing Importer")
 
 # =======================================================================
-# 2. CONSTANTES DE ENDEREÇOS
+# 1. ALIAS DE MEMÓRIA GLOBAIS
 # =======================================================================
-BASE_RANK   = 0x1fe733 # Endereço "Fighter Rank Category" do Tanaka
-OFFSET_CHAR = 0x50     # Distância de bytes entre os lutadores
+mem_screen  = byte(0x1feff0)
+mem_menu    = byte(0x1fef74)
+mem_champ   = byte(0x1fef70)
+mem_char    = byte(0x1fef66)
+mem_rank    = byte(0x1fef68)
+mem_p1_ctrl = byte(0x1fef84)
+mem_p2_ctrl = byte(0x1fef88)
+mem_p1_vs   = byte(0x1fedb0)
+mem_p2_vs   = byte(0x1fede8)
+mem_diff    = word(0x1fe564)
+
+ptr_base      = tbyte(0x1fe480)
+win_match     = ptr_base >> bit0(0x0000c8)
+match_state   = ptr_base >> byte(0x000018)
+in_fight      = (mem_screen == 0x0e) | (mem_screen == 0x0d)
 
 # =======================================================================
-# 3. CRIAÇÃO DA CONQUISTA
+# 2. FEATHERS / IMPACTS / LEGENDS (Títulos de Campeonato)
 # =======================================================================
-ach = Achievement(
-    id=118000,
-    title="True Veteran",
-    description="Reach Veteran level with any character",
-    points=10,
-    badge="00000",
-    type=AchievementType.PROGRESSION
-)
+champ_data = [
+    (589160, 0,  "Heavyweight Impact", "Win the Local Championship in the Heavyweight weight class", 10, "670388", AchievementType.PROGRESSION),
+    (589156, 1,  "Local Impact", "Win the Local Championship in the Middleweight weight class", 2, "670386", AchievementType.PROGRESSION),
+    (589152, 2,  "Bronze Feather", "Win the Local Championship in the Lightweight weight class", 2, "670383", AchievementType.PROGRESSION),
+    (589161, 3,  "Titan of the Nation", "Win the National Championship in the Heavyweight weight class", 10, "670389", AchievementType.PROGRESSION),
+    (589157, 4,  "National Pride", "Win the National Championship in the Middleweight weight class", 5, "669866", AchievementType.PROGRESSION),
+    (589153, 5,  "Silver Feather", "Win the National Championship in the Lightweight weight class", 2, "670384", AchievementType.PROGRESSION),
+    (589162, 6,  "Heavyweight Legend", "Win the World Championship in the Heavyweight weight class", 10, "670390", AchievementType.PROGRESSION),
+    (589158, 7,  "Global Domination", "Win the World Championship in the Middleweight weight class", 10, "670387", AchievementType.PROGRESSION),
+    (589154, 8,  "Gold Feather", "Win the World Championship in the Lightweight weight class", 5, "670385", AchievementType.PROGRESSION),
+    (589163, 9,  "The Final Challenge", "Win the Secret Championship in the Heavyweight weight class", 25, "670392", AchievementType.WIN_CONDITION),
+    (589159, 10, "Middleweight Enigma", "Win the Secret Championship in the Middleweight weight class", 10, "669868", AchievementType.PROGRESSION),
+    (589155, 11, "Platinum Feather", "Win the Secret Championship in the Lightweight weight class", 10, "670391", AchievementType.PROGRESSION),
+]
 
-# --- CORE GROUP (Segurança) ---
-# Evita que a conquista ative na tela de Load/Save (19 em decimal / 0x13)
-ach.add_core([
-    mem_screen != 19
-])
-
-# --- ALT GROUPS (Checando os personagens) ---
-# Loop que passa por todos os 13 lutadores (IDs de 0 a 12)
-for char_id in range(13):
-    
-    # Calcula o endereço do Rank específico para este lutador
-    # O Python faz a conta sozinho: 0x1fe733 + (ID * 0x50)
-    char_rank = byte(BASE_RANK + (char_id * OFFSET_CHAR))
-    
-    # Adiciona o grupo Alt com as 3 condições para este lutador
-    ach.add_alt([
-        mem_char == char_id,        # 1: Lutador é o correto (Tanaka, Ryoko, etc)
-        char_rank.delta() < 101,    # 2: Frame passado: Rank era menor que 101
-        char_rank == 101            # 3: Frame atual: Rank chegou a 101 (Veteran)
+for a_id, champ_val, title, desc, pts, badge, a_type in champ_data:
+    ach = Achievement(id=a_id, title=title, description=desc, points=pts, badge=badge, type=a_type)
+    ach.add_core([
+        in_fight,
+        win_match == 1,
+        match_state == 0x13,
+        mem_champ == champ_val,
+        mem_champ.delta() == champ_val
     ])
-
-meu_set.add_achievement(ach)
+    my_set.add_achievement(ach)
 
 # =======================================================================
-# 4. SALVAR
+# 3. UNLOCKS DE PERSONAGENS
 # =======================================================================
-meu_set.save()
+unlock_data = [
+    (589149, 0x1fe6d3, "Son of a Legend", "Unlock the fighter B.T.", 2, "669846"),
+    (589140, 0x1fe6d4, "Lightning Counter", "Unlock the fighter Puma", 2, "669847"),
+    (589141, 0x1fe6d5, "The Prince's Ambition", "Unlock the fighter Prince", 2, "669848"),
+    (589142, 0x1fe6d6, "Precise Intuition", "Unlock the fighter Misha", 5, "669849"),
+    (589143, 0x1fe6d7, "The Living Legend", "Unlock the fighter Silver Man", 5, "669850"),
+    (589144, 0x1fe6d8, "Devastating Reach", "Unlock the fighter Gio", 5, "669851"),
+    (589145, 0x1fe6d9, "From Dohyo to the Ring", "Unlock the fighter Kojiromaru", 5, "669852"),
+    (589146, 0x1fe6da, "The Ring Spy", "Unlock the fighter Spice", 5, "669853"),
+    (589147, 0x1fe6db, "Warrior of the Sun", "Unlock the fighter Asteka", 10, "669854"),
+    (589148, 0x1fe6dc, "The Disguised Champion", "Unlock the fighter Mr. Crown", 10, "669855"),
+]
+for a_id, addr, title, desc, pts, badge in unlock_data:
+    ach = Achievement(id=a_id, title=title, description=desc, points=pts, badge=badge)
+    ach.add_core([mem_menu == 1, byte(addr).delta() == 0, byte(addr) == 1])
+    my_set.add_achievement(ach)
 
+# =======================================================================
+# 4. RING ENCYCLOPEDIA (589139) & MASTER OF TECHNIQUES (589151)
+# =======================================================================
+# Ring Encyclopedia
+encyc_addrs = range(0x1fe6d0, 0x1fe6dd)
+core_encyc = [add_hits((byte(addr) == 2).with_hits(1)) for addr in encyc_addrs]
+core_encyc.append(measured((value(0) == 1).with_hits(13)))
+core_encyc.extend([add_hits((byte(addr).delta() == 2).with_hits(1)) for addr in encyc_addrs])
+core_encyc.extend([(value(0) == 1).with_hits(12), reset_if(mem_menu != 1)])
 
-# from pycheevos.core.helpers import byte, bit0, word
-# from pycheevos.models.achievement import Achievement
-# from pycheevos.models.set import AchievementSet
-# from pycheevos.core.constants import AchievementType
-# from functools import reduce
-# import operator
+ach_encyc = Achievement(id=589139, title="Ring Encyclopedia", description="Unlock every bio note and secret for every fighter", points=25, badge="670227")
+ach_encyc.add_core(core_encyc)
+my_set.add_achievement(ach_encyc)
 
-# meu_set = AchievementSet(game_id=36353, title="Unshakable Perfection")
+# Master of Techniques
+tech_addrs = [0x1fe6dd, 0x1fe6de, 0x1fe6df, 0x1fe6e3, 0x1fe6e4, 0x1fe6e5, 0x1fe6e9, 0x1fe6ea, 0x1fe6ef, 0x1fe6f0, 0x1fe6f1, 0x1fe6f2, 0x1fe6f5, 0x1fe6fb, 0x1fe6fc, 0x1fe6fd, 0x1fe701, 0x1fe702, 0x1fe707, 0x1fe70d, 0x1fe70e, 0x1fe70f, 0x1fe713, 0x1fe714, 0x1fe719, 0x1fe71a, 0x1fe71b, 0x1fe71f, 0x1fe725, 0x1fe726]
+core_tech = [add_hits((byte(addr) == 1).with_hits(1)) for addr in tech_addrs]
+core_tech.append(measured((value(0) == 1).with_hits(30)))
+core_tech.extend([add_hits((byte(addr).delta() == 1).with_hits(1)) for addr in tech_addrs])
+core_tech.extend([(value(0) == 1).with_hits(29), reset_if(mem_menu != 4)])
 
-# # =======================================================================
-# # 1. ALIAS DE MEMÓRIA (Core)
-# # =======================================================================
-# mem_screen = byte(0x1feff0)
-# mem_rank   = byte(0x1fef68)
-# mem_win    = bit0(0x1fef6a)
-# mem_char   = byte(0x1fef66)
+ach_tech = Achievement(id=589151, title="Master of Techniques", description="Successfully perform the special move of each of the 13 characters", points=10, badge="670229")
+ach_tech.add_core(core_tech)
+my_set.add_achievement(ach_tech)
 
-# # =======================================================================
-# # 2. CONSTANTES DE ENDEREÇOS (Base Tanaka)
-# # =======================================================================
-# BASE_LOSSES = 0x1fe75c # Total Losses (Persistent) do Tanaka
-# BASE_BELT   = 0x1fe764 # Primeiro cinto do Tanaka (Light Local)
-# OFFSET_CHAR = 0x50     # Distância entre os lutadores
+# =======================================================================
+# 5. CONQUISTAS DE "CHAMPION'S RETIREMENT" E "TRUE VETERAN"
+# =======================================================================
+OFFSET_CHAR = 0x50
 
-# ach = Achievement(
-#     id=117000,
-#     title="Unshakable Perfection",
-#     description="Win all Championships across all weight classes without ever losing a match.",
-#     points=50,
-#     badge="00000",
-#     type=AchievementType.MISSABLE
-# )
+# Champion's Retirement (39 Alts Automáticos)
+ach = Achievement(id=589309, title="Champion's Retirement", description="Win the World Championship in all three weight classes with the same fighter", points=10, badge="670230")
+ach.add_core([mem_screen != 0x13, match_state == 0x13])
+for char_id in range(13):
+    t_light = word(0x1fe768 + (char_id * OFFSET_CHAR))
+    t_mid   = word(0x1fe770 + (char_id * OFFSET_CHAR))
+    t_heavy = word(0x1fe778 + (char_id * OFFSET_CHAR))
+    ach.add_alt([mem_char == char_id, t_light.delta() == 0, t_light > 0, t_mid > 0, t_heavy > 0])
+    ach.add_alt([mem_char == char_id, t_light > 0, t_mid.delta() == 0, t_mid > 0, t_heavy > 0])
+    ach.add_alt([mem_char == char_id, t_light > 0, t_mid > 0, t_heavy.delta() == 0, t_heavy > 0])
+my_set.add_achievement(ach)
 
-# # --- CORE GROUP ---
-# ach.add_core([
-#     mem_screen != 0x13,
-#     mem_rank == 1,
-#     mem_win.delta() == 0,
-#     mem_win == 1
-# ])
+# True Veteran (13 Alts)
+ach = Achievement(id=589821, title="True Veteran", description="Reach Veteran level with any character", points=10, type=AchievementType.PROGRESSION, badge="669877")
+ach.add_core([mem_screen != 0x13])
+for char_id in range(13):
+    char_rank = byte(0x1fe733 + (char_id * OFFSET_CHAR))
+    ach.add_alt([mem_char == char_id, char_rank.delta() < 0x65, char_rank == 0x65])
+my_set.add_achievement(ach)
 
-# # --- ALT GROUPS ---
-# for char_id in range(13):
+# =======================================================================
+# 6. GRUPO "WITHOUT LOSING A MATCH" (Neighborhood Hero, etc.)
+# =======================================================================
+no_loss_data = [
+    (589308, "Neighborhood Hero", "Win the Local Championship in Middleweight weight class or higher without losing a match", "670239", lambda c: c <= 1, 10),
+    (589810, "National Idol", "Win the National Championship in Middleweight weight class or higher without losing a match", "670240", lambda c: (c == 3) | (c == 4), 25),
+    (589812, "Living Legend", "Win the World Championship in Middleweight weight class or higher without losing a match", "670241", lambda c: (c == 6) | (c == 7), 25),
+    (589814, "Beyond the Limit", "Win the Secret Championship in Middleweight weight class or higher without losing a match", "670242", lambda c: (c == 9) | (c == 10), 25),
+]
+
+match_win_flag = bit0(0x1fef6a)
+
+for a_id, title, desc, badge, champ_cond, pts in no_loss_data:
+    ach = Achievement(id=a_id, title=title, description=desc, points=pts, type=AchievementType.MISSABLE, badge=badge)
+    ach.add_core([champ_cond(mem_champ), mem_rank == 1, and_next(match_win_flag.delta() == 0), trigger(match_win_flag == 1)])
+    for char_id in range(13):
+        ach.add_alt([mem_char == char_id, word(0x1fe738 + (char_id * OFFSET_CHAR)) == 0])
+    my_set.add_achievement(ach)
+
+# Unshakable Perfection (A escada mágica do OrNext)
+ach = Achievement(id=589818, title="Unshakable Perfection", description="Win all Championships across all weight classes without ever losing a match", points=50, type=AchievementType.MISSABLE, badge="670251")
+ach.add_core([mem_screen != 0x13, mem_rank == 1, match_win_flag.delta() == 0, match_win_flag == 1])
+
+for char_id in range(13):
+    losses_pers = word(0x1fe75c + (char_id * OFFSET_CHAR))
+    belts = [word(0x1fe764 + (char_id * OFFSET_CHAR) + (i * 2)) for i in range(12)]
     
-#     # 1. Endereço de Derrotas deste lutador
-#     char_losses = word(BASE_LOSSES + (char_id * OFFSET_CHAR))
+    or_next_deltas = reduce(operator.or_, [b.delta() == 0 for b in belts])
+    current_checks = [b > 0 for b in belts]
     
-#     # 2. Gera uma lista com os endereços dos 12 cinturões deste lutador
-#     # O loop `i` vai de 0 a 11 e soma 2 bytes (0x02) a cada passo.
-#     belts = [word(BASE_BELT + (char_id * OFFSET_CHAR) + (i * 2)) for i in range(12)]
-    
-#     # 3. Cria a corrente de OrNext para os Deltas (Frame passado)
-#     # Isso transforma: [A, B, C] em (A | B | C), gerando o OrNext automaticamente!
-#     delta_checks = [b.delta() == 0 for b in belts]
-#     or_next_deltas = reduce(operator.or_, delta_checks)
-    
-#     # 4. Cria a lista de checagens normais (Frame atual)
-#     current_checks = [b > 0 for b in belts]
-    
-#     # 5. Junta tudo no Alt Group atual
-#     # O PyCheevos 'achata' a lista automaticamente, unindo tudo perfeitamente
-#     alt_logic = [
-#         mem_char == char_id,
-#         char_losses == 0,
-#         or_next_deltas      # Adiciona as 12 linhas de OrNext Delta
-#     ] + current_checks      # Adiciona as 12 linhas de Mem Atual
-    
-#     ach.add_alt(alt_logic)
+    ach.add_alt([mem_char == char_id, losses_pers == 0, or_next_deltas] + current_checks)
+my_set.add_achievement(ach)
 
-# meu_set.add_achievement(ach)
-# meu_set.save()
+# =======================================================================
+# 7. CONDIÇÕES ESPECÍFICAS EM COMBATE
+# =======================================================================
+combat_data = [
+    (589836, "Don't Blink!", "Score a KO in the first round", 1, "670253", [
+        mem_screen != 0x13, mem_p1_ctrl == 1, mem_p2_ctrl == 0, in_fight,
+        ptr_base >> dword(0x00002c) == 1, win_match.delta() == 0, win_match == 1
+    ]),
+    (589843, "Clean Code", "Win a fight without being knocked down", 2, "670761", [
+        mem_screen != 0x13, mem_p1_ctrl == 1, mem_p2_ctrl == 0, in_fight,
+        ptr_base >> byte(0x0000ac) == 0, win_match.delta() == 0, win_match == 1
+    ]),
+    (589908, "Human Dynamometer", "Knock down your opponent with a strike that registers 100kg or more of force on the impact panel", 2, "670762", [
+        mem_screen != 0x13, in_fight, mem_p2_ctrl == 0, mem_p1_ctrl == 1,
+        (word(0x1fee54) >= 500) | (word(0x1fee58) >= 500) | (word(0x1fee5c) >= 500),
+        (ptr_base >> byte(0x0000c0)).delta() == 0, ptr_base >> byte(0x0000c0) == 1
+    ]),
+    (589930, "Optimized Defense", "Win a fight while maintaining over 50% HP", 2, "670763", [
+        in_fight, mem_p2_ctrl == 0, mem_p1_ctrl == 1,
+        add_source(word(0x1fedd8)), sub_source(word(0x1feddc)), word(0x1fedd8) > 0,
+        win_match.delta() == 0, win_match == 1
+    ]),
+    (589931, "[VOID]Reverse Logic", "KO an opponent using a Counter", 5, "670764", [
+        in_fight, mem_p2_ctrl == 0, mem_p1_ctrl == 1,
+        (word(0x1fee54) > word(0x1fee54).delta()) | (word(0x1fee58) > word(0x1fee58).delta()) | (word(0x1fee5c) > word(0x1fee5c).delta()),
+        (word(0x1fee54) >= 100) | (word(0x1fee58) >= 100) | (word(0x1fee5c) >= 100),
+        win_match.delta() == 0, win_match == 1
+    ]),
+    (589932, "Human Projectile", "Land 5 consecutive hits without the opponent blocking", 2, "670765", [
+        in_fight, mem_p2_ctrl == 0, mem_p1_ctrl == 1,
+        reset_if(word(0x1fedd8) < word(0x1fedd8).delta()),
+        pause_if(ptr_base >> bit0(0x0000d4) == 1),
+        reset_if((word(0x1fee10) == word(0x1fee10).delta()).with_hits(120)),
+        (word(0x1fee10) < word(0x1fee10).delta()).with_hits(5)
+    ]),
+    (591285, "Feline Reflex", "Block or evade 5 consecutive attacks", 5, "670803", [
+        in_fight, mem_p2_ctrl == 0, mem_p1_ctrl == 1,
+        reset_if(word(0x1fedd8) < word(0x1fedd8).delta()),
+        and_next(word(0x1fee60) != 0), add_hits(word(0x1fee60) != word(0x1fee60).delta()),
+        and_next(word(0x1fee64) != 0), add_hits(word(0x1fee64) != word(0x1fee64).delta()),
+        and_next(word(0x1fee68) != 0), (word(0x1fee68) != word(0x1fee68).delta()).with_hits(5)
+    ]),
+    (591418, "Floor Sweeper", "K.O your opponent using a special move", 5, "670804", [
+        mem_p2_ctrl == 0, mem_p1_ctrl == 1, in_fight, reset_if(mem_screen == 0x09),
+        (ptr_base >> byte(0x0000b0) > byte(0x0000b0).delta()).with_hits(1),
+        and_next(ptr_base >> tbyte(0x000148) == 2),
+        reset_if((ptr_base >> byte(0x0000b0)) > byte(0x0000b0).delta()),
+        
+        win_match.delta() == 0, trigger(win_match == 1)
+    ])
+]
 
+for a_id, title, desc, pts, badge, logic in combat_data:
+    ach = Achievement(id=a_id, title=title, description=desc, points=pts, badge=badge)
+    ach.add_core(logic)
+    my_set.add_achievement(ach)
 
+# Ring Dance (Alt Groups)
+ach = Achievement(id=589933, title="Ring Dance", description="Survive an entire round without being hit", points=5, badge="670801")
+ach.add_core([in_fight, mem_p2_ctrl == 0, (mem_p1_ctrl == 1).with_hits(1), word(0x1feddc) > 0, reset_if(word(0x1fedd8) < word(0x1feddc))])
+ach.add_alt([and_next(win_match.delta() == 0), trigger(win_match == 1)])
+ach.add_alt([and_next((ptr_base >> dword(0x00002c)).delta() > 0), trigger((ptr_base >> dword(0x00002c)).delta() < (ptr_base >> dword(0x00002c)))])
+my_set.add_achievement(ach)
 
-# from pycheevos.core.helpers import byte, bit0, word
-# from pycheevos.models.achievement import Achievement
-# from pycheevos.models.set import AchievementSet
+# The Amazing Chicken (Tem lógica sequencial, precisa de reset_next_if)
+ach = Achievement(id=589934, title="The Amazing Chicken", description="Run away for an entire round without attacking and win the fight afterward", points=5, badge="670802")
+ach.add_core([
+    in_fight, mem_p2_ctrl == 0, mem_p1_ctrl == 1,
+    (mem_screen == 0x0a) | reset_next_if(mem_screen == 0x09),
+    and_next(ptr_base >> dword(0x00002c) == 1),
+    pause_if((word(0x1fee10) < word(0x1fee10).delta()).with_hits(1)),
+    ptr_base >> dword(0x00002c) > 1, win_match.delta() == 0, win_match == 1
+])
+my_set.add_achievement(ach)
 
-# meu_set = AchievementSet(game_id=36353, title="Undefeated Champion")
+# =======================================================================
+# 8. PARTIDAS DE HISTÓRIA / RIVAIS
+# =======================================================================
+rivals_data = [
+    (591419, "Noble Final Act", "Win the World Championship as Prince in any weight class", 5, "671053", 
+     [mem_char == 5, byte(0x1fe8bf) == 2, byte(0x1fe8c1) == 1, match_win_flag.delta() == 0, match_win_flag == 1]),
+    (591420, "Sparring of a Lifetime", "As Tanaka, defeat Silver Man on Hard difficulty or higher", 2, "671069",
+     [in_fight, mem_menu == 2, (mem_diff == 0x4b) | (mem_diff == 0x64), mem_p2_ctrl == 0, mem_p1_ctrl == 1, mem_p1_vs == 0, mem_p2_vs == 7, win_match.delta() == 0, win_match == 1]),
+    (591421, "The Script Changed", "As Ryoko, defeat her father Tanaka on Hard difficulty or higher", 5, "671070",
+     [in_fight, mem_menu == 2, (mem_diff == 0x4b) | (mem_diff == 0x64), mem_p2_ctrl == 0, mem_p1_ctrl == 1, mem_p1_vs == 1, mem_p2_vs == 0, win_match.delta() == 0, win_match == 1]),
+    (591422, "End of the Shadow", "As Red, finally defeat his colleague Ryoko on Hard difficulty or higher", 5, "671071",
+     [in_fight, mem_menu == 2, (mem_diff == 0x4b) | (mem_diff == 0x64), mem_p2_ctrl == 0, mem_p1_ctrl == 1, mem_p1_vs == 2, mem_p2_vs == 1, win_match.delta() == 0, win_match == 1]),
+    (591423, "Number One Fan", "As Misha, defeat her hero Asteka on Hard difficulty or higher", 10, "671086",
+     [in_fight, mem_menu == 2, (mem_diff == 0x4b) | (mem_diff == 0x64), mem_p2_ctrl == 0, mem_p1_ctrl == 1, mem_p1_vs == 6, mem_p2_vs == 11, win_match.delta() == 0, win_match == 1]),
+    (591424, "Childhood Pact", "As Prince, defeat his friend Gio on Hard difficulty or higher", 3, "671087",
+     [in_fight, mem_menu == 2, (mem_diff == 0x4b) | (mem_diff == 0x64), mem_p2_ctrl == 0, mem_p1_ctrl == 1, mem_p1_vs == 5, mem_p2_vs == 8, win_match.delta() == 0, win_match == 1]),
+    (591425, "Final Service", "As Spice, defeat Mr. Crown on Hard difficulty or higher", 10, "671088",
+     [in_fight, mem_menu == 2, (mem_diff == 0x4b) | (mem_diff == 0x64), mem_p2_ctrl == 0, mem_p1_ctrl == 1, mem_p1_vs == 10, mem_p2_vs == 12, win_match.delta() == 0, win_match == 1]),
+    (591426, "Master of Evasion", "Win a fight on Very Hard difficulty", 5, "671090",
+     [in_fight, mem_menu == 2, mem_diff == 0x64, mem_p1_ctrl == 1, mem_p2_ctrl == 0, win_match.delta() == 0, win_match == 1]),
+    (591427, "Shadow Boxing", "Win a fight in Exhibition mode against the same character you are using on Very Hard difficulty", 10, "671091",
+     [in_fight, mem_menu == 2, mem_diff == 0x64, mem_p2_ctrl == 0, mem_p1_ctrl == 1, mem_p1_vs == mem_p2_vs, win_match.delta() == 0, win_match == 1])
+]
 
-# # =======================================================================
-# # 1. ALIAS DE MEMÓRIA (Core)
-# # =======================================================================
-# mem_champ = byte(0x1fef70) # Current Championship (0=Heavy Local, 1=Middle Local)
-# mem_rank  = byte(0x1fef68) # Opponent Rank (1 = Championship Match)
-# mem_win   = bit0(0x1fef6a) # Match Win Indicator
-# mem_char  = byte(0x1fef66) # P1 Character ID
+for a_id, title, desc, pts, badge, logic in rivals_data:
+    ach = Achievement(id=a_id, title=title, description=desc, points=pts, badge=badge)
+    ach.add_core(logic)
+    my_set.add_achievement(ach)
 
-# # =======================================================================
-# # 2. CONSTANTES DE ENDEREÇOS
-# # =======================================================================
-# BASE_LOSSES = 0x1fe738 # Endereço de "Total Losses (Session)" do Tanaka
-# OFFSET_CHAR = 0x50     # Distância estrutural entre os personagens
-
-# # =======================================================================
-# # 3. CRIAÇÃO DA CONQUISTA
-# # =======================================================================
-# ach = Achievement(
-#     id=116000,
-#     title="Flawless Local Victory",
-#     description="Win the Heavy or Middle Local Championship without a single loss during the session.",
-#     points=10,
-#     badge="00000"
-# )
-
-# # --- CORE GROUP ---
-# ach.add_core([
-#     mem_champ <= 1,           # 0 = Heavy Local, 1 = Middle Local
-#     mem_rank == 1,            # Luta pelo título (contra o Rank #1)
-#     mem_win.delta() == 0,     # Frame passado: ainda não tinha vencido
-#     mem_win == 1              # Frame atual: Venceu a luta!
-# ])
-
-# # --- ALT GROUPS (Loop Mágico para os 13 lutadores) ---
-# # Gera os Alts de 0 a 12
-# for char_id in range(13):
-    
-#     # O Python calcula o endereço das derrotas do lutador atual automaticamente
-#     # Como as derrotas são 16-bit nas suas notas, usamos word()
-#     char_losses = word(BASE_LOSSES + (char_id * OFFSET_CHAR))
-    
-#     ach.add_alt([
-#         mem_char == char_id,  # Checa se é este lutador
-#         char_losses == 0      # Garante que as derrotas na sessão são 0
-#     ])
-
-# meu_set.add_achievement(ach)
-
-# # Salva o arquivo final
-# meu_set.save()
-
-
-# meu_set = AchievementSet(game_id=36353, title="Champion's Retirement")
-
-# mem_screen = byte(0x1feff0)
-# ptr_base = word(0x1fe480)
-# match_status = ptr_base >> byte(0x000018) # I:0xW1fe480_0xH000018
-# mem_char = byte(0x1fef66)                 # P1 Character ID
-
-# BASE_LIGHT = 0x1fe768
-# BASE_MID   = 0x1fe770
-# BASE_HEAVY = 0x1fe778
-
-# # Distância em bytes entre os personagens na memória
-# OFFSET_CHAR = 0x50
-
-# ach = Achievement(
-#     id=115000,
-#     title="Champion's Retirement",
-#     description="Win the World Championship in all three weight classes with the same fighter.",
-#     points=50,
-#     badge="00000"
-# )
-
-# # --- LÓGICA CORE ---
-# # 0x13 = 19 em decimal (Champion / Load Screen)
-# ach.add_core([
-#     mem_screen != 0x13,
-#     match_status == 0x13
-# ])
-
-# for char_id in range(13):
-    
-#     # O Python calcula o endereço exato para nós!
-#     t_light = word(BASE_LIGHT + (char_id * OFFSET_CHAR))
-#     t_mid   = word(BASE_MID   + (char_id * OFFSET_CHAR))
-#     t_heavy = word(BASE_HEAVY + (char_id * OFFSET_CHAR))
-
-#     # --- ALT A: Ganhou o Light World por último ---
-#     ach.add_alt([
-#         mem_char == char_id,
-#         t_light.delta() == 0, t_light > 0,
-#         t_mid > 0,
-#         t_heavy > 0
-#     ])
-
-#     # --- ALT B: Ganhou o Middle World por último ---
-#     ach.add_alt([
-#         mem_char == char_id,
-#         t_light > 0,
-#         t_mid.delta() == 0, t_mid > 0,
-#         t_heavy > 0
-#     ])
-
-#     # --- ALT C: Ganhou o Heavy World por último ---
-#     ach.add_alt([
-#         mem_char == char_id,
-#         t_light > 0,
-#         t_mid > 0,
-#         t_heavy.delta() == 0, t_heavy > 0
-#     ])
-
-# meu_set.add_achievement(ach)
-# meu_set.save()
+my_set.save()
