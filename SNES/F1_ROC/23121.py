@@ -1,263 +1,142 @@
-from pycheevos.models.set import *
-from pycheevos.models.achievement import *
 from pycheevos.core.helpers import *
 from pycheevos.core.constants import *
+from pycheevos.models.achievement import Achievement
+from pycheevos.models.set import AchievementSet
 
-# 1. CONFIGURAÇÃO DO SET
-meu_set = AchievementSet(game_id=23121, title="F1 ROC: Champions of Race")
+my_set = AchievementSet(game_id=23121, title="Imported Set")
 
-# 2. MAPEAMENTO DE MEMÓRIA (VARIABLES)
+# --- ALIAS DE MEMÓRIA (Facilita a leitura e manutenção) ---
+mem_state = byte(0x0007dd)
+mem_track = byte(0x0013de)
+mem_pos   = byte(0x0007d9)
+mem_money = word(0x0013e2)
 
-# Endereços extraídos das Code Notes
-mem_state       = byte(0x0007dd)  # 13=Corrida, 7=Vitoria, 17=Shop, 16=Nome
-mem_circuit     = byte(0x0013de)  # ID da Pista
-mem_position    = byte(0x0007d9)  # 0 = 1º Lugar
-mem_qualify     = byte(0x00009e)  # Luz Verde / Grid
-mem_damage      = byte(0x000076)  # Dano
-mem_rain        = byte(0x0013e0)  # Clima (>0 chuva)
-mem_tires       = byte(0x0005a2)  # Pneus (1=Rain)
-mem_mode        = byte(0x000032)  # Modo de jogo / Grid Pos
-mem_start_pos   = byte(0x000039)  # Posição de largada 8th?
-mem_money_hi    = word(0x0013e2)  # Dinheiro
-mem_season_wins = byte(0x001468)  # Pontos/Vitórias
-mem_champ_pts   = byte(0x0000a3)  # Cutscene ID ou Pontos? (Usado no ID 555915)
-
-# Slots Minigame
-mem_slots_state = byte(0x0006d0)
-mem_slots_w1    = byte(0x001222) # Win digit
-
-# 3. HELPERS (Lógica Reutilizável)
-def win_condition():
-    """
-    Padrão de vitória encontrado nas conquistas:
-    Posição = 0 (1º), Estado = 7 (Vitória), Veio do estado 13 (Corrida)
-    """
-    return (mem_position == 0) & (mem_state == 7) & (delta(mem_state) == 13)
-
-# 4. CONQUISTAS DE PISTAS (LOOP)
-TRACKS = {
-    0:  {"id": 554324, "badge": "640397", "pts": 1, "title": "Tifosi's Hero",         "desc": "Italian"},
-    1:  {"id": 554334, "badge": "640398", "pts": 1, "title": "Silverstone Conqueror", "desc": "Great Britain"},
-    2:  {"id": 554325, "badge": "640399", "pts": 1, "title": "Autobahn Ace",          "desc": "German"},
-    3:  {"id": 554333, "badge": "640400", "pts": 2, "title": "Samba Victory",         "desc": "Brazilian"},
-    4:  {"id": 554329, "badge": "640401", "pts": 1, "title": "Imola Champion",        "desc": "San Marino"},
-    5:  {"id": 554337, "badge": "640402", "pts": 2, "title": "The Matador",           "desc": "Spanish"},
-    6:  {"id": 554327, "badge": "640403", "pts": 1, "title": "Estoril Excellence",    "desc": "Portuguese"},
-    7:  {"id": 554328, "badge": "640404", "pts": 1, "title": "High-Altitude Hero",    "desc": "Mexican"},
-    8:  {"id": 554331, "badge": "640405", "pts": 1, "title": "King of the Hungaroring","desc": "Hungarian"},
-    9:  {"id": 554339, "badge": "640406", "pts": 2, "title": "Wall of Champions",     "desc": "Canadian"},
-    10: {"id": 554338, "badge": "640407", "pts": 2, "title": "Vive La Victoire!",     "desc": "French"},
-    11: {"id": 554332, "badge": "640408", "pts": 2, "title": "Master of Eau Rouge",   "desc": "Belgian"},
-    12: {"id": 554326, "badge": "640409", "pts": 2, "title": "Down Under Dominator",  "desc": "Australian"},
-    13: {"id": 554336, "badge": "640410", "pts": 1, "title": "The American Dream",    "desc": "USA"},
-    14: {"id": 554330, "badge": "640411", "pts": 2, "title": "Jewel in the Crown",    "desc": "Monaco"},
-    15: {"id": 554335, "badge": "640412", "pts": 2, "title": "Suzuka Samurai",        "desc": "Japanese"},
-}
-
-for track_id, data in TRACKS.items():
-    ach = Achievement(
-        id=data['id'], title=data['title'], points=data['pts'], badge=data['badge'],
-        description=f"Win a race at the {data['desc']} circuit"
-    )
-    ach.add_core([
-        mem_circuit == track_id,
-        win_condition()
-    ])
-    meu_set.add_achievement(ach)
-
-# 5. CONQUISTAS DE UPGRADES (LOOP)
-UPGRADES = {
-    'chassis':    {'mem': byte(0x00059b), 'max': 2, 'id': 555219, 'badge': '640414', 'pts': 5, 'name': 'Type 3 chassis'},
-    'gearbox':    {'mem': byte(0x00059c), 'max': 3, 'id': 555218, 'badge': '640415', 'pts': 2, 'name': '7Speed transmission'},
-    'brakes':     {'mem': byte(0x00059d), 'max': 2, 'id': 555217, 'badge': '640416', 'pts': 2, 'name': 'Antilock brake'},
-    'suspension': {'mem': byte(0x00059e), 'max': 2, 'id': 555216, 'badge': '640417', 'pts': 1, 'name': 'Active suspension'},
-    'diffuser':   {'mem': byte(0x00059f), 'max': 3, 'id': 555215, 'badge': '640418', 'pts': 2, 'name': 'Special Diffuser'},
-    'rear_wing':  {'mem': byte(0x0005a1), 'max': 2, 'id': 555213, 'badge': '640419', 'pts': 5, 'name': 'HI D.F Rear Wing'},
-    'front_wing': {'mem': byte(0x0005a0), 'max': 4, 'id': 555214, 'badge': '640420', 'pts': 2, 'name': 'SPECIAL.W Front Wing'},
-    'tires':      {'mem': byte(0x0005a2), 'max': 4, 'id': 555212, 'badge': '640421', 'pts': 1, 'name': 'Special Tires'},
-    'engine':     {'mem': byte(0x0005a3), 'max': 5, 'id': 555211, 'badge': '640422', 'pts': 5, 'name': 'Homda V12 engine'},
-}
-
-# 5.1 Conquistas Individuais "Chief Engineer"
-for key, data in UPGRADES.items():
-    ach = Achievement(
-        id=data['id'], title=f"Chief Engineer: {key.replace('_',' ').title()}", 
-        points=data['pts'], badge=data['badge'],
-        description=f"Purchase the {data['name']} upgrade"
-    )
-    ach.add_core([
-        mem_state == 17,
-        data['mem'] == data['max'],
-        delta(data['mem']) < data['max']
-    ])
-    meu_set.add_achievement(ach)
-
-# 5.2 First Upgrade
-ach_first = Achievement(id=555385, title="First Upgrade", points=1, badge="640396", description="Buy your first car improvement")
-ach_first.add_core(mem_state == 17)
-for key, data in UPGRADES.items():
-    ach_first.add_alt([
-        delta(data['mem']) == 0,
-        data['mem'] > 0
-    ])
-meu_set.add_achievement(ach_first)
-
-# 5.3 The Perfect Machine
-ach_perfect = Achievement(id=555220, title="The Perfect Machine", points=25, badge="640428", description="Purchase all available upgrades for an F1 car")
-# Core conditions
-conds_perf = [
-    mem_state == 17,
-]
-for key, data in UPGRADES.items():
-    conds_perf.append(data['mem'] == data['max'])
-
-# Trigger na transição da loja ou update
-conds_perf.append(delta(mem_state) == 17) 
-ach_perfect.add_core(conds_perf)
-meu_set.add_achievement(ach_perfect)
-
-# 6. CONQUISTAS ESPECÍFICAS
 
 # Pole Position
-ach_pole = Achievement(id=555894, title="Pole Position", points=1, badge="640254", type=AchievementType.PROGRESSION,
-    description="Achieve your first Pole Position in any circuit")
-ach_pole.add_core([
-    mem_qualify == 1, 
-    delta(mem_qualify) == 0, 
-    mem_mode == 0, 
-    mem_state == 13
-])
-meu_set.add_achievement(ach_pole)
+ach_pole = Achievement(title="Pole Position", points=1, id=555894, badge="640254", description="Achieve your first Pole Position in any circuit", type=AchievementType.PROGRESSION)
+ach_pole.add_core([byte(0x9e) == 1, byte(0x9e).delta() == 0, byte(0x32) == 0, mem_state == 0x0d])
+my_set.add_achievement(ach_pole)
 
 # Pole to Win
-ach_polewin = Achievement(id=555895, title="Pole to Win", points=2, badge="640435", type=AchievementType.PROGRESSION,
-    description="Win a race after starting from Pole Position")
-ach_polewin.add_core([
-    mem_mode == 0,
-    mem_position == 0,
-    mem_state == 7,
-    delta(mem_state) == 13
-])
-meu_set.add_achievement(ach_polewin)
+ach_ptw = Achievement(title="Pole to Win", points=2, id=555895, badge="640435", description="Win a race after starting from Pole Position", type=AchievementType.PROGRESSION)
+ach_ptw.add_core([byte(0x32) == 0, mem_pos == 0, mem_state == 7, mem_state.delta() == 0x0d])
+my_set.add_achievement(ach_ptw)
 
 # Back of the Pack
-ach_back = Achievement(id=555909, title="Back of the Pack", points=10, badge="640423",
-    description="Win a race after starting from 8th place")
-ach_back.add_core([
-    mem_start_pos == 0,
-    win_condition()
-])
-meu_set.add_achievement(ach_back)
+ach_botp = Achievement(title="Back of the Pack", points=10, id=555909, badge="640423", description="Win a race after starting from 8th place")
+ach_botp.add_core([byte(0x39) == 0, mem_pos == 0, mem_state == 7, mem_state.delta() == 0x0d])
+my_set.add_achievement(ach_botp)
 
 # Interlagos Rain Master
-ach_rain_br = Achievement(id=556004, title="Interlagos Rain Master", points=10, badge="640424",
-    description="Win a race in rainy conditions at the Brazilian circuit")
-ach_rain_br.add_core([
-    mem_circuit == 3,
-    mem_rain > 0,
-    mem_position == 0,
-    trigger(mem_state == 7),
-    mem_state != 14,
-    delta(mem_state) == 13
-])
-meu_set.add_achievement(ach_rain_br)
+ach_rain_br = Achievement(title="Interlagos Rain Master", points=10, id=556004, badge="640424", description="Win a race in rainy conditions at the Brazilian circuit")
+ach_rain_br.add_core([mem_track == 3, byte(0x13e0) > 0, mem_pos == 0, trigger(mem_state == 7), mem_state.delta() == 0x0d])
+my_set.add_achievement(ach_rain_br)
 
 # Dancing in the Rain
-ach_dance = Achievement(id=555222, title="Dancing in the Rain", points=2, badge="640425",
-    description="Win any race in wet conditions after equipping RAIN tires")
-ach_dance.add_core([
-    mem_position == 0,
-    mem_tires == 1,
-    mem_rain > 0,
-    trigger(mem_state == 7),
-    mem_state != 14, mem_state != 17,
-    delta(mem_state) == 13
-])
-meu_set.add_achievement(ach_dance)
+ach_dance = Achievement(title="Dancing in the Rain", points=2, id=555222, badge="640425", description="Win any race in wet conditions after equipping RAIN tires")
+ach_dance.add_core([mem_pos == 0, byte(0x5a2) == 1, byte(0x13e0) > 0, trigger(mem_state == 7), mem_state.delta() == 0x0d])
+my_set.add_achievement(ach_dance)
 
-# Untouchable (Missable)
-ach_untouch = Achievement(id=555221, title="Untouchable", points=25, badge="640426",
-    description="Win a race at the Monaco circuit with zero damage to your car")
+# Untouchable
+ach_untouch = Achievement(title="Untouchable", points=25, id=555221, badge="640426", description="Win a race in 1st place without taking any damage to your car")
 ach_untouch.add_core([
-    (mem_qualify == 1).with_hits(1),
-    mem_circuit == 14,
-    mem_position == 0,
-    trigger(mem_state == 7),
-    delta(mem_state) == 13
+    and_next(mem_track == 0x0e), (byte(0x9e) == 1).with_hits(1), 
+    mem_pos == 0, trigger(mem_state == 7), mem_state.delta() != 7, reset_if(byte(0x76) > 0)
 ])
-ach_untouch.add_alt(reset_if(mem_damage > 0))
-meu_set.add_achievement(ach_untouch)
-
-# Capital Injection
-ach_capital = Achievement(id=555198, title="Capital Injection", points=1, badge="640413", type=AchievementType.MISSABLE,
-    description="Start the game with a $10,000 bonus")
-ach_capital.add_core([
-    mem_money_hi == 1000,
-    delta(mem_money_hi) < 1000,
-    mem_season_wins == 0,
-    delta(mem_state) == 16
-])
-meu_set.add_achievement(ach_capital)
+my_set.add_achievement(ach_untouch)
 
 # Monaco Jackpot
-ach_jackpot = Achievement(id=555203, title="Monaco Jackpot", points=1, badge="640427", type=AchievementType.MISSABLE,
-    description="Discover and play the secret slot machine minigame in Monaco")
-ach_jackpot.add_core([
-    mem_state == 10,
-    byte(0x0013e8) == 67, # C
-    byte(0x0013e9) == 65, # A
-    byte(0x0013ea) == 83, # S
-    byte(0x0013eb) == 73, # I
-    byte(0x0013ec) == 78, # N
-    byte(0x0013ed) == 79, # O
-    mem_slots_state == 5,
-    delta(mem_state) == 10
-])
-meu_set.add_achievement(ach_jackpot)
+ach_jackpot = Achievement(title="Monaco Jackpot", points=1, id=555203, badge="640427", description="Find and try your luck at the secret slot machine minigame in Monaco", type=AchievementType.MISSABLE)
+casino_str = [0x43, 0x41, 0x53, 0x49, 0x4e, 0x4f] # C A S I N O
+ach_jackpot.add_core([mem_state == 0x0a] + [byte(0x13e8 + i) == char for i, char in enumerate(casino_str)] + [byte(0x6d0) == 5, byte(0x6d0).delta() != 5])
+my_set.add_achievement(ach_jackpot)
 
-# Big Luck 777
-ach_777 = Achievement(id=563375, title="[VOID]Big Luck 777", points=10, badge="640431",
-    description="Win the top prize Jackpot of 4000 on the slot machine in Monaco")
-ach_777.add_core([
-    mem_state == 10,
-    mem_slots_w1 == 244, # Raw value from note
-    byte(0x001223) == 240,
-    byte(0x001224) == 240,
-    byte(0x001225) == 240,
-    delta(mem_slots_w1) != 244
-])
-meu_set.add_achievement(ach_777)
+# Capital Injection
+ach_capital = Achievement(title="Capital Injection", points=1, id=555198, badge="640413", description="Start the game with a $10,000 bonus", type=AchievementType.MISSABLE)
+ach_capital.add_core([mem_money == 1000, mem_money.delta() < 1000, mem_state.delta() == 0x10])
+my_set.add_achievement(ach_capital)
 
-# The Dream Comes True (Win Championship)
-ach_dream = Achievement(id=555915, title="The Dream Comes True", points=25, badge="640429", type=AchievementType.WIN_CONDITION,
-    description="Win the F1 World Championship for the first time")
-ach_dream.add_core([
-    byte(0x0000a3) == 32, # Cutscene ID para vitória
-    delta(byte(0x0000a3)) != 32,
-    byte(0x0000a4) == 144,
-    byte(0x0000a5) == 29,
-    mem_circuit == 15,
-    byte(0x001390) == 0
-])
-meu_set.add_achievement(ach_dream)
+# The Dream Comes True
+ach_champ = Achievement(title="The Dream Comes True", points=25, id=555915, badge="640429", description="Win the F1 World Championship for the first time", type=AchievementType.WIN_CONDITION)
+ach_champ.add_core([tbyte(0xa3) == 0x1d9020, tbyte(0xa3).delta() != 0x1d9020, mem_track == 0x0f, byte(0x1390) == 0])
+my_set.add_achievement(ach_champ)
 
 # Perfect Season
-ach_perfect_season = Achievement(id=555384, title="Perfect Season", points=50, badge="640430",
-    description="Win every single race in a full F1 season")
-ach_perfect_season.add_core([
-    mem_season_wins == 160,
-    byte(0x0000a3) == 237,
-    byte(0x0000a4) == 231,
-    byte(0x0000a5) == 31,
-    delta(byte(0x0000a3)) != 237
-])
-meu_set.add_achievement(ach_perfect_season)
+ach_perfect = Achievement(title="Perfect Season", points=50, id=555384, badge="640430", description="Win every single race in a full F1 season")
+ach_perfect.add_core([byte(0x1468) == 0xa0, tbyte(0xa3) == 0x1d9020, tbyte(0xa3).delta() != 0x1d9020])
+my_set.add_achievement(ach_perfect)
 
-# Legend (Back to Back)
-ach_legend = Achievement(id=555916, title="[VOID] Legend of the Asphalt", points=0, badge="640432",
-    description="Win back-to-back Formula 1 World Championships")
-ach_legend.add_core(byte(0x0013e6) == 2) # Season 2
-meu_set.add_achievement(ach_legend)
+# First Upgrade
+ach_first_up = Achievement(title="First Upgrade", points=1, id=555385, badge="640396", description="Buy your first car improvement")
+ach_first_up.add_core(mem_state == 0x11)
+# Groups: (Addr, Type: 0=(d=0, v>0), 1=(d=1, v!=1))
+upg_checks = [
+    (0x59b,0), (0x59c,0), (0x59d,0), (0x59e,0), (0x59f,1), (0x5a0,1), (0x5a1,1), (0x5a3,0)
+]
+for addr, logic_type in upg_checks:
+    b = byte(addr)
+    conds = [b.delta() == 0, b > 0] if logic_type == 0 else [b.delta() == 1, b != 1]
+    ach_first_up.add_alt(conds)
+my_set.add_achievement(ach_first_up)
 
-# 7. EXPORTAÇÃO
-meu_set.save()
+# --- VENCER CORRIDAS (Circuitos) ---
+# (TrackID, Title, Points, ID, Badge, Desc_Circuit_Name)
+track_wins = [
+    (0x00, "Tifosi's Hero",         2, 554324, "640397", "Italian"),
+    (0x01, "Silverstone Conqueror", 2, 554334, "640398", "Great Britain"),
+    (0x02, "Autobahn Ace",          2, 554325, "640399", "German"),
+    (0x03, "Samba Victory",         5, 554333, "640400", "Brazilian"),
+    (0x04, "Imola Champion",        2, 554329, "640401", "San Marino"),
+    (0x05, "The Matador",           5, 554337, "640402", "Spanish"),
+    (0x06, "Estoril Excellence",    2, 554327, "640403", "Portuguese"),
+    (0x07, "High-Altitude Hero",    2, 554328, "640404", "Mexican"),
+    (0x08, "King of the Hungaroring",2,554331, "640405", "Hungarian"),
+    (0x09, "Wall of Champions",     5, 554339, "640406", "Canadian"),
+    (0x0a, "Vive La Victoire!",     5, 554338, "640407", "French"),
+    (0x0b, "Master of Eau Rouge",   5, 554332, "640408", "Belgian"),
+    (0x0c, "Down Under Dominator",  5, 554326, "640409", "Australian"),
+    (0x0d, "The American Dream",    5, 554336, "640410", "USA"),
+    (0x0e, "Jewel in the Crown",    5, 554330, "640411", "Monaco"),
+    (0x0f, "Suzuka Samurai",        5, 554335, "640412", "Japanese"),
+]
+
+for tid, title, pts, aid, badge, cname in track_wins:
+    ach = Achievement(title=title, description=f"Win a race at the {cname} circuit", points=pts, id=aid, badge=badge)
+    ach.add_core([mem_track == tid, mem_pos == 0, mem_state == 7, mem_state.delta() == 0x0d])
+    my_set.add_achievement(ach)
+
+# --- UPGRADES (Chief Engineer) ---
+# (Addr, MaxVal, TitleSuffix, DescName, Points, ID, Badge)
+upgrades = [
+    (0x59b, 2, "Chassis",    "Type 3 chassis",          5, 555219, "640414"),
+    (0x59c, 3, "Gearing",    "7Speed transmission",     2, 555218, "640415"),
+    (0x59d, 2, "Brakes",     "Antilock brake",          2, 555217, "640416"),
+    (0x59e, 2, "Suspension", "Active suspension",       1, 555216, "640417"),
+    (0x59f, 3, "Diffuser",   "Special Diffuser",        2, 555215, "640418"),
+    (0x5a1, 2, "Rear Wing",  "HI D.F Rear Wing",        5, 555213, "640419"),
+    (0x5a0, 4, "Front Wing", "SPECIAL.W Front Wing",    2, 555214, "640420"),
+    (0x5a2, 4, "Tires",      "Special Tires",           1, 555212, "640421"),
+    (0x5a3, 5, "Engine",     "Homda V12 engine",        5, 555211, "640422"),
+]
+
+for addr, maxv, suffix, dname, pts, aid, badge in upgrades:
+    ach = Achievement(title=f"Chief Engineer: {suffix}", description=f"Purchase the {dname} upgrade", points=pts, id=aid, badge=badge)
+    b = byte(addr)
+    ach.add_core([b == maxv, b.delta() < maxv, mem_state == 0x11])
+    my_set.add_achievement(ach)
+
+# The Perfect Machine
+ach_perf = Achievement(title="The Perfect Machine", points=25, id=555220, badge="640428", description="Purchase all available upgrades for an F1 car")
+conds_perf = []
+for addr, maxv, _, _, _, _, _ in upgrades:
+    conds_perf.append((byte(addr) == maxv).with_hits(1))
+conds_perf.append(measured((value(0) == 1).with_hits(8)))
+for addr, maxv, _, _, _, _, _ in upgrades:
+    conds_perf.append((byte(addr).delta() == maxv).with_hits(1))
+conds_perf.append((value(0) == 1).with_hits(7))
+conds_perf.append(reset_if(mem_state != 0x11))
+
+ach_perf.add_core(conds_perf)
+my_set.add_achievement(ach_perf)
+
+my_set.save()
