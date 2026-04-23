@@ -1,0 +1,538 @@
+Game ID: 2428
+Source: RA Server
+Total Notes: 65
+============================================================
+
+0x000008: [8-bit] Password Slot 1
+Values:
+0xff = Nulo
+0x00 = A
+0x01 = B
+0x02 = C
+0x03 = D
+0x04 = E
+0x05 = F
+0x06 = G
+0x07 = H
+0x08 = I
+0x09 = G
+0x0a = K
+0x0b = L
+0x0c = M
+0x0d = N
+0x0e = O
+0x0f = P
+0x10 = Q
+0x11 = R
+0x12 = S
+0x13 = T
+0x14 = U
+0x15 = V
+0x16 = W
+0x17 = X
+0x18 = Y
+0x19 = Z
+
+0x000009: [8-bit] Password Slot 2
+Values:
+0xff = Nulo
+0x00 = A
+0x01 = B
+0x02 = C
+0x03 = D
+0x04 = E
+0x05 = F
+0x06 = G
+0x07 = H
+0x08 = I
+0x09 = G
+0x0a = K
+0x0b = L
+0x0c = M
+0x0d = N
+0x0e = O
+0x0f = P
+0x10 = Q
+0x11 = R
+0x12 = S
+0x13 = T
+0x14 = U
+0x15 = V
+0x16 = W
+0x17 = X
+0x18 = Y
+0x19 = Z
+
+0x00000a: [8-bit] Password Slot 3
+Values:
+0xff = Nulo
+0x00 = A
+0x01 = B
+0x02 = C
+0x03 = D
+0x04 = E
+0x05 = F
+0x06 = G
+0x07 = H
+0x08 = I
+0x09 = G
+0x0a = K
+0x0b = L
+0x0c = M
+0x0d = N
+0x0e = O
+0x0f = P
+0x10 = Q
+0x11 = R
+0x12 = S
+0x13 = T
+0x14 = U
+0x15 = V
+0x16 = W
+0x17 = X
+0x18 = Y
+0x19 = Z
+
+0x00000b: [8-bit] Password Slot 4
+Values:
+0xff = Nulo
+0x00 = A
+0x01 = B
+0x02 = C
+0x03 = D
+0x04 = E
+0x05 = F
+0x06 = G
+0x07 = H
+0x08 = I
+0x09 = G
+0x0a = K
+0x0b = L
+0x0c = M
+0x0d = N
+0x0e = O
+0x0f = P
+0x10 = Q
+0x11 = R
+0x12 = S
+0x13 = T
+0x14 = U
+0x15 = V
+0x16 = W
+0x17 = X
+0x18 = Y
+0x19 = Z
+
+0x00000c: [8-bit] Password Slot 5
+Values:
+0xff = Nulo
+0x00 = A
+0x01 = B
+0x02 = C
+0x03 = D
+0x04 = E
+0x05 = F
+0x06 = G
+0x07 = H
+0x08 = I
+0x09 = G
+0x0a = K
+0x0b = L
+0x0c = M
+0x0d = N
+0x0e = O
+0x0f = P
+0x10 = Q
+0x11 = R
+0x12 = S
+0x13 = T
+0x14 = U
+0x15 = V
+0x16 = W
+0x17 = X
+0x18 = Y
+0x19 = Z
+
+0x00000d: [8-bit] Password Slot 6
+Values:
+0xff = Nulo
+0x00 = A
+0x01 = B
+0x02 = C
+0x03 = D
+0x04 = E
+0x05 = F
+0x06 = G
+0x07 = H
+0x08 = I
+0x09 = G
+0x0a = K
+0x0b = L
+0x0c = M
+0x0d = N
+0x0e = O
+0x0f = P
+0x10 = Q
+0x11 = R
+0x12 = S
+0x13 = T
+0x14 = U
+0x15 = V
+0x16 = W
+0x17 = X
+0x18 = Y
+0x19 = Z
+
+0x00000e: [8-bit] Password Slot 7
+Values:
+0xff = Nulo
+0x00 = A
+0x01 = B
+0x02 = C
+0x03 = D
+0x04 = E
+0x05 = F
+0x06 = G
+0x07 = H
+0x08 = I
+0x09 = G
+0x0a = K
+0x0b = L
+0x0c = M
+0x0d = N
+0x0e = O
+0x0f = P
+0x10 = Q
+0x11 = R
+0x12 = S
+0x13 = T
+0x14 = U
+0x15 = V
+0x16 = W
+0x17 = X
+0x18 = Y
+0x19 = Z
+
+0x00000f: [8-bit] Password Slot 8
+Values:
+0xff = Nulo
+0x00 = A
+0x01 = B
+0x02 = C
+0x03 = D
+0x04 = E
+0x05 = F
+0x06 = G
+0x07 = H
+0x08 = I
+0x09 = G
+0x0a = K
+0x0b = L
+0x0c = M
+0x0d = N
+0x0e = O
+0x0f = P
+0x10 = Q
+0x11 = R
+0x12 = S
+0x13 = T
+0x14 = U
+0x15 = V
+0x16 = W
+0x17 = X
+0x18 = Y
+0x19 = Z
+
+0x00001c: [8-bit] Timer (milliseconds)
+
+0x00001d: [8-bit] Timer (seconds)
+
+0x00001e: [8-bit] Timer (minutes)
+
+0x00001f: [8-bit] Timer (hours)
+
+0x000020: [8-bit] Utility Belt Selected Item (Batman)
+Values:
+0x00 = Batarang
+0x01 = Smoke bomb
+0x02 = Bat-grapple
+0x03 = Health potion
+
+0x000021: [8-bit] Batarangs Count (Batman)
+Values:
+0x00 = empty
+0x09 = full
+
+0x000022: [8-bit] Smoke bombs Count (Batman)
+Values:
+0x00 = empty
+0x09 = full
+
+0x000024: [8-bit] Health potions Count (Batman)
+Values:
+0x00 = empty
+0x09 = full
+
+0x000025: [8-bit] Health bar icon (Robin)
+Values:
+0x00 = invisible
+0x01 = visible
+
+0x000026: [8-bit] Value insert Disk Batman Advanced Mode
+Values:
+0x00 = Disk 1
+0x01 = Disk 2
+0x02 = Disk 3
+
+0x000028: [8-bit] Health bar (Batman)
+Value:
+0x0c = max
+
+0x00002a: [8-bit] Timer Advanced Mode (Batman)
+- Seconds (Units Digit)
+
+0x00002b: [8-bit] Timer Advanced Mode (Batman)
+- Seconds (Tens Digit)
+
+0x00002c: [8-bit] Timer Advanced Mode (Batman)
+- Minutes
+
+0x0000e0: [8-bit] Utility Belt Selected Item (Robin)
+Values:
+0x00 = Batarang
+0x01 = Smoke bomb
+0x02 = Bat-grapple
+0x03 = Health potion
+
+0x0000e1: [8-bit] Batarangs Count (Robin)
+Values:
+0x00 = empty
+0x09 = full
+
+0x0000e3: [8-bit] Card Key (Robin) Story mode
+Values:
+0x00 = empty
+0x01 = 1 Card Key
+0x02 = 2 Card Key
+0x03 = 3 Card Key
+
+0x0000e4: [8-bit] Card Key (Robin) Advanced Mode
+Values:
+0x00 = empty
+0x01 = 1 Card Key
+0x02 = 2 Card Key
+0x03 = 3 Card Key
+
+[8-bit] Health potions Count (Robin) Story Mode
+Values:
+0x00 = empty
+0x09 = full
+
+0x0000e6: [8-bit] Value insert Disk Robin Advanced Mode
+Values:
+0x00 = Disk 1
+0x01 = Disk 2
+0x02 = Disk 3
+
+0x0000e8: 8-bit] Health bar (Robin)
+Value:
+0x0c = max
+
+0x0000ea: [8-bit] Timer Advanced Mode (Robin)
+- Seconds (Units Digit)
+
+0x0000eb: [8-bit] Timer Advanced Mode (Robin)
+- Seconds (Tens Digit)
+
+0x0000ec: [8-bit] Timer Advanced Mode (Robin)
+- Minutes
+
+0x000210: [8-bit] Game Over Screen
+Values:
+0x01 = in game
+0x00 = game over
+
+0x000218: [8-bit] Music Indicator
+Values:
+0x00 = no music
+0x04 = menu selection sfx
+0x44 = opening music
+0x16 = menu music
+0x64 = stage clear music
+0x22 = game over music
+
+0x003d84: [8-bit] Game pause
+Values:
+0x00 = in game
+0x01 = pause
+
+0x003d90: [8-bit] Menu selection
+
+0x003d96: [8-bit] Screen ID / Game State
+Values:
+0x00 = Intro game
+0x05 = Selecionando linguagem
+0x07 = Menu inical/In game
+
+0x003d9c: [8-bit] Game Location State
+Values:
+0x02 = Cutscene
+0x0e = Language Selection
+0x1c = Menu selection
+0x13 = New Game/Password Menu
+0x14 = Advanced Mode/Password Menu
+0x1f = in game
+0x22 = Boss Fight
+
+0x003da8: [8-bit] Current Level ID (Story mode)
+Values:
+0x00 = Level 1
+0x01 = Level 2
+0x02 = Level 3
+0x03 = Level 4
+0x04 = Level 5
+0x05 = Level 6
+0x06 = Level 7
+0x07 = Level 8
+0x08 = Level 9
+0x09 = Level 10
+0x0a = Level 11
+0x0b = Level 12
+0x0c = Level 13
+0x0d = Level 14
+0x0e = Level 15
+0x0f = Level 16
+0x10 = Level 17
+0x11 = Level 18
+0x12 = Level 19
+0x13 = Level 20
+0x14 = Level 21
+
+[8-bit] Current Level ID (Advanced mode)
+Values:
+0x15 = Level 1
+0x16 = Level 2
+0x17 = Level 3
+0x18 = Level 4
+0x19 = Level 5
+0x1a = Level 6
+0x1b = Level 7
+0x1c = Level 8
+0x1d = Level 9
+0x1f = Level 10
+0x20 = Level 11
+0x21 = Level 12
+0x22 = Level 13
+0x23 = Level 14
+0x24 = Level 15
+0x25 = Level 16
+
+0x003db8: [8-bit] Selection mode
+Values:
+0x00 = Story mode
+0x01 = Advanced Mode
+
+0x003e12: [8-bit] Input: A Button 
+Bit0 = Pressed
+
+0x003e13: [8-bit] Input: B Button 
+Bit0 = Pressed
+
+0x003e14: [8-bit] Input: L Button 
+Bit0 = Pressed
+
+0x003e15: [8-bit] Input: R Button 
+Bit0 = Pressed
+
+0x003e16: [8-bit] Input: D-Pad Up 
+Bit0 = Pressed
+
+0x003e17: [8-bit] Input: D-Pad Down 
+Bit0 = Pressed
+
+0x003e18: [8-bit] Input: D-Pad Left 
+Bit0 = Pressed
+
+0x003e19: [8-bit] Input: D-Pad Right 
+Bit0 = Pressed
+
+0x004240: [16-bit] Language [EUA/EU]
+Values:
+0x0000 = English
+0x0001 = French
+0x0002 = Italiano
+0x0003 = Nederlands
+0x0004 = Deutsch
+0x0005 = Spanish
+
+0x00425e: [8-bit] Value insert Disk Batplane Advanced Mode
+Values:
+0x00 = Disk 1
+0x01 = Disk 2
+0x02 = Disk 3
+
+0x004260: [8-bit] Boss Health Bar - Joker's Airship
+Value:
+0x98 = max
+
+0x00426e: [8-bit] Batplane Health Bar
+Value:
+0x0c = max
+
+0x004270: [8-bit] Batplane Timer
+- Seconds (Units Digit)
+
+0x004271: [8-bit] Batplane Timer
+- Seconds (Tens Digit)
+
+0x004272: [8-bit] Batplane Timer
+- Minutes
+
+0x00430e: [8-bit] Value insert Disk Batmobile Advanced Mode
+Values:
+0x00 = Disk 1
+0x01 = Disk 2
+0x02 = Disk 3
+
+0x004310: [8-bit] Batmobile Timer
+- Seconds (Units Digit)
+
+0x004311: [8-bit] Batmobile Timer
+- Seconds (Tens Digit)
+
+0x004312: [8-bit] Batmobile Timer
+- Minutes
+
+0x004328: [8-bit] Utility Belt (Boss Fight) (Batman)
+Values:
+0x00 = Batarang
+0x01 = Smoke bomb
+0x02 = Bat-grapple
+0x03 = Health potion
+
+0x004329: [8-bit] Batarangs Count (Boss Fight) (Batman)
+Values:
+0x00 = empty
+0x09 = full
+
+0x00432a: [8-bit] Smoke bombs Count (Boss Fight) (Batman)
+Values:
+0x00 = empty
+0x09 = full
+
+0x00432c: [8-bit] Health potions Count (Boss Fight) (Batman)
+Values:
+0x00 = empty
+0x09 = full
+
+0x004331: [8-bit] Health bar (Boss Fight) (Batman)
+Value:
+0x0c = max
+
+0x004332: [8-bit] Boss Health Bar
+Values:
+0x18 = The Joker
+0x09 = Mr. Freeze
+0x08 = Poison Ivy
+0x0a = Harley Quinn
+
