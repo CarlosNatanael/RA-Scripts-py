@@ -4,9 +4,7 @@ from pycheevos.models.set import AchievementSet
 
 my_set = AchievementSet(game_id=36353, title="Batman Vengeance")
 
-# ==========================================
 # 1. ALIAS DE MEMÓRIA
-# ==========================================
 mem_state    = byte(0x3d96)
 mem_lang_a   = byte(0x3d9c) 
 mem_lang_sel = byte(0x3d90) 
@@ -14,9 +12,8 @@ mem_leu      = word(0x4240)
 mem_mode     = byte(0x3db8) 
 mem_level    = byte(0x3da8) 
 
-# ==========================================
+
 # 2. INICIANDO O RICH PRESENCE BUILDER
-# ==========================================
 rp = RichPresence()
 rp.add_format("Value", "VALUE")
 
@@ -53,10 +50,10 @@ for i in range(3, 13): hull_dict[i] = f"{(i - 2) * 10}%"
 rp.add_lookup("BarBatplane", hull_dict, default="")
 
 
-# ==========================================
-# 3. DISPLAYS (Usando os métodos estáticos nativos)
-# ==========================================
-# Helper local para não repetir muito código
+
+# 3. DISPLAYS
+
+# Helper local
 L = RichPresence.lookup
 V = RichPresence.value
 
@@ -98,8 +95,7 @@ for levels, suffix in advanced_formats.items():
 # Display Padrão (Fallback)
 rp.add_display(None, "Playing Batman: Vengeance")
 
-# ==========================================
+
 # 4. SALVAR
-# ==========================================
 my_set.add_rich_presence(rp)
 my_set.save()
