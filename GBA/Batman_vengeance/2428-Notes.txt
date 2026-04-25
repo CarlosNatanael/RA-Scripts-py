@@ -1,6 +1,6 @@
 Game ID: 2428
-Source: RA Server
-Total Notes: 65
+Source: RA Server (Synced)
+Total Notes: 64
 ============================================================
 
 0x000008: [8-bit] Password Slot 1
@@ -243,14 +243,6 @@ Values:
 0x18 = Y
 0x19 = Z
 
-0x00001c: [8-bit] Timer (milliseconds)
-
-0x00001d: [8-bit] Timer (seconds)
-
-0x00001e: [8-bit] Timer (minutes)
-
-0x00001f: [8-bit] Timer (hours)
-
 0x000020: [8-bit] Utility Belt Selected Item (Batman)
 Values:
 0x00 = Batarang
@@ -267,6 +259,7 @@ Values:
 Values:
 0x00 = empty
 0x09 = full
+0xff = Unlimited Smoke Bombs
 
 0x000024: [8-bit] Health potions Count (Batman)
 Values:
@@ -300,7 +293,7 @@ Value:
 0x0000e0: [8-bit] Utility Belt Selected Item (Robin)
 Values:
 0x00 = Batarang
-0x01 = Smoke bomb
+0x01 = Batcrawler
 0x02 = Bat-grapple
 0x03 = Health potion
 
@@ -328,6 +321,11 @@ Values:
 0x00 = empty
 0x09 = full
 
+0x0000e5: [8-bit] Password Screen
+0x00 = On screen
+0x01 = Not on screen
+Note: Input screen for Batcrawler code
+
 0x0000e6: [8-bit] Value insert Disk Robin Advanced Mode
 Values:
 0x00 = Disk 1
@@ -337,6 +335,10 @@ Values:
 0x0000e8: 8-bit] Health bar (Robin)
 Value:
 0x0c = max
+
+0x0000e9: [8-bit] Batcrawler Indicator (Robin)
+0x00 = Inactive
+0x01 = Area allows Batcrawler
 
 0x0000ea: [8-bit] Timer Advanced Mode (Robin)
 - Seconds (Units Digit)
@@ -361,6 +363,11 @@ Values:
 0x64 = stage clear music
 0x22 = game over music
 
+0x00033d: [8-bit] Animation Indicator
+
+0x00 = None
+0x7b = Batcrawler Animation
+
 0x003d84: [8-bit] Game pause
 Values:
 0x00 = in game
@@ -376,13 +383,14 @@ Values:
 
 0x003d9c: [8-bit] Game Location State
 Values:
-0x02 = Cutscene
+0x02 = Demo mode
 0x0e = Language Selection
 0x1c = Menu selection
-0x13 = New Game/Password Menu
+0x13 = New Game
 0x14 = Advanced Mode/Password Menu
 0x1f = in game
 0x22 = Boss Fight
+0x29 = All Animations
 
 0x003da8: [8-bit] Current Level ID (Story mode)
 Values:
@@ -479,14 +487,11 @@ Value:
 Value:
 0x0c = max
 
-0x004270: [8-bit] Batplane Timer
-- Seconds (Units Digit)
+0x004270: [8-bit] Batplane Timer - Seconds (Units Digit)
 
-0x004271: [8-bit] Batplane Timer
-- Seconds (Tens Digit)
+0x004271: [8-bit] Batplane Timer - Seconds (Tens Digit)
 
-0x004272: [8-bit] Batplane Timer
-- Minutes
+0x004272: [8-bit] Batplane Timer - Minutes
 
 0x00430e: [8-bit] Value insert Disk Batmobile Advanced Mode
 Values:
@@ -494,14 +499,11 @@ Values:
 0x01 = Disk 2
 0x02 = Disk 3
 
-0x004310: [8-bit] Batmobile Timer
-- Seconds (Units Digit)
+0x004310: [8-bit] Batmobile Timer - Seconds (Units Digit)
 
-0x004311: [8-bit] Batmobile Timer
-- Seconds (Tens Digit)
+0x004311: [8-bit] Batmobile Timer - Seconds (Tens Digit)
 
-0x004312: [8-bit] Batmobile Timer
-- Minutes
+0x004312: [8-bit] Batmobile Timer - Minutes
 
 0x004328: [8-bit] Utility Belt (Boss Fight) (Batman)
 Values:
