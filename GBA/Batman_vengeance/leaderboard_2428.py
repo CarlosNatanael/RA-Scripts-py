@@ -6,47 +6,71 @@ from pycheevos.models.set import AchievementSet
 
 my_set = AchievementSet(game_id=2428, title="Imported Leaderboards")
 
+mem_mode = byte(0x3db8)
+mem_level = byte(0x3da8)
+
+TIMERS = {
+    "Batman":    (byte(0x002c), byte(0x002b), byte(0x002a)),
+    "Batmobile": (byte(0x4312), byte(0x4311), byte(0x4310)),
+    "Robin":     (byte(0x00ec), byte(0x00eb), byte(0x00ea)),
+    "Batplane":  (byte(0x4272), byte(0x4271), byte(0x4270)),
+}
+
+# 2. DADOS DOS LEADERBOARDS
+# Formato: (LB_ID, "Número", "Personagem", Level_Inicial)
 leaderboard_data = [
-    (28,  "08",  "Level 8",    0),
-    (29,  "09",  "Level 9",    1),
-    (33,  "13",  "Level 13",   2),
-    (35,  "15",  "Level 15",   3),
+    (162091, "01", "Batman", 21),
+    (162093, "02", "Batmobile", 22),
+    (162094, "03", "Robin", 23),
+    (162095, "04", "Batplane", 24),
+    (162096, "05", "Batmobile", 25),
+    (162097, "06", "Robin", 26),
+    (162098, "07", "Batplane", 27),
+    (162099, "08", "Batman", 28),
+    (162100, "09", "Batman", 29),
+    (162101, "10", "Batplane", 30),
+    (162102, "11", "Robin", 31),
+    (162103, "12", "Batmobile", 32),
+    (162104, "13", "Batman", 33),
+    (162105, "14", "Batmobile", 34),
+    (162106, "15", "Batman", 35),
+    (162107, "16", "Robin", 36),
 ]
 
-for level_val, country, adjective, lb_id in leaderboard_data:
+# 3. GERAÇÃO DINÂMICA
+for lb_id, num, character, lvl in leaderboard_data:
+    next_lvl = lvl + 1
     
-    next_level = level_val + 1
+    timer_min, timer_sec, timer_ms = TIMERS[character]
 
-    # Retornamos o value() para garantir que a PyCheevos gere os objetos corretamente
     lb_start = [
-        (byte(0x003db8) == value(1)),
-        (byte(0x003da8) == value(level_val)),
-        (byte(0x003da8).delta() != value(level_val)),
+        (mem_mode == value(1)),
+        (mem_level == value(lvl)),
+        (mem_level.delta() != value(lvl)),
     ]
     
     lb_cancel = [
-        (byte(0x003da8) != value(level_val)),
-        (byte(0x003da8) != value(next_level)),
-        (byte(0x003da8).delta() == value(level_val)),
+        (mem_level != value(lvl)),
+        (mem_level != value(next_lvl)),
+        (mem_level.delta() == value(lvl)),
     ]
     
     lb_submit = [
-        (byte(0x003db8) == value(1)),
-        (byte(0x003da8) == value(next_level)),
-        (byte(0x003da8).delta() == value(level_val)),
+        (mem_mode == value(1)),
+        (mem_level == value(next_lvl)),
+        (mem_level.delta() == value(lvl)),
     ]
     
     lb_value = [
-        add_source(byte(0x00002c) * 60),
-        add_source(byte(0x00002b) * 10),
-        measured(byte(0x00002a) * 1), 
+        add_source(timer_min * 60),
+        add_source(timer_sec * 10),
+        measured(timer_ms),
     ]
     
-    # Criamos a Leaderboard passando o ID do loop
     lb = Leaderboard(
         id=lb_id,
-        title=f"Advanced Trial {country}: Batman",
-        description=f"Complete Advanced Mode {adjective}. Ranked by the highest time remaining on the clock",
+        title=f"Advanced Trial {num} - {character}",
+        description=f"Complete Advanced Mode Level {int(num)}. Ranked by the highest time remaining on the clock",
         format=LeaderboardFormat.VALUE,
         lower_is_better=False
     )

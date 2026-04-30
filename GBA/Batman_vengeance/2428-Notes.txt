@@ -1,7 +1,10 @@
 Game ID: 2428
-Source: RA Server (Synced)
+Source: RA Server
 Total Notes: 64
 ============================================================
+
+0x000000: [Notes] Set created with the help of PyCheevos scripts:
+https://github.com/CarlosNatanael/RA-Scripts-py/tree/main/GBA/Batman_vengeance
 
 0x000008: [8-bit] Password Slot 1
 Values:
@@ -394,6 +397,7 @@ Values:
 
 0x003da8: [8-bit] Current Level ID (Story mode)
 Values:
+0xff = Null
 0x00 = Level 1
 0x01 = Level 2
 0x02 = Level 3
@@ -427,13 +431,13 @@ Values:
 0x1b = Level 7
 0x1c = Level 8
 0x1d = Level 9
-0x1f = Level 10
-0x20 = Level 11
-0x21 = Level 12
-0x22 = Level 13
-0x23 = Level 14
-0x24 = Level 15
-0x25 = Level 16
+0x1e = Level 10
+0x1f = Level 11
+0x20 = Level 12
+0x21 = Level 13
+0x22 = Level 14
+0x23 = Level 15
+0x24 = Level 16
 
 0x003db8: [8-bit] Selection mode
 Values:
