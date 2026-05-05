@@ -1,0 +1,78 @@
+Game ID: 11638
+Source: RA Server
+Total Notes: 15
+============================================================
+
+0x0000e3: [8-bit] Lamp Freeze Status
+0x00 = Enemies are frozen by the Lamp
+0x01 = Normal gameplay
+
+0x0000ef: [8-bit] Game State
+0x4c = In Game
+0x4f = Menu game
+
+0x0001ab: [8-bit] P1 Input Controller
+Bit0 = Up
+Bit1 = Down
+Bit2 = Left
+Bit3 = Right
+Bit4 = Button 2
+Bit5 = Button 1
+
+0x0001df: [8-bit] Stage ID
+0x01 = Stage 1
+0x02 = Stage 2
+0x03 = Stage 3
+0x04 = Stage 4
+0x05 = Stage 5
+0x06 = Stage 6
+0x07 = Victory Screen / Ending
+
+0x0001e0: [8-bit] Lives Count
+
+0x0001e8: [24-bit] Player Score
+[Note: Stored in BCD Little Endian. Multiply by 10 for on-screen value. Example: 0x005145 in RAM = 51450 on screen]
+
+0x0001ed: [Bitflags] Treasures Collected (Chronological Order - Part 1)
+[Note: Bits represent the order in which treasures are collected across all stages, not their physical location]
+Bit0 = 4th Treasure Collected
+Bit1 = 2nd Treasure Collected
+Bit2 = 1st Treasure Collected
+Bit3 = 3rd Treasure Collected
+Bit4 = 12th Treasure Collected
+Bit5 = 11th Treasure Collected
+Bit6 = 6th Treasure Collected
+Bit7 = 5th Treasure Collected
+
+0x0001ee: [Bitflags] Treasures Collected (Chronological Order - Part 2)
+Bit0 = 10th Treasure Collected
+Bit1 = 9th Treasure Collected
+Bit2 = 8th Treasure Collected
+Bit3 = 7th Treasure Collected
+
+0x000215: [8-bit] Game State / Pause Flag
+0x00 = In Game
+0xff = Game Paused
+
+0x00021b: [8-bit] Chapolim HP
+[Note: Max HP is 0xc0]
+
+0x000251: [8-bit] Partial Kill Counter / Event Trigger
+[Note: Counts up to 0x0f and resets to 0x00. Does NOT count all enemies. Highly inconsistent. Do not use for global kill milestones]
+
+0x000253: [8-bit] Mid-Air Items Caught
+[Note: Increments when catching thrown items. Reaching 15 (0x0f) grants a bonus and resets the counter to 0x00]
+
+0x000256: [8-bit] Key Entity/Sprite State
+[Note: Tracks if the key is currently spawned on the map]
+0x00 = Not active / Despawned / Collected
+0x01 = Spawned and visible
+
+0x000259: [8-bit] Jewels Collected (Current Stage)
+[Note: Reaching 0x05 clears the stage]
+
+0x00041e: [Bitflags] Inventory: Key & Squeaky Mallet
+Bit0 = Has Squeaky Mallet (Chipote Chillón)
+Bit6 = Has Key
+Bit7 = Currently using Squeaky Mallet
+
