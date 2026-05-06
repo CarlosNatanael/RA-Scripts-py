@@ -26,6 +26,7 @@ class MemoryExpression:
         new_expr.terms.append((last_term, Flag.ADD_ADDRESS))
         new_expr.terms.append((other, Flag.ADD_SOURCE))
         return new_expr
+    
 
     def _apply_modifier(self, method_name):
         new_expr = MemoryExpression(self.terms[0][0], self.terms[0][1])
@@ -130,6 +131,9 @@ class MemoryValue:
     def __mul__(self, other):
         from .condition import Condition
         return Condition(self, "*", other)
+    
+    def __rmul__(self, other):
+        return self.__mul__(other)
 
     def __truediv__(self, other):
         from .condition import Condition
@@ -181,8 +185,12 @@ class MemoryValue:
         if size_str == " ":
             size_str = ""
 
-        if size_str.startswith('f') or size_str == 'K':
+        if self.size == MemorySize.BITCOUNT:
+            return f"{self.mtype.value}0xK{hex_addr}"
+
+        if size_str.startswith('f'):
             return f"{self.mtype.value}{size_str}{hex_addr}"
+            
         return f"{self.mtype.value}0x{size_str}{hex_addr}"
     
     def __str__(self):
@@ -197,6 +205,18 @@ class RecallValue(MemoryValue):
     
     def render(self) -> str:
         return "{recall}"
+    
+    def __rshift__(self, other): # type: ignore
+        from .condition import Condition, ConditionList
+        # other is already a Condition or ConditionList — prepend recall as ADD_ADDRESS
+        addr_condition = Condition(self, flag=Flag.ADD_ADDRESS)
+        if isinstance(other, ConditionList):
+            return ConditionList([addr_condition] + other)
+        elif isinstance(other, Condition):
+            return ConditionList([addr_condition, other])
+        else:
+            # fall back to base behaviour for MemoryValue chains
+            return super().__rshift__(other)
     
     def __str__(self):
         return self.render()
@@ -242,3 +262,10 @@ class ConstantValue:
     
     def __repr__(self):
         return self.render()
+    
+    def __mul__(self, other):
+        from .condition import Condition
+        return Condition(self, "*", other)
+
+    def __rmul__(self, other):
+        return self.__mul__(other)

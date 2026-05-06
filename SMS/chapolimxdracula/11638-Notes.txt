@@ -1,15 +1,11 @@
 Game ID: 11638
 Source: RA Server
-Total Notes: 15
+Total Notes: 17
 ============================================================
 
-0x0000e3: [8-bit] Lamp Freeze Status
-0x00 = Enemies are frozen by the Lamp
-0x01 = Normal gameplay
-
-0x0000ef: [8-bit] Game State
-0x4c = In Game
-0x4f = Menu game
+0x000191: [8-bit] Game State
+0x10 = Player
+0x00 = Demo mode
 
 0x0001ab: [8-bit] P1 Input Controller
 Bit0 = Up
@@ -18,6 +14,10 @@ Bit2 = Left
 Bit3 = Right
 Bit4 = Button 2
 Bit5 = Button 1
+
+0x0001bb: [8-bit] Game State
+0x05 = In Game
+0x00 = Menu game
 
 0x0001df: [8-bit] Stage ID
 0x01 = Stage 1
@@ -29,6 +29,11 @@ Bit5 = Button 1
 0x07 = Victory Screen / Ending
 
 0x0001e0: [8-bit] Lives Count
+0x00 = 0 Lives (Last chance)
+0x01 = 1 Life
+0x02 = 2 Lives
+0x03 = 3 Lives (Extra)
+0xff = Game Over Screen
 
 0x0001e8: [24-bit] Player Score
 [Note: Stored in BCD Little Endian. Multiply by 10 for on-screen value. Example: 0x005145 in RAM = 51450 on screen]
@@ -56,6 +61,19 @@ Bit3 = 7th Treasure Collected
 
 0x00021b: [8-bit] Chapolim HP
 [Note: Max HP is 0xc0]
+
+0x00023d: [8-bit] Lamp Time Freeze Timer
+[Note: When activated, counts from 0x01 up to 0xfe before resetting to 0x00 and unfreezing gameplay]
+0x00 = Inactive
+0x01, 0xfe =  active
+
+0x000242: [8-bit] Boss State: Active Dracula
+[Note: 0x00 = Inactive or Defeated. Resets to 0x00 when defeated and the jewel is collected]
+0x01 = Dracula 1 Active
+0x02 = Dracula 2 Active
+0x03 = Dracula 3 Active
+0x04 = Dracula 4 Active
+0x05 = Dracula 5 Active
 
 0x000251: [8-bit] Partial Kill Counter / Event Trigger
 [Note: Counts up to 0x0f and resets to 0x00. Does NOT count all enemies. Highly inconsistent. Do not use for global kill milestones]
