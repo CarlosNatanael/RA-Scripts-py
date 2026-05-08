@@ -1,0 +1,154 @@
+Game ID: 14286
+Source: RA Server
+Total Notes: 23
+============================================================
+
+0x00031f: [8-bit] Hero Chosen
+0x00 = Captain America
+0x01 = Ironman
+0x02 = Vision
+0x03 = Hawakeye
+
+0x000320: [8-bit] Player Health
+[Note: Starting value is 100 (0x64). Maximum value is 255 (0xff). 0x00 = Dead]
+
+0x001a93: [8-bit] Stage ID
+0x00 = Stage 1-1
+0x01 = Stage 1-2
+0x02 = Stage 1-3 (Boss: Living Laser)
+0x03 = Stage 1-4
+0x04 = Stage 1-5
+0x05 = Stage 1-6 (Boss: Whirlwind)
+0x06 = Stage 2-1
+0x07 = Stage 2-2
+0x08 = Stage 2-3 (Boss: Juggernaut)
+0x09 = Stage 2-4
+0x0a = Stage 2-5
+0x0b = Stage 2-6 (Boss: Grim Reaper)
+0x0c = Stage 3-1
+0x0d = Stage 3-2
+0x0e = Stage 3-3
+0x0f = Stage 3-4
+0x10 = Stage 3-6 (Boss: Living Laser Rematch)
+0x11 = Stage 4-1
+0x12 = Stage 4-2
+0x13 = Stage 4-3 (Boss: Juggernaut Rematch)
+0x14 = Stage 4-4
+0x15 = Stage 4-5
+0x16 = Stage 4-6 (Boss: Ultron)
+0x17 = Stage 5-1
+0x18 = Stage 5-2
+0x19 = Stage 5-3 (Boss: Crossbones)
+0x1a = Stage 5-4
+0x1b = Stage 5-5
+0x1c = Stage 5-6 (Boss: Red Skull)
+0x1d = Victory Scene / Ending
+
+0x001d00: [24-bit] Lower Corner Display Value
+[Note: Context-dependent. Displays character health or current stage value depending on the screen]
+
+0x001d0c: [8-bit] Menu Selection
+0x00 = Start game
+0x01 = Options
+
+0x001d0e: [8-bit] Options Selection
+0x00 = Difficulty
+0x01 = Continues
+0x02 = Sound Test
+0x03 = Music Test
+
+0x001d0f: [8-bit] Difficulty Level
+0x00 = Practice
+0x01 = Normal
+0x02 = Challenge
+
+0x001d10: [8-bit] Selection Continues
+0x03 = 3 Continues
+0x04 = 4 Continues
+0x05 = 5 Continues
+[Note: Reused memory address based on Game State 0x1d22]
+Options Menu Context (Continues):
+
+[8-bit] In-Game Credit 
+In-Game Context: Represents current active credit
+0x00 = Game Over
+0x01 = 0 Credits (Last Chance)
+0x02 = 1 Credit
+0x03 = 2 Credits
+0x04 = 3 Credits
+[Note: Internal value is N+1 compared to the on-screen display]
+
+0x001d11: [8-bit] Sound Test Selection
+[Note: Map the min/max range here, e.g., 0x00 - 0x21]
+
+0x001d12: [8-bit] Music Test Selection
+[Note: Map the min/max range here, e.g., 0x00 - 0x0f]
+
+0x001d15: [8-bit] In Boss Fight Status
+0x00 = Boss encounter is active
+0x01 = Normal stage gameplay
+
+0x001d17: [8-bit] Boss HP
+[Note: 0x00 when inactive/defeated. Max HP varies by difficulty]
+
+--- Practice ---
+0x28 = Living Laser
+0x32 = Whirlwind
+0x32 = Juggernaut
+0x3c = Grim Reaper
+0x46 = Living Laser Rematch
+0x46 = Juggernaut Rematch
+0x50 = Ultron
+0x50 = Crossbones
+0x64 = Red Skull
+
+--- Normal ---
+0x3c = Living Laser
+0x46 = Whirlwind
+0x46 = Juggernaut
+0x50 = Grim Reaper
+0x5a = Living Laser Rematch
+0x5a = Juggernaut Rematch
+0x64 = Ultron
+0x64 = Crossbones
+0x7d = Red Skull
+
+--- Challenge ---
+0x50 = Living Laser
+0x5a = Whirlwind
+0x5a = Juggernaut
+0x64 = Grim Reaper
+0x6e = Living Laser Rematch
+0x6e = Juggernaut Rematch
+0x78 = Ultron
+0x78 = Crossbones
+0x96 = Red Skull
+
+0x001d22: [8-bit] Game State
+0x01 = Main Menu
+0x02 = Avenger Selection Screen
+0x03 = In-Game
+0x07 = Level Complete Screen
+0x08 = Score Screen (Appears on Game Over and Ending)
+
+0x001d54: [Lower4] P1 Score - Units
+
+0x001d55: [Lower4] P1 Score - Tens
+
+0x001d56: [Lower4] P1 Score - Hundreds
+
+0x001d57: [Lower4] P1 Score - Thousands
+
+0x001d58: [Lower4] P1 Score - Ten Thousands
+
+0x001d59: [Lower4] P1 Score - Hundred Thousands
+
+0x001d5a: [Lower4] P1 Score - Millions
+
+0x001d5b: [Lower4] P1 Score - Ten Millions
+
+0x001dac: [32-bit] High Score Name Input - Characters 1 to 4
+[Note: Uses standard ASCII values. 0x41 = A]
+
+0x001db0: [32-bit] High Score Name Input - Characters 5 to 8
+
