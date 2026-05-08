@@ -69,13 +69,15 @@ Total Notes: 23
 [Note: Reused memory address based on Game State 0x1d22]
 Options Menu Context (Continues):
 
-[8-bit] In-Game Credit 
+[8-bit] In-Game Credit
 In-Game Context: Represents current active credit
 0x00 = Game Over
 0x01 = 0 Credits (Last Chance)
 0x02 = 1 Credit
 0x03 = 2 Credits
 0x04 = 3 Credits
+0x05 = 4 Credits
+0x06 = 5 Credits
 [Note: Internal value is N+1 compared to the on-screen display]
 
 0x001d11: [8-bit] Sound Test Selection
