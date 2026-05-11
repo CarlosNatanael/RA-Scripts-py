@@ -1,0 +1,166 @@
+Game ID: 1167
+Source: RA Server
+Total Notes: 37
+============================================================
+
+0x000062: [8-bit] Core Game State
+0x93 = Title Screen (Press Start)
+0x95 = Main Menu (Start / Options)
+0xb6 = Stage Clear Screen
+0xb8 = Congratulations Cutscene (Boss Rush Clear)
+0xc7 = In-Game (Normal Gameplay)
+0xcc = Game Over
+0xcd = Continue Screen
+0xd0 = In-Game (Hit Stage Active)
+0xd3 = Hit Stage Select Menu
+0xd6 = Options Menu
+0xdb = Boss Fight Active
+0xf6 = Congratulations Cutscene (Normal Clear)
+0xfd = Intro Cutscene
+0xff = Intro Cutscene
+
+0x0000aa: [8-bit] Stage ID (Logic)
+0x00 = Stage 1
+0x01 = Stage 2
+0x02 = Stage 3
+0x03 = Stage 4
+0x04 = Stage 5
+0x08 = Victory Scene / Ending
+
+0x0008bc: [8-bit] Enemy Slot 1 Active
+[Bit0] 0 = No Enemy / Dead | 1 = Enemy Alive/On-Screen
+
+0x0008be: [8-bit] Enemy Slot 2 Active
+[Bit0] 0 = No Enemy / Dead | 1 = Enemy Alive/On-Screen
+
+0x0008c0: [8-bit] Enemy Slot 3 Active
+[Bit0] 0 = No Enemy / Dead | 1 = Enemy Alive/On-Screen
+
+0x000f9f: [8-bit] Player HP (Active Logic)
+[Note: Max is 0x50]
+
+0x000fa1: [8-bit] Player Lives (Active Logic)
+
+0x000fa3: [8-bit] Player D-Punch (Active Logic)
+
+0x001608: [8-bit] Boss HP (Active Logic)
+[Note: The primary memory address for the active enemy/boss health]
+
+0x001852: [8-bit] Stage ID Option
+0x00 = Stage 1
+0x01 = Stage 2
+0x02 = Stage 3
+0x03 = Stage 4
+0x04 = Stage 5
+0x09 = Hit Stage Menu
+0x0a = Boss Mode (Boss Rush)
+
+0x001854: [8-bit] Sound Test: SFX
+[Note: Triggers sound effects during the Options screen]
+
+0x001856: [8-bit] Sound Test: BGM
+0x00 = Stop
+0x01 = Game Over
+0x02 = Stage 1
+0x03 = Stage 2
+0x04 = Stage 3
+0x05 = Stage 4
+0x06 = Stage 5
+0x07 = Boss
+0x08 = Stage Clear
+0x09 = Opening
+0x0a = Hit
+0x0b = Hero Select
+0x0c = Hero Clear
+0x0d = Ending
+
+0x00185a: [8-bit] Difficulty
+0x00 = Easy
+0x01 = Normal
+0x02 = Hard
+0x03 = Very Hard
+
+0x00185c: [8-bit] Player Stock (Starting Lives)
+0x00 = 1 Life
+0x01 = 3 Lives
+0x02 = 5 Lives
+
+0x00185e: [8-bit] Sound Mode
+0x00 = Stereo
+0x01 = Mono
+
+0x001860: [8-bit] Control Pad Configuration
+0x00 = Normal
+0x01 = Change
+
+0x0018a6: [8-bit] Game State / Pause Flag
+0x00 = In Game
+0x01 = Game Paused
+
+0x0018e8: [8-bit] Hit Stage Index
+0x00 = Hit Stage 1
+0x01 = Hit Stage 2
+0x02 = Hit Stage 3
+0x03 = Hit Stage 4
+0x04 = Hit Stage 5
+
+0x0018ea: [8-bit] Hit Stage 1 Active Flag
+0x00 = Inactive
+0x01 = Active / Completed
+
+0x0018eb: [8-bit] Hit Stage 2 Active Flag
+0x00 = Inactive
+0x01 = Active / Completed
+
+0x0018ec: [8-bit] Hit Stage 3 Active Flag
+0x00 = Inactive
+0x01 = Active / Completed
+
+0x0018ed: [8-bit] Hit Stage 4 Active Flag
+0x00 = Inactive
+0x01 = Active / Completed
+
+0x0018ee: [8-bit] Hit Stage 5 Active Flag
+0x00 = Inactive
+0x01 = Active / Completed
+
+0x0018f9: [8-bit] Hit Stage: Power Meter (Charge Value)
+[Note: Tracks D-Pad rotation/mashing]
+0x6f = Max value for a full bar
+
+0x001991: [8-bit] Hit Stage: Current Punch Power
+[Note: Displays power of the immediate punch only. Does not store previous values]
+
+0x00199f: [8-bit] Hit Stage: Punch Order Index
+0x01 = 1st Punch
+0x02 = 2nd Punch
+0x03 = 3rd Punch
+
+0x0019a1: [8-bit] Hit Stage: Timer (Seconds)
+
+0x0019a3: [8-bit] Hit Stage: Timer (Frames)
+
+0x0019e7: :[8-bit] Hit Stage: Total Punch Power
+[Note: Accumulates the score of all punches in the current Hit Stage]
+
+0x001a03: [8-bit] Player HP (Display/HUD)
+[Note: Max is 0x50. Visual only]
+
+0x001a05: [8-bit] Enemy HP (Display/HUD)
+[Note: Visual bar only]
+
+0x001a07: [8-bit] Player Lives (Display/HUD)
+[Note: Visual only]
+
+0x001a09: [8-bit] Player Score Display (Digits 1-2 / Units)
+[Note: Big Endian BCD format. Visual/HUD only]
+
+0x001a0a: [8-bit] Player Score Display (Digits 3-4 / Hundreds)
+
+0x001a0b: [8-bit] Player Score Display (Digits 5-6 / Ten Thousands)
+
+0x001a0c: [8-bit] Player Score Display (Digits 7-8 / Millions)
+
+0x001a13: [8-bit] Player D-Punch (Display/HUD)
+[Note: Visual only]
+
