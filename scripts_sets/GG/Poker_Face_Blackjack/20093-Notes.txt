@@ -1,0 +1,79 @@
+Game ID: 20093
+Source: RA Server
+Total Notes: 15
+============================================================
+
+0x00008d: [8-bit] Main Game State
+0x01 = Menu Setup
+0x06 = Location Selection / Rules
+0x07 = In-Game (Dealing / Playing Hands)
+0x08 = Betting Screen
+0x09 = Menu Setup
+0x0e = Game Options
+0x10 = Location Selection / Rules
+
+0x00009b: [8-bit] Game Options: Number of Decks To Think About
+0x00 = One
+0x01 = Two
+0x02 = Four
+0x03 = Six
+[Note: Credit to lonegraywolf2000]
+
+0x000142: [8-bit] Player Menu Selection (Cursor Index)
+0x02 = Hit / Play
+0x03 = Stand / Count
+0x04 = Double Down / Help
+0x05 = Quit
+0x09 = Play
+0x0a = Insure
+
+0x001a41: [8-bit] Music Option
+0x00 = Disabled
+0x01 = Enabled
+
+0x001a51: [8-bit] Current Bet Amount
+
+0x001b68: [32-bit BCD] Player Bankroll
+[Note: Little Endian BCD format. Bytes 1b68 to 1b6b handle the total value]
+
+0x001b6c: [8-bit] Blackjack Ruleset
+0x00 = Las Vegas The Strip
+0x01 = London
+0x02 = Atlantic City
+0x03 = Downtown Las Vegas
+
+0x001b6f: [8-bit] Game Options: Number of Decks Actually In Play
+0x00 = One
+0x01 = Two
+0x02 = Four
+0x03 = Six
+[Note: Credit to lonegraywolf2000]
+
+0x001b70: [8-bit] Player Title (How are you addressed)
+0x00 = Sir
+0x01 = Madam
+
+0x001b71: [8-bit] Dealer Character
+0x00 = Female
+0xff = Male
+[Note: Controls the visual sprite of the dealer]
+
+0x001b9b: [8-bit] Hand Outcome Message
+0x00 = Busted
+0x01 = Player Wins
+0x03 = Push / Tie (Final state)
+0x04 = Dealer Wins
+0x05 = Blackjack 
+[Note: Values 0x00 and 0x05 are temporary visual triggers.]
+
+0x001daf: [8-bit] Blackjack Rules Page Number
+[Note: Credit to lonegraywolf2000]
+
+0x001db3: [8-bit] Menu State Flag
+0x00 = In-Game Actions (Hit, Stand, D.Down)
+0x01 = Help/Pause Menu Active (Count, Help, Quit)
+
+0x001dd7: Blackjack Setup: Which Column?
+
+0x001dd8: Blackjack Setup: Which Row?
+

@@ -1,0 +1,232 @@
+Game ID: 26280
+Source: RA Server
+Total Notes: 47
+============================================================
+
+0x000ad4: [8-bit] Match Clock: Minutes
+
+0x000ad5: [8-bit] Match Clock: Seconds
+
+0x000ad6: [8-bit] Match Clock: Frames / Sub-seconds
+
+0x000af0: [8-bit] Match Period
+0x00 = 1st Half
+0x01 = 2nd Half
+0x02 = Extra Time (Golden Goal rules apply)
+
+0x000af5: [8-bit] Options: Half Length
+0x01 = 2 mins
+0x02 = 4 mins
+0x03 = 6 mins
+0x04 = 8 mins
+0x05 = 10 mins
+0x06 = 15 mins
+0x07 = 20 mins
+0x08 = 30 mins
+0x09 = 45 mins
+
+0x000af6: [8-bit] Options: Fouls
+0x00 = Off
+0xff = On
+
+0x000af7: [8-bit] Options: Game Type
+0x00 = Action
+0xff = Simulation
+
+0x000af9: [8-bit] Options: Field Conditions
+0x00 = Dry
+0x01 = Damp
+0x02 = Muddy
+
+0x000afb: [8-bit] Options: Sound
+0x00 = None
+0x01 = Music Only
+0x02 = SFX Only
+0x03 = Music & SFX
+
+0x000b11: [8-bit] Player Team
+0x00 = Algeria
+0x01 = Argentina
+0x02 = Australia
+0x03 = Austria
+0x04 = Belgium
+0x05 = Bolivia
+0x06 = Brazil
+0x07 = Bulgaria
+0x08 = Cameroon
+0x09 = Canada
+0x0a = Chile
+0x0b = China
+0x0c = Colombia
+0x0d = Czech Republic
+0x0e = Denmark
+0x0f = England
+0x10 = France
+0x11 = Germany
+0x12 = Greece
+0x13 = Hong Kong
+0x14 = Hungary
+0x15 = Iraq
+0x16 = Israel
+0x17 = Italy
+0x18 = Ivory Coast
+0x19 = Japan
+0x1a = Luxembourg
+0x1b = Mexico
+0x1c = Morocco
+0x1d = Netherlands
+0x1e = New Zealand
+0x1f = Nigeria
+0x20 = Northern Ireland
+0x21 = Norway
+0x22 = Poland
+0x23 = Portugal
+0x24 = Qatar
+0x25 = Republic of Ireland
+0x26 = Romania
+0x27 = Russia
+0x28 = Saudi Arabia
+0x29 = Scotland
+0x2a = South Korea
+0x2b = Spain
+0x2c = Sweden
+0x2d = Switzerland
+0x2e = Turkey
+0x2f = USA
+0x30 = Ukraine
+0x31 = Uruguay
+0x32 = Wales
+0x33 = EA All Stars
+
+0x000b12: [8-bit] CPU Team ID
+0x00 = Algeria
+0x01 = Argentina
+0x02 = Australia
+0x03 = Austria
+0x04 = Belgium
+0x05 = Bolivia
+0x06 = Brazil
+0x07 = Bulgaria
+0x08 = Cameroon
+0x09 = Canada
+0x0a = Chile
+0x0b = China
+0x0c = Colombia
+0x0d = Czech Republic
+0x0e = Denmark
+0x0f = England
+0x10 = France
+0x11 = Germany
+0x12 = Greece
+0x13 = Hong Kong
+0x14 = Hungary
+0x15 = Iraq
+0x16 = Israel
+0x17 = Italy
+0x18 = Ivory Coast
+0x19 = Japan
+0x1a = Luxembourg
+0x1b = Mexico
+0x1c = Morocco
+0x1d = Netherlands
+0x1e = New Zealand
+0x1f = Nigeria
+0x20 = Northern Ireland
+0x21 = Norway
+0x22 = Poland
+0x23 = Portugal
+0x24 = Qatar
+0x25 = Republic of Ireland
+0x26 = Romania
+0x27 = Russia
+0x28 = Saudi Arabia
+0x29 = Scotland
+0x2a = South Korea
+0x2b = Spain
+0x2c = Sweden
+0x2d = Switzerland
+0x2e = Turkey
+0x2f = USA
+0x30 = Ukraine
+0x31 = Uruguay
+0x32 = Wales
+0x33 = EA All Stars
+
+0x000b30: [8-bit] Menu Cursor Index
+[Note: Tracks the currently highlighted option in the active menu. Resets to 0x00 upon entering a new menu screen.]
+
+0x000b3b: [8-bit] Selected Language
+0x00 = English
+0x01 = French
+0x02 = Spanish
+0x03 = German
+
+0x000c70: [8-bit] Password Slot 1
+[Note: Stores tournament progress and state]
+
+0x000c71: [8-bit] Password Slot 2
+
+0x000c72: [8-bit] Password Slot 3
+
+0x000c73: [8-bit] Password Slot 4
+
+0x000c74: [8-bit] Password Slot 5
+
+0x000c75: [8-bit] Password Slot 6
+
+0x000c76: [8-bit] Password Slot 7
+
+0x000c77: [8-bit] Password Slot 8
+
+0x000c78: [8-bit] Password Slot 9
+
+0x000c79: [8-bit] Password Slot 10
+
+0x000c7a: [8-bit] Password Slot 11
+
+0x000c7b: [8-bit] Password Slot 12
+
+0x000c7c: [8-bit] Password Slot 13
+
+0x000c7d: [8-bit] Password Slot 14
+
+0x000c7e: [8-bit] Password Slot 15
+
+0x000c7f: [8-bit] Password Slot 16
+
+0x000c80: [8-bit] Password Slot 17
+
+0x000c81: [8-bit] Password Slot 18
+
+0x000c82: [8-bit] Password Slot 19
+
+0x000c83: [8-bit] Password Slot 20
+
+0x000c84: [8-bit] Password Slot 21
+
+0x000c85: [8-bit] Password Slot 22
+
+0x000c86: [8-bit] Password Slot 23
+
+0x000c87: [8-bit] Password Slot 24
+
+0x000c88: [8-bit] Password Slot 25
+
+0x000c89: [8-bit] Password Slot 26
+
+0x000c8a: [8-bit] Password Slot 27
+
+0x000c8b: [8-bit] Password Slot 28
+
+0x000c8c: [8-bit] Password Slot 29
+
+0x000c8d: [8-bit] Password Slot 30
+
+0x000c8e: [8-bit] Password Slot 31
+
+0x000c8f: [8-bit] Password Slot 32
+
+0x000d85: [8-bit] Home Team Score
+
+0x000d93: [8-bit] Away Team Score
+
