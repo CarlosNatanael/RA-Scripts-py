@@ -23,7 +23,7 @@ Total Notes: 15
 0x02 = Hit / Play
 0x03 = Stand / Count
 0x04 = Double Down / Help
-0x05 = Quit
+0x05 = Quit / Split
 0x09 = Play
 0x0a = Insure
 
