@@ -3,7 +3,11 @@ from pycheevos.models.rich_presence import RichPresence
 
 rp = RichPresence()
 
-# 1. LOOKUPS (Dicionários)
+# 1. LOOKUPS
+rp.add_lookup("StageRush", {
+    0: "Stage 1", 1: "Stage 2", 2: "Stage 3", 3: "Stage 4", 4: "Stage 5"
+}, default="")
+
 rp.add_lookup("Stage", {
     0: "Stage 1", 1: "Stage 2", 2: "Stage 3", 3: "Stage 4",
     4: "Stage 5", 5: "Stage 5-1", 6: "Stage 5-2", 7: "Stage 5-3", 8: "Stage 5-4"
@@ -44,6 +48,7 @@ mem_stock        = byte(0x185c)
 mem_dpunch       = byte(0x0fa3)
 mem_lives        = byte(0x0fa1)
 mem_opt_flag     = byte(0x18a8)
+mem_rush_flag    = byte(0x1856)
 
 # Menu de Hit Stage
 mem_hit_id       = byte(0x18e8)
@@ -62,8 +67,15 @@ mem_hit_curr_l   = byte(0x1991).bcd()
 mem_hit_tot_h    = byte(0x19e8).bcd()
 mem_hit_tot_l    = byte(0x19e7).bcd()
 
-# Aproveitando nosso patch para strings brutas nas macros complexas de Score
+
 macro_score = "A:b0xH1a0c*1000000_A:b0xH1a0b*10000_A:b0xH1a0a*100_M:b0xH1a09"
+
+display_stage_rush = (
+    f"🏙️ {RichPresence.lookup('StageRush', mem_mode)} Rush | 👊 D-Punch: {RichPresence.value(mem_dpunch)} | "
+    f"💖 Lives: {RichPresence.value(mem_lives)} | ⚙️ {RichPresence.lookup('Difficulty', mem_diff)} | "
+    f"Score: {RichPresence.value(macro_score, 'SCORE')}"
+)
+
 
 # 3. DISPLAYS
 rp.add_display([mem_state == 149], "📺 Main Menu")
@@ -75,6 +87,12 @@ rp.add_display([mem_state == 255], "🎬 Intro Cutscene")
 rp.add_display(
     [mem_state == 214, mem_opt_flag == 0],
     f"⚙️ Option Mode | Difficulty: {RichPresence.lookup('Difficulty', mem_diff)} | Player Stock: {RichPresence.lookup('player_stock', mem_stock)}"
+)
+
+# Stage Rush 1
+rp.add_display(
+    [mem_state == 199, mem_mode == 0, mem_rush_flag == 2], 
+    display_stage_rush
 )
 
 # In-Game Normal
@@ -109,7 +127,6 @@ display_hit_menu = (
     f"[5:{RichPresence.lookup('confir', mem_hit_conf5)}]"
 )
 rp.add_display([mem_state == 211], display_hit_menu)
-rp.add_display([mem_mode == 9], display_hit_menu)
 
 # Playing a Hit Stage
 rp.add_display(
@@ -127,12 +144,22 @@ rp.add_display(
     f"Score: {RichPresence.value(macro_score, 'SCORE')}"
 )
 
+# Hit Stage Select Menu (Alt Condition)
+rp.add_display([mem_mode == 9], display_hit_menu)
+
 # Boss Rush Mode
 rp.add_display(
     [mem_mode == 10, mem_state == 219],
     f"Boss Rush: Blast Man vs {RichPresence.lookup('Boss', mem_stage)} | "
     f"👊 D-Punch: {RichPresence.value(mem_dpunch)} | 💖 Lives: {RichPresence.value(mem_lives)} | ⚙️ {RichPresence.lookup('Difficulty', mem_diff)}"
 )
+
+# Stage Rush 2 ao 5
+for val_mode, val_rush in [(1, 3), (2, 4), (3, 5), (4, 6)]:
+    rp.add_display(
+        [mem_mode == val_mode, mem_rush_flag == val_rush], 
+        display_stage_rush
+    )
 
 # Fallback (Menu / Default)
 rp.add_display([], "Playing Sonic Blast Man")
