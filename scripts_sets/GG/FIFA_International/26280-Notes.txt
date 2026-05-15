@@ -1,7 +1,10 @@
 Game ID: 26280
 Source: RA Server
-Total Notes: 47
+Total Notes: 78
 ============================================================
+
+0x000a34: [11-byte] Selected Team Name (ASCII String)
+[Note: Stores the name of the player's chosen team in ASCII format.]
 
 0x000ad4: [8-bit] Match Clock: Minutes
 
@@ -44,7 +47,113 @@ Total Notes: 47
 0x02 = SFX Only
 0x03 = Music & SFX
 
-0x000b11: [8-bit] Player Team
+0x000b0d: [8-bit] Player Team (Tournament)
+0x00 = Algeria
+0x01 = Argentina
+0x02 = Australia
+0x03 = Austria
+0x04 = Belgium
+0x05 = Bolivia
+0x06 = Brazil
+0x07 = Bulgaria
+0x08 = Cameroon
+0x09 = Canada
+0x0a = Chile
+0x0b = China
+0x0c = Colombia
+0x0d = Czech Republic
+0x0e = Denmark
+0x0f = England
+0x10 = France
+0x11 = Germany
+0x12 = Greece
+0x13 = Netherlands
+0x14 = Hong Kong
+0x15 = Hungary
+0x16 = Iraq
+0x17 = Israel
+0x18 = Italy
+0x19 = Ivory Coast
+0x1a = Japan
+0x1b = Luxembourg
+0x1c = Mexico
+0x1e = New Zealand
+0x1f = Nigeria
+0x20 = Northern Ireland
+0x21 = Norway
+0x22 = Poland
+0x23 = Portugal
+0x24 = Qatar
+0x25 = Republic of Ireland
+0x26 = Romania
+0x27 = Russia
+0x28 = Saudi Arabia
+0x29 = Scotland
+0x2a = South Korea
+0x2b = Spain
+0x2c = Sweden
+0x2d = Switzerland
+0x2e = Turkey
+0x2f = USA
+0x30 = Ukraine
+0x31 = Uruguay
+0x32 = Wales
+0x33 = EA All Stars
+
+0x000b0e: [8-bit] CPU Team ID (Tournament)
+0x00 = Algeria
+0x01 = Argentina
+0x02 = Australia
+0x03 = Austria
+0x04 = Belgium
+0x05 = Bolivia
+0x06 = Brazil
+0x07 = Bulgaria
+0x08 = Cameroon
+0x09 = Canada
+0x0a = Chile
+0x0b = China
+0x0c = Colombia
+0x0d = Czech Republic
+0x0e = Denmark
+0x0f = England
+0x10 = France
+0x11 = Germany
+0x12 = Greece
+0x13 = Netherlands
+0x14 = Hong Kong
+0x15 = Hungary
+0x16 = Iraq
+0x17 = Israel
+0x18 = Italy
+0x19 = Ivory Coast
+0x1a = Japan
+0x1b = Luxembourg
+0x1c = Mexico
+0x1e = New Zealand
+0x1f = Nigeria
+0x20 = Northern Ireland
+0x21 = Norway
+0x22 = Poland
+0x23 = Portugal
+0x24 = Qatar
+0x25 = Republic of Ireland
+0x26 = Romania
+0x27 = Russia
+0x28 = Saudi Arabia
+0x29 = Scotland
+0x2a = South Korea
+0x2b = Spain
+0x2c = Sweden
+0x2d = Switzerland
+0x2e = Turkey
+0x2f = USA
+0x30 = Ukraine
+0x31 = Uruguay
+0x32 = Wales
+0x33 = EA All Stars
+
+0x000b11: [8-bit] Player Team (Exhibition)
 0x00 = Algeria
 0x01 = Argentina
 0x02 = Australia
@@ -98,7 +207,7 @@ Total Notes: 47
 0x32 = Wales
 0x33 = EA All Stars
 
-0x000b12: [8-bit] CPU Team ID
+0x000b12: [8-bit] CPU Team ID  (Exhibition)
 0x00 = Algeria
 0x01 = Argentina
 0x02 = Australia
@@ -226,7 +335,82 @@ Total Notes: 47
 
 0x000c8f: [8-bit] Password Slot 32
 
+0x000c98: [8-bit] Knockout Stage / Bracket Position
+0x00 = Round of 16
+0x01 = Quarter Finals
+0x02 = Semi Finals
+0x03 = Final
+0x04 = Trophy Screen
+[Note: This address is only active/relevant when 0x0c9a is set to 0x04 and 0x02.]
+
+0x000c99: [8-bit] Competition Group Index (UI/Navigation)
+0x00 = Group A
+0x01 = Group B
+0x02 = Group C
+0x03 = Group D
+0x04 = Group E
+0x05 = Group F
+[Note: This value tracks the group currently being displayed on the screen. It is a dynamic menu index and changes as the player scrolls through different groups in the tournament menu.]
+
+0x000c9a: [8-bit] Competition Mode
+0x00 = None (Exhibition / Friendly Match)
+0x01 = League
+0x02 = Playoffs
+0x03 = Tournament (Group Stage)
+0x04 = Tournament (Knockout Stage / Playoffs)
+
+0x000c9c: [8-bit] Tournament - Group A - 1st Place (Team ID)
+
+0x000ca4: [8-bit] Tournament - Group A - 2nd Place (Team ID)
+
+0x000cac: [8-bit] Tournament - Group A - 3rd Place (Team ID)
+
+0x000cb4: [8-bit] Tournament - Group A - 4th Place (Team ID)
+
+0x000cbc: [8-bit] Tournament - Group B - 1st Place (Team ID)
+
+0x000cc4: [8-bit] Tournament - Group B - 2nd Place (Team ID)
+
+0x000ccc: [8-bit] Tournament - Group B - 3rd Place (Team ID)
+
+0x000cd4: [8-bit] Tournament - Group B - 4th Place (Team ID)
+
+0x000cdc: [8-bit] Tournament - Group C - 1st Place (Team ID)
+
+0x000ce4: [8-bit] Tournament - Group C - 2nd Place (Team ID)
+
+0x000cec: [8-bit] Tournament - Group C - 3rd Place (Team ID)
+
+0x000cf4: [8-bit] Tournament - Group C - 4th Place (Team ID)
+
+0x000cfc: [8-bit] Tournament - Group D - 1st Place (Team ID)
+
+0x000d04: [8-bit] Tournament - Group D - 2nd Place (Team ID)
+
+0x000d0c: [8-bit] Tournament - Group D - 3rd Place (Team ID)
+
+0x000d14: [8-bit] Tournament - Group D - 4th Place (Team ID)
+
+0x000d1c: [8-bit] Tournament - Group E - 1st Place (Team ID)
+
+0x000d24: [8-bit] Tournament - Group E - 2nd Place (Team ID)
+
+0x000d2c: [8-bit] Tournament - Group E - 3rd Place (Team ID)
+
+0x000d34: [8-bit] Tournament - Group E - 4th Place (Team ID)
+
+0x000d3c: [8-bit] Tournament - Group F - 1st Place (Team ID)
+
+0x000d44: [8-bit] Tournament - Group F - 2nd Place (Team ID)
+
+0x000d4c: [8-bit] Tournament - Group F - 3rd Place (Team ID)
+
+0x000d54: [8-bit] Tournament - Group F - 4th Place (Team ID)
+
 0x000d85: [8-bit] Home Team Score
 
 0x000d93: [8-bit] Away Team Score
+
+0x000dd3: [186-byte] ASCII String Buffer - News/Message Panel
+[Note: Contains dynamic text data for UI messages. Not recommended for achievement logic triggers]
 
