@@ -1,8 +1,17 @@
 ## Repository of various scripts for RetroAchievements using Pycheevos
 
+### <img src="https://static.retroachievements.org/assets/images/system/snes.png" height="30"> SNES/Super Famicom
+- [F1 ROC: Race of Champions](https://retroachievements.org/game/23121)
+  
+### <img src="https://static.retroachievements.org/assets/images/system/ps1.png" height="30"> PlayStation
+- [Boxing](https://retroachievements.org/game/36353)
 
-- [F1 ROC: Race of Champions](https://retroachievements.org/game/23121), SNES
-- [Boxing](https://retroachievements.org/game/36353), PS1
-- [Batman: Vengeance](https://retroachievements.org/game/2428), GBA
-- [Chapolim x Dracula: Um Duelo Assustador](https://retroachievements.org/game/11638), SMS
-- [Captain America and the Avengers](https://retroachievements.org/game/14286), GG
+###  <img src="https://static.retroachievements.org/assets/images/system/gba.png" height="30"> Game Boy Advance
+- [Batman: Vengeance](https://retroachievements.org/game/2428)
+
+### <img src="https://static.retroachievements.org/assets/images/system/sms.png" height="30"> Master System
+- [Chapolim x Dracula: Um Duelo Assustador](https://retroachievements.org/game/11638)
+
+### <img src="https://static.retroachievements.org/assets/images/system/gg.png" height="30"> Game Gear
+- [Captain America and the Avengers](https://retroachievements.org/game/14286)
+- [Poker Face Paul's Blackjack](https://retroachievements.org/game/20093)
