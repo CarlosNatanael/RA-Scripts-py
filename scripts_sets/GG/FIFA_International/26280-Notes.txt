@@ -1,6 +1,6 @@
 Game ID: 26280
 Source: RA Server
-Total Notes: 78
+Total Notes: 178
 ============================================================
 
 0x000a34: [11-byte] Selected Team Name (ASCII String)
@@ -153,6 +153,9 @@ Total Notes: 78
 0x32 = Wales
 0x33 = EA All Stars
 
+0x000b0f: [8-bit] Player Selected Team ID (Tournament/League)
+0xff = Demo Mode
+
 0x000b11: [8-bit] Player Team (Exhibition)
 0x00 = Algeria
 0x01 = Argentina
@@ -270,6 +273,19 @@ Total Notes: 78
 0x02 = Spanish
 0x03 = German
 
+0x000bb3: [8-bit] Gameplay Active Flag
+0x00 = Menus / Pause Menu / Inactive Gameplay
+0x01 = Active Match Gameplay (On the Field)
+0x04 = Tournament Champions Screen
+0x09 = League Champions Screen
+
+0x000c6a: [8-bit] Screen State / Transition Flag
+0x01 = Pre-Menu / Title Screen
+[Note: Acts as a frame reset or screen transition indicator.]
+
+0x000c6b: [8-bit] Intro Screen Countdown Timer
+[Note: Counts down from 0x04 to 0x00 before transitioning to the main intro. Used by the engine to time the title sequence.]
+
 0x000c70: [8-bit] Password Slot 1
 [Note: Stores tournament progress and state]
 
@@ -358,54 +374,249 @@ Total Notes: 78
 0x02 = Playoffs
 0x03 = Tournament (Group Stage)
 0x04 = Tournament (Knockout Stage / Playoffs)
+0xff = Password
 
-0x000c9c: [8-bit] Tournament - Group A - 1st Place (Team ID)
+0x000c9b: [8-bit] Competition Participant - Slot 01 - Points
 
-0x000ca4: [8-bit] Tournament - Group A - 2nd Place (Team ID)
+[Note: This engine does NOT store Losses in RAM to save memory. Losses are calculated dynamically by the CPU using the formula: Matches Played - Wins - Draws = Losses.]
 
-0x000cac: [8-bit] Tournament - Group A - 3rd Place (Team ID)
+0x000c9c: [8-bit] Tournament/League Participant - Slot 01 (Team ID)
 
-0x000cb4: [8-bit] Tournament - Group A - 4th Place (Team ID)
+0x000c9d: [8-bit] Competition Participant - Slot 01 - Matches Played
 
-0x000cbc: [8-bit] Tournament - Group B - 1st Place (Team ID)
+0x000c9e: [8-bit] Competition Participant - Slot 01 - Wins
 
-0x000cc4: [8-bit] Tournament - Group B - 2nd Place (Team ID)
+0x000c9f: [8-bit] Competition Participant - Slot 01 - Draws
 
-0x000ccc: [8-bit] Tournament - Group B - 3rd Place (Team ID)
+0x000ca3: [8-bit] Competition Participant - Slot 02 - Points
 
-0x000cd4: [8-bit] Tournament - Group B - 4th Place (Team ID)
+0x000ca4: [8-bit] Tournament/League Participant - Slot 02 (Team ID)
 
-0x000cdc: [8-bit] Tournament - Group C - 1st Place (Team ID)
+0x000ca5: [8-bit] Competition Participant - Slot 02 - Matches Played
 
-0x000ce4: [8-bit] Tournament - Group C - 2nd Place (Team ID)
+0x000ca6: [8-bit] Competition Participant - Slot 02 - Wins
 
-0x000cec: [8-bit] Tournament - Group C - 3rd Place (Team ID)
+0x000ca7: [8-bit] Competition Participant - Slot 02 - Draws
 
-0x000cf4: [8-bit] Tournament - Group C - 4th Place (Team ID)
+0x000cab: [8-bit] Competition Participant - Slot 03 - Points
 
-0x000cfc: [8-bit] Tournament - Group D - 1st Place (Team ID)
+0x000cac: [8-bit] Tournament/League Participant - Slot 03 (Team ID)
 
-0x000d04: [8-bit] Tournament - Group D - 2nd Place (Team ID)
+0x000cad: [8-bit] Competition Participant - Slot 03 - Matches Played
 
-0x000d0c: [8-bit] Tournament - Group D - 3rd Place (Team ID)
+0x000cae: [8-bit] Competition Participant - Slot 03 - Wins
 
-0x000d14: [8-bit] Tournament - Group D - 4th Place (Team ID)
+0x000caf: [8-bit] Competition Participant - Slot 03 - Draws
 
-0x000d1c: [8-bit] Tournament - Group E - 1st Place (Team ID)
+0x000cb3: [8-bit] Competition Participant - Slot 04 - Points
 
-0x000d24: [8-bit] Tournament - Group E - 2nd Place (Team ID)
+0x000cb4: [8-bit] Tournament/League Participant - Slot 04 (Team ID)
 
-0x000d2c: [8-bit] Tournament - Group E - 3rd Place (Team ID)
+0x000cb5: [8-bit] Competition Participant - Slot 04 - Matches Played
 
-0x000d34: [8-bit] Tournament - Group E - 4th Place (Team ID)
+0x000cb6: [8-bit] Competition Participant - Slot 04 - Wins
 
-0x000d3c: [8-bit] Tournament - Group F - 1st Place (Team ID)
+0x000cb7: [8-bit] Competition Participant - Slot 04 - Draws
 
-0x000d44: [8-bit] Tournament - Group F - 2nd Place (Team ID)
+0x000cbb: [8-bit] Competition Participant - Slot 05 - Points
 
-0x000d4c: [8-bit] Tournament - Group F - 3rd Place (Team ID)
+0x000cbc: [8-bit] Tournament/League Participant - Slot 05 (Team ID)
 
-0x000d54: [8-bit] Tournament - Group F - 4th Place (Team ID)
+0x000cbd: [8-bit] Competition Participant - Slot 05 - Matches Played
+
+0x000cbe: [8-bit] Competition Participant - Slot 05 - Wins
+
+0x000cbf: [8-bit] Competition Participant - Slot 05 - Draws
+
+0x000cc3: [8-bit] Competition Participant - Slot 06 - Points
+
+0x000cc4: [8-bit] Tournament/League Participant - Slot 06 (Team ID)
+
+0x000cc5: [8-bit] Competition Participant - Slot 06 - Matches Played
+
+0x000cc6: [8-bit] Competition Participant - Slot 06 - Wins
+
+0x000cc7: [8-bit] Competition Participant - Slot 06 - Draws
+
+0x000ccb: [8-bit] Competition Participant - Slot 07 - Points
+
+0x000ccc: [8-bit] Tournament/League Participant - Slot 07 (Team ID)
+
+0x000ccd: [8-bit] Competition Participant - Slot 07 - Matches Played
+
+0x000cce: [8-bit] Competition Participant - Slot 07 - Wins
+
+0x000ccf: [8-bit] Competition Participant - Slot 07 - Draws
+
+0x000cd3: [8-bit] Competition Participant - Slot 08 - Points
+
+0x000cd4: [8-bit] Tournament/League Participant - Slot 08 (Team ID)
+
+0x000cd5: [8-bit] Competition Participant - Slot 08 - Matches Played
+
+0x000cd6: [8-bit] Competition Participant - Slot 08 - Wins
+
+0x000cd7: [8-bit] Competition Participant - Slot 08 - Draws
+
+0x000cdb: [8-bit] Competition Participant - Slot 09 - Points
+
+0x000cdc: [8-bit] Tournament Participant - Slot 09 (Team ID)
+
+0x000cdd: [8-bit] Competition Participant - Slot 09 - Matches Played
+
+0x000cde: [8-bit] Competition Participant - Slot 09 - Wins
+
+0x000cdf: [8-bit] Competition Participant - Slot 09 - Draws
+
+0x000ce3: [8-bit] Competition Participant - Slot 10 - Points
+
+0x000ce4: [8-bit] Tournament Participant - Slot 10 (Team ID)
+
+0x000ce5: [8-bit] Competition Participant - Slot 10 - Matches Played
+
+0x000ce6: [8-bit] Competition Participant - Slot 10 - Wins
+
+0x000ce7: [8-bit] Competition Participant - Slot 10 - Draws
+
+0x000ceb: [8-bit] Competition Participant - Slot 11 - Points
+
+0x000cec: [8-bit] Tournament Participant - Slot 11 (Team ID)
+
+0x000ced: [8-bit] Competition Participant - Slot 11 - Matches Played
+
+0x000cee: [8-bit] Competition Participant - Slot 11 - Wins
+
+0x000cef: [8-bit] Competition Participant - Slot 11 - Draws
+
+0x000cf3: [8-bit] Competition Participant - Slot 12 - Points
+
+0x000cf4: [8-bit] Tournament Participant - Slot 12 (Team ID)
+
+0x000cf5: [8-bit] Competition Participant - Slot 12 - Matches Played
+
+0x000cf6: [8-bit] Competition Participant - Slot 12 - Wins
+
+0x000cf7: [8-bit] Competition Participant - Slot 12 - Draws
+
+0x000cfb: [8-bit] Competition Participant - Slot 13 - Points
+
+0x000cfc: [8-bit] Tournament Participant - Slot 13 (Team ID)
+
+0x000cfd: [8-bit] Competition Participant - Slot 13 - Matches Played
+
+0x000cfe: [8-bit] Competition Participant - Slot 13 - Wins
+
+0x000cff: [8-bit] Competition Participant - Slot 13 - Draws
+
+0x000d03: [8-bit] Competition Participant - Slot 14 - Points
+
+0x000d04: [8-bit] Tournament Participant - Slot 14 (Team ID)
+
+0x000d05: [8-bit] Competition Participant - Slot 14 - Matches Played
+
+0x000d06: [8-bit] Competition Participant - Slot 14 - Wins
+
+0x000d07: [8-bit] Competition Participant - Slot 14 - Draws
+
+0x000d0b: [8-bit] Competition Participant - Slot 15 - Points
+
+0x000d0c: [8-bit] Tournament Participant - Slot 15 (Team ID)
+
+0x000d0d: [8-bit] Competition Participant - Slot 15 - Matches Played
+
+0x000d0e: [8-bit] Competition Participant - Slot 15 - Wins
+
+0x000d0f: [8-bit] Competition Participant - Slot 15 - Draws
+
+0x000d13: [8-bit] Competition Participant - Slot 16 - Points
+
+0x000d14: [8-bit] Tournament Participant - Slot 16 (Team ID)
+
+0x000d15: [8-bit] Competition Participant - Slot 16 - Matches Played
+
+0x000d16: [8-bit] Competition Participant - Slot 16 - Wins
+
+0x000d17: [8-bit] Competition Participant - Slot 16 - Draws
+
+0x000d1b: [8-bit] Competition Participant - Slot 17 - Points
+
+0x000d1c: [8-bit] Tournament Participant - Slot 17 (Team ID)
+
+0x000d1d: [8-bit] Competition Participant - Slot 17 - Matches Played
+
+0x000d1e: [8-bit] Competition Participant - Slot 17 - Wins
+
+0x000d1f: [8-bit] Competition Participant - Slot 17 - Draws
+
+0x000d23: [8-bit] Competition Participant - Slot 18 - Points
+
+0x000d24: [8-bit] Tournament Participant - Slot 18 (Team ID)
+
+0x000d25: [8-bit] Competition Participant - Slot 18 - Matches Played
+
+0x000d26: [8-bit] Competition Participant - Slot 18 - Wins
+
+0x000d27: [8-bit] Competition Participant - Slot 18 - Draws
+
+0x000d2b: [8-bit] Competition Participant - Slot 19 - Points
+
+0x000d2c: [8-bit] Tournament Participant - Slot 19 (Team ID)
+
+0x000d2d: [8-bit] Competition Participant - Slot 19 - Matches Played
+
+0x000d2e: [8-bit] Competition Participant - Slot 19 - Wins
+
+0x000d2f: [8-bit] Competition Participant - Slot 19 - Draws
+
+0x000d33: [8-bit] Competition Participant - Slot 20 - Points
+
+0x000d34: [8-bit] Tournament Participant - Slot 20 (Team ID)
+
+0x000d35: [8-bit] Competition Participant - Slot 20 - Matches Played
+
+0x000d36: [8-bit] Competition Participant - Slot 20 - Wins
+
+0x000d37: [8-bit] Competition Participant - Slot 20 - Draws
+
+0x000d3b: [8-bit] Competition Participant - Slot 21 - Points
+
+0x000d3c: [8-bit] Tournament Participant - Slot 21 (Team ID)
+
+0x000d3d: [8-bit] Competition Participant - Slot 21 - Matches Played
+
+0x000d3e: [8-bit] Competition Participant - Slot 21 - Wins
+
+0x000d3f: [8-bit] Competition Participant - Slot 21 - Draws
+
+0x000d43: [8-bit] Competition Participant - Slot 22 - Points
+
+0x000d44: [8-bit] Tournament Participant - Slot 22 (Team ID)
+
+0x000d45: [8-bit] Competition Participant - Slot 22 - Matches Played
+
+0x000d46: [8-bit] Competition Participant - Slot 22 - Wins
+
+0x000d47: [8-bit] Competition Participant - Slot 22 - Draws
+
+0x000d4b: [8-bit] Competition Participant - Slot 23 - Points
+
+0x000d4c: [8-bit] Tournament Participant - Slot 23 (Team ID)
+
+0x000d4d: [8-bit] Competition Participant - Slot 23 - Matches Played
+
+0x000d4e: [8-bit] Competition Participant - Slot 23 - Wins
+
+0x000d4f: [8-bit] Competition Participant - Slot 23 - Draws
+
+0x000d53: [8-bit] Competition Participant - Slot 24 - Points
+
+0x000d54: [8-bit] Tournament Participant - Slot 24 (Team ID)
+
+0x000d55: [8-bit] Competition Participant - Slot 24 - Matches Played
+
+0x000d56: [8-bit] Competition Participant - Slot 24 - Wins
+
+0x000d57: [8-bit] Competition Participant - Slot 24 - Draws
 
 0x000d85: [8-bit] Home Team Score
 
