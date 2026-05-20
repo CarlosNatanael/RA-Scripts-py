@@ -1,0 +1,90 @@
+Game ID: 10764
+Source: RA Server
+Total Notes: 22
+============================================================
+
+0x000001: [8-bit] Game State Flag
+0x00 = In-Game Active
+0x02 = Game Paused
+
+0x000002: [8-bit] Main Game State / Screen ID
+0x01 = Title Screen / Main Menu
+0x05 = Active Gameplay
+0x0e = Cheat Menu
+0x12 = Level Intro / Stage Presentation
+0x14 = Round Clear / Stage Complete Screen
+0x1a = Game Over / Continue Screen
+0x09 = Screen special Ninjutsu
+
+0x000003: [8-bit] Intro / Cutscene State Flag
+0xff = Intro / Cutscene Active
+
+0x000005: [8-bit] Controller Input Bitmask
+Bit0 = Up
+Bit1 = Down
+Bit2 = Left
+Bit3 = Right
+Bit4 = Button 1 (Punch / Shoot)
+Bit5 = Button 2 (Jump)
+
+0x00000c: [8-bit] Stage Index
+0x00 = Stage 1
+0x01 = Stage 2
+0x02 = Stage 3
+0x03 = Stage 4
+0x04 = Stage 5
+0x05 = Stage 6
+
+0x00000d: [8-bit] Sub-Stage / Room Index
+0x00 = Section 1 (Normal Stage)
+0x01 = Section 2 (Mid-Stage)
+0x02 = Boss Arena
+
+0x00000e: [8-bit] Player Lives Count
+
+0x000010: [8-bit] Power Gauge Level
+0x08 = Max Power
+
+0x000011: [8-bit] Ninjutsu Gauge Level
+0x01-0x03 = Fire (Katon)
+0x04-0x05 = Tornado (Fuuton)
+0x06-0x07 = Lightning (Raiton)
+0x08 = Earth (Doton)
+
+[Note: Max value is 0x08. Determines the available elemental magic]
+
+0x000012: [8-bit] Weapon/Shot Selection & Ammo
+0x01-0x08 = Shuriken
+0x09-0x10 = Laser Vulcan
+0x11-0x18 = Grenade / Supergrenade
+
+0x000014: [8-bit] Timer
+- Seconds (Units Digit)
+
+0x000015: [8-bit] Timer
+- Seconds (Tens Digit)
+
+0x000016: [8-bit] Timer
+- Minutes
+
+0x000018: [8-bit BCD] Score - Tens & Units
+
+0x000019: [8-bit BCD] Score - Hundreds
+
+0x00001a: [8-bit BCD] Score - Thousands
+
+0x00001b: [8-bit BCD] Score - Ten Thousands
+
+0x00001c: [8-bit BCD] Score - Hundred Thousands
+
+0x00001d: [8-bit BCD] Score - Millions
+
+0x00001e: [8-bit BCD] Score - Ten Millions
+
+0x000025: [8-bit] Enemies Defeated Counter (Per Stage)
+[Note: Tracks enemies defeated in the current level. Resets at the beginning of each new stage.]
+
+0x00011c: [8-bit] Player Health Gauge
+0x00 = Danger
+0x23 = Max Health
+0xfe = Dead
