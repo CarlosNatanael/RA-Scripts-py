@@ -1,7 +1,10 @@
 Game ID: 10764
 Source: RA Server
-Total Notes: 22
+Total Notes: 24
 ============================================================
+
+0x000000: [Notes] Set created with the help of PyCheevos scripts:
+https://github.com/CarlosNatanael/RA-Scripts-py/tree/main/scripts_sets/SMS/The_Cyber_Shinobi
 
 0x000001: [8-bit] Game State Flag
 0x00 = In-Game Active
@@ -9,10 +12,12 @@ Total Notes: 22
 
 0x000002: [8-bit] Main Game State / Screen ID
 0x01 = Title Screen / Main Menu
+0x04 = Window transition
 0x05 = Active Gameplay
 0x0e = Cheat Menu
 0x12 = Level Intro / Stage Presentation
 0x14 = Round Clear / Stage Complete Screen
+0x16,0x18 = Credits end game
 0x1a = Game Over / Continue Screen
 0x09 = Screen special Ninjutsu
 
@@ -37,10 +42,14 @@ Bit5 = Button 2 (Jump)
 
 0x00000d: [8-bit] Sub-Stage / Room Index
 0x00 = Section 1 (Normal Stage)
-0x01 = Section 2 (Mid-Stage)
+0x01 = Section 2  / Boss Arena
 0x02 = Boss Arena
 
 0x00000e: [8-bit] Player Lives Count
+
+0x00000f: [8-bit] Player Health Storage - Screen Transition Buffer
+
+[Note: Stores a static copy of the player's health from 0x011c. During screen transitions, 0x011c temporarily drops to 0x00, and this address preserves the value, dumping it back into 0x011c once the new screen or gameplay active state loads.]
 
 0x000010: [8-bit] Power Gauge Level
 0x08 = Max Power
@@ -87,4 +96,5 @@ Bit5 = Button 2 (Jump)
 0x00011c: [8-bit] Player Health Gauge
 0x00 = Danger
 0x23 = Max Health
-0xfe = Dead
+0xfb, 0xeb = Dead
+

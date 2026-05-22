@@ -75,6 +75,8 @@ macro_score = (
 # 3. DISPLAYS
 rp.add_display([mem_screen == 1], "Title Screen")
 rp.add_display([mem_screen == 14], "Cheat Menu")
+rp.add_display([mem_screen == 22], "Credits End Game")
+rp.add_display([mem_screen == 24], "Credits End Game")
 
 # Intro
 rp.add_display(
