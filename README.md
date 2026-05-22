@@ -12,7 +12,7 @@
 
 ### <img src="https://static.retroachievements.org/assets/images/system/sms.png" height="30" align="middle"> &nbsp; Master System
 - [Chapolim x Dracula: Um Duelo Assustador](https://retroachievements.org/game/11638)
-
+- [The Cyber Shinobi](https://retroachievements.org/game/10764)
 ### <img src="https://static.retroachievements.org/assets/images/system/gg.png" height="30" align="middle"> &nbsp; Game Gear
 - [Captain America and the Avengers](https://retroachievements.org/game/14286)
 - [FIFA International Soccer](https://retroachievements.org/game/26280)
