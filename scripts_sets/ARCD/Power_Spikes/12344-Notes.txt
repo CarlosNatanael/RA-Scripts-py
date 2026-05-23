@@ -1,0 +1,63 @@
+Game ID: 12344
+Source: RA Server
+Total Notes: 11
+============================================================
+
+0x000022: [16-bit] Main Game State
+0x00 = Boot / Null
+0x03 = Title Screen / Insert Coin
+0x04 = Team Selection
+0x05 = Team Matchup Presentation
+0x06 = Active Gameplay
+0x07 = Match Victory Scene (Player or CPU)
+0x08 = Arcade Clear Sequence / High Score Name Entry
+0x09 = Game Over Screen
+
+0x00002e: [8-bit] Player 2 / CPU Active Flag
+0x00 = Player 2 Active
+0x01 = CPU Active
+0x03 = Demo Mode
+
+0x00004c: [8-bit] Player Credits (Coins)
+
+0x00004e: [8-bit] Player Credits (Coins)
+
+0x00168e: [16-bit] Player 1 Score
+[Note: By default due to standard volleyball scoring rules. Set ends when a 3-point advantage is reached]
+
+0x001690: [16-bit] Player 2 / CPU Score
+[Note: By default due to standard volleyball scoring rules. Set ends when a 3-point advantage is reached]
+
+0x0016b4: [16-bit] Timer - Seconds
+
+0x0016b6: [16-bit] Timer - Minutes
+
+0x0019c0: [8-bit] Player 1 Selected Team ID
+0x05 = Italy
+0x06 = France
+0x07 = Germany
+0x08 = Great Britain
+0x09 = Spain
+0x0a = Sweden
+0x0b = Norway
+0x0c = Denmark
+0x0d = Brazil
+
+0x0019c2: [8-bit] Player 2 Selected Team ID
+0x00 = Japan
+0x01 = USA
+0x02 = USSR
+0x03 = China
+0x05 = Italy
+0x06 = France
+0x07 = Germany
+0x08 = Great Britain
+0x09 = Spain
+0x0a = Sweden
+0x0b = Norway
+0x0c = Denmark
+0x0d = Brazil
+0x0f = Cuba
+
+0x0023d2: [16-bit] Player 1 Arcade Score
+[Note: Value resets to zero upon using a continue]
