@@ -82,3 +82,4 @@ Total Notes: 18
 0x002422: [16-bit] Arcade Score Slot 4
 
 0x002432: [16-bit] Arcade Score Slot 5
+
