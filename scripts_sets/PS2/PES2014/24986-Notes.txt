@@ -1,0 +1,336 @@
+Game ID: 24986
+Source: RA Server
+Total Notes: 11
+============================================================
+
+0x62f4de: [16-bit] Home Team ID
+// == Europe A ==
+0x0000 = Austria
+0x0001 = Belgium
+0x0002 = Bulgaria
+0x0003 = Croatia
+0x0004 = Czech Republic
+0x0005 = Denmark
+0x0006 = England
+0x0007 = Finland
+0x0008 = France
+0x0009 = Germany
+0x000a = Greece
+0x000b = Hungary
+0x000c = Ireland
+0x000d = Israel
+0x000e = Italy
+0x000f = Netherlands
+0x0010 = Northern Ireland
+0x0011 = Norway
+0x0012 = Poland
+0x0013 = Portugal
+// == Europe B ==
+0x0014 = Romania
+0x0015 = Russia
+0x0016 = Scotland
+0x0017 = Serbia
+0x0018 = Slovakia
+0x0019 = Slovenia
+0x001a = Spain
+0x001b = Sweden
+0x001c = Switzerland
+0x001d = Turkey
+0x001e = Ukraine
+0x001f = Wales
+// == Africa ==
+0x0020 = Algeria
+0x0021 = Cameroon
+0x0022 = Cote d'Ivoire
+0x0023 = Egypt
+0x0024 = Ghana
+0x0025 = Nigeria
+0x0026 = South Africa
+0x0027 = Zambia
+// == Americas ==
+0x0028 = Costa Rica
+0x0029 = Honduras
+0x002a = Mexico
+0x002b = USA
+0x002c = Argentina
+0x002d = Brazil
+0x002e = Chile
+0x002f = Colombia
+0x0030 = Ecuador
+0x0031 = Paraguay
+0x0032 = Peru
+0x0033 = Uruguay
+// == Asia ==
+0x0034 = Australia
+0x0035 = China
+0x0036 = Japan
+0x0037 = North Korea
+0x0038 = Saudi Arabia
+0x0039 = South Korea
+0x003a = UAE
+0x003b = New Zealand
+// == English League ==
+0x0043 = North London
+0x0044 = West Midlands Village
+0x0045 = South Wales
+0x0046 = London FC
+0x0047 = South East London
+0x0048 = Merseyside Blue
+0x0049 = West London White
+0x004a = Yorkshire Orange
+0x004b = Merseyside Red
+0x004c = Man Blue
+0x004d = Manchester United
+0x004e = Tyneside
+0x004f = Northluck C
+0x0050 = Soton
+0x0051 = The Potteries
+0x0052 = Wearside
+0x0053 = Swearcle
+0x0054 = North East London
+0x0055 = West Midlands Stripes
+0x0056 = East London
+// == Ligue 1 ==
+0x0057 = AC Ajaccio
+0x0058 = SC Bastia
+0x0059 = Girondins de Bordeaux
+0x005a = Evian Thonon Gaillard
+0x005b = EA Guingamp
+0x005c = LOSC Lille
+0x005d = FC Lorient
+0x005e = Olympique Lyonnais
+0x005f = Olympique de Marseille
+0x0060 = AS Monaco FC
+0x0061 = Montpellier Herault SC
+0x0062 = FC Nantes
+0x0063 = OGC Nice
+0x0064 = Paris Saint-Germain
+0x0065 = Stade de Reims
+0x0066 = Stade Rennais FC
+0x0067 = AS Saint-Etienne
+0x0068 = FC Sochaux-Montbeliard
+0x0069 = Toulouse FC
+0x006a = Valenciennes FC
+// == Italian League ==
+0x006b = Atalanta B.C.
+0x006c = Bologna
+0x006d = Cagliari Calcio
+0x006e = Calcio Catania
+0x006f = A.C. Chievo Verona
+0x0070 = Fiorentina
+0x0071 = Genoa CFC
+0x0072 = Internazionale
+0x0073 = Juventus
+0x0074 = Lazio
+0x0075 = A.S. Livorno
+0x0076 = A.C. Milan
+0x0077 = Napoli
+0x0078 = Parma FC
+0x0079 = Roma
+0x007a = Sampdoria
+0x007b = Sassuolo
+0x007c = Torino FC
+0x007d = Udinese Calcio
+0x007e = Verona
+// == Eredivisie ==
+0x007f = ADO Den Haag
+0x0080 = Ajax FC
+0x0081 = AZ
+0x0082 = Cambuur Leeuwarden
+0x0083 = Feyenoord
+0x0084 = Go Ahead Eagles
+0x0085 = FC Groningen
+0x0086 = SC Heerenveen
+0x0087 = Heracles Almelo
+0x0088 = NAC Breda
+0x0089 = N.E.C. Nijmegen
+0x008a = PSV
+0x008b = RKC Waalwijk
+0x008c = Roda JC Kerkrade
+0x008d = FC Twente
+0x008e = FC Utrecht
+0x008f = Vitesse
+0x0090 = PEC Zwolle
+// == Liga BBVA ==
+0x0091 = UD Almeria
+0x0092 = Athletic Club
+0x0093 = At. Madrid
+0x0094 = FC Barcelona
+0x0095 = Real Betis
+0x0096 = Celta de Vigo
+0x0097 = Elche CF
+0x0098 = RCD Espanyol
+0x0099 = Getafe CF
+0x009a = Granada CF
+0x009b = Malaga CF
+0x009c = Levante UD
+0x009d = CA Osasuna
+0x009e = Rayo Vallecano
+0x009f = Real Madrid
+0x00a0 = Real Sociedad
+0x00a1 = Sevilla FC
+0x00a2 = Valencia CF
+0x00a3 = Real Valladolid
+0x00a4 = Villarreal CF
+// == Other Leagues A & B ==
+0x00a5 = RSC Anderlecht
+0x00a6 = APOEL FC
+0x00a7 = Sparta Praha
+0x00a8 = F.C. Copenhagen
+0x00a9 = Nordsjaelland
+0x00aa = Bayer 04 Leverkusen
+0x00ab = Bayern Munchen
+0x00ac = Schalke 04
+0x00ad = Olympiacos FC
+0x00ae = PAOK F.C.
+0x00af = Maccabi Tel Aviv
+0x00b0 = Legia Warszawa
+0x00b1 = SL Benfica
+0x00b2 = S.C. Braga
+0x00b3 = Pacos de Ferreira
+0x00b4 = FC Porto
+0x00b5 = CSKA Moskva
+0x00b6 = FC Zenit
+0x00b7 = Celtic FC
+0x00b8 = Motherwell FC
+0x00b9 = Galatasaray A.S.
+0x00ba = Shakhtar Donetsk
+0x00bb = Almchendolf
+0x00bc = Ehrenhofstadt
+0x00bd = Fineseeberg
+0x00be = Kriedbach
+0x00bf = Lengerblitz
+0x00c0 = Theeselvargen
+0x00c1 = PES United
+0x00c2 = WE United
+// == Copa Libertadores ==
+0x00ed = Arsenal F.C.
+0x00ee = Boca Juniors
+0x00ef = Newell's Old Boys
+0x00f0 = Tigre
+0x00f1 = Velez Sarsfield
+0x00f2 = Club Bolivar
+0x00f3 = San Jose
+0x00f4 = The Strongest
+0x00f5 = Atletico Mineiro
+0x00f6 = Corinthians
+0x00f7 = Fluminense
+0x00f8 = Gremio
+0x00f9 = Palmeiras
+0x00fa = Sao Paulo
+0x00fb = Huachipato
+0x00fc = Deportes Iquique
+0x00fd = Universidad de Chile
+0x00fe = Deportes Tolima
+0x00ff = Millonarios
+0x0100 = Santa Fe
+0x0101 = Barcelona S.C.
+0x0102 = Emelec
+0x0103 = Liga de Quito
+0x0104 = Leon
+0x0105 = Tijuana
+0x0106 = Toluca
+0x0107 = Cerro Porteno
+0x0108 = Club Libertad
+0x0109 = Olimpia
+0x010a = Real Garcilaso
+0x010b = Sporting Cristal
+0x010c = Cesar Vallejo
+0x010d = Defensor Sporting
+0x010e = Nacional
+0x010f = Penarol
+0x0110 = Caracas F.C.
+0x0111 = Deportivo Anzoategui
+0x0112 = Deportivo Lara
+// == UEFA Champions League ==
+0x0146 = Manchester United
+0x0147 = Bayern Munchen
+0x0148 = Bayer 04 Leverkusen
+0x0149 = Schalke 04
+0x014a = FC Barcelona
+0x014b = Real Madrid
+0x014c = At. Madrid
+0x014d = Real Sociedad
+0x014e = Juventus
+0x014f = Napoli
+0x0150 = A.C. Milan
+0x0151 = FC Porto
+0x0152 = SL Benfica
+0x0153 = Pacos de Ferreira
+0x0154 = Paris Saint-Germain
+0x0155 = Olympique de Marseille
+0x0156 = Olympique Lyonnais
+0x0157 = CSKA Moskva
+0x0158 = FC Zenit
+0x0159 = Ajax FC
+0x015a = PSV
+0x015b = Shakhtar Donetsk
+0x015c = Olympiacos FC
+0x015d = PAOK F.C.
+0x015e = Galatasaray A.S.
+0x015f = RSC Anderlecht
+0x0160 = F.C. Copenhagen
+0x0161 = Nordsjaelland
+0x0162 = APOEL FC
+0x0163 = Maccabi Tel Aviv
+0x0164 = Celtic FC
+0x0165 = Legia Warszawa
+// == Master League Custom Team ==
+0x0113 = ML United
+0x0114 = AC Maestore
+0x0115 = AS Victoire
+0x0116 = CA Especialista
+0x0117 = Bravona
+0x0118 = FC Aries
+0x0119 = FC Taurus
+0x011a = AC Gemini
+0x011b = AS Cancer
+0x011c = AC Leo
+0x011d = AS Virgo
+0x011e = Libra FC
+0x011f = Scorpio FC
+0x0120 = FC Sagittarius
+0x0121 = AS Capricorn
+0x0122 = AC Aquarius
+0x0123 = Pisces FC
+0x0124 = WE Japan
+0x0125 = English All-Stars
+0x0126 = French
+0x0127 = Germany
+0x0128 = Italian
+0x0129 = Dutch
+0x012a = Spannish
+0x012b = Argentinian
+0x012c = Brazilian
+0x012d = AS Mohican
+0x012e = FC Magerio
+0x012f = Longuedez
+0x0130 = Bosedez
+0x0131 = Maccingami FC
+
+0x62f4e0: [16-bit] Away Team ID
+[Note: Uses the exact same Team ID dictionary as the Home Team address (0x0062f4de)]
+
+0xd316ec: [8-bit] Penalty Shootout - Home Team Score
+
+0xd319e0: [8-bit] Penalty Shootout - Away Team Score
+
+0xd41bf6: [8-bit] Home Team Score
+
+0xd41bfa: [8-bit] Away Team Score
+
+0xd41c06: [16-bit] Match Period
+0x00 = 1st Half
+0x01 = 2nd Half
+0x02 = 1st Half Extra Time
+0x03 = 2nd Half Extra Time
+0x04 = Penalty Shootout
+
+0xd41c08: [8-bit BCD] Timer - Minutes Units
+
+0xd41c09: [8-bit BCD] Timer - Minutes Tens
+
+0xd41c0a: [8-bit BCD] Timer - Seconds Units
+
+0xd41c0b: [8-bit BCD] Timer - Seconds Tens
+
