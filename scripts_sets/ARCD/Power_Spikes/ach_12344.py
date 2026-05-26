@@ -70,9 +70,7 @@ ach.add_core([
     trigger(mem_state == 0x08),
 ])
 ach.add_alt([
-    or_next(mem_state == 0x09),
-    or_next(mem_state == 0x03),
-    reset_if(mem_match_end == 0x0c),
+    reset_if(mem_state == 0x03)
 ])
 my_set.add_achievement(ach)
 
