@@ -57,7 +57,7 @@ def inject_translation(original_rom, patched_rom, json_map_file):
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        print("Uso correto: python injector.py <Garbagefield Saves Christmas (U).sms> <rom_traduzida.sms> <traducoes.json>")
+        print("Uso correto: python injector.py garbagefield_original.sms rom_traduzida.sms traducoes.json")
         sys.exit(1)
         
     rom_in = sys.argv[1]
