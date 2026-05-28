@@ -1,221 +1,276 @@
-0x5715b0: [16-bit] Left - Team Selected
-Europe A:
-0x00=Ireland
-0x01=Italy
-0x02=England
-0x03=Wales
-0x04=Ukraine
-0x05=Austria
-0x06=Holland
-0x07=Greece
-0x08=Northern Ireland
-0x09=Croatia
-0x0a=Switzerland
-0x0b=Sweden
-0x0c=Scotland
-0x0d=Spain
-0x0e=Slovakia
-0x0f=Slovenia
-0x10=Serbia & Montenegro
-0x11=Czech
-0x12=Denmark
-0x13=Germany
+Game ID: 21697
+Source: RA Server
+Total Notes: 17
+============================================================
 
-Europe B:
-0x14=Turkey
-0x15=Norway
-0x16=Hungary
-0x17=Finland
-0x18=France
-0x19=Bulgaria
-0x1a=Belgium
-0x1b=Poland
-0x1c=Portugal
-0x1d=Latvia
-0x1e=Romania
-0x1f=Russia
+0x3c9900: [32-bit] Pointer - Menu Selector Base
+[Note: Base address for the active menu. Contains the exact selector position.]
++0x0d | Selector
 
-Africa:
-0x20=Angola
-0x21=Ghana
-0x22=Cameroon
-0x23=Ivory Coast
-0x24=Tunisia
-0x25=Togo
-0x26=Nigeria
-0x27=South Africa
+0x3c9974: [8-bit] Main Menu Mode
+0x00 = Match
+0x01 = Master League
+0x02 = League
+0x03 = Cup
+0x04 = Training
+0x05 = Edit
+0x06 = Option
+0x07 = Nippon Challenge
+0x08 = International Challenge
+0x09 = Random Match
 
-The Americas:
-0x28=United States
-0x29=Costa Rica
-0x2a=Mexico
-0x2b=Trinidad & Tobago
-0x2c=Argentina
-0x2d=Uruguay
-0x2e=Ecuador
-0x2f=Colombia
-0x30=Chile
-0x31=Paraguay
-0x32=Brazil
-0x33=Peru
+0x3ca638: [8-bit] Menu Option Cursor / Selector
 
-Asia-Oceania:
-0x34=Iran
-0x35=Korea
-0x36=Saudi Arabia
-0x37=Japan
-0x38=Australia
+0x5715b0: [16-bit] Home Team ID
 
-England League:
-0x40=Arsenal
-0x41=Aston Villa
-0x42=Wigan Athletic
-0x43=West Bromwich
-0x44=West Ham
-0x45=Everton
-0x46=Sunderland
-0x47=Chelsea
-0x48=Charlton
-0x49=Tottenham
-0x4a=Newcastle
-0x4b=Birmingham
-0x4c=Blackburn R.
-0x4d=Fulham
-0x4e=Portsmouth
-0x4f=Bolton W.
-0x50=Manchester City
-0x51=Manchester United
-0x52=Middlesbrough
-0x53=Liverpool
+// == Europe A ==
+0x0000 = Ireland
+0x0001 = Italy
+0x0002 = England
+0x0003 = Wales
+0x0004 = Ukraine
+0x0005 = Austria
+0x0006 = Holland
+0x0007 = Greece
+0x0008 = Northern Ireland
+0x0009 = Croatia
+0x000a = Switzerland
+0x000b = Sweden
+0x000c = Scotland
+0x000d = Spain
+0x000e = Slovakia
+0x000f = Slovenia
+0x0010 = Serbia & Montenegro
+0x0011 = Czech
+0x0012 = Denmark
+0x0013 = Germany
+// == Europe B ==
+0x0015 = Norway
+0x0014 = Turkey
+0x0016 = Hungary
+0x0017 = Finland
+0x0018 = France
+0x0019 = Bulgaria
+0x001a = Belgium
+0x001b = Poland
+0x001c = Portugal
+0x001d = Latvia
+0x001e = Romania
+0x001f = Russia
+// == Africa ==
+0x0020 = Angola
+0x0021 = Ghana
+0x0022 = Cameroon
+0x0023 = Ivory Coast
+0x0024 = Tunisia
+0x0025 = Togo
+0x0026 = Nigeria
+0x0027 = South Africa
+// == Americas ==
+0x0028 = United States
+0x0029 = Costa Rica
+0x002a = Mexico
+0x002b = Trinidad & Tobago
+0x002c = Argentina
+0x002d = Uruguay
+0x002e = Ecuador
+0x002f = Colombia
+0x0030 = Chile
+0x0031 = Paraguay
+0x0032 = Brazil
+0x0033 = Peru
+// == Asia ==
+0x0034 = Iran
+0x0035 = Korea
+0x0036 = Saudi Arabia
+0x0037 = Japan
+0x0038 = Australia
+// == English League ==
+0x0040 = Arsenal
+0x0041 = Aston Villa
+0x0042 = Wigan Athletic
+0x0043 = West Bromwich
+0x0044 = West Ham
+0x0045 = Everton
+0x0046 = Sunderland
+0x0047 = Chelsea
+0x0048 = Charlton
+0x0049 = Tottenham
+0x004a = Newcastle
+0x004b = Birmingham
+0x004c = Blackburn R.
+0x004d = Fulham
+0x004e = Portsmouth
+0x004f = Bolton W.
+0x0050 = Manchester City
+0x0051 = Manchester United
+0x0052 = Middlesbrough
+0x0053 = Liverpool
+// == Brasileirão A ==
+0x0054 = Figueirense
+0x0055 = Botafogo
+0x0056 = Atletico MG
+0x0057 = Cruzeiro
+0x0058 = Sport Recife
+0x0059 = Flamengo
+0x005a = Portuguesa
+0x005b = Atletico PR
+0x005c = Goias
+0x005d = Gremio
+0x005e = Internacional
+0x005f = Palmeiras
+0x0060 = Coritiba
+0x0061 = Vitoria
+0x0062 = Santos
+0x0063 = Nautico
+0x0064 = Ipatinga
+0x0065 = São Paulo
+0x0066 = Fluminense
+0x0067 = Vasco
+// == Germany League ==
+0x0068 = Eintracht Frankfurt
+0x0069 = Arminia Bielefeld
+0x006a = Werder Bremen
+0x006b = WfL Wolfsburg
+0x006c = 1FC Kaiserlautern
+0x006d = 1FC Koln
+0x006e = FC Schalke 04
+0x006f = VfB Stuttgart
+0x0070 = Duisburg
+0x0071 = 1FC Nurnberg
+0x0072 = Bayern München
+0x0073 = Bayer Leverkusen
+0x0074 = Hannover 96
+0x0075 = Hamburger SV
+0x0076 = Hertha Berlin
+0x0077 = Borussia Dortmund
+0x0078 = B. Monchen
+0x0079 = FSV Mainz
+// == Serie A ==
+0x007a = Ascoli
+0x007b = Inter Milan
+0x007c = Udinese
+0x007d = Empoli
+0x007e = Cagliari
+0x007f = Chievo Verona
+0x0080 = Sampdoria
+0x0081 = Siena
+0x0082 = Treviso
+0x0083 = Parma
+0x0084 = Palermo
+0x0085 = Fiorentina
+0x0086 = A.C. Milan
+0x0087 = Messina
+0x0088 = Juventus
+0x0089 = Lazio
+0x008a = Livorno
+0x008b = Reggina
+0x008c = Lecce
+0x008d = A.S. Roma
+// == Europe Teams ==
+0x008e = Lyon
+0x008f = Porto
+0x0090 = Benfica
+0x0091 = Besiktas
+0x0092 = PSV
+0x0093 = RBC
+0x0094 = Sporting
+0x0095 = Ajax
+0x0096 = Celtic
+0x0097 = Paris Saint-Germain
+0x0098 = AC Monaco
+0x0099 = Dynamo Kiev
+0x009a = Feyenoord
+0x009b = FC Groningen
+0x009c = SC Heerenveen
+0x009d = Olympiakos
+0x009e = Olympique de Marseille
+0x009f = Fenerbahche
+// == League Spannish ==
+0x00a0 = Athletic Club Bilbao
+0x00a1 = Atletico de Madrid
+0x00a2 = Alaves
+0x00a3 = Espanyol
+0x00a4 = Osasuna
+0x00a5 = Cadiz
+0x00a6 = Sevilla
+0x00a7 = Celta Vigo
+0x00a8 = Deportivo La Coruña
+0x00a9 = FC Barcelona
+0x00aa = Valencia
+0x00ab = Villareal
+0x00ac = Getafe
+0x00ad = Real Mallorca
+0x00ae = Malaga
+0x00af = Racing Santander
+0x00b0 = Real Zaragoza
+0x00b1 = Real Sociedad
+0x00b2 = Real Betis
+0x00b3 = Real Madrid
+// == Sulamericana ==
+0x00b4 = Parana Clube
+0x00b5 = Nacional de Cali
+0x00b6 = River Plate
+0x00b7 = L.D.U
+0x00b8 = Ponte Portuguesa
+0x00b9 = Gama
+0x00ba = So Caetano
+0x00bb = Racing
+0x00bc = Avai
+0x00bd = Velez
+0x00be = Brasiliense
+0x00bf = Boca Juniors
+0x00c0 = Fortaleza
+0x00c1 = Paysandu
+0x00c2 = Nacional
+0x00c3 = Corinthians
+0x00c4 = America de Natal
+// == Brasileirão B ==
+0x00c5 = Bahia
+0x00c6 = Volta Redonda
+0x00c7 = Santa Cruz
+0x00c8 = Cabofriense
+0x00c9 = Juventude
 
-France League:
-0x54=AC Ajaccio
-0x55=AJ Auxerre
-0x56=St. Etienne
-0x57=Estrasbourgo
-0x58=Sochaux
-0x59=Toulouse
-0x5a=Troyes
-0x5b=Nancy
-0x5c=Nantes
-0x5d=OGC Nice
-0x5e=Paris St. Germain
-0x5f=Girondis B.
-0x60=O. Marseille
-0x61=FC Metz
-0x62=AS Monaco
-0x63=RC Lens
-0x64=Lille
-0x65=O. Lyon
-0x66=Le Mans
-0x67=Rennes
+0x5715b2: [16-bit] Away Team ID
+[Note: Uses the exact same Team ID dictionary as the Home Team address (0x005715b0)]
 
-Germany League:
-0x68=Eintracht Frankfurt
-0x69=Arminia Bielefeld
-0x6a=SV Werder Bremen
-0x6b=WfL Wolfsburg
-0x6c=1FC Kaiserlautern
-0x6d=1FC Koln
-0x6e=FC Schalke 04
-0x6f=VfB Stuttgart
-0x70=Duisburg
-0x71=1FC Nurnberg
-0x72=Bayern München
-0x73=Bayer Leverkusen
-0x74=Hannover 96
-0x75=Hamburger SV
-0x76=Hertha BSC Berlin
-0x77=Borussia Dortmund
-0x78=B. Monchen
-0x79=FSV Mainz
+0x5cda1c: [8-bit] Home Team Score
 
-Serie A:
-0x7a=Ascoli
-0x7b=Inter Milan
-0x7c=Udinese
-0x7d=Empoli
-0x7e=Cagliari
-0x7f=Chievo Verona
-0x80=Sampdoria
-0x81=Siena
-0x82=Treviso
-0x83=Parma
-0x84=Palermo
-0x85=Fiorentina
-0x86=A.C. Milan
-0x87=Messina
-0x88=Juventus
-0x89=Lazio
-0x8a=Livorno
-0x8b=Reggina
-0x8c=Lecce
-0x8d=A.S. Roma
+0x5cda1e: [8-bit] Away Team Score
 
-Eredivisie:
-0x8e=ADO Den Haag
-0x8f=AZ
-0x90=NAC
-0x91=NEC
-0x92=PSV
-0x93=RBC
-0x94=RKC
-0x95=Ajax
-0x96=Willem II
-0x97=Sparta de Rotterdam
-0x98=Twente
-0x99=Vitesse
-0x9a=Feyenoord
-0x9b=Groningen
-0x9c=Heerenveen
-0x9d=Heracles Almelo
-0x9e=Utrecht
-0x9f=Roda
+0xc8025c: [8-bit] Penalty Shootout - Home Team Score
 
-La Liga Espanhola:
-0xa0=Athletic Club Bilbao
-0xa1=Atletico de Madrid
-0xa2=Alaves
-0xa3=Espanyol
-0xa4=Osasuna
-0xa5=Cadiz
-0xa6=Sevilla
-0xa7=Celta Vigo
-0xa8=Deportivo La Coruña
-0xa9=Barcelona
-0xaa=Valencia
-0xab=Villareal
-0xac=Getafe
-0xad=Mallorca
-0xae=Malaga
-0xaf=Santander
-0xb0=Zaragoza
-0xb1=Real Sociedad
-0xb2=Betis
-0xb3=Real Madrid
+0xc80550: [8-bit] Penalty Shootout - Away Team Score
 
-Other League A:
-0xb4=Anderlecht
-0xb5=Olympiakos
-0xb6=Galatasaray
-0xb7=Club Brugge
-0xb8=Kopenhagen
-0xb9=Djurgardens
-0xba=Sparta Prague
-0xbb=Sporting
-0xbc=Celtic
-0xbd=Dynamo Kyiv
-0xbe=Panathinaikos
-0xbf=Fenerbahche
-0xc0=Besiktas
-0xc1=Benfica
-0xc2=Porto
-0xc3=Rangers
-0xc4=Rosenborg
+0xc8e686: [16-bit] Match Period
+0x00 = 1st Half
+0x01 = 2nd Half
+0x02 = 1st Half Extra Time
+0x03 = 2nd Half Extra Time
+0x04 = Penalty Shootout
 
-Other League B:
-0xc5=São Paulo
-0xc6=Boca Juniors
-0xc7=River Plate
-0xc8=WE United
-0xc9=PES United
+0xc8e688: [8-bit BCD] Timer - Minutes Units
+
+0xc8e689: [8-bit BCD] Timer - Minutes Tens
+
+0xc8e68a: [8-bit BCD] Timer - Seconds Units
+
+0xc8e68b: [8-bit BCD] Timer - Seconds Tens
+
+0xccd99c: [8-bit] Edit Mode Menu
+0x00 = Edit Player
+0x01 = Register Member
+0x02 = Edit Team
+0x03 = Edit Emblems and Logos
+0x04 = Edit Boots
+0x05 = Edit Stadium Names
+0x06 = Edit League and Cup Names
+0x07 = Save Data Manager
+0x08 = Exit / Finish Editing
+[Note: Retains cursor position for sub-menus like Emblems or Boots, but dynamically resets to 0x00 upon interacting with Player/Team/Data Manager options.]
+
+0xccd9c4: [11 Bytes ASCII] Edit Mode Background Juggling Player Name
+
+0x183abec: [32-bit] PES Shop Points
+
