@@ -1,0 +1,80 @@
+0x0028:[8-bit] Lives
+0x002b:[8-bit BCD] Timer - Seconds
+0x002c:[8-bit BCD] Timer - Minutes
+
+[8-bit] Letter: A (1st in CAPTAIN) 
+0x00 = No
+0x01 = Yes
+
+[8-bit] Letter: A (2nd in CAPTAIN) 
+0x00 = No
+0x01 = Yes
+
+[8-bit] Letter: I (in CAPTAIN) 
+0x00 = No
+0x01 = Yes
+
+[8-bit] Letter: I (in SILVER) 
+0x00 = No
+0x01 = Yes
+
+[8-bit] Letter: C (in CAPTAIN) 
+0x00 = No
+0x01 = Yes
+
+[8-bit] Letter: P (in CAPTAIN) 
+0x00 = No
+0x01 = Yes
+
+[8-bit] Letter: T (in CAPTAIN) 
+0x00 = No
+0x01 = Yes
+
+[8-bit] Letter: N (in CAPTAIN) 
+0x00 = No
+0x01 = Yes
+
+[8-bit] Letter: S (in SILVER) 
+0x00 = No
+0x01 = Yes
+
+[8-bit] Letter: L (in SILVER) 
+0x00 = No
+0x01 = Yes
+
+[8-bit] Letter: V (in SILVER) 
+0x00 = No
+0x01 = Yes
+
+[8-bit] Letter: E (in SILVER) 
+0x00 = No
+0x01 = Yes
+
+[8-bit] Letter: R (in SILVER) 
+0x00 = No
+0x01 = Yes
+
+
+0x0149:[8-bit] Shop Access / Key Drop Flag
+[Note: Becomes 0x01 when a key is collected, resets to 0x00 upon entering the shop.]
+
+0x0154:[8-bit] Item: Herb 
+0x00 = No
+0x01 = Yes
+
+0x0158:[8-bit] Item: Key 
+0x00 = No
+0x01 = Yes
+
+0x015c:[8-bit] Item: Boots 
+0x00 = No
+0x01 = Yes
+
+0x0160:[8-bit] Item: 300 Pts Coin 
+0x00 = No
+0x01 = Yes
+
+
+0x0002:[8-bit] Pause Flag
+0x00 = Active / In-Game
+0xff = Paused
