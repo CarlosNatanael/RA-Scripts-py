@@ -1,0 +1,21 @@
+Game ID: 3757
+Source: RA Server
+Total Notes: 3
+============================================================
+
+0x130f14: [24-bit] Pointer - Player Inventory / Ammo Base
++0x0280 | [16-bit] Ballistic Weapon Ammo
++0x0284 | [16-bit] Energy Cells Ammo
++0x0288 | [16-bit] Rockets Ammo
+
+0x20a3d8: [24-bit] Pointer - Player Entity Base
++0xf0 | [Float] Player HP
+[Note: Max/Initial value is 100.0. Value can drop below 0.0 upon death.]
+
+0x20a798: [8-bit] Difficulty game
+0x00 = Normal
+0x01 = Easy
+0x02 = Hard
+
+[Original Note: Pudpod]
+
