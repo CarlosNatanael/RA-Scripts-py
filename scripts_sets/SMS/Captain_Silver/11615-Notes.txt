@@ -1,6 +1,6 @@
 Game ID: 11615
 Source: RA Server
-Total Notes: 32
+Total Notes: 34
 ============================================================
 
 0x000002: [8-bit] Pause Flag
@@ -23,6 +23,7 @@ Total Notes: 32
 0x06 = Stage 6
 
 0x000028: [8-bit] Lives
+0x00 = Game Over Screen
 
 0x000029: [8-bit] Power Level
 0x00 = Default
@@ -86,6 +87,11 @@ Total Notes: 32
 0x00 = No
 0x01 = Yes
 
+0x000107: [8-bit] Victory Screen / Ending
+0x00 = Inactive
+0xff = Active
+[Note: This value then changes to 0x01 to display the final story]
+
 0x000140: [16-bit] Herb Effect Active (Invincibility)
 0x0000 = No
 0x0401 = Yes
@@ -124,3 +130,6 @@ Total Notes: 32
 0x00 = No
 0x01 = Yes
 
+0x0003d5: [8-bit] Game State
+0x00 = Screen transition
+0xff = In Game
