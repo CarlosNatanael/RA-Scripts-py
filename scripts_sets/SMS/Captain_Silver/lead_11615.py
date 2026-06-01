@@ -22,7 +22,7 @@ mem_gold_10 = byte(0x0022).bcd()
 
 # 2. CÁLCULOS DE VALOR (VALUES)
 time_value = [
-    add_source(mem_time_m * 60),
+    add_source(mem_time_m * 100),
     measured(mem_time_s)
 ]
 
