@@ -1,7 +1,10 @@
 Game ID: 11615
 Source: RA Server
-Total Notes: 34
+Total Notes: 35
 ============================================================
+
+0x000000: [Notes] Set created with the help of PyCheevos scripts:
+https://github.com/CarlosNatanael/RA-Scripts-py/tree/main/scripts_sets/SMS/Captain_Silver
 
 0x000002: [8-bit] Pause Flag
 0x00 = In-Game
