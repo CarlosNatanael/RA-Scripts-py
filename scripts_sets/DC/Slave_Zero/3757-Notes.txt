@@ -1,12 +1,25 @@
 Game ID: 3757
 Source: RA Server
-Total Notes: 3
+Total Notes: 6
 ============================================================
 
+0x130d64: [24-bit] Pointer - Entity Generator02
++0x70 | [Float] Generator HP
+
 0x130f14: [24-bit] Pointer - Player Inventory / Ammo Base
-+0x0280 | [16-bit] Ballistic Weapon Ammo
-+0x0284 | [16-bit] Energy Cells Ammo
-+0x0288 | [16-bit] Rockets Ammo
++0x025c | [16-bit] Weapon Slot 1 ID
+0x00 = None
+0x01 = IR-9000 (Standard)
+0x02 = IR-9000 (Iron Roar)
++0x0264 | [16-bit] Weapon Slot 2 ID
+0x00 = None
+0x02 = PR-2 Plasma Pulse 
++0x0280 | [16-bit] Ammo Pool - Ballistic
++0x0284 | [16-bit] Ammo Pool - Energy Cells
++0x0288 | [16-bit] Ammo Pool - Rockets
+
+0x131ec0: [24-bit] Pointer - Entity Generator01
++0x01b0 | [Float] Generator HP
 
 0x20a3d8: [24-bit] Pointer - Player Entity Base
 +0xf0 | [Float] Player HP
@@ -18,4 +31,7 @@ Total Notes: 3
 0x02 = Hard
 
 [Original Note: Pudpod]
+
+0x20cae8: [24-bit] Pointer - Entity Generator03
++0x70 | [Float] Generator HP
 
