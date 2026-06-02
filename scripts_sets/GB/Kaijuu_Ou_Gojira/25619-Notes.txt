@@ -1,0 +1,127 @@
+Game ID: 25619
+Source: RA Server
+Total Notes: 13
+============================================================
+
+0x00d886: [8-bit] Pause Flag
+0x00 = In-Game
+0x01 = Paused
+
+0x00da2c: [8-bit] Current Stage ID
+0x00 = Stage 1
+0x01 = Stage 2
+0x02 = Stage 3
+0x03 = Stage 4
+0x04 = Stage 5
+0x05 = Stage 6
+
+0x00db37: [8-bit] Continues Used
+0x00 = 0 Continues
+0x01 = 1 Continue
+0x02 = 2 Continues
+0x03 = 3 Continues (Max / Game Over)
+
+0x00dc43: [8-bit] Enemy Slot 1 / Main Body - HP
+// Stage 1:
+0x64 = Ebirah (100)
+0x8c = Battra (140)
+0x96 = Mothra Egg (150)
+0xb4 = Mothra Larva (180)
+
+// Stage 2:
+0xfa = Super X (250)
+0xfe = Biollante Middle Tentacle (254)
+0x22 = Super X2 (34)
+[Note: Boss has two phases. Starts at 0x22, drops to 0x00, refills to 0xf2 (242), then drops to 0x00 upon death]
+0xfe = Biollante Upper Tentacle - 2nd Fight (254)
+
+// Stage 3:
+0xfa = Gabara (250)
+[Note: Starts at 0x54 (84), drops to 0x00, refills to 0xfa, then drops to 0x00 upon death]
+
+// Stage 4:
+0xfc = King Ghidorah (252)
+[Note: Boss has two phases. Starts at 0xa4 (164), drops to 0x04, refills to 0xfc, then drops to 0x00 upon death]
+0xfe = King Caesar (254)
+[Note: Starts at 0x72 (114), drops to 0x00, refills to 0xfe, then drops to 0x00 upon death]
+0xfe = Jet Jaguar (254)
+[Note: Starts at 0x5e (94), drops to 0x00, refills to 0xfe, then drops to 0x00 upon death]
+0xf8 = Gezora (248)
+[Note: Starts at 0x68 (104), drops to 0x00, refills to 0xf8, then drops to 0x00 upon death]
+0xf8 = Ganime (248)
+[Note: Identical behavior to Gezora]
+
+0x00dc63: [8-bit] Enemy Slot 2 / Sub-Entity - HP
+// Stage 2:
+0xfe = Biollante Lower Tentacle - 2nd Fight (254)
+
+// Stage 3:
+0xfc = Flying Hedorah (252)
+[Note: Boss has two phases. Starts at 0x2c (44), drops to 0x04, refills to 0xfc, then drops to 0x00 upon death]
+
+0x00dc83: [8-bit] Enemy Slot 3 / Sub-Entity - HP
+// Stage 2:
+0xfe = Biollante Upper Tentacle (254)
+
+0x00dca3: [8-bit] Enemy Slot 4 / Sub-Entity - HP
+// Stage 2:
+0xfe = Biollante Lower Tentacle (254)
+
+0x00dd43: [8-bit] Enemy Boss Core - HP
+// Stage 1:
+0xc8 = Mothra Larva 2 (200)
+0xfc = Mothra Imago (252)
+[Note: Imago phase starts at 0x04, then changes to 0xfc]
+0x7c = Mothra Final (124)
+[Note: Boss has two health bars. Starts at 0x7c, drops to 0x04, refills to 0xfc, then drops to 0x00 upon death]
+
+// Stage 2:
+0xfc = Anguirus (252)
+0xf8 = Biollante Final Form (248)
+[Note: Starts at 0x18 (24), drops to 0x00, refills to 0xf8, then drops to 0x00 upon death]
+0xfc = Biollante Final Form - 2nd Fight (252)
+[Note: Starts at 0x2c (44), drops to 0x00, refills to 0xfc, then drops to 0x00 upon death]
+
+// Stage 3:
+0xf8 = Manda (248)
+[Note: Starts at 0x40 (64), drops to 0x00, refills to 0xf8, then drops to 0x00 upon death]
+0xfe = Kamacuras 1 (254)
+[Note: Starts at 0x5e (94), drops to 0x00, refills to 0xfe, then drops to 0x00 upon death]
+0xfe = Kamacuras 2 (254)
+[Note: Identical behavior to Kamacuras 1]
+0xfc = Kumonga (252)
+[Note: Starts at 0x7c (124), drops to 0x00, refills to 0xfc, then drops to 0x00 upon death]
+0xfe = Kamacuras 3 (254)
+[Note: Identical behavior to Kamacuras 1 & 2]
+0xf8 = Final Hedorah (248)
+[Note: Starts at 0x90 (144), drops to 0x00, refills to 0xf8, then drops to 0x00 upon death]
+
+// Stage 4:
+0xfc = King Ghidorah (252)
+[Note: Starts at 0xa4 (164), drops to 0x04, refills to 0xfc, then drops to 0x00 upon death]
+0xf8 = Gigan (248)
+[Note: Starts at 0xb8 (184), drops to 0x00, refills to 0xf8, then drops to 0x00 upon death]
+0xfa = Megalon (250)
+[Note: Starts at 0xc2 (194), drops to 0x02, refills to 0xfa, then drops to 0x00 upon death]
+
+0x00df02: [8-bit] Debug Menu - Stage Selector
+0x00 = Stage 1
+0x01 = Stage 2
+0x02 = Stage 3
+0x03 = Stage 4
+0x04 = Stage 5
+0x05 = Stage 6
+
+0x00df03: [8-bit] Debug Menu - Map X (Needs Verification)
+0xff = Maximum
+
+0x00df04: [8-bit] Debug Menu - GGNO (Needs Verification)
+0x05 = Maximum
+
+0x00df05: [8-bit] Debug Menu - Godzilla HP / Energy Flag
+0xff = Maximum
+[Note: Initializes at 0x00. Becomes 0xff when debug mode is activated.]
+
+0x00ffb9: [8-bit] Godzilla HP/Energy
+0xff = Max hp
+
