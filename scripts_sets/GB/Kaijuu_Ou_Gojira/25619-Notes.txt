@@ -125,3 +125,93 @@ Total Notes: 13
 0x00ffb9: [8-bit] Godzilla HP/Energy
 0xff = Max hp
 
+[8-bit] Enemy Boss Core - HP
+// Stage 1:
+0xc8 = Mothra Larva 2 (200)
+0xfc = Mothra Imago (252)
+[Note: Imago phase starts at 0x04, then changes to 0xfc]
+0x7c = Mothra Final (124)
+[Note: Boss has two health bars. Starts at 0x7c, drops to 0x04, refills to 0xfc, then drops to 0x00 upon death]
+
+// Stage 2:
+0xfc = Anguirus (252)
+0xf8 = Biollante Final Form (248)
+[Note: Starts at 0x18 (24), drops to 0x00, refills to 0xf8, then drops to 0x00 upon death]
+0xfc = Biollante Final Form - 2nd Fight (252)
+[Note: Starts at 0x2c (44), drops to 0x00, refills to 0xfc, then drops to 0x00 upon death]
+
+// Stage 3:
+0xf8 = Manda (248)
+[Note: Starts at 0x40 (64), drops to 0x00, refills to 0xf8, then drops to 0x00 upon death]
+0xfe = Kamacuras 1 (254)
+[Note: Starts at 0x5e (94), drops to 0x00, refills to 0xfe, then drops to 0x00 upon death]
+0xfe = Kamacuras 2 (254)
+[Note: Identical behavior to Kamacuras 1]
+0xfc = Kumonga (252)
+[Note: Starts at 0x7c (124), drops to 0x00, refills to 0xfc, then drops to 0x00 upon death]
+0xfe = Kamacuras 3 (254)
+[Note: Identical behavior to Kamacuras 1 & 2]
+0xf8 = Final Hedorah (248)
+[Note: Starts at 0x90 (144), drops to 0x00, refills to 0xf8, then drops to 0x00 upon death]
+
+// Stage 4:
+0xfc = King Ghidorah (252)
+[Note: Starts at 0xa4 (164), drops to 0x04, refills to 0xfc, then drops to 0x00 upon death]
+0xf8 = Gigan (248)
+[Note: Starts at 0xb8 (184), drops to 0x00, refills to 0xf8, then drops to 0x00 upon death]
+0xfa = Megalon (250)
+[Note: Starts at 0xc2 (194), drops to 0x02, refills to 0xfa, then drops to 0x00 upon death]
+
+// Stage 5:
+0xf8 = Godzilla copia
+[Note: Começa em 0xe0 assim que chega em 0x00 vai para 0xf8]
+
+0xf8 = Mechagodzilla2
+[Note: Começa em 0xd8 assim que chega em 0x00 vai para 0xf8]
+
+0xf8 = Titanosaurus
+[Note: Começa em 0xe0 assim que chega em 0x00 vai para 0xf8]
+
+0xf8 = Rodan
+[Note: Começa em 0xe0 assim que chega em 0x00 vai para 0xf8]
+
+0xf8 = Mechagodzilla  final
+[Note: Começa em 0xf4 assim que chega em 0x00 vai para 0xf8]
+
+
+[8-bit] Enemy Slot 1 / Main Body - HP
+// Stage 1:
+0x64 = Ebirah (100)
+0x8c = Battra (140)
+0x96 = Mothra Egg (150)
+0xb4 = Mothra Larva (180)
+
+// Stage 2:
+0xfa = Super X (250)
+0xfe = Biollante Middle Tentacle (254)
+0x22 = Super X2 (34)
+[Note: Boss has two phases. Starts at 0x22, drops to 0x00, refills to 0xf2 (242), then drops to 0x00 upon death]
+0xfe = Biollante Upper Tentacle - 2nd Fight (254)
+
+// Stage 3:
+0xfa = Gabara (250)
+[Note: Starts at 0x54 (84), drops to 0x00, refills to 0xfa, then drops to 0x00 upon death]
+
+// Stage 4:
+0xfc = King Ghidorah (252)
+[Note: Boss has two phases. Starts at 0xa4 (164), drops to 0x04, refills to 0xfc, then drops to 0x00 upon death]
+0xfe = King Caesar (254)
+[Note: Starts at 0x72 (114), drops to 0x00, refills to 0xfe, then drops to 0x00 upon death]
+0xfe = Jet Jaguar (254)
+[Note: Starts at 0x5e (94), drops to 0x00, refills to 0xfe, then drops to 0x00 upon death]
+0xf8 = Gezora (248)
+[Note: Starts at 0x68 (104), drops to 0x00, refills to 0xf8, then drops to 0x00 upon death]
+0xf8 = Ganime (248)
+[Note: Identical behavior to Gezora]
+
+// Stage 5:
+0xfc = Mechagodzilla voador
+[Note: Começa em 0xfa assim que chega em 0x04 vai para 0xfc]
+
+0xfa = Varan
+[Note: Começa em 0xc2 assim que chega em 0x02 vai para 0xfa]
