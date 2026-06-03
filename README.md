@@ -2,6 +2,9 @@
 ### <img src="https://static.retroachievements.org/assets/images/system/arc.png" height="30" align="middle"> &nbsp; Arcade
 - [Power Spikes](https://retroachievements.org/game/12344)
 
+### <img src="https://static.retroachievements.org/assets/images/system/gb.png" height="30" align="middle"> &nbsp; Game Boy
+- [Kaijuu Ou Gojira](https://retroachievements.org/game/25619)
+
 ### <img src="https://static.retroachievements.org/assets/images/system/gba.png" height="30" align="middle"> &nbsp; Game Boy Advance
 - [Batman: Vengeance](https://retroachievements.org/game/2428)
 
