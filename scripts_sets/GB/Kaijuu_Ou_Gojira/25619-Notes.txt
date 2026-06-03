@@ -142,4 +142,3 @@ Total Notes: 13
 
 0x00ffb9: [8-bit] Godzilla HP/Energy
 0xff = Max hp
-
