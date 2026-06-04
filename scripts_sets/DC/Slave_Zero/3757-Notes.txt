@@ -1,10 +1,11 @@
 Game ID: 3757
 Source: RA Server
-Total Notes: 6
+Total Notes: 8
 ============================================================
 
-0x130d64: [24-bit] Pointer - Entity Generator02
-+0x70 | [Float] Generator HP
+0x130d64: [24-bit] Pointer - Entity: Generator 02
++0x70 | [Float] Generator 02 HP
+50.0 = Max hp - Normal/Easy
 
 0x130f14: [24-bit] Pointer - Player Inventory / Ammo Base
 +0x025c | [16-bit] Weapon Slot 1 ID
@@ -18,20 +19,32 @@ Total Notes: 6
 +0x0284 | [16-bit] Ammo Pool - Energy Cells
 +0x0288 | [16-bit] Ammo Pool - Rockets
 
-0x131ec0: [24-bit] Pointer - Entity Generator01
-+0x01b0 | [Float] Generator HP
+0x130ff8: [24-bit] Pointer - Entity: Titan
++0xf4 | [Float] Titan HP
+160.0 = Max hp - Easy
+200.0 = Max hp - Normal
+
+0x131ea8: [32-bit] Game State / Level ID
+0x09 = Main Menu
+0x3b = Story Intro / Cutscene
+0x6a = Level 1 - Area 1
+0x6b = Level 1 - Area 2
+0x5e = Level 2 - Area 1
+
+0x131ec0: [24-bit] Pointer - Entity: Generator 01
++0x01b0 | [Float] Generator 01 HP
+50.0 = Max hp - Normal/Easy
 
 0x20a3d8: [24-bit] Pointer - Player Entity Base
 +0xf0 | [Float] Player HP
-[Note: Max/Initial value is 100.0. Value can drop below 0.0 upon death.]
+[Note: Max/Initial value is 100.0 Value can drop below 0.0 upon death.]
 
-0x20a798: [8-bit] Difficulty game
+0x20a798: [8-bit] Difficulty Setting
 0x00 = Normal
 0x01 = Easy
 0x02 = Hard
+[Original Note by Pudpod]
 
-[Original Note: Pudpod]
-
-0x20cae8: [24-bit] Pointer - Entity Generator03
-+0x70 | [Float] Generator HP
-
+0x20cae8: [24-bit] Pointer - Entity: Generator 03
++0x01ac | [Float] Generator 03 HP
+80.0 = Max hp - Normal/Easy
