@@ -8,16 +8,40 @@ Total Notes: 8
 50.0 = Max hp - Normal/Easy
 
 0x130f14: [24-bit] Pointer - Player Inventory / Ammo Base
-+0x025c | [16-bit] Weapon Slot 1 ID
-0x00 = None
-0x01 = IR-9000 (Standard)
-0x02 = IR-9000 (Iron Roar)
-+0x0264 | [16-bit] Weapon Slot 2 ID
-0x00 = None
-0x02 = PR-2 Plasma Pulse 
++0x0258 | [16-bit] Active Weapon Category Flag
+.0x00 = Ballistic Weapon Equipped
+.0x01 = Energy Weapon Equipped
+
++0x025c | [16-bit] Weapon Slot 1 (Active / In Hands)
+// Ballistic
+.0x00 = None
+.0x01 = AVR-9
+.0x02 = IR-9000
+// Energy
+0x01 = PPR-2 Plasma Pulse
+
++0x026c | [16-bit] Weapon Slot 2 (Holstered / On Back)
+// Ballistic
+.0x00 = None
+.0x01 = AVR-9
+.0x02 = IR-9000
+// Energy
+.0x01 = PPR-2 Plasma Pulse
+
++0x027c | [16-bit] Weapon Slot 3 (Explosives - Fixed)
+.0x01 = Standard Rockets
+.0x02 = Stone Dog (Guided Missiles)
+
 +0x0280 | [16-bit] Ammo Pool - Ballistic
+
 +0x0284 | [16-bit] Ammo Pool - Energy Cells
+
 +0x0288 | [16-bit] Ammo Pool - Rockets
+
++0x0290 | [16-bit] Environmental Weapon / Melee Flag
+0x00 = None
+0x02 = Holding Girder / Metal Bar
+[Note: Resets to 0x00 when the object is thrown or dropped]
 
 0x130ff8: [24-bit] Pointer - Entity: Titan
 +0xf4 | [Float] Titan HP
@@ -30,6 +54,9 @@ Total Notes: 8
 0x6a = Level 1 - Area 1
 0x6b = Level 1 - Area 2
 0x5e = Level 2 - Area 1
+0x52 = Level 2 - Area 2
+0x53 = Level 3 - Area 1
+0x56 = Level 3 - Area 2
 
 0x131ec0: [24-bit] Pointer - Entity: Generator 01
 +0x01b0 | [Float] Generator 01 HP
@@ -37,7 +64,7 @@ Total Notes: 8
 
 0x20a3d8: [24-bit] Pointer - Player Entity Base
 +0xf0 | [Float] Player HP
-[Note: Max/Initial value is 100.0 Value can drop below 0.0 upon death.]
+[Note: Max/Initial value is 100.0 Value can drop below 0.0 upon death]
 
 0x20a798: [8-bit] Difficulty Setting
 0x00 = Normal
