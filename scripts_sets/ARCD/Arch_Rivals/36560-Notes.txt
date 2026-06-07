@@ -1,0 +1,9 @@
+[8-bit] Player 2 / CPU Character ID
+0x00 = Tyrone
+0x01 = Vinnie
+0x02 = Hammer
+0x03 = Moose
+0x04 = Lewis
+0x05 = Blade
+0x06 = Mohwk
+0x07 = Reggie
