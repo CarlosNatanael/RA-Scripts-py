@@ -1,4 +1,27 @@
-[8-bit] Player 2 / CPU Character ID
+Game ID: 36560
+Source: RA Server
+Total Notes: 11
+============================================================
+
+0x0001e2: [8-bit] Current Period
+0x01 = 1st Quarter
+0x02 = 2nd Quarter
+0x03 = 3rd Quarter
+0x04 = 4th Quarter
+
+0x000216: [16-bit] Score - Home Team
+
+0x00021a: [16-bit] Score - Away Team
+
+0x000371: [8-bit] Team Pairing ID
+0x00 = Los Angeles vs Chicago
+0x01 = Brawl State vs Natural High
+0x02 = Chicago vs Brawl State
+0x03 = Natural High vs Los Angeles
+0x04 = Natural High vs Chicago
+0x05 = Brawl State vs Los Angeles
+
+0x000377: [8-bit]  Home Team -  Player Character ID (Slot 1)
 0x00 = Tyrone
 0x01 = Vinnie
 0x02 = Hammer
@@ -7,3 +30,45 @@
 0x05 = Blade
 0x06 = Mohwk
 0x07 = Reggie
+
+0x000587: [8-bit] Home Team - CPU Character ID (Slot 2)
+0x00 = Tyrone
+0x01 = Vinnie
+0x02 = Hammer
+0x03 = Moose
+0x04 = Lewis
+0x05 = Blade
+0x06 = Mohwk
+0x07 = Reggie
+
+0x000795: [8-bit] Controller Type
+0x00 = CPU Controlled
+0x02 = Player 2 Controlled
+
+0x000797: [8-bit] Away Team - P2 / CPU Character ID (Slot 3)
+0x00 = Tyrone
+0x01 = Vinnie
+0x02 = Hammer
+0x03 = Moose
+0x04 = Lewis
+0x05 = Blade
+0x06 = Mohwk
+0x07 = Reggie
+
+0x0009a7: [8-bit] Away Team - CPU Character ID (Slot 4)
+0x00 = Tyrone
+0x01 = Vinnie
+0x02 = Hammer
+0x03 = Moose
+0x04 = Lewis
+0x05 = Blade
+0x06 = Mohwk
+0x07 = Reggie
+
+0x001e16: [16-bit] Coin Counter
+
+0x001f2b: [8-bit] Shot Clock Timer
+0x18 = Start
+0x09 = Counter
+0x00 = Lose Ball
+[Note: Starts at 0x18 (24 seconds). Becomes visible on screen at 0x09. Turnover occurs at 0x00]
