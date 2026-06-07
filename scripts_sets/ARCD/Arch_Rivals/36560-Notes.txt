@@ -1,13 +1,15 @@
 Game ID: 36560
 Source: RA Server
-Total Notes: 11
+Total Notes: 31
 ============================================================
 
 0x0001e2: [8-bit] Current Period
+0x00 = Menu game
 0x01 = 1st Quarter
 0x02 = 2nd Quarter
 0x03 = 3rd Quarter
 0x04 = 4th Quarter
+0x08 = Sudden Death
 
 0x000216: [16-bit] Score - Home Team
 
@@ -31,6 +33,16 @@ Total Notes: 11
 0x06 = Mohwk
 0x07 = Reggie
 
+0x000392: [8-bit] Slot 1 (Home P1) - Points Scored
+
+0x000396: [8-bit] Slot 1 (Home P1) - Steals
+
+0x000398: [8-bit] Slot 1 (Home P1) - Rebounds
+
+0x00039a: [8-bit] Slot 1 (Home P1) - Total Shots
+
+0x00039c: [8-bit] Slot 1 (Home P1) - Dunks
+
 0x000587: [8-bit] Home Team - CPU Character ID (Slot 2)
 0x00 = Tyrone
 0x01 = Vinnie
@@ -40,6 +52,16 @@ Total Notes: 11
 0x05 = Blade
 0x06 = Mohwk
 0x07 = Reggie
+
+0x0005a2: [8-bit] Slot 2 (Home CPU) - Points Scored
+
+0x0005a6: [8-bit] Slot 2 (Home CPU) - Steals
+
+0x0005a8: [8-bit] Slot 2 (Home CPU) - Rebounds
+
+0x0005aa: [8-bit] Slot 2 (Home CPU) - Total Shots
+
+0x0005ac: [8-bit] Slot 2 (Home CPU) - Dunks
 
 0x000795: [8-bit] Controller Type
 0x00 = CPU Controlled
@@ -55,6 +77,16 @@ Total Notes: 11
 0x06 = Mohwk
 0x07 = Reggie
 
+0x0007b2: [8-bit] Slot 3 (Away P2 / CPU) - Points Scored
+
+0x0007b6: [8-bit] Slot 3 (Away P2 / CPU) - Steals
+
+0x0007b8: [8-bit] Slot 3 (Away P2 / CPU) - Rebounds
+
+0x0007ba: [8-bit] Slot 3 (Away P2 / CPU) - Total Shots
+
+0x0007bc: [8-bit] Slot 3 (Away P2 / CPU) - Dunks
+
 0x0009a7: [8-bit] Away Team - CPU Character ID (Slot 4)
 0x00 = Tyrone
 0x01 = Vinnie
@@ -64,6 +96,16 @@ Total Notes: 11
 0x05 = Blade
 0x06 = Mohwk
 0x07 = Reggie
+
+0x0009c2: [8-bit] Slot 4 (Away CPU) - Points Scored
+
+0x0009c6: [8-bit] Slot 4 (Away CPU) - Steals
+
+0x0009c8: [8-bit] Slot 4 (Away CPU) - Rebounds
+
+0x0009ca: [8-bit] Slot 4 (Away CPU) - Total Shots
+
+0x0009cc: [8-bit] Slot 4 (Away CPU) - Dunks
 
 0x001e16: [16-bit] Coin Counter
 
