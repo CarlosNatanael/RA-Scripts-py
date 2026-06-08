@@ -1,6 +1,6 @@
 Game ID: 36560
 Source: RA Server
-Total Notes: 34
+Total Notes: 35
 ============================================================
 
 0x0001e2: [8-bit] Current Period
@@ -131,4 +131,8 @@ Total Notes: 34
 0x09 = Counter
 0x00 = Lose Ball
 [Note: Starts at 0x18 (24 seconds). Becomes visible on screen at 0x09. Turnover occurs at 0x00]
+
+0x008518: [8-bit] Period State Flag
+0xff = In-Game
+0x00 = Quarter Ended / Time Up
 
