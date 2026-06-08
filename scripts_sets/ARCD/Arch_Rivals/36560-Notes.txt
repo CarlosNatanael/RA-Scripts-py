@@ -1,6 +1,6 @@
 Game ID: 36560
 Source: RA Server
-Total Notes: 31
+Total Notes: 34
 ============================================================
 
 0x0001e2: [8-bit] Current Period
@@ -42,6 +42,16 @@ Total Notes: 31
 0x00039a: [8-bit] Slot 1 (Home P1) - Total Shots
 
 0x00039c: [8-bit] Slot 1 (Home P1) - Dunks
+
+0x000465: [8-bit] P1 Action Button Flags
+0x10 = A
+0x20 = B
+
+0x000471: [8-bit] P1 Directional / Facing State
+0x04 = Up
+0x16 = Left
+0x1b = Right
+0x2b = Down
 
 0x000587: [8-bit] Home Team - CPU Character ID (Slot 2)
 0x00 = Tyrone
@@ -107,6 +117,13 @@ Total Notes: 31
 
 0x0009cc: [8-bit] Slot 4 (Away CPU) - Dunks
 
+0x000c07: [8-bit] Ball Possession ID
+0x00 = No one / Loose Ball (In the air / Dropped)
+0x01 = Slot 1 (Home P1)
+0x02 = Slot 2 (Home CPU)
+0x03 = Slot 3 (Away P2 / CPU)
+0x04 = Slot 4 (Away CPU)
+
 0x001e16: [16-bit] Coin Counter
 
 0x001f2b: [8-bit] Shot Clock Timer
@@ -114,3 +131,4 @@ Total Notes: 31
 0x09 = Counter
 0x00 = Lose Ball
 [Note: Starts at 0x18 (24 seconds). Becomes visible on screen at 0x09. Turnover occurs at 0x00]
+
