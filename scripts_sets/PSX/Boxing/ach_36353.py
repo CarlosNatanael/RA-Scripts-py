@@ -135,7 +135,7 @@ for a_id, title, desc, badge, champ_cond, pts in no_loss_data:
     my_set.add_achievement(ach)
 
 # Unshakable Perfection (A escada mágica do OrNext com reduce)
-ach = Achievement(id=589818, title="Unshakable Perfection", description="Win all Championships across all weight classes without ever losing a match", points=50, type=AchievementType.MISSABLE, badge="670251")
+ach = Achievement(id=589818, title="Unshakable Perfection", description="Claim all 12 championship belts with one fighter without ever losing a match", points=50, type=AchievementType.MISSABLE, badge="670251")
 ach.add_core([mem_screen != 0x13, mem_rank == 1, match_win_flag.delta() == 0, match_win_flag == 1])
 
 for char_id in range(13):
@@ -195,10 +195,14 @@ combat_data = [
         and_next(word(0x1fee68) != 0), (word(0x1fee68) != word(0x1fee68).delta()).with_hits(5)
     ]),
     (591418, "Floor Sweeper", "K.O your opponent using a special move", 5, "670804", [
-        mem_p2_ctrl == 0, mem_p1_ctrl == 1, in_fight, reset_if(mem_screen == 0x09),
+        mem_p2_ctrl == 0, 
+        mem_p1_ctrl == 1, 
+        or_next(mem_screen == 14), 
+        mem_screen == 13, 
+        reset_if(mem_screen == 9),
         add_address(tbyte(0x1fe480)), (byte(0x0000b0) > byte(0x0000b0).delta()).with_hits(1),
         add_address(tbyte(0x1fe480)), and_next(tbyte(0x000148) == 2),
-        add_address(tbyte(0x1fe480)), reset_if(byte(0x0000b0) > byte(0x0000b0).delta()),
+        add_address(tbyte(0x1fe480)), reset_if(byte(0x0000c0) == 0),
         add_address(tbyte(0x1fe480)), bit0(0x0000c8).delta() == 0, 
         add_address(tbyte(0x1fe480)), bit0(0x0000c8) == 1
     ])
