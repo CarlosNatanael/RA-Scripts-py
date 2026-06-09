@@ -1,5 +1,6 @@
 ## Repository of various scripts for RetroAchievements using Pycheevos
 ### <img src="https://static.retroachievements.org/assets/images/system/arc.png" height="30" align="middle"> &nbsp; Arcade
+- [Arch Rivals](https://retroachievements.org/game/36560)
 - [Power Spikes](https://retroachievements.org/game/12344)
 
 ### <img src="https://static.retroachievements.org/assets/images/system/gb.png" height="30" align="middle"> &nbsp; Game Boy
