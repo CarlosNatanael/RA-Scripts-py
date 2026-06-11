@@ -9,6 +9,7 @@ my_set = AchievementSet(game_id=36560, title="Arch Rivals")
 mem_period       = byte(0x01e2)
 mem_p2_ctrl      = byte(0x0795)
 mem_matchup      = byte(0x0371)
+secondary_iD     = byte(0x0d9f)
 
 mem_p1_score     = word(0x0216)
 mem_p2_score     = word(0x021a)
@@ -29,8 +30,6 @@ mem_p2_ind_score = byte(0x05a2)
 mem_p3_ind_score = byte(0x07b2)
 mem_p4_ind_score = byte(0x09c2)
 
-# 2. BLOCOS REUTILIZÁVEIS
-# Lógica comum: P2 é CPU, P1 ganha, Fim do 4º Quarto ou Morte Súbita, Tela de Resultado
 cond_match_win = [
     (mem_p2_ctrl == 0x00),
     (mem_p1_score > mem_p2_score),
@@ -41,14 +40,28 @@ cond_match_win = [
 ]
 
 # 3. VITÓRIAS POR CONFRONTO (MATCHUPS)
-matchup_data = [
-    (615363, "City of Angels", "Win a Los Angeles vs Chicago match", 5, 0x00, AchievementType.STANDARD),
-    (615364, "State Rivalry", "Win a Brawl State vs Natural High match", 5, 0x01, AchievementType.STANDARD),
+matchup_data1 = [
+    (615363, "City of Angels", "Win a Los Angeles vs Chicago match", 5, 0x00, 0x01, AchievementType.STANDARD),
+    (615364, "State Rivalry", "Win a Brawl State vs Natural High match", 5, 0x01, 0x06, AchievementType.STANDARD),
+]
+
+for a_id, title, desc, pts, matchup_val1, matchup_val2, ach_type in matchup_data1:
+    ach = Achievement(id=a_id, title=title, description=desc, points=pts, type=ach_type)
+    ach.add_core([
+        reset_if(mem_period == 0x00),
+        (mem_matchup == matchup_val1).with_hits(1),
+        (secondary_iD == matchup_val2),
+        *cond_match_win
+    ])
+    my_set.add_achievement(ach)
+
+
+matchup_data2 = [
     (615365, "High Altitude, Low Blows", "Win a Natural High vs Los Angeles match", 5, 0x03, AchievementType.STANDARD),
     (615366, "Windy City Brawlers", "Win a Chicago vs Brawl State match", 5, 0x02, AchievementType.WIN_CONDITION),
 ]
 
-for a_id, title, desc, pts, matchup_val, ach_type in matchup_data:
+for a_id, title, desc, pts, matchup_val, ach_type in matchup_data2:
     ach = Achievement(id=a_id, title=title, description=desc, points=pts, type=ach_type)
     ach.add_core([
         reset_if(mem_period == 0x00),
@@ -114,6 +127,8 @@ ach.add_core([
     (mem_p2_ctrl == 0x00),
     (mem_period > 0x00),
     reset_if(mem_p1_ind_score.delta() > mem_p1_ind_score),
+    and_next(mem_shot_clock > 0x03),
+    reset_if(mem_shots_att > mem_shots_att.delta()),
     (mem_shot_clock <= 0x03).with_hits(1),
     sub_source(mem_p1_ind_score.delta()),
     trigger(mem_p1_ind_score == 0x03),
@@ -136,7 +151,7 @@ ach = Achievement(id=615375, title="Front Runner", description="Score the first 
 ach.add_core([
     (mem_p2_ctrl == 0x00),
     (mem_p1_score > mem_p2_score),
-    pause_if(mem_p2_score > mem_p1_score),
+    pause_if((mem_p2_score > mem_p1_score).with_hits(1)),
     (mem_period == 0x01).with_hits(1),
     trigger((mem_period == 0x02).with_hits(1)),
     trigger((mem_period == 0x03).with_hits(1)),
@@ -154,7 +169,7 @@ ach.add_core([
     (mem_p2_ctrl == 0x00),
     (mem_period.delta() == 0x01),
     trigger(mem_period == 0x02),
-    (mem_p1_score > mem_p2_score),
+    trigger(mem_p1_score > mem_p2_score),
 ])
 ach.add_alt([reset_if(mem_period == 0x00)])
 my_set.add_achievement(ach)
@@ -165,7 +180,7 @@ ach.add_core([
     and_next(mem_teammate_req >= 0x03),
     pause_if((mem_punch_flag == 0x20).with_hits(1)),
     (mem_p2_ctrl == 0x00),
-    (mem_p1_score > mem_p2_score),
+    trigger(mem_p1_score > mem_p2_score),
     or_next(mem_period == 0x04),
     trigger(mem_period == 0x08),
     (mem_match_end.delta() == 0xff),
