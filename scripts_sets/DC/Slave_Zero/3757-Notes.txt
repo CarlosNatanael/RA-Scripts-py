@@ -3,9 +3,16 @@ Source: RA Server
 Total Notes: 8
 ============================================================
 
-0x130d64: [24-bit] Pointer - Entity: Generator 02
-+0x70 | [Float] Generator 02 HP
-50.0 = Max hp - Normal/Easy
+0x130d64: [24-bit] Pointer - Dynamic Boss / Objective Entity Base
+
++0x12 | [32-bit BE ASCII] Entity ASCII Signature (First 4 chars)
+.0x67656e65 = "gene" (Generator)
+.0x6e656d65 = "neme" (Nemesis)
+
++0x70 | [Float] Current Entity HP
+.50.0 = Generator 02 (Normal/Easy)
+.1000.0 = Nemesis (Normal/Easy)
+[Note: Pointer is dynamically allocated based on the active level]
 
 0x130f14: [24-bit] Pointer - Player Inventory / Ammo Base
 +0x0258 | [16-bit] Active Weapon Category Flag
