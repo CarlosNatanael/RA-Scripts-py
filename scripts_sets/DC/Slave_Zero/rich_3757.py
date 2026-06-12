@@ -34,7 +34,8 @@ rp.add_lookup("Stage", {
     94: "Level 2 - Area 1",
     82: "Level 2 - Area 2",
     83: "Level 3 - Area 1",
-    86: "Level 3 - Area 2"
+    86: "Level 3 - Area 2",
+    101:"Level 3 - Area 3"
 }, default="Area Unknown")
 
 # 2. ALIASES DE MEMÓRIA E PONTEIROS

@@ -6,13 +6,12 @@ Total Notes: 8
 0x130d64: [24-bit] Pointer - Dynamic Boss / Objective Entity Base
 
 +0x12 | [32-bit BE ASCII] Entity ASCII Signature (First 4 chars)
-.0x67656e65 = "gene" (Generator)
-.0x6e656d65 = "neme" (Nemesis)
+.0x67656e65 = "gene" (s_generator_02)
+.0x6e656d65 = "neme" (a_nemesis)
 
 +0x70 | [Float] Current Entity HP
 .50.0 = Generator 02 (Normal/Easy)
 .1000.0 = Nemesis (Normal/Easy)
-[Note: Pointer is dynamically allocated based on the active level]
 
 0x130f14: [24-bit] Pointer - Player Inventory / Ammo Base
 +0x0258 | [16-bit] Active Weapon Category Flag
@@ -50,10 +49,26 @@ Total Notes: 8
 0x02 = Holding Girder / Metal Bar
 [Note: Resets to 0x00 when the object is thrown or dropped]
 
-0x130ff8: [24-bit] Pointer - Entity: Titan
-+0xf4 | [Float] Titan HP
-160.0 = Max hp - Easy
-200.0 = Max hp - Normal
+0x130ff8: [24-bit] Pointer - Titan Encounter Group Base
++0x12 | [32-bit BE ASCII] Entity ASCII Signature (First 4 chars)
+.0x6d696e69 = "mini" (miniboss_titan)
+.0x74697461 = "tita" (titan_02)
+
++0xf4 | [Float] Current Titan 02 HP
+// Miniboss Titan
+.160.0 = Max HP (Easy)
+.200.0 = Max HP (Normal)
+// Titan 2
+.100.0 = Max HP (Easy)
+.100.0 = Max HP (Normal)
+
++0x5c | [24-bit] Pointer to Titan 01 Base
+++0x12 | [32-bit BE ASCII] Titan 01 ASCII Signature
+..0x74697461 = "tita" (titan_01)
+
+++0xf4 | [Float] Current Titan 01 HP
+..100.0 = Max HP (Easy)
+..100.0 = Max HP (Normal)
 
 0x131ea8: [32-bit] Game State / Level ID
 0x09 = Main Menu
@@ -64,6 +79,7 @@ Total Notes: 8
 0x52 = Level 2 - Area 2
 0x53 = Level 3 - Area 1
 0x56 = Level 3 - Area 2
+0x65 = Level 3 - Area 3
 
 0x131ec0: [24-bit] Pointer - Entity: Generator 01
 +0x01b0 | [Float] Generator 01 HP
