@@ -1,0 +1,177 @@
+Game ID: 10708
+Source: RA Server
+Total Notes: 34
+============================================================
+
+0x0003db: [8-bit] Ball Possession
+[Note: Indicates which team currently controls the ball]
+0x10 = Player 1
+0xfe = Player 2 / CPU
+
+0x00083b: [8-bit BCD] Current Down
+[Note: Tracks the current attempt from 1st to 4th down]
+
+0x00083e: [8-bit BCD] Line of Scrimmage (Yard Position)
+[Note: The exact yard line where the ball is placed before the snap]
+
+0x000866: [8-bit BCD] Home Team - Score
+
+0x000868: [8-bit BCD] Home Away - Score
+
+0x000872: [8-bit] Current Quarter
+0x01 = 1st Quarter
+0x02 = 2nd Quarter
+0x03 = 3rd Quarter
+0x04 = 4th Quarter
+
+0x000885: [8-bit BCD] Timer - Seconds
+
+0x000886: [8-bit BCD] Timer - Minutes
+
+0x00088b: [8-bit] Offensive Strategy / Play Selected
+0x00 = Rooter Right
+0x01 = Double Cross
+0x02 = Seam Splitter
+0x03 = [Unmapped / Blank]
+0x04 = [Unmapped / Blank]
+0x05 = Clear out
+0x06 = Curl the flash
+0x07 = Burn Neon
+0x08 = Lotsa Curls
+0x09 = Zucchini Bit
+0x0a = Hot Crossed Buns
+0x0b = Rhino's Charge
+0x0c = U.F.O
+0x0d = R.I.P
+0x0e = [Unmapped / Blank]
+0x0f = Off tackle
+0x10 = Orville's Right
+0x11 = Hilbur's Leaft
+0x12 = Keeper
+0x13 = Big end Around
+
+0x00088c: [8-bit] Defensive Strategy / Play Selected
+0x00 = Goal Line
+0x01 = Goal Shift
+0x02 = Sub-Dural Hematoma
+0x03 = Odd Jam
+0x04 = Odd Zone
+0x05 = Prevent
+
+0x000891: [8-bit] Main Game State / Engine Mode
+0x01 = In-Game / Action Phase
+0x02 = Playbook / Strategic Menu
+0x04 = Team Selection Menu
+0x08 = Title Screen / Main Menu
+0x40 = Coin Toss Screen
+
+0x00089b: [16-bit BCD] Passing Attempts - P1
+
+0x00089d: [16-bit BCD] Passing Attempts - P2 / CPU
+
+0x00089f: [16-bit BCD] Completions - P1
+
+0x0008a1: [16-bit BCD] Completions - P2 / CPU
+
+0x0008a3: [16-bit BCD] Rushing Yardage - P1
+
+0x0008a5: [16-bit BCD] Rushing Yardage - P2 / CPU
+
+0x0008a7: [16-bit BCD] Passing Yardage - P1
+
+0x0008a9: [16-bit BCD] Passing Yardage - P2 / CPU
+
+0x0008ab: [16-bit BCD] Total Yards - P1
+
+0x0008ad: [16-bit BCD] Total Yards - P2 / CPU
+
+0x0008af: [8-bit BCD] First Downs - P1
+
+0x0008b0: [8-bit BCD] First Downs - P2 / CPU
+
+0x0008b1: [8-bit BCD] Interceptions - P2 / CPU
+
+0x0008b2: [8-bit BCD] Interceptions - P1
+
+0x0008b3: [8-bit BCD] Sacks By - P2 / CPU
+
+0x0008b4: [8-bit BCD] Sacks By - P1
+
+0x0008b5: [16-bit BCD] Return Yards - P1
+
+0x0008b7: [16-bit BCD] Return Yards - P2 / CPU
+
+0x0008be: [8-bit] Player 1 - Team ID
+0x00 = San Francisco
+0x01 = Atlanta
+0x02 = Los Angeles (NFC / Rams)
+0x03 = New Orleans
+0x04 = Chicago
+0x05 = Detroit
+0x06 = Green Bay
+0x07 = Minnesota
+0x08 = Tampa Bay
+0x09 = Dallas
+0x0a = New York (NFC / Giants)
+0x0b = Philadelphia
+0x0c = Phoenix
+0x0d = Washington
+0x0e = Cincinnati
+0x0f = Cleveland
+0x10 = Houston
+0x11 = Pittsburgh
+0x12 = Denver
+0x13 = Kansas City
+0x14 = Los Angeles (AFC / Raiders)
+0x15 = San Diego
+0x16 = Seattle
+0x17 = Buffalo
+0x18 = Indianapolis
+0x19 = Miami
+0x1a = New England
+0x1b = New York (AFC / Jets)
+
+0x0008bf: [8-bit] Player 2 / CPU - Team ID
+0xff = CPU Controller
+0x00 = San Francisco
+0x01 = Atlanta
+0x02 = Los Angeles (NFC / Rams)
+0x03 = New Orleans
+0x04 = Chicago
+0x05 = Detroit
+0x06 = Green Bay
+0x07 = Minnesota
+0x08 = Tampa Bay
+0x09 = Dallas
+0x0a = New York (NFC / Giants)
+0x0b = Philadelphia
+0x0c = Phoenix
+0x0d = Washington
+0x0e = Cincinnati
+0x0f = Cleveland
+0x10 = Houston
+0x11 = Pittsburgh
+0x12 = Denver
+0x13 = Kansas City
+0x14 = Los Angeles (AFC / Raiders)
+0x15 = San Diego
+0x16 = Seattle
+0x17 = Buffalo
+0x18 = Indianapolis
+0x19 = Miami
+0x1a = New England
+0x1b = New York (AFC / Jets)
+
+0x0008d5: [8-bit] Difficulty
+0x00 = Beginner
+0x01 = Normal
+0x02 = Professional
+
+0x0008d6: [8-bit] Coin Toss Choice
+0x00 = Heads
+0xff = Tails
+
+0x001f3a: [8-bit] Coin Toss Result / Winner
+0x00 = Player 2 / CPU Won
+0x01 = Player 1 Won
+
