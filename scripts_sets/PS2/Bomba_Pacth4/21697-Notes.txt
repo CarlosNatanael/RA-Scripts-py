@@ -1,7 +1,48 @@
 Game ID: 21697
 Source: RA Server
-Total Notes: 17
+Total Notes: 22
 ============================================================
+
+0x38c910: [8-bit] Menu State - Player Options Cursor Position
+0x00 = Unselected
+0x01 = Home / Away
+0x02 = Cursor Speed
+0x03 = GK Cursor
+0x04 = Cursor Name
+0x05 = Load all options
+0x06 = Exited / Out of Player Options
+
+0x38c911: [8-bit] Side Selection & Control Level
+0x00 = Neutral / Unassigned
+0x01 = Away | Full Player Control
+0x02 = Away | Player Controls Players / COM Controls Tactics
+0x03 = Away | COM Controls Players / Player Controls Tactics
+0xfd = Home | COM Controls Players / Player Controls Tactics
+0xfe = Home | Player Controls Players / COM Controls Tactics
+0xff = Home | Full Player Control
+
+0x38c912: [8-bit] Cursor Speed / Player Switching Mode
+0x00 = Fixed
+0x01 = Semi-Fixed
+0x02 = Manual
+0x03 = Level 1
+0x04 = Level 2
+0x05 = Level 3
+0x06 = Level 4
+0x07 = Level 5
+0x08 = Level 6
+0x09 = Level 7
+0x0a = Max Level
+
+0x38c913: [8-bit] Cursor Name Display
+0x00 = Default / Player Number
+0x01 = Profile Name / Save Data
+0x02 = Real Player Name
+
+0x38c942: [8-bit] GK Cursor Mode
+0x00 = Off / Auto
+
+0x01 = On / Manual
 
 0x3c9900: [32-bit] Pointer - Menu Selector Base
 [Note: Base address for the active menu. Contains the exact selector position.]
