@@ -1,7 +1,10 @@
 Game ID: 10708
 Source: RA Server
-Total Notes: 34
+Total Notes: 36
 ============================================================
+
+0x000000: [Notes] Set created with the help of PyCheevos scripts:
+https://github.com/CarlosNatanael/RA-Scripts-py/tree/main/scripts_sets/SMS/Joe_Montana_Football
 
 0x0003db: [8-bit] Ball Possession
 [Note: Indicates which team currently controls the ball]
@@ -28,6 +31,12 @@ Total Notes: 34
 
 0x000886: [8-bit BCD] Timer - Minutes
 
+0x000889: [8-bit] Pre-Play Selection / Special Teams
+0x00 = Timeout (T/O)
+0x01 = Punt
+0x02 = Field Goal
+0x03 = Playbook (Normal Plays)
+
 0x00088b: [8-bit] Offensive Strategy / Play Selected
 0x00 = Rooter Right
 0x01 = Double Cross
@@ -41,8 +50,8 @@ Total Notes: 34
 0x09 = Zucchini Bit
 0x0a = Hot Crossed Buns
 0x0b = Rhino's Charge
-0x0c = UFO
-0x0d = RIP
+0x0c = U.F.O
+0x0d = R.I.P
 0x0e = [Unmapped / Blank]
 0x0f = Off tackle
 0x10 = Orville's Right
@@ -63,6 +72,7 @@ Total Notes: 34
 0x02 = Playbook / Strategic Menu
 0x04 = Team Selection Menu
 0x08 = Title Screen / Main Menu
+0x20 = Post-Game / Victory or Defeat Scene
 0x40 = Coin Toss Screen
 
 0x00089b: [16-bit BCD] Passing Attempts - P1
@@ -89,9 +99,9 @@ Total Notes: 34
 
 0x0008b0: [8-bit BCD] First Downs - P2 / CPU
 
-0x0008b1: [8-bit BCD] Interceptions - P2 / CPU
+0x0008b1: [8-bit BCD] Interceptions Thrown - P2 / CPU
 
-0x0008b2: [8-bit BCD] Interceptions - P1
+0x0008b2: [8-bit BCD] Interceptions Thrown - P1
 
 0x0008b3: [8-bit BCD] Sacks By - P2 / CPU
 
