@@ -41,8 +41,8 @@ Total Notes: 34
 0x09 = Zucchini Bit
 0x0a = Hot Crossed Buns
 0x0b = Rhino's Charge
-0x0c = U.F.O
-0x0d = R.I.P
+0x0c = UFO
+0x0d = RIP
 0x0e = [Unmapped / Blank]
 0x0f = Off tackle
 0x10 = Orville's Right
@@ -170,8 +170,3 @@ Total Notes: 34
 0x0008d6: [8-bit] Coin Toss Choice
 0x00 = Heads
 0xff = Tails
-
-0x001f3a: [8-bit] Coin Toss Result / Winner
-0x00 = Player 2 / CPU Won
-0x01 = Player 1 Won
-
