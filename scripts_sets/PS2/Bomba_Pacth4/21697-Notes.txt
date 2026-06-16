@@ -1,6 +1,6 @@
 Game ID: 21697
 Source: RA Server
-Total Notes: 22
+Total Notes: 44
 ============================================================
 
 0x38c910: [8-bit] Menu State - Player Options Cursor Position
@@ -315,3 +315,173 @@ Total Notes: 22
 
 0x183abec: [32-bit] PES Shop Points
 
+0x183ae78: [8-bit] Match Time (Exhibition)
+0x00 = 5 Min.
+0x01 = 10 Min.
+0x02 = 15 Min.
+0x03 = 20 Min.
+0x04 = 25 Min.
+0x05 = 30 Min.
+
+0x183ae79: [8-bit] Difficulty Level (Exhibition)
+0x00 = 1 Star
+0x01 = 2 Stars
+0x02 = 3 Stars
+0x03 = 4 Stars
+0x04 = 5 Stars
+
+0x183ae7a: [8-bit] Injuries (Exhibition)
+0x00 = Off
+0x01 = On
+
+0x183ae7b: [8-bit] Home Team Condition (Exhibition)
+0x00 = Random
+0x01 = Excellent
+0x02 = Good
+0x03 = Normal
+0x04 = Bad
+0x05 = Terrible
+
+0x183ae7c: [8-bit] Away Team Condition (Exhibition)
+0x00 = Random
+0x01 = Excellent
+0x02 = Good
+0x03 = Normal
+0x04 = Bad
+0x05 = Terrible
+
+0x183ae7d: [8-bit] Max Substitutions (Exhibition)
+0x00 = 0 Players
+0x01 = 1 Player
+0x02 = 2 Players
+0x03 = 3 Players
+0x04 = 4 Players
+0x05 = 5 Players
+0x06 = 6 Players
+0x07 = 7 Players
+
+0x183ae7e: [8-bit] Extra Time (Exhibition)
+0x00 = Off
+0x01 = On
+0x02 = Silver Goal
+0x03 = Golden Goal
+
+0x183ae7f: [8-bit] Penalties (Exhibition)
+0x00 = Off
+0x01 = On
+
+0x183ae80: [8-bit] Time of Day (Exhibition)
+0x00 = Day
+0x01 = Night
+0x02 = Random
+
+0x183ae81: [8-bit] Season (Exhibition)
+0x00 = Summer
+0x01 = Winter
+0x02 = Random
+
+0x183ae82: [8-bit] Weather (Exhibition)
+0x00 = Fine
+0x01 = Rain
+0x02 = Snow
+0x03 = Random
+
+0x183ae83: [8-bit] Crowd: Home (Exhibition)
+0x01 = Level 1 (Low)
+0x02 = Level 2 (Medium)
+0x03 = Level 3 (Full)
+
+0x183ae84: [8-bit] Crowd: Away (Exhibition)
+0x01 = Level 1 (Low)
+0x02 = Level 2 (Medium)
+0x03 = Level 3 (Full)
+
+0x183ae85: [8-bit] Stadium (Exhibition)
+0x00 = Santiago Bernabeu
+0x01 = Camp Nou
+0x02 = Riazor
+0x03 = Ilha do Retiro
+0x04 = Old Trafford
+0x05 = Highbury
+0x06 = Stamford Bridge
+0x07 = Anfield Road
+0x08 = St. James Park
+0x09 = São Januario
+0x0a = Parc des Princes
+0x0b = Bayern Munich Stadium
+0x0c = San Siro
+0x0d = Stadio Delle Alpi
+0x0e = Olimpico Rome
+0x0f = Raulino de Oliveira
+0x10 = Westfalenstadion
+0x11 = Serra Dourada
+0x12 = Bruchwegstadion
+0x13 = Amsterdam Arena
+0x14 = Casa Blanca
+0x15 = Beira-Rio
+0x16 = Olimpico Monumental
+0x17 = Newlands Stadium
+0x19 = La Bombonera
+0x1a = Nacional de Santiago
+0x1c = Monumental de Nuñez
+0x1d = Vila Belmiro
+0x1e = Arena da Baixada (Kyocera)
+0x1f = Mineirão
+0x20 = Maracanã
+0x21 = Morumbi
+0x22 = Engenhão
+0x23 = Saitama Stadium
+0x25 = Random
+
+0x183ae86: [8-bit] Support Type (Exhibition)
+0x00 = Home & Away
+0x01 = Neutral
+0x02 = Player
+
+0x183ae87: [8-bit] Entrance Scene (Exhibition)
+0x00 = Off
+0x01 = On
+
+0x183ae88: [8-bit] Referee (Exhibition)
+0x00 = Mario Pedrotti
+0x01 = Martin O'Brien
+0x02 = Jose Trueva
+0x03 = Johann Weikath
+0x04 = Francois Séraphine
+0x05 = Johan Jansen
+0x06 = Alberto Carlos
+0x07 = Cart White
+0x08 = Piere Enume
+0x09 = Kazuki Ito
+0x0a = Random
+
+0x183ae89: [8-bit] Home and Away / 2 Legs (Exhibition)
+0x00 = Off
+0x01 = On
+
+0x183ae8a: [8-bit] Away Goals Rule (Exhibition)
+[Note: Depends on 0x0183ae89 being On]
+0x00 = Off
+0x01 = On
+
+0x183ae8b: [8-bit] Scoreboard (Exhibition)
+0x00 = Exhibition
+0x01 = Cup
+0x02 = International League
+0x03 = English League
+0x04 = Spanish League
+0x05 = Serie A
+0x06 = German League
+0x07 = Brasileirao 2008
+0x08 = Eredivisie
+0x09 = Master League D1
+0x0a = Master League D2
+0x0b = Random
+
+0x183ae8c: [8-bit] Auto Player Selection: Home (Exhibition)
+0x00 = Off
+0x01 = On
+
+0x183ae8d: [8-bit] Auto Player Selection: Away (Exhibition)
+0x00 = Off
+0x01 = On
