@@ -23,6 +23,9 @@
 ### <img src="https://static.retroachievements.org/assets/images/system/ps1.png" height="30" align="middle"> &nbsp; PlayStation
 - [Boxing](https://retroachievements.org/game/36353)
 
+### <img src="https://static.retroachievements.org/assets/images/system/ps2.png" height="30" align="middle"> &nbsp; PlayStation 2
+- [RC Revenge Pro - Subset RA Dev Tracks](https://retroachievements.org/game/32849?set=38653)
+
 ### <img src="https://static.retroachievements.org/assets/images/system/snes.png" height="30" align="middle"> &nbsp; SNES / Super Famicom
 - [F1 ROC: Race of Champions](https://retroachievements.org/game/23121)
 - [Sonic Blast Man](https://retroachievements.org/game/1167)
