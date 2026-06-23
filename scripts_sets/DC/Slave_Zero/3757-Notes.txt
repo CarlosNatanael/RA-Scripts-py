@@ -62,7 +62,7 @@ Total Notes: 10
 +0x01b0 | [Float] Generator 01 HP
 50.0 = Max hp - Normal/Easy
 
-0x20a3d8: 24-bit] Pointer - Player Entity Base
+0x20a3d8: [24-bit] Pointer - Player Entity Base
 +0xF0: [Float] Player HP
 [Note: Max/Initial value is 100.0 Value can drop below 0.0 upon death]
 
@@ -113,4 +113,3 @@ Total Notes: 10
 0xdf3ea4: [32-bit Float] Boss HP - Argilus
 0x441dfffd = Argilus
 0x44200000 = Death
-
