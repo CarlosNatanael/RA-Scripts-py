@@ -1,0 +1,71 @@
+Format:Value
+FormatType=VALUE
+
+Lookup:Question
+0x00=1
+0x01=2
+0x02=3
+0x03=4
+0x04=5
+0x05=6
+0x06=7
+0x07=8
+0x08=9
+0x09=10
+0x0a=11
+0x0b=12
+0x0c=13
+0x0d=14
+0x0e=15
+0x0f=16
+
+Lookup:PrizeV
+0xff=Ainda Não ganhou
+0x00=500 reais!
+0x01=Mil reais!
+0x02=1.500 reais!
+0x03=2.000 reais!
+0x06=4.000 reais!
+0x07=5.000 reais!
+0x08=10 Mil reais!
+0x09=15 Mil reais!
+0x0a=20 Mil reais!
+0x0b=25 Mil reais!
+0x0c=30 Mil reais!
+0x0d=40 Mil reais!
+0x0e=50 Mil reais!
+0x0f=100 Mil reais!
+0x10=150 Mil reais!
+0x11=200 Mil reais!
+0x13=300 Mil reais!
+0x14=400 Mil reais!
+0x15=500 Mil reais!
+0x16=1 Million
+
+Lookup:Prize
+0x00=Mil reais!
+0x01=2 Mil reais!
+0x02=3 Mil reais!
+0x03=4 Mil reais!
+0x04=5 Mil reais!
+0x05=10 Mil reais!
+0x06=20 Mil reais!
+0x07=30 Mil reais!
+0x08=40 Mil reais!
+0x09=50 Mil reais!
+0x0a=100 Mil reais!
+0x0b=200 Mil reais!
+0x0c=300 Mil reais!
+0x0d=400 Mil reais!
+0x0e=500 Mil reais!
+0x0f=1 Milhao de reais!
+
+Display:
+?0xh10=1?Assistindo a Demo
+?0xh0907=0?No Menu Inicial
+?0xh05c60=22_0xh0907=67_0xh0860=0?GANHOU 1 MILHAO DE REAIS!!!
+?0xh0907=97?Registrando o participante
+?0xh0907=99?Verificando o Placar de Hoje: @PrizeV(0xh001c)
+?0xh0907=67_0xh0860=1?Pergunta @Question(0xh854) | Valendo @Prize(0xh854) | ⏱️ @Value(b0xh085e)s
+?0xh0907=67_0xh0860=0?Preparando a próxima rodada | Valendo @Prize(0xh854)
+Playing Show do Milhão
