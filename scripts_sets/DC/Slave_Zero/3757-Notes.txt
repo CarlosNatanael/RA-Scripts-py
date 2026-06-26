@@ -1,6 +1,6 @@
 Game ID: 3757
 Source: RA Server
-Total Notes: 10
+Total Notes: 11
 ============================================================
 
 0x130d64: [24-bit] Pointer - Dynamic Boss / Objective Entity Base
@@ -57,6 +57,8 @@ Total Notes: 10
 0x62 = Level 4 - Area 1
 0x5c = Level 4 - Area 2
 0x57 = Level 5 - Area 1
+0x54 = Level 5 - Area 2
+0x65 = Level 6 - Area 1
 
 0x131ec0: [24-bit] Pointer - Entity: Generator 01
 +0x01b0 | [Float] Generator 01 HP
@@ -105,6 +107,10 @@ Total Notes: 10
 0x01 = Easy
 0x02 = Hard
 [Original Note by Pudpod]
+
+0x20bae8: [8-bit] Game State
+0x00 = Menu / Pause game
+0x01 = In game
 
 0x20cae8: [24-bit] Pointer - Entity: Generator 03
 +0x01ac | [Float] Generator 03 HP
