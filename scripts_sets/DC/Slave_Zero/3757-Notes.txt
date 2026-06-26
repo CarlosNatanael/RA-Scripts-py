@@ -1,11 +1,18 @@
 Game ID: 3757
 Source: RA Server
-Total Notes: 11
+Total Notes: 12
 ============================================================
 
-0x130d64: [24-bit] Pointer - Dynamic Boss / Objective Entity Base
+0x130ca4: [24-bit] Pointer - Argilus
++0x7c | [Float] Argilus HP
+.800.0 = Normal/Easy
 
-+0x12 | [32-bit BE ASCII] Entity ASCII Signature (First 4 chars)
+0x130cb0: [24-bit] Pointer - Sangunar
++0x79c | [Float] Sangunar HP
+.3000.0 = Normal/Easy
+
+0x130d64: [24-bit] Pointer - Dynamic Boss / Objective Entity Base
++0x12 | [32-bit] Entity ASCII Signature
 .0x67656e65 = "gene" (s_generator_02)
 .0x6e656d65 = "neme" (a_nemesis)
 
@@ -13,14 +20,15 @@ Total Notes: 11
 .50.0 = Generator 02 (Normal/Easy)
 .1000.0 = Nemesis (Normal/Easy)
 
-0x130e24: [24-bit] Pointer Objective Entity Base
-+0x6E: [32-bit] Entity ASCII Signature
+0x130e24: [24-bit] Pointer - Objective Entity Base
++0x6e | [32-bit] Entity ASCII Signature
 .0x65626572 = "rebe" (rebelbase)
-+0xD4: [Float] HP - Rebel Base
-690.0 = Normal/Easy
+
++0xd4 | [Float] HP - Rebel Base
+.690.0 = Normal/Easy
 
 0x130ff8: [24-bit] Pointer - Titan Encounter Group Base
-+0x12 | [32-bit BE ASCII] Entity ASCII Signature (First 4 chars)
++0x12 | [32-bit] Entity ASCII Signature
 .0x6d696e69 = "mini" (miniboss_titan)
 .0x74697461 = "tita" (titan_02)
 
@@ -32,8 +40,8 @@ Total Notes: 11
 .100.0 = Max HP (Easy)
 .100.0 = Max HP (Normal)
 
-+0x5c | [24-bit] Pointer to Titan 01 Base
-++0x12 | [32-bit BE ASCII] Titan 01 ASCII Signature
++0x5c | [24-bit] Pointer - Titan 01 Base
+++0x12 | [32-bit] Titan 01 ASCII Signature
 ..0x74697461 = "tita" (titan_01)
 
 ++0xf4 | [Float] Current Titan 01 HP
@@ -62,25 +70,20 @@ Total Notes: 11
 
 0x131ec0: [24-bit] Pointer - Entity: Generator 01
 +0x01b0 | [Float] Generator 01 HP
-50.0 = Max hp - Normal/Easy
+.50.0 = Max hp - Normal/Easy
+
+0x131ee4: [24-bit] Pointer - Entity: Generator 03
++0x2ec | [Float] Generator 03 HP
+.80.0 = Max hp - Normal/Easy
 
 0x20a3d8: [24-bit] Pointer - Player Entity Base
-+0xF0: [Float] Player HP
-[Note: Max/Initial value is 100.0 Value can drop below 0.0 upon death]
++0xf0 | [Float] Player HP (Max 100.0, can drop below 0.0 upon death)
 
-+0x258: [16-bit] Active Weapon Category Flag
++0x258 | [16-bit] Active Weapon Category Flag
 .0x00 = Ballistic Weapon Equipped
 .0x01 = Energy Weapon Equipped
 
-+0x25C: [16-bit] Weapon Slot 1 (Active / In Hands)
-// Ballistic
-.0x00 = None
-.0x01 = AVR-9
-.0x02 = IR-9000
-// Energy
-.0x01 = PPR-2 Plasma Pulse
-.0x02 = PS7 Phaton Burst Cannon
-+0x26C: [16-bit] Weapon Slot 2 (Holstered / On Back)
++0x25c | [16-bit] Weapon Slot 1 (Active / In Hands)
 // Ballistic
 .0x00 = None
 .0x01 = AVR-9
@@ -89,33 +92,33 @@ Total Notes: 11
 .0x01 = PPR-2 Plasma Pulse
 .0x02 = PS7 Phaton Burst Cannon
 
-+0x27C: [16-bit] Weapon Slot 3 (Explosives - Fixed)
++0x26c | [16-bit] Weapon Slot 2 (Holstered / On Back)
+// Ballistic
+.0x00 = None
+.0x01 = AVR-9
+.0x02 = IR-9000
+// Energy
+.0x01 = PPR-2 Plasma Pulse
+.0x02 = PS7 Phaton Burst Cannon
+
++0x27c | [16-bit] Weapon Slot 3 (Explosives - Fixed)
 .0x01 = Standard Rockets
 .0x02 = Stone Dog (Guided Missiles)
 
-+0x280: [16-bit] Ammo Pool - Ballistic
-+0x284: [16-bit] Ammo Pool - Energy Cells
-+0x288: [16-bit] Ammo Pool - Rockets
++0x280 | [16-bit] Ammo Pool - Ballistic
++0x284 | [16-bit] Ammo Pool - Energy Cells
++0x288 | [16-bit] Ammo Pool - Rockets
 
-+0x290: [16-bit] Environmental Weapon / Melee Flag
-0x00 = None
-0x02 = Holding Girder / Metal Bar
-[Note: Resets to 0x00 when the object is thrown or dropped]
++0x290 | [16-bit] Environmental Weapon / Melee Flag
+.0x00 = None (Resets when object is thrown/dropped)
+.0x02 = Holding Girder / Metal Bar
 
 0x20a798: [8-bit] Difficulty Setting
 0x00 = Normal
 0x01 = Easy
 0x02 = Hard
-[Original Note by Pudpod]
+(Original Note by Pudpod)
 
 0x20bae8: [8-bit] Game State
 0x00 = Menu / Pause game
 0x01 = In game
-
-0x20cae8: [24-bit] Pointer - Entity: Generator 03
-+0x01ac | [Float] Generator 03 HP
-80.0 = Max hp - Normal/Easy
-
-0xdf3ea4: [32-bit Float] Boss HP - Argilus
-0x441dfffd = Argilus
-0x44200000 = Death
