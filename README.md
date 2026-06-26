@@ -14,6 +14,9 @@
 - [FIFA International Soccer](https://retroachievements.org/game/26280)
 - [Poker Face Paul's Blackjack](https://retroachievements.org/game/20093)
 
+### <img src="https://static.retroachievements.org/assets/images/system/md.png" height="30" align="middle"> &nbsp; Genesis/Mega Drive
+- [Show do Milhão](https://retroachievements.org/game/125) - Rich Presence
+
 ### <img src="https://static.retroachievements.org/assets/images/system/sms.png" height="30" align="middle"> &nbsp; Master System
 - [Captain Silver](https://retroachievements.org/game/11615)
 - [Chapolim x Dracula: Um Duelo Assustador](https://retroachievements.org/game/11638)
