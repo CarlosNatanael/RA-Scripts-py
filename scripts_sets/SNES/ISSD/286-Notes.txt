@@ -1,0 +1,213 @@
+Game ID: 286
+Source: RA Server
+Total Notes: 80
+============================================================
+
+0x000032: Screen ID?!
+
+When on the field, seems to be 0x03 during demo, and 0x06 during normal gameplay modes (pretty all of them once you're at mode select or beyond--never saw it change)
+
+0x00 during Konami logo on startup
+0x09 during the intro stuff pre-title screen
+0x01 Title screen
+0x05 During transition from title screen to mode select
+0x06 on mode select and beyond
+
+Seems consistent.
+
+0x000052: CPU Active: 00 = Yes, 01 = No
+
+0x000058: value for scenario 1  = win or lose, 3also=penalties
+
+0x0000a8: Period (8-bit)
+
+0x0: First half
+0x1: Second half
+0x2: Extra time first half
+0x3: Extra time second half and penalty shootout
+
+0x000da0: P1 - Team: 00=Italy, 02=Holland, 04=England, 06=Norway, 08=Spain, 0a=Ireland, 0c=Portugal, 0e=Denmark, 10=Germany, 12=France, 14=Belgium, 16=Sweden, 18=Romania, 1a=Bulgaria, 1c=Russia, 1e=Swiss, 20=Greece, 22=Croatia, 24=Austria, 26=Wales, 28=Scotland, 2a=N. Ireland, 2c=Czech, 2e=Poland, 30=Japan, 32=S., Korea, 34=Turkey, 36=Nigeria, 38=Cameroon, 3a=Morocco, 3c=Brazil, 3e=Argentina, 40=Columbia, 42=Mexico, 44=U.S.A, 46=Uruguay
+
+0x000da2: goal1
+
+0x000daa: total shots for player
+
+0x000dab: player free kick
+
+0x000dac: player corner
+
+0x000dae: yellow card player?
+
+0x000daf: player red card
+
+0x000ea0: opponent team id
+
+0x000ea2: opponent goals
+
+0x000eaa: opponent shots
+
+0x000eab: Opponent free kicks
+
+0x000eac: opponent corner kicks
+
+0x0013e1: credits for scenario
+
+0x001582: shooting level 1?
+
+0x001652: most likely new win value?
+
+0x001653: maybe 00 for future value win
+
+0x001654: 2ND VALUE stable
+
+0x0016d2: Timer - Seconds (Hex=Dec)
+
+0x0016d3: Timer - Minutes
+
+0x0016d4: Timer - frames
+
+0x0019c4: static value.... = value of scenario total tries
+
+0x001cfa: score in challenge mode
+
+0x001cfb: score 2 in challenge mode
+
+0x001d04: training mode code?
+
+0x001d08: Voice Lines (8-bit)
+
+0x14: You Win!
+
+0x001e5e: Mode Selected (8-bit)
+
+0x0: Open Game
+0x1: International
+0x2: World Series
+0x3: Password
+0x4: Scenario
+0x5: Penalty Kick
+0x6: Training
+0x7: Options
+
+0x001f88: 0 = 3 minutes and 7 minutes = 2
+
+0x001f92: offside off = 1
+offside on = 0
+
+0x001f98: foul on = 0 and off = 1
+
+0x001f9a: yellow card on = 0
+yellow card off = 1
+
+0x001f9c: difficulty 0 = 1 and 4 = 5
+
+0x001fa0: umpires carlos = 0
+Heinz = 1
+Hasegaa = 2
+
+0x00d442: goals in penalties
+
+0x00d443: opponent goals in penalties
+
+0x00d702: soma dos goals1
+
+0x00d706: [8-bit] Scenario Modes Won
+9-12
+Bit 8 = 9
+...
+Bit 4 = 12
+
+0x00d88d: [8-bit] Scenario Modes Won
+1-8
+Bit 7 = 1
+...
+Bit 0 = 8
+
+0x00d896: no of tries in scenario 9
+
+code is 55 at start of game
+
+0x00d897: no of tries in scenario 10
+
+0x00d899: Number of Tries For Scenario 12 (8-bit)
+
+0x00d8c4: dribbling level 1?
+
+0x00d8cf: passing level 1
+
+0x00d8da: shooting level 1
+
+0x00d8e5: defense level 1
+
+0x00d8e6: defense value 2
+
+0x00d8f0: corner level 1
+
+0x00d8fb: free kick level 1
+
+0x00d906: dribbling level 2
+
+0x00d91c: shooting level 2
+
+0x00d927: defense training 2 value
+
+0x00d928: defense value 2
+
+0x00d932: corner level 2
+
+0x00d93e: corner level 2 value
+
+0x00d948: dribbling level 3
+
+0x00d95e: shooting level 3?
+
+0x00d969: defense level 3 value 1
+
+0x00d96a: defense value 2
+
+0x00d974: corner level 3
+
+0x00d97f: free kick level 3
+
+0x00d980: free kick level 3
+
+0x00d98a: dribling level 4
+
+0x00d995: passing level 4
+
+0x00d9a0: shooting level 4
+
+0x00d9ab: defense level 4 value
+
+0x00d9b6: corner level 4
+
+0x00dc61: win value2?
+
+0x00e3e8: 1 = win possibly?
+0 = lose
+doesn't work for scenario, doesnt reset in tournements, goes 1,2,3 etc
+
+0x00e3e9: 1 =lose possible?
+in tournements it goes up 2 loses = 2
+does not work for scenario
+
+0x00e3fb: win value 3?
+
+0x00e411: win value 3?
+
+0x00e423: win value 5?
+
+0x00e52a: scenario mode 0 = 1st challenge etc
+
+0x00e52c: 0 = dribble training   (challenge mode)
+1 = pass training
+2 = shoot 3 = defense  4 = corner kick 5 = free kick
+
+0x00e52e: 0 = level 1      (challenge mode)
+1 = level 2
+2 = level 3    3= level 4
+
+0x00e532: 01 = Scenario Mode
+
+0x00e534: 01= Training mode
+
