@@ -546,3 +546,4 @@ Note: Stores the currently selected scenario (01-12)
 0x00 = No
 0x01 = Yes
 (Original Note by Hotscrock)
+
