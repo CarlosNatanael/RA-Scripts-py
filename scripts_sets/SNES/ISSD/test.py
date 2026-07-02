@@ -25,10 +25,10 @@ pass_data = [
 ]
 
 shoot_data = [
-    ("Lv1", 0x00, word(0x00d8fb), 550),
-    ("Lv2", 0x01, word(0x00d93d), 540),
-    ("Lv3", 0x02, word(0x00d97f), 524),
-    ("Lv4", 0x03, word(0x00d9c1), 526),
+    ("Lv1", 0x00, word(0x00d8da), 550),
+    ("Lv2", 0x01, word(0x00d91c), 540),
+    ("Lv3", 0x02, word(0x00d95e), 524),
+    ("Lv4", 0x03, word(0x00d9a0), 526),
 ]
 
 defense_data = [
@@ -46,10 +46,10 @@ corner_data = [
 ]
 
 free_data = [
-    ("Lv1", 0x00, word(0x00d8c4), 100),
-    ("Lv2", 0x01, word(0x00d906), 200),
-    ("Lv3", 0x02, word(0x00d948), 300),
-    ("Lv4", 0x03, word(0x00d98a), 472),
+    ("Lv1", 0x00, word(0x00d8fb), 514),
+    ("Lv2", 0x01, word(0x00d93d), 510),
+    ("Lv3", 0x02, word(0x00d97f), 478),
+    ("Lv4", 0x03, word(0x00d9c1), 542),
 ]
 
 # 3. GERAÇÃO DINÂMICA
