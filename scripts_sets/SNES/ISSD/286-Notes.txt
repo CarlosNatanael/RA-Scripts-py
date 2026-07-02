@@ -1,6 +1,6 @@
 Game ID: 286
 Source: RA Server
-Total Notes: 102
+Total Notes: 133
 ============================================================
 
 0x000032: [8-bit] Screen ID 
@@ -204,6 +204,12 @@ Note: Seems to be 0x06 consistently during all normal game modes after the mode 
 0x03 = Good
 0x04 = Strong
 
+0x0011e6: [8-bit] Options - Players Mode
+0x00 = 1P vs CPU
+0x01 = 1P/2P vs CPU
+0x04 = 1P vs 2P
+0x08 = CPU vs CPU
+
 0x0013e1: [8-bit] Credits for scenario
 
 0x00151c: [8-bit] Selector Menu
@@ -386,10 +392,15 @@ Note: Stores the currently selected main game mode.
 0x00 = No
 0x01 = Yes
 
-0x00d442: [8-bit] Player 1 Penalty Score
+0x002f1f: [8-bit] Game State - Match
+0x00 = Not in Match / Menu
+0x01 = In Match
+(Note: Does not register during Penalty Kicks)
+
+0x00d442: [8-bit] P1 Penalty Score
 (Original Note by Jamiras)
 
-0x00d443: [8-bit] P2/CPU Score
+0x00d443: [8-bit] P2/CPU Penalty Score
 (Original Note by Jamiras)
 
 0x00d474: [8-bit] P1 Player Condition
@@ -409,16 +420,26 @@ Note: Stores the currently selected main game mode.
 0x05 = Random
 
 0x00d706: [8-bit] Scenario Modes Won
-9-12
-Bit 8 = 9
-...
-Bit 4 = 12
+Bit7 = 9 Scenario
+Bit6 = 10 Scenario
+Bit5 = 11 Scenario
+Bit4 = 12 Scenario
+(Original Note by s0uth)
+
+0x00d854: [8-bit] Referee Dog
+0x00 = Disabled
+0x01 = Enabled
 
 0x00d88d: [8-bit] Scenario Modes Won
-1-8
-Bit 7 = 1
-...
-Bit 0 = 8
+Bit7 = 1 Scenario
+Bit6 = 2 Scenario
+Bit5 = 3 Scenario
+Bit4 = 4 Scenario
+Bit3 = 5 Scenario
+Bit2 = 6 Scenario
+Bit1 = 7 Scenario
+Bit0 = 8 Scenario
+(Original Note by s0uth)
 
 0x00d88e: [8-bit] Scenario 1 Attempt Count
 
@@ -447,55 +468,123 @@ Bit 0 = 8
 0x00d899: [8-bit] Scenario 12 Attempt Count
 (Original Note by MelodyAsh)
 
-0x00d8c4: dribbling level 1?
+0x00d8be: [16-bit BCD] Training: Dribble Challenge Lv1 - Best Time
 
-0x00d8cf: passing level 1
+0x00d8c4: [16-bit] Training: Dribble Challenge Lv1 - Best Score
+(Original Note by Jamiras)
 
-0x00d8da: shooting level 1
+0x00d8c9: [16-bit BCD] Training: Pass Challenge Lv1 - Best Time
 
-0x00d8e5: defense level 1
+0x00d8cf: [16-bit] Training: Pass Challenge Lv1 - Best Score
+(Original Note by mickyt888)
 
-0x00d8e6: defense value 2
+0x00d8d4: [16-bit BCD] Training: Kick Challenge Lv1 - Best Time
 
-0x00d8f0: corner level 1
+0x00d8da: [16-bit] Training: Kick Challenge Lv1 - Best Score
+(Original Note by Jamiras)
 
-0x00d8fb: free kick level 1
+0x00d8df: [16-bit BCD] Training: Defense Challenge Lv1 - Best Time
 
-0x00d906: dribbling level 2
+0x00d8e5: [16-bit] Training: Defense Challenge Lv1 - Best Score
+(Original Note by mickyt888)
 
-0x00d91c: shooting level 2
+0x00d8e6: [8-bit] Wrong Annotation - Logic Fix
 
-0x00d927: defense training 2 value
+0x00d8ea: [16-bit BCD] Training: Corner Kick Challenge Lv1 - Best Time
 
-0x00d928: defense value 2
+0x00d8f0: [16-bit] Training: Corner Kick Challenge Lv1 - Best Score
 
-0x00d932: corner level 2
+0x00d8f5: [16-bit BCD] Training: Free Kick Challenge Lv1 - Best Time
 
-0x00d93e: corner level 2 value
+0x00d8fb: [16-bit] Training: Free Kick Challenge Lv1 - Best Score
 
-0x00d948: dribbling level 3
+0x00d900: [16-bit BCD] Training: Dribble Challenge Lv2 - Best Time
 
-0x00d95e: shooting level 3?
+0x00d906: [16-bit] Training: Dribble Challenge Lv2 - Best Score
 
-0x00d969: defense level 3 value 1
+0x00d90b: [16-bit BCD] Training: Pass Challenge Lv2 - Best Time
 
-0x00d96a: defense value 2
+0x00d911: [16-bit] Training: Pass Challenge Lv2 - Best Score
 
-0x00d974: corner level 3
+0x00d916: [16-bit BCD] Training: Kick Challenge Lv2 - Best Time
 
-0x00d97f: free kick level 3
+0x00d91c: [16-bit] Training: Kick Challenge Lv2 - Best Score
 
-0x00d980: free kick level 3
+0x00d921: [16-bit BCD] Training: Defense Challenge Lv2 - Best Time
 
-0x00d98a: dribling level 4
+0x00d927: [16-bit] Training: Defense Challenge Lv2 - Best Score
 
-0x00d995: passing level 4
+0x00d928: [8-bit] Wrong Annotation - Logic Fix
 
-0x00d9a0: shooting level 4
+0x00d92c: [16-bit BCD] Training: Corner Kick Challenge Lv2 - Best Time
 
-0x00d9ab: defense level 4 value
+0x00d932: [16-bit] Training: Corner Kick Challenge Lv2 - Best Score
 
-0x00d9b6: corner level 4
+0x00d937: [16-bit BCD] Training: Free Kick Challenge Lv2 - Best Time
+
+0x00d93d: [16-bit] Training: Free Kick Challenge Lv2 - Best Score
+
+0x00d93e: [8-bit] Wrong Annotation - Logic Fix
+
+0x00d942: [16-bit BCD] Training: Dribble Challenge Lv3 - Best Time
+
+0x00d948: [16-bit] Training: Dribble Challenge Lv3 - Best Score
+
+0x00d94d: [16-bit BCD] Training: Pass Challenge Lv3 - Best Time
+
+0x00d953: [16-bit] Training: Pass Challenge Lv3 - Best Score
+
+0x00d958: [16-bit BCD] Training: Kick Challenge Lv3 - Best Time
+
+0x00d95e: [16-bit] Training: Kick Challenge Lv3 - Best Score
+
+0x00d963: [16-bit BCD] Training: Defense Challenge Lv3 - Best Time
+
+0x00d969: [16-bit] Training: Defense Challenge Lv3 - Best Score
+
+0x00d96e: [16-bit BCD] Training: Corner Kick Challenge Lv3 - Best Time
+
+0x00d974: [16-bit] Training: Corner Kick Challenge Lv3 - Best Score
+
+0x00d979: [16-bit BCD] Training: Free Kick Challenge Lv3 - Best Time
+
+0x00d97f: [16-bit] Training: Free Kick Challenge Lv3 - Best Score
+
+0x00d980: [8-bit] Wrong Annotation - Logic Fix
+
+0x00d984: [16-bit BCD] Training: Dribble Challenge Lv4 - Best Time
+
+0x00d98a: [16-bit] Training: Dribble Challenge Lv4 - Best Score
+
+0x00d98f: [16-bit BCD] Training: Pass Challenge Lv4 - Best Time
+
+0x00d995: [16-bit] Training: Pass Challenge Lv4 - Best Score
+
+0x00d99a: [16-bit BCD] Training: Kick Challenge Lv4 - Best Time
+
+0x00d9a0: [16-bit] Training: Kick Challenge Lv4 - Best Score
+
+0x00d9a5: [16-bit BCD] Training: Defense Challenge Lv4 - Best Time
+
+0x00d9ab: [16-bit] Training: Defense Challenge Lv4 - Best Score
+
+0x00d9b0: [16-bit BCD] Training: Corner Kick Challenge Lv4 - Best Time
+
+0x00d9b6: [16-bit] Training: Corner Kick Challenge Lv4 - Best Score
+
+0x00d9bb: [16-bit BCD] Training: Free Kick Challenge Lv4 - Best Time
+
+0x00d9c1: [16-bit] Training: Free Kick Challenge Lv4 - Best Score
+
+0x00de13: [8-bit] Game Mode - Match Type
+0x00 = Open Game
+0x02 = International
+0x03 = World Series
+0x04 = Short League
+0x05 = Short Tournament
+0x06 = Scenario
+0x07 = Challenge
+0x08 = Training
 
 0x00e3e8: [8-bit] World Series - Number of Wins
 
