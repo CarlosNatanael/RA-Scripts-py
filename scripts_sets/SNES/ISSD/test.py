@@ -53,7 +53,7 @@ free_data = [
 ]
 
 # 3. GERAÇÃO DINÂMICA
-for level_name, diff_val, mem_score, target_score in pass_data:
+for level_name, diff_val, mem_score, target_score in free_data:
     ach = Achievement(
         id=0,
         title=f"Dribble Master {level_name}",
@@ -62,7 +62,7 @@ for level_name, diff_val, mem_score, target_score in pass_data:
     )
     
     ach.add_core([
-        (mem_chal_type == 0x01),
+        (mem_chal_type == 0x05),
         (mem_chal_diff == diff_val),
         (mem_menu_opt == 0x06),
         trigger(mem_score > target_score),
