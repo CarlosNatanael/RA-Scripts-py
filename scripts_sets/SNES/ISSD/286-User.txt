@@ -40,40 +40,43 @@ International Superstar Soccer Deluxe
 9370:"0xH000da2>d0xH000da2.3._0xH000032!=3_0xH002f1f=1_0xH000052=0_0xH0011e6=0_P:0xH000da2=99.1.SR:0xH002f1f=0":Hat Trick!:Score 3 goals in a match::::Nomstuff:3:::::479209
 535:"0xH000da2>d0xH000da2.10._0xH000032!=3_0xH002f1f=1_0xH000052=0_0xH0011e6=0_P:0xH000da2=99.1.SR:0xH002f1f=0":GOALLLL!!!! GOALLLLLL!!!!:Score 10 goals in a match::::Dissection:5:::::09068
 9371:"0xH000da2>d0xH000da2.20._0xH000032!=3_0xH002f1f=1_0xH000052=0_0xH0011e6=0_P:0xH000da2=99.1.SR:0xH002f1f=0":I Don't Believe It:Score 20 goals in a match::::Nomstuff:10:::::479210
-10278:"0xH000da2>0xH000ea2_0xH002f1f=1_0xH001d08=20_0xH000052=0_0xH0011e6=0_d0xH001d08!=20_P:0xH000da2=99.1.SR:0xH002f1f=0":First Taste of Success:Win first full game::::mickyt888:5:::::09834
+10278:"0xH000da2>0xH000ea2_0xH002f1f=1_0xH001d08=20_0xH000052=0_0xH0011e6=0_d0xH001d08!=20_P:0xH000da2=99.1.SR:0xH002f1f=0":First Taste of Success:Win a full match in any game mode::::mickyt888:5:::::09834
 10276:"0xH000dae>d0xH000dae.1._0xH002f1f=1_0xH000052=0_0xH0011e6=0_P:0xH000da2=99.1.SR:0xH002f1f=0":Word of Warning:Receive a Yellow Card::::mickyt888:1:::::09832
 10277:"0xH000daf>d0xH000daf.1._0xH002f1f=1_0xH000052=0_0xH0011e6=0_P:0xH000da2=99.1.SR:0xH002f1f=0":You're Off!:Receive a Red Card::::mickyt888:1:::::09833
-10357:"0xH000da2>0xH000ea2_0xH000052=0_0xH0011e6=0_0xH002f1f=1_0xH001f92=1_0xH001f98=1_0xH001f9a=1_0xH001d08=20_d0xH001d08!=20_P:0xH000da2=99.1.SR:0xH002f1f=0":Made Easy:Turn off fouls, offside, cards and win an open match::::mickyt888:5:::::10036
-10355:"0xH000daa=0_0xH000da2>0xH000ea2_0xH002f1f=1_0xH000052=0_0xH0011e6=0_0xH001d08=20_d0xH001d08!=20_P:0xH000da2=99.1.SR:0xH002f1f=0":Shotless:Win a game without having a shot in an open game::::mickyt888:5:::::10034
-10358:"0xH001e5e=5_0xH00d443=0_0xH000052=0_0xH0011e6=0_T:0xH001d08=20_d0xH001d08!=20_P:0xH000da2=99.1.SR:0xH001e5e=0":Super Goalie:In penalties, keep the opponent scoreless and win::::mickyt888:5:::::10037
-10359:"0xH001f9c=4_0xH001e5e=5_0xH00d443=0_0xH000052=0_0xH0011e6=0_T:0xH001d08=20_d0xH001d08!=20_P:0xH000da2=99.1.SR:0xH001e5e=0":Super Goalie 2:In penalties, keep the opponent scoreless and win in open match on hardest difficulty::::mickyt888:10:::::10038
-10362:"M:0xH000dac>d0xH000dac.10._0xH002f1f=1_0xH000052=0_0xH0011e6=0_P:0xH000da2=99.1.SR:0xH002f1f=0":Must Score Now:Have at least 10 corner attempts in a match::::mickyt888:5:::::10041
-10363:"M:0xH000dab>d0xH000dab.10._0xH002f1f=1_0xH000052=0_0xH0011e6=0_P:0xH000da2=99.1._P:0xH000dae>0.1.SR:0xH002f1f=0":Luck of the Irish:Give away 10 free kicks in a game without receiving a card::::mickyt888:10:::::10042
-10252:"0xH00e52c=0_0xH00e52e=0_0xH001e5e=6_T:0x 00d8c4>485_d0x 00d8c4<=485":Dribble Learner:Break Dribble LV.1 record::::mickyt888:1:::::09852
-10253:"0xH00e52c=0_0xH00e52e=1_0xH001e5e=6_T:0x 00d906>492_d0x 00d906<=492":Dribble Teacher:Break Dribble LV.2 record::::mickyt888:1:::::09854
-10254:"0xH00e52c=0_0xH00e52e=2_0xH001e5e=6_T:0x 00d948>479_d0x 00d948<=479":Dribble Expert:Break Dribble LV.3 record::::mickyt888:5:::::09855
-10255:"0xH00e52c=0_0xH00e52e=3_0xH001e5e=6_T:0x 00d98a>472_d0x 00d98a<=472":Dribble Master:Break Dribble LV.4 record::::mickyt888:5:::::09856
-10256:"0xHe52c=1_0xHe52e=0_0xH1e5e=6_T:0xd8cf>480_d0xd8cf<=480":So You Think You Can Pass?:Break Pass LV.1 record::::mickyt888:1:::::09930
-10257:"0xHe52c=1_0xHe52e=1_0xH1e5e=6_T:0xd911>479_d0xd911<=479":Long Way to Go Yet:Break Pass LV.2 record::::mickyt888:1:::::09931
-10258:"0xHe52c=1_0xHe52e=2_0xH1e5e=6_T:0xd953>477_d0xd953<=477":Assist King:Break Pass LV.3 record::::mickyt888:3:::::09932
-10259:"0xHe52c=1_0xHe52e=3_0xH1e5e=6_T:0xd995>487_d0xd995<=487":Assist Master:Break Pass LV.4 record::::mickyt888:5:::::09933
-10260:"0xHe52c=2_0xHe52e=0_0xH1e5e=6_T:0xd8da>550_d0xd8da<=550":Rookie Shooter:Break Shoot LV.1 record::::mickyt888:1:::::09934
-10261:"0xHe52c=2_0xHe52e=1_0xH1e5e=6_T:0xd91c>540_d0xd91c<=540":Still Couldn't Score in a League Game:Break Shoot LV.2 record::::mickyt888:1:::::09935
-10262:"0xHe52c=2_0xHe52e=2_0xH1e5e=6_T:0xd95e>524_d0xd95e<=524":Still Couldn't Score in the World Cup:Break Shoot LV.3 record::::mickyt888:3:::::09936
-10263:"0xHe52c=2_0xHe52e=3_0xH1e5e=6_T:0xd9a0>526_d0xd9a0<=526":World Class Striker:Break Shoot LV.4 record::::mickyt888:5:::::09937
-10264:"0xHe52c=3_0xHe52e=0_0xH1e5e=6_T:0xd8e5>519_d0xd8e5<=519":You are Still Learning to Defend:Break Defense LV.1 record::::mickyt888:1:::::09938
-10265:"0xHe52c=3_0xHe52e=1_0xH1e5e=6_T:0xd927>505_d0xd927<=505":Rookie Defender:Break Defense LV.2 record easily::::mickyt888:1:::::09939
-10266:"0xHe52c=3_0xHe52e=2_0xH1e5e=6_T:0xd969>521_d0xd969<=521":Local League Defender:Break Defense LV.3 record::::mickyt888:3:::::09940
-10267:"0xHe52c=3_0xHe52e=3_0xH1e5e=6_T:0xd9ab>523_d0xd9ab<=523":World Class Defender:Break Defense LV.4 record::::mickyt888:5:::::09941
-10268:"0xHe52c=4_0xHe52e=0_0xH1e5e=6_T:0xd8f0>518_d0xd8f0<=518":Corner Rookie:Break Corner LV.1 record::::mickyt888:1:::::09942
-10269:"0xH00e52c=4_0xH00e52e=1_0xH001e5e=6_T:0x 00d932>510_d0x 00d932<=510":Where is the Bend?:Break Corner LV.2 record::::mickyt888:1:::::09943
-10270:"0xH00e52c=4_0xH00e52e=2_0xH001e5e=6_T:0x 00d974>504_d0x 00d974<=504":First Picked For Corners:Break Corner LV.3 record::::mickyt888:3:::::09944
-10271:"0xH00e52c=4_0xH00e52e=3_0xH001e5e=6_T:0x 00d9b6>478_d0x 00d9b6<=478":Curving expert:Break Corner LV.4 record::::mickyt888:5:::::09945
-10272:"0xH00e52c=5_0xH00e52e=0_0xH001e5e=6_T:0x 00d8fb>514_d0x 00d8fb<=514":Bend It Like Victoria Beckham:Break Free Kick LV.1 record::::mickyt888:1:::::09946
-10273:"0xH00e52c=5_0xH00e52e=1_0xH001e5e=6_T:0x 00d93d>510_d0x 00d93d<=510":Can't Score From A Free Kick:Break Free Kick LV.2 record::::mickyt888:1:::::09947
-10274:"0xH00e52c=5_0xH00e52e=2_0xH001e5e=6_T:0x 00d97f>512_d0x 00d97f<=478":Goals From 20 Yards:Break Free Kick LV.3 record scoring over 512 points::::mickyt888:3:::::09948
-10275:"0xH00e52c=5_0xH00e52e=3_0xH001e5e=6_T:0x 00d9c1>542_d0x 00d9c1<=542":Goals from Anywhere!:Break Free Kick LV.4 record::::mickyt888:5:::::09949
+10357:"0xH000da2>0xH000ea2_0xH000052=0_0xH0011e6=0_0xH002f1f=1_0xH001f92=1_0xH001f98=1_0xH001f9a=1_0xH001d08=20_d0xH001d08!=20_P:0xH000da2=99.1.SR:0xH002f1f=0":Made Easy:Win a match in Open Game mode with fouls, offisde, and cards disabled::::mickyt888:5:::::10036
+10355:"0xH000daa=0_0xH000da2>0xH000ea2_0xH002f1f=1_0xH000052=0_0xH0011e6=0_0xH001d08=20_d0xH001d08!=20_P:0xH000da2=99.1.SR:0xH002f1f=0":Shotless:Win a match in Open Game mode without ever shooting the ball::::mickyt888:5:::::10034
+10358:"0xH001e5e=5_0xH00d443=0_0xH000052=0_0xH0011e6=0_T:0xH001d08=20_d0xH001d08!=20_P:0xH000da2=99.1.SR:0xH001e5e=0":Super Goalie:Win a match in Penalty Kick mode without allowing a goal::::mickyt888:5:::::10037
+10359:"0xH001f9c=4_0xH001e5e=5_0xH00d443=0_0xH000052=0_0xH0011e6=0_T:0xH001d08=20_d0xH001d08!=20_P:0xH000da2=99.1.SR:0xH001e5e=0":The Unbreakable Wall:Win a match in Penalty Kick mode on Game Level 5 and while keeping a clean sheet::::mickyt888:10:::::10038
+10362:"M:0xH000dac>d0xH000dac.10._0xH002f1f=1_0xH000052=0_0xH0011e6=0_P:0xH000da2=99.1.SR:0xH002f1f=0":Must Score Now:Accumulate at least 10 Corner Kicks in a single match::::mickyt888:5:::::10041
+10363:"M:0xH000dab>d0xH000dab.10._0xH002f1f=1_0xH000052=0_0xH0011e6=0_P:0xH000da2=99.1._P:0xH000dae>0.1.SR:0xH002f1f=0":Luck of the Irish:Giveaway 10 free kicks to the opposing team without receiving a card in a single match::::mickyt888:10:::::10042
+10252:"0xH00e52c=0_0xH00e52e=0_0xH001e5e=6_T:0x 00d8c4>485_d0x 00d8c4<=485":Dribble Learner:Break the Lv . 1 Dribble Traning record::::mickyt888:1:::::09852
+10253:"0xH00e52c=0_0xH00e52e=1_0xH001e5e=6_T:0x 00d906>492_d0x 00d906<=492":Dribble Teacher:Break the Lv . 2 Dribble Traning record::::mickyt888:1:::::09854
+10254:"0xH00e52c=0_0xH00e52e=2_0xH001e5e=6_T:0x 00d948>479_d0x 00d948<=479":Dribble Expert:Break the Lv . 3 Dribble Traning record::::mickyt888:5:::::09855
+10255:"0xH00e52c=0_0xH00e52e=3_0xH001e5e=6_T:0x 00d98a>472_d0x 00d98a<=472":Dribble Master:Break the Lv . 4 Dribble Traning record::::mickyt888:5:::::09856
+10256:"0xHe52c=1_0xHe52e=0_0xH1e5e=6_T:0xd8cf>480_d0xd8cf<=480":So You Think You Can Pass?:Break the Lv . 1 Pass Traning record::::mickyt888:1:::::09930
+10257:"0xHe52c=1_0xHe52e=1_0xH1e5e=6_T:0xd911>479_d0xd911<=479":Long Way to Go Yet:Break the Lv . 2 Pass Traning record::::mickyt888:1:::::09931
+10258:"0xHe52c=1_0xHe52e=2_0xH1e5e=6_T:0xd953>477_d0xd953<=477":Assist King:Break the Lv . 3 Pass Traning record::::mickyt888:3:::::09932
+10259:"0xHe52c=1_0xHe52e=3_0xH1e5e=6_T:0xd995>487_d0xd995<=487":Assist Master:Break the Lv . 4 Pass Traning record::::mickyt888:5:::::09933
+10260:"0xHe52c=2_0xHe52e=0_0xH1e5e=6_T:0xd8da>550_d0xd8da<=550":Rookie Shooter:Break the Lv . 1 Shoot Traning record::::mickyt888:1:::::09934
+10261:"0xHe52c=2_0xHe52e=1_0xH1e5e=6_T:0xd91c>540_d0xd91c<=540":Still Couldn't Score in a League Game:Break the Lv . 2 Shoot Traning record::::mickyt888:1:::::09935
+10262:"0xHe52c=2_0xHe52e=2_0xH1e5e=6_T:0xd95e>524_d0xd95e<=524":Tournament Pressure:Break the Lv . 3 Shoot Traning record::::mickyt888:3:::::09936
+10263:"0xHe52c=2_0xHe52e=3_0xH1e5e=6_T:0xd9a0>526_d0xd9a0<=526":World Class Striker:Break the Lv . 4 Shoot Traning record::::mickyt888:5:::::09937
+10264:"0xHe52c=3_0xHe52e=0_0xH1e5e=6_T:0xd8e5>519_d0xd8e5<=519":You are Still Learning to Defend:Break the Lv . 1 Defence Traning record::::mickyt888:1:::::09938
+10265:"0xHe52c=3_0xHe52e=1_0xH1e5e=6_T:0xd927>505_d0xd927<=505":Rookie Defender:Break the Lv . 2 Defence Traning record::::mickyt888:1:::::09939
+10266:"0xHe52c=3_0xHe52e=2_0xH1e5e=6_T:0xd969>521_d0xd969<=521":Local League Defender:Break the Lv . 3 Defence Traning record::::mickyt888:3:::::09940
+10267:"0xHe52c=3_0xHe52e=3_0xH1e5e=6_T:0xd9ab>523_d0xd9ab<=523":World Class Defender:Break the Lv . 4 Defence Traning record::::mickyt888:5:::::09941
+10268:"0xHe52c=4_0xHe52e=0_0xH1e5e=6_T:0xd8f0>518_d0xd8f0<=518":Corner Rookie:Break the Lv . 1 Corner Kick Traning record::::mickyt888:1:::::09942
+10269:"0xH00e52c=4_0xH00e52e=1_0xH001e5e=6_T:0x 00d932>510_d0x 00d932<=510":Where is the Bend?:Break the Lv . 2 Corner Kick Traning record::::mickyt888:1:::::09943
+10270:"0xH00e52c=4_0xH00e52e=2_0xH001e5e=6_T:0x 00d974>504_d0x 00d974<=504":First Picked For Corners:Break the Lv . 3 Corner Kick Traning record::::mickyt888:3:::::09944
+10271:"0xH00e52c=4_0xH00e52e=3_0xH001e5e=6_T:0x 00d9b6>478_d0x 00d9b6<=478":Curving expert:Break the Lv . 4 Corner Kick Traning record::::mickyt888:5:::::09945
+10272:"0xH00e52c=5_0xH00e52e=0_0xH001e5e=6_T:0x 00d8fb>514_d0x 00d8fb<=514":Bend It Like Victoria Beckham:Break the Lv . 1 Free Kick Traning record::::mickyt888:1:::::09946
+10273:"0xH00e52c=5_0xH00e52e=1_0xH001e5e=6_T:0x 00d93d>510_d0x 00d93d<=510":Can't Score From A Free Kick:Break the Lv . 2 Free Kick Traning record::::mickyt888:1:::::09947
+10274:"0xH00e52c=5_0xH00e52e=2_0xH001e5e=6_T:0x 00d97f>512_d0x 00d97f<=478":Goals From 20 Yards:Break the Lv . 3 Free Kick Traning record, scoring over 512 points::::mickyt888:3:::::09948
+10275:"0xH00e52c=5_0xH00e52e=3_0xH001e5e=6_T:0x 00d9c1>542_d0x 00d9c1<=542":Goals from Anywhere!:Break the Lv . 4 Free Kick Traning record::::mickyt888:5:::::09949
+10280:"T:0xH001652=35.1._R:0xH00dc60!=0_T:0xP000057=1_d0xP000057!=1_O:0xH001e5e=2_0xH00de13=3":World Champion:Win the World Series without a single loss in the season::::mickyt888:25:::::09950
+10281:"T:0xH001652=35.1._R:0xH00dc60!=0_0xH000da0=58_T:0xP000057=1_d0xP000057!=1_O:0xH001e5e=2_0xH00de13=3":Defying the Impossible:Win every match in the World Series as Morocco::::mickyt888:25:::::09951
+10282:"T:0xH001652=35.1._0xH001f9c=4_R:0xH00dc60!=0_T:0xP000057=1_d0xP000057!=1_O:0xH001e5e=2_0xH00de13=3":It Will Take Something Special:Win every match in the World Series on Game Level 5::::mickyt888:50:::::09953
 10283:"0xH001f9c=4_0xH000da0=58_0xH001652=35_0xH001654=3_P:0xH000da2=99.1.":[DEMOTED] This Could Never Happen... Ever:Win all games in World Series on max difficulty as Morocco::::mickyt888:50:::::09952
-10312:"0xH00d88d=255.1._0xH00d706=241.1._0xH001e5e=4_0xH001f9c>=2_T:0xH0013e1=1_d0xH0013e1=0_R:0xH00d88e>1_R:0xH00d88f>1_R:0xH00d890>1_R:0xH00d891>1_R:0xH00d892>1_R:0xH00d893>1_R:0xH00d894>1_R:0xH00d895>1_R:0xH00d896>1_R:0xH00d897>1_R:0xH00d898>1_R:0xH00d899>1":Good Luck:Beat all scenario's on the first attempt::::mickyt888:25:::::09986
-10360:"0xH000ea0=72_0xH002f1f=1_0xH0011e6=0_0xH000052=0_T:0xH000da2>0xH000ea2_T:0xH001d08=20_d0xH001d08!=20_Z:0xH002f1f=0_P:0xH000da2=99.1.":One Tough Line Up:Beat the All Star in open match::::mickyt888:5:::::10039
-10361:"0xH000da0=58_0xH000ea0=72_0xH002f1f=1_0xH0011e6=0_0xH000052=0_0xH001f9c=4_T:0xH000da2>0xH000ea2_T:0xH001d08=20_d0xH001d08!=20_Z:0xH002f1f=0_P:0xH000da2=99.1.":Don't Underestimate Us:Beat the All Star in open match with Morocco on hardest difficulty and max time::::mickyt888:25:::::10040
+10312:"0xH00d88d=255.1._0xH00d706=241.1._0xH001e5e=4_0xH001f9c>=3_T:0xH0013e1=1_d0xH0013e1=0_R:0xH00d88e>1_R:0xH00d88f>1_R:0xH00d890>1_R:0xH00d891>1_R:0xH00d892>1_R:0xH00d893>1_R:0xH00d894>1_R:0xH00d895>1_R:0xH00d896>1_R:0xH00d897>1_R:0xH00d898>1_R:0xH00d899>1":The True Ending:Clear every Scenario on the first attempt on Game Level 4 or above::::mickyt888:25:::::09986
+10360:"0xH000ea0=72_0xH002f1f=1_0xH0011e6=0_0xH000052=0_T:0xH000da2>0xH000ea2_T:0xH001d08=20_d0xH001d08!=20_Z:0xH002f1f=0_P:0xH000da2=99.1.":One Tough Line Up:Beat the All-Star team in a match in Open Game mode::::mickyt888:5:::::10039
+10361:"0xH000da0=58_0xH000ea0=72_0xH002f1f=1_0xH0011e6=0_0xH000052=0_0xH001f88=2_0xH001f9c=4_T:0xH000da2>0xH000ea2_T:0xH001d08=20_d0xH001d08!=20_Z:0xH002f1f=0_P:0xH000da2=99.1.":Don't Underestimate Us:Beat the All-Star team in a match in Open Game mode while playing as Morocco on Game Level 5 with Game Time set to 7::::mickyt888:25:::::10040
