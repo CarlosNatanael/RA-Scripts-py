@@ -21,6 +21,7 @@
 - [Captain Silver](https://retroachievements.org/game/11615)
 - [Chapolim x Dracula: Um Duelo Assustador](https://retroachievements.org/game/11638)
 - [Joe Montana Football](https://retroachievements.org/game/10708)
+- [Kung Fu Kid](https://retroachievements.org/game/10203) - Rich Presence
 - [The Cyber Shinobi](https://retroachievements.org/game/10764)
 
 ### <img src="https://static.retroachievements.org/assets/images/system/ps1.png" height="30" align="middle"> &nbsp; PlayStation
