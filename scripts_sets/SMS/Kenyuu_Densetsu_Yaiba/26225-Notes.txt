@@ -1,0 +1,65 @@
+Game ID: 26225
+Source: RA Server
+Total Notes: 13
+============================================================
+
+0x000009: [8-bit BCD] Fighting Spirit
+
+0x00000d: [16-bit BCD] Score
+
+0x00000e: [8-bit BCD] Score - Thousands
+
+0x000016: [8-bit] Lives
+
+0x000017: [BitFlag] Controller Input
+Bit0 = Up
+Bit1 = Down
+Bit2 = Left
+Bit3 = Right
+Bit4 = Button B
+Bit5 = Button A
+Bit7 = Start
+
+0x0000c3: [8-bit] I still don't know what it is!
+
+0x0000f6: [8-bit] Stage
+0x00 = 1 Stage
+0x01 = 2 Stage
+0x02 = 3 Stage
+0x03 = 4 Stage
+
+0x0000f7: [8-bit] Sword Power (Pause Menu Selection)
+0x00 = No Power
+0x01 = Thunder
+0x02 = Wind
+0x03 = Water
+0x04 = Fire
+0x05 = Ice
+0x06 = Earth
+0x07 = Sound
+
++[8-bit] Sword Power (Active In-Game Effect)
+.0x00 = No Power (Matches Menu 0x00)
+.0x01 = Thunder (Matches Menu 0x01)
+.0x03 = Fire (Matches Menu 0x06 Earth)
+.0x04 = Water (Matches Menu 0x04 Fire)
+.0x05 = Paralyzes enemies (Matches Menu 0x05)
+.0x08 = Protective Shield (Matches Menu 0x07 Sound)
+.0x09 = Transform into Stage Monster (Matches Menu 0x02 Wind)
+.0x0a = Grow Huge & Clear Screen (Matches Menu 0x03 Water)
+
+0x000ad7: [8-bit] Healt Bar - Kojiro Sasaki
+0x08 = Max Hp
+
+0x000aff: [8-bit] Health Bar - Jubei
+0x0f = Max Hp
+
+0x000b77: [8-bit] Health Bar - Player
+0x06 = Max HP
+
+0x0015aa: [8-bit] Sword Power
+[Note: Linked address $0x00f7]
+
+0x001e42: [8-bit] Active Gameplay Flag
+0x00 = Paused / Dead
+0x01 = In Game
