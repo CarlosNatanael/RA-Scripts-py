@@ -1,6 +1,6 @@
 Game ID: 26225
 Source: RA Server
-Total Notes: 13
+Total Notes: 14
 ============================================================
 
 0x000009: [8-bit BCD] Fighting Spirit
@@ -8,6 +8,57 @@ Total Notes: 13
 0x00000d: [16-bit BCD] Score
 
 0x00000e: [8-bit BCD] Score - Thousands
+
+0x000013: [8-bit] Stage ID / Minigames
+0x00 = Menu
+0x01 = 1-1 Gameplay
+0x02 = 1-2 Intro Opening Geroda
+0x03 = 1-2 Minigame Geroda
+0x04 = 1-2 Intro Ending Geroda
+0x05 = 1-3 Minigame Kagetora
+0x06 = 1-3 Intro Ending Kagetora
+0x07 = 1-4 Intro Opening Sasaki
+0x08 = 1-4 Boss Fight Sasaki
+0x09 = 1-4 Intro Ending Sasaki
+0x0a = 2-1 Intro Start Stage 2
+0x0b = 2-1 Intro Stage 2
+0x0c = 2-2 Minigame 1 Power Orb
+0x0d = 2-3 Intro Opening 2 Power Orb
+0x0e = 2-3 Minigame 2 Power Orb
+0x0f = 2-4 Intro Opening 3 Power Orb
+0x10 = 2-4 Minigame 3 Power Orb
+0x11 = 2-5 Intro Opening 4 Power Orb
+0x12 = 2-5 Minigame 4 Power Orb
+0x13 = 2-6 Intro Opening 5 Power Orb
+0x14 = 2-6 Minigame 5 Power Orb
+0x15 = 2-7 Intro Opening 6 Power Orb
+0x16 = 2-7 Minigame 6 Power Orb
+0x17 = 2-7 Intro Opening
+0x18 = 2-7 Castle Gameplay
+0x19 = 2-7 Boss Fight Jubei
+0x1a = 2-7 Intro Ending Jubei
+0x1b = 2-8 Minigame 7 Power Orb
+0x1c = 2-8 Minigame 7 Power Orb (Choose Friend or Orb)
+0x1d = 3-1 Intro Stage 3
+0x1e = 3-1 Gameplay
+0x1f = 3-2 Minigame Gekko vs Takeshi Onimaru
+0x20 = 3-3 Intro Ending Stage 3
+0x21 = 3-4 Gameplay
+0x22 = 3-5 Intro Opening Boss?
+0x23 = 3-6 Minigame Yaiba vs Ice Wolf?
+0x24 = 3-6 Intro Ending Success
+0x25 = 4-1 Intro Stage 4
+0x26 = 4-1 Gameplay
+0x27 = 4-2 Gameplay
+0x28 = 4-3 Intro Opening Minigame
+0x29 = 4-3 Minigame Join Swords
+0x2a = 4-4 Intro Story
+0x2b = 4-5 Minigame Shonosuke
+0x2c = 4-6 Intro Gameplay
+0x2d = 4-7 Gameplay
+0x2e = 4-8 Intro Boss Fight Takeshi Onimaru
+0x2f = Boss Fight Takeshi Onimaru
+0x30 = Game Ending / Credits
 
 0x000016: [8-bit] Lives
 
@@ -22,7 +73,7 @@ Bit7 = Start
 
 0x0000c3: [8-bit] I still don't know what it is!
 
-0x0000f6: [8-bit] Stage
+0x0000f6: [8-bit] Stage ID
 0x00 = 1 Stage
 0x01 = 2 Stage
 0x02 = 3 Stage
@@ -48,8 +99,9 @@ Bit7 = Start
 .0x09 = Transform into Stage Monster (Matches Menu 0x02 Wind)
 .0x0a = Grow Huge & Clear Screen (Matches Menu 0x03 Water)
 
-0x000ad7: [8-bit] Healt Bar - Kojiro Sasaki
-0x08 = Max Hp
+0x000ad7: [8-bit] Healt Bar - Bosses
+0x08 = Max Hp Kojiro Sasaki
+0x14 = Max Hp Takeshi Onimaru
 
 0x000aff: [8-bit] Health Bar - Jubei
 0x0f = Max Hp
