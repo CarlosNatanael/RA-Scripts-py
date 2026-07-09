@@ -1,0 +1,24 @@
+1.4.2.0
+Kenyuu Densetsu Yaiba
+1:"0xH0013=10_d0xH0013=9_0xH1e42=1":The Raijin Awakens:Complete Stage 1:::progression:PyCheevos:1:::::00000
+2:"0xH0013=29_d0xH0013=28_0xH1e42=1":Trials of the Dragon Orb:Complete Stage 2:::progression:PyCheevos:2:::::00000
+3:"0xH0013=37_d0xH0013=36_0xH1e42=1":Infiltrating Onimaru's Fortress:Complete Stage 3:::progression:PyCheevos:2:::::00000
+4:"0xH0013=48_d0xH0013=47_0xH1e42=1":Kenyuu Densetsu:Complete Stage 4:::win_condition:PyCheevos:5:::::00000
+5:"T:0xH0013=9_d0xH0013=8_N:0xH0013=8_P:0xH0b77<d0xH0b77.1.SR:0xH0016=0":Dodging the Swallow Cut:Defeat Kojiro Sasaki without taking any damage:::missable:PyCheevos:5:::::00000
+6:"T:0xH0013=26_d0xH0013=25_N:0xH0013=25_P:0xH0b77<d0xH0b77.1.SR:0xH0016=0":Taming the One-Eyed Wolf:Defeat Jubei without taking any damage:::missable:PyCheevos:10:::::00000
+7:"T:0xH0013=48_d0xH0013=47_N:0xH0013=47_P:0xH0b77<d0xH0b77.1.SR:0xH0016=0":Conquering the Fujin Sword:Defeat Takeshi Onimaru without taking any damage:::missable:PyCheevos:25:::::00000
+8:"T:0xH0013=4_d0xH0013=3_N:0xH0013=3_P:0xH0b77=2.1.SR:0xH0016=0":Mastering the Toad:Complete the Geroda minigame with at least 3 blocks of health remaining:::missable:PyCheevos:10:::::00000
+9:"T:0xH0013=6_d0xH0013=5_N:0xH0013=5_P:0xH0b77<d0xH0b77.1.SR:0xH0016=0":Riding the Fierce Tiger:Complete the Kagetora minigame flawlessly:::missable:PyCheevos:5:::::00000
+10:"T:0xH0013=32_d0xH0013=31_N:0xH0013=31_P:0xH0b77=2.1.SR:0xH0016=0":Deflecting the Wind:Complete the Gekko vs Takeshi Onimaru with at least 3 blocks of health remaining:::missable:PyCheevos:10:::::00000
+11:"T:0xH0013=42_d0xH0013=43_N:0xH0013=43_P:0xH0b77<d0xH0b77.1.SR:0xH0016=0":Soaring with Shonosuke:Complete the Shonosuke minigame flawlessly:::missable:PyCheevos:5:::::00000
+12:"0x 000d>=1280_d0x 000d<1280_0xH0013!=0":Jungle Boy:Reach a score of 5,000::::PyCheevos:2:::::00000
+13:"0x 000d>=5376_d0x 000d<5376_0xH0013!=0":Kendo Prodigy:Reach a score of 15,000::::PyCheevos:3:::::00000
+14:"0x 000d>=20480_d0x 000d<20480_0xH0013!=0":The Legendary Samurai:Reach a score of 50,000::::PyCheevos:5:::::00000
+15:"0xH0016=5_d0xH0016=4_0xH0013!=0":Kurogane Resilience:Accumulate 5 extra lives at the same time::::PyCheevos:2:::::00000
+16:"0xH0009>=96_d0xH0009!=96_0xH0013!=0":Samurai Damashii:Reach a Fighting Spirit of 60 or higher::::PyCheevos:5:::::00000
+17:"T:0xH0013=9_d0xH0013=8_0xH00f7=0":Bare Blade:Defeat Kojiro Sasaki with the Sword Power set to No Power::::PyCheevos:2:::::00000
+18:"0xH0013=29_d0xH0013=28_N:0xH0013=28_P:0xH0016<d0xH0016.1.SR:0xH0016=0":Sayaka's True Hero:Choose to save your friends instead of taking the Power Orb in Stage 2::::PyCheevos:1:::::00000
+19:"T:0xH0013=48_d0xH0013!=48_Z:0xH0013=0_P:0xH0016=0.1.":Heir of the Dragon God:Complete the game without getting a Game Over::::PyCheevos:25:::::00000
+20:"T:0xH0013=2_d0xH0013=1_Z:0xH0013=0_P:0xH0013=1.2300.":Swift as a Jungle Boy:Speedrun Stage 1-1 and beat the Developer time:::missable:Cnat:2:::::00000
+21:"0xH0013=14_T:0xH0009>d0xH0009.1._T:0xH0016>d0xH0016.1._R:0xH0013=15":ITEM 2 Stgae 2:Colete os dois items na primeira caverna do Stage 2:::missable:Cnat:1:::::00000
+22:"0xH0013=1_T:0xH1f3c=1.1._O:d0xH1f3c=0_d0xH1f3c=2_R:0xH0013=2":ITEM 1 Stage 1:Colete o item de Força na primeira fase do Stage 1::::Cnat:1:::::00000
