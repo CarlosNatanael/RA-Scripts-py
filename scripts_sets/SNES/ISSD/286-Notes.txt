@@ -1,6 +1,6 @@
 Game ID: 286
 Source: RA Server
-Total Notes: 133
+Total Notes: 139
 ============================================================
 
 0x000032: [8-bit] Screen ID 
@@ -18,6 +18,9 @@ Note: Seems to be 0x06 consistently during all normal game modes after the mode 
 0x00 = Yes
 0x01 = No
 (Original Note by MarioJunior10)
+
+0x000057: [8-bit] [Bitfield] Screen Condition Win
+Bit3 = International and World Series winning screen
 
 0x000058: [8-bit] Match - Configuration Screen
 0x00 = Off
@@ -69,6 +72,12 @@ Note: Seems to be 0x06 consistently during all normal game modes after the mode 
 0x42 = Mexico
 0x44 = U.S.A
 0x46 = Uruguay
+0x48 = All Start
+0x4a = Euro Star A
+0x4c = Euro Star B
+0x4e = Asian Start
+0x50 = African Start
+0x52 = All American Start
 
 (Original Note by SamuraiGoroh)
 
@@ -156,6 +165,12 @@ Note: Seems to be 0x06 consistently during all normal game modes after the mode 
 0x42 = Mexico
 0x44 = U.S.A
 0x46 = Uruguay
+0x48 = All Start
+0x4a = Euro Star A
+0x4c = Euro Star B
+0x4e = Asian Start
+0x50 = African Start
+0x52 = All American Start
 
 (Original Note by mickyt888)
 
@@ -211,6 +226,8 @@ Note: Seems to be 0x06 consistently during all normal game modes after the mode 
 0x08 = CPU vs CPU
 
 0x0013e1: [8-bit] Credits for scenario
+0x00 = No active
+0x01 = Active
 
 0x00151c: [8-bit] Selector Menu
 
@@ -236,6 +253,16 @@ Note: Seems to be 0x06 consistently during all normal game modes after the mode 
 0x07 = Challenge
 0x08 = Training
 (Original Note by Jamiras)
+
+0x00167c: [8-bit] Number of Players - Short League and Short Tournament
+0x01 = 1 Player
+0x02 = 2 Players
+0x03 = 3 Players
+0x04 = 4 Players
+0x05 = 5 Players
+0x06 = 6 Players
+0x07 = 7 Players
+0x08 = 8 Players
 
 0x0016d2: [8-bit BCD] Timer - Seconds
 (Original Note by Jamiras)
@@ -395,7 +422,10 @@ Note: Stores the currently selected main game mode.
 0x002f1f: [8-bit] Game State - Match
 0x00 = Not in Match / Menu
 0x01 = In Match
-(Note: Does not register during Penalty Kicks)
+(Note: Does not register during Penalty Kicks and Scenario)
+
+0x00a23e: [8-bit Bitfield] Screen Condition Win
+Bit5 = Short Tournament  and Short League Winning Screen
 
 0x00d442: [8-bit] P1 Penalty Score
 (Original Note by Jamiras)
@@ -576,6 +606,22 @@ Bit0 = 8 Scenario
 
 0x00d9c1: [16-bit] Training: Free Kick Challenge Lv4 - Best Score
 
+0x00dc60: [8-bit] Number of losses - World Series
+
+0x00dc61: [8-bit] Number of Wins - World Series
+
+0x00ddff: [8-bit] International - Current Round
+0x00 = 1st match of 1st stage
+0x01 = 2nd match of 1st stage
+0x02 = 1st match of 2nd stage
+0x03 = 2nd match of 2nd stage
+0x04 = 3rd match of 2nd stage
+0x05 = Round of 16
+0x06 = Quarter-finals
+0x07 = Semifinais
+0x08 = Finals
+0x09 = Championship credits
+
 0x00de13: [8-bit] Game Mode - Match Type
 0x00 = Open Game
 0x02 = International
@@ -590,7 +636,7 @@ Bit0 = 8 Scenario
 
 0x00e3e9: [8-bit] World Series - Number of Losses
 
-0x00e3fb: [8-bit] Number of matches played at International and World Series
+0x00e3fb: [8-bit] Number of matches played World Series
 
 0x00e528: [8-bit] Challenge Mode
 0x00 = No
@@ -635,3 +681,4 @@ Note: Stores the currently selected scenario (01-12)
 0x00 = No
 0x01 = Yes
 (Original Note by Hotscrock)
+
