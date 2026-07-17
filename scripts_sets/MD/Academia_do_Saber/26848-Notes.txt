@@ -1,0 +1,242 @@
+Game ID: 26848
+Source: RA Server
+Total Notes: 42
+============================================================
+
+0x00126f: [8-bit] Swamp ID 03 Puzzle Minigame Progress
+0x00 = Puzzle 1
+0x01 = Puzzle 2
+0x02 = Puzzle 3
+0x03 = Puzzle 4
+0x04 = Finished (All Puzzles Completed)
+
+0x00127f: [8-bit] Swamp ID 01 Puzzle Minigame Progress
+0x00 = Puzzle 1
+0x01 = Puzzle 2
+0x02 = Puzzle 3
+0x03 = Puzzle 4
+0x04 = Puzzle 5
+0x05 = Finished (All Puzzles Completed)
+
+0x00186d: [8-bit] Jungle ID 02 Puzzle Minigame Progress
+0x00 = Puzzle 1
+0x01 = Puzzle 2
+0x02 = Puzzle 3
+0x03 = Puzzle 4
+0x04 = Puzzle 5
+0x05 = Finished (All Puzzles Completed)
+
+0x001a5e: [8-bit] Game State
+0x00 = Intro
+0x01 = Logo Overplay
+0x03 = Main Menu
+0x05 = Mission Menu
+0x07 = Choosing Mission Category
+0x09 = Mission Gameplay
+0x10 = Training Mode
+0x14 = Versus Mode (Combate contra amigo)
+0x18 = Credits
+0x1a = Password Screen
+
+0x001a66: [16-bit] Internal Mission Timer
+
+0x001a6a: [8-bit] Military Rank / Patente
+0x00 = Soldier (Soldado)
+0x01 = Steward (Taifeiro)
+0x02 = Corporal (Cabo)
+0x03 = Sergeant (Sargento)
+0x04 = Warrant Officer (Subtenente)
+0x05 = Officer Candidate (Aspirante)
+0x06 = Second Lieutenant (Segundo Tenente)
+0x07 = First Lieutenant (Primeiro Tenente)
+0x08 = Captain (Capitão)
+0x09 = Major (Major)
+0x0a = Lieutenant Colonel (Tenente Coronel)
+0x0b = Colonel (Coronel)
+0x0c = Brigade General (General de Brigada)
+0x0d = Division General (General de Divisão)
+0x0e = Army General (General de Exército)
+
+0x001a6b: [8-bit] Mission ID / Missão
+0x00 = Swamp (Pântano)
+0x01 = Caatinga
+0x02 = Jungle (Selva)
+
+0x0026d0: [8-bit] Swamp Puzzle Cursor X-Position (Low Byte)
+0xf0 = Left
+0x11 = Center
+0x32 = Right
+Note: 33-pixel grid spacing
+
+0x0026d1: [8-bit] Swamp Puzzle Cursor X-Position (High Byte)
+0x00 = X is below 256 (Left)
+0x01 = X is above 255 (Center / Right)
+
+0x0026d2: [8-bit] Swamp Puzzle Cursor Y-Position
+0xa0 = Top
+0xc1 = Center
+0xe2 = Bottom
+
+0x005304: [8-bit] Password Input Buffer - 2nd Digit
+
+0x005305: [8-bit] Password Input Buffer - 1st Digit
+
+0x005306: [8-bit] Password Input Buffer - 4th Digit
+
+0x005307: [8-bit] Password Input Buffer - 3rd Digit
+
+0x005496: [8-bit] Caatinga ID 01 Puzzle Minigame Progress
+0x00 = Finished (All Puzzles Completed)
+0x01 = Puzzle 5
+0x02 = Puzzle 4
+0x03 = Puzzle 3
+0x04 = Puzzle 2
+0x05 = Puzzle 1
+
+0x005498: [8-bit] Caatinga Minigame ID 01 - Correct Answers
+
+0x0054af: [8-bit] Jungle ID 05 Puzzle Minigame Progress
+0x00 = Finished (All Puzzles Completed)
+0x01 = Puzzle 5
+0x02 = Puzzle 4
+0x03 = Puzzle 3
+0x04 = Puzzle 2
+0x05 = Puzzle 1
+
+0x0054b1: [8-bit] Jungle Minigame ID 05 - Correct Answers
+
+0x00551a: [8-bit] Caatinga ID 04 Puzzle Minigame Progress
+0x00 = Finished (All Puzzles Completed)
+0x01 = Puzzle 5
+0x02 = Puzzle 4
+0x03 = Puzzle 3
+0x04 = Puzzle 2
+0x05 = Puzzle 1
+
+0x00551c: [8-bit] Caatinga Minigame ID 04 - Correct Answers
+
+0x0055ce: [8-bit] Swamp ID 04 Puzzle Minigame Progress
+0x00 = Finished (All Puzzles Completed)
+0x01 = Puzzle 5
+0x02 = Puzzle 4
+0x03 = Puzzle 3
+0x04 = Puzzle 2
+0x05 = Puzzle 1
+
+0x0055d0: [8-bit] Swamp Minigame ID 04 - Correct Answers
+
+0x00563c: [8-bit] Jungle ID 04 Puzzle Minigame Progress
+0x00 = Finished (All Puzzles Completed)
+0x01 = Puzzle 5
+0x02 = Puzzle 4
+0x03 = Puzzle 3
+0x04 = Puzzle 2
+0x05 = Puzzle 1
+
+0x00563e: [8-bit] Jungle Minigame ID 04 - Correct Answers
+
+0x00572a: [8-bit] Caatinga ID 05 Puzzle Minigame Progress
+0x00 = Finished (All Puzzles Completed)
+0x01 = Puzzle 5
+0x02 = Puzzle 4
+0x03 = Puzzle 3
+0x04 = Puzzle 2
+0x05 = Puzzle 1
+
+0x00572c: [8-bit] Caatinga Minigame ID 05 - Correct Answers
+
+0x00583e: [8-bit] Swamp ID 02 Puzzle Minigame Progress
+0x00 = Finished (All Puzzles Completed)
+0x01 = Puzzle 5
+0x02 = Puzzle 4
+0x03 = Puzzle 3
+0x04 = Puzzle 2
+0x05 = Puzzle 1
+
+0x005840: [8-bit] Swamp Minigame ID 02 - Correct Answers
+
+0x0058a0: [8-bit] Caatinga ID 02 Puzzle Minigame Progress
+0x00 = Finished (All Puzzles Completed)
+0x01 = Puzzle 5
+0x02 = Puzzle 4
+0x03 = Puzzle 3
+0x04 = Puzzle 2
+0x05 = Puzzle 1
+
+0x0058a2: [8-bit] Caatinga Minigame ID 02 - Correct Answers
+
+0x00591a: [8-bit] Jungle ID 03 Puzzle Minigame Progress
+0x00 = Finished (All Puzzles Completed)
+0x01 = Puzzle 5
+0x02 = Puzzle 4
+0x03 = Puzzle 3
+0x04 = Puzzle 2
+0x05 = Puzzle 1
+
+0x00591c: [8-bit] Jungle Minigame ID 03 - Correct Answers
+
+0x005a0a: [8-bit] Caatinga ID 03 Puzzle Minigame Progress
+0x00 = Finished (All Puzzles Completed)
+0x01 = Puzzle 5
+0x02 = Puzzle 4
+0x03 = Puzzle 3
+0x04 = Puzzle 2
+0x05 = Puzzle 1
+
+0x005a0c: [8-bit] Caatinga Minigame ID 03 - Correct Answers
+
+0x005b4a: [8-bit] Swamp ID 05 Puzzle Minigame Progress
+0x00 = Finished (All Puzzles Completed)
+0x01 = Puzzle 10
+0x02 = Puzzle 9
+0x03 = Puzzle 8
+0x04 = Puzzle 7
+0x05 = Puzzle 6
+0x06 = Puzzle 5
+0x07 = Puzzle 4
+0x08 = Puzzle 3
+0x09 = Puzzle 2
+0x0a = Puzzle 1
+
+0x005b4c: [8-bit] Swamp Minigame ID 05 - Correct Answers
+
+0x005b74: [8-bit] Jungle ID 01 Puzzle Minigame Progress
+0x00 = Finished (All Puzzles Completed)
+0x01 = Puzzle 5
+0x02 = Puzzle 4
+0x03 = Puzzle 3
+0x04 = Puzzle 2
+0x05 = Puzzle 1
+
+0x005b76: [8-bit] Jungle Minigame ID 01 - Correct Answers
+
+0x005bc9: [8-bit] Menu Cursor Y-Position / Selection Index
+
+0x005bcb: [8-bit] Minigame ID
+Note: Values depend on the current Mission ID ($001a6b)
+0x00 = HQ / QG (All Missions)
+
+-- Swamp (Pântano - Mission 0x00) --
+0x01 = Picture Puzzle (Jogo de figura)
+0x02 = Odd One Out (Figura que não combina)
+0x03 = Color Sequence (Cores na ordem)
+0x04 = Math Equations (Expressões numéricas)
+0x05 = Shape Fit (Figura no molde)
+
+-- Caatinga (Mission 0x01) --
+0x01 = Count the Boxes (Contar caixas)
+0x02 = Complete the Sequence (Completar sequência)
+0x03 = Card Recall (Memória das cartas)
+0x04 = Quick Math (Matemática rápida)
+0x05 = Shadow Matching (Descobrir pela sombra)
+
+-- Jungle (Selva - Mission 0x02) --
+0x01 = Cube Folding (Cubo 3D equivalente)
+0x02 = Knight's Tour (Movimento do cavalo de xadrez)
+0x03 = Memory Match (Achar figura igual)
+0x04 = Missing Digits Division (Divisões com algarismos faltantes)
+0x05 = Object Counting (Contar formas misturadas)
+
+0x007bc0: [Lower4] Display Timer (Seconds) - Tens Digit
+
+0x007bc2: [Lower4] Display Timer (Seconds) - Units Digit
