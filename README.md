@@ -12,9 +12,11 @@
 ### <img src="https://static.retroachievements.org/assets/images/system/gg.png" height="30" align="middle"> &nbsp; Game Gear
 - [Captain America and the Avengers](https://retroachievements.org/game/14286)
 - [FIFA International Soccer](https://retroachievements.org/game/26280)
+- [Kenyuu Densetsu Yaiba](https://retroachievements.org/game/26225)
 - [Poker Face Paul's Blackjack](https://retroachievements.org/game/20093)
 
 ### <img src="https://static.retroachievements.org/assets/images/system/md.png" height="30" align="middle"> &nbsp; Genesis/Mega Drive
+- [Academia do Saber](https://retroachievements.org/game/26848)
 - [Show do Milhão](https://retroachievements.org/game/125) - Rich Presence
 
 ### <img src="https://static.retroachievements.org/assets/images/system/sms.png" height="30" align="middle"> &nbsp; Master System
@@ -32,4 +34,5 @@
 
 ### <img src="https://static.retroachievements.org/assets/images/system/snes.png" height="30" align="middle"> &nbsp; SNES / Super Famicom
 - [F1 ROC: Race of Champions](https://retroachievements.org/game/23121)
+- [International Superstar Soccer Deluxe](https://retroachievements.org/game/286) - Revision
 - [Sonic Blast Man](https://retroachievements.org/game/1167)
