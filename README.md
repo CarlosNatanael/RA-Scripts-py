@@ -14,6 +14,7 @@
 - [FIFA International Soccer](https://retroachievements.org/game/26280)
 - [Kenyuu Densetsu Yaiba](https://retroachievements.org/game/26225)
 - [Poker Face Paul's Blackjack](https://retroachievements.org/game/20093)
+- [Yu Yu Hakusho: Horobishimono no Gyakushuu](https://retroachievements.org/game/14452)
 
 ### <img src="https://static.retroachievements.org/assets/images/system/md.png" height="30" align="middle"> &nbsp; Genesis/Mega Drive
 - [Academia do Saber](https://retroachievements.org/game/26848)
@@ -36,3 +37,4 @@
 - [F1 ROC: Race of Champions](https://retroachievements.org/game/23121)
 - [International Superstar Soccer Deluxe](https://retroachievements.org/game/286) - Revision
 - [Sonic Blast Man](https://retroachievements.org/game/1167)
+- [Spider-Man & Venom: Maximum Carnage](https://retroachievements.org/game/1179)

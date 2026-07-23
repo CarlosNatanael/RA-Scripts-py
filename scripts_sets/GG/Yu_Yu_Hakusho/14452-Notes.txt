@@ -1,0 +1,68 @@
+Game ID: 14452
+Source: RA Server
+Total Notes: 15
+============================================================
+
+0x000010: [16-bit] Score
+
+0x000016: [8-bit] Character ID
+0x00 = Yusuke
+0x01 = Kuwabara
+0x02 = Kurama
+0x03 = Hiei
+
+0x00001a: [8-bit] Difficulty
+0x00 = Easy
+0x01 = Hard
+
+0x00001e: [8-bit] Credits
+0x03 = Max Credits
+
+0x000044: [8-bit] Music ID
+[Note: These addresses only update when actively using the Sound mode in the Options menu. They do NOT track real-time gameplay audio.]
+
+0x000045: [8-bit] Sound Effect ID
+
+0x000150: [8-bit] Map ID
+0x00 = Map A
+0x01 = Map B
+0x02 = Map C
+0x03 = Map D
+0x04 = Castle
+0x05 = Demon Realm
+
+0x000b19: [8-bit] Player HP
+0x50 = Max HP
+
+0x000b25: [8-bit] Invulnerability Timer (I-Frames)
+0xff = Active (Just took damage)
+0x00 = Inactive (Vulnerable)
+
+0x000b39: [8-bit] Special Power Charges
+0x04 = Max Charges
+
+0x000e20: [8-bit] Monster ID
+0x00 = Slime Demon
+0x01 = Bat Demon
+0x02 = Giant Robot
+0x03 = Fire Demon
+0x04 = Green Demon
+0x05 = King Demon
+
+0x000e24: [8-bit] Monster Targeting / Aim Position
+0x00 = None Selected
+0x01 = Head (Bat Demon / Fire Demon)
+0x03 = Head (Slime Demon)
+0x06 = Head (King Demon)
+0x0b = Core (Giant Robot)
+0x10 = Head (Green Demon)
+
+0x000e2a: [8-bit] Boss HP
+0x50 = Max HP
+
+0x000e8b: [8-bit] Player HP (Boss Fight State)
+0x50 = Max HP
+
+0x000e8c: [8-bit] Special Power Charges (Boss Fight State)
+0x04 = Max Charges
+

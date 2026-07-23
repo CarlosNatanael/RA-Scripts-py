@@ -1,0 +1,116 @@
+Game ID: 1179
+Source: RA Server
+Total Notes: 23
+============================================================
+
+0x0006ad: [8-bit] Pause Flag
+0x00 = In Game
+0x08 = Game paused
+
+0x000966: [16-bit] Stage Hit Counter
+[Note: Resets on stage clear]
+(Original Note by jackolantern)
+
+0x00097a: [8-bit] Score - Units / Tens
+(Original Note by mickyt888)
+
+0x00097c: [8-bit] Score - Hundreds
+(Original Note by PabloTMF)
+
+0x00097e: [8-bit] Score - Thousands
+(Original Note by mickyt888)
+
+0x000980: [8-bit] Score - Tens of Thousands
+(Original Note by mickyt888)
+
+0x000982: [8-bit] Score - Hundreds of Thousands
+(Original Note by mickyt888)
+
+0x000990: [16-bit] Lives
+(Original Note by jackolantern)
+
+0x000994: [16-bit] Continues
+(Original Note by mickyt888)
+
+0x000996: [8-bit] Invincibility
+0x5b = Active
+
+0x0009a8: [8-bit] Character ID
+0x00 = Spider-Man
+0x02 = Venom
+
+0x000a0e: [16-bit] Stage ID
+0x02 = New York Street
+0x04 = Climb
+0x06 = Rooftop
+0x08 = Alleyway
+0x0a = The Hall
+0x0c = Chase
+0x0e = Times Square
+0x10 = San Francisco
+0x12 = Central Park
+0x14 = New York Street 2
+0x16 = The Deep
+0x18 = Fantastic 4 HQ
+0x1a = Fantastic 4 Lab
+0x1c = Rooftop 2
+0x1e = Prospect Park
+0x20 = Prospect Park 2
+0x22 = Police Station
+0x24 = Alleyway Stage (With No Spiderman Or Venom - Unplayable)
+0x26 = Manhattan Rooftop
+0x28 = Alleyway Stage (With No Spiderman Or Venom - Unplayable)
+0x2a = Statue of Liberty
+0x2c = Manhattan Street 1
+0x2e = Alleyway Stage (With No Spiderman Or Venom - Unplayable)
+0x2f = Alleyway Stage (With No Spiderman Or Venom - Unplayable)
+0x30 = Manhattan Street 2
+0x32 = "The End?" Cutscene then Manhattan Street 2
+0x34 = Ruined Boys Home
+0x36 = Secret Room
+0x38 = Secret Room (Different)
+0x3a = Secret Room (Climb)
+0x3c = Secret Room (Different)
+0x3e = Secret Room (Different)
+0x40 = Secret Room (Different)
+0x44 = Cutscene Intro
+
+0x000b7c: [16-bit] Health Bar - Player
+(Original Note by jackolantern)
+
+0x000d4c: [16-bit] Enemy health - Slot 2
+(Original Note by jackolantern)
+
+0x000dc0: [16-bit] Enemy health - Slot 1
+(Original Note by jackolantern)
+
+0x000e34: [16-bit] Enemy health - Slot 3
+(Original Note by jackolantern)
+
+0x000ea8: [16-bit] Enemy health - Slot 4
+
+0x0019cd: [8-bit] Controller 2 Cheat Flag (8x Energy Bar)
+0x30 = Deactivated
+0x80 = Activated
+
+0x0019cf: [8-bit] Controller 2 Cheat Flag (5 lives)
+0x03 = Deactivated
+0x05 = Activated
+
+0x0019d1: [8-bit] Controller 2 Cheat Flag (5 continues)
+0x01 = Deactivated
+0x05 = Activated
+
+0x001c68: [8-bit] Enemies on Screen
+
+0x001cca: [8-bit] Stage Fighting Accuracy
+0x00 = During Gameplay
+0xff = Stage Clear Transition
+[Note: Updates to the final accuracy value on the results screen]
+(Original Note by mickyt888)
+
+0x001ccc: [8-bit] Continue Counter
+0x10 = Starting Count
+0x00 = Last Chance
+0xf9 = Game Over
+
