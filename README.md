@@ -37,4 +37,4 @@
 - [F1 ROC: Race of Champions](https://retroachievements.org/game/23121)
 - [International Superstar Soccer Deluxe](https://retroachievements.org/game/286) - Revision
 - [Sonic Blast Man](https://retroachievements.org/game/1167)
-- [Spider-Man & Venom: Maximum Carnage](https://retroachievements.org/game/1179)
+- [Spider-Man & Venom: Maximum Carnage](https://retroachievements.org/game/1179) - Revision

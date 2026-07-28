@@ -3,9 +3,9 @@ Source: RA Server
 Total Notes: 23
 ============================================================
 
-0x0006ad: [8-bit] Pause Flag
+0x00088e: [8-bit] Pause Flag
 0x00 = In Game
-0x08 = Game paused
+0xff = Game paused
 
 0x000966: [16-bit] Stage Hit Counter
 [Note: Resets on stage clear]
@@ -40,6 +40,7 @@ Total Notes: 23
 0x02 = Venom
 
 0x000a0e: [16-bit] Stage ID
+0x00 = Menu Intro
 0x02 = New York Street
 0x04 = Climb
 0x06 = Rooftop
@@ -67,12 +68,11 @@ Total Notes: 23
 0x30 = Manhattan Street 2
 0x32 = "The End?" Cutscene then Manhattan Street 2
 0x34 = Ruined Boys Home
-0x36 = Secret Room
-0x38 = Secret Room (Different)
-0x3a = Secret Room (Climb)
-0x3c = Secret Room (Different)
-0x3e = Secret Room (Different)
-0x40 = Secret Room (Different)
+0x36 = Secret Room (Fantastic 4 Lab)
+0x38 = Secret Room (San Franciso)
+0x3a = Secret Room (Climb/San Franciso)
+0x3c = Secret Room (Police Station/Ruined Boy's Home)
+0x3e = Secret Room (Manhattan Rooftop)
 0x44 = Cutscene Intro
 
 0x000b7c: [16-bit] Health Bar - Player
@@ -109,8 +109,5 @@ Total Notes: 23
 [Note: Updates to the final accuracy value on the results screen]
 (Original Note by mickyt888)
 
-0x001ccc: [8-bit] Continue Counter
-0x10 = Starting Count
-0x00 = Last Chance
-0xf9 = Game Over
-
+0x001ccc: [8-bit BCD] Screen Display Digit (Visual Buffer)
+Note: This address only transmits the graphic tile/digit to the screen
