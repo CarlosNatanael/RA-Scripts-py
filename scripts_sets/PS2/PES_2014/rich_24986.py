@@ -86,7 +86,7 @@ rp.add_lookup("Period", {
 
 # 2. ALIASES DE MEMÓRIA
 mem_period = byte(0x00d41c06)
-
+mem_lang   = byte(0x0056ae70)
 mem_team1 = word(0x0062f4de)
 mem_team2 = word(0x0062f4e0)
 
@@ -104,11 +104,24 @@ mem_time_s1  = byte(0x00d41c0a)
 mem_pen_score1 = byte(0x00d316ec)
 mem_pen_score2 = byte(0x00d319e0)
 
+rp.add_format("Value", "VALUE")
 
 # 3. DISPLAYS
+# Linguagem do jogo
+rp.add_lookup("Language", {
+    0: "🇺🇸",
+    4: "🇪🇸",
+    10: "🇵🇹",
+    12: "🇷🇺",
+    14: "🇸🇪",
+    15: "🇳🇱",
+    17: "🇹🇷"
+}, default="")
+
 # Partida no tempo regulamentar ou prorrogação
 rp.add_display(
     [mem_period <= 3],
+    f"{RichPresence.lookup('Language', mem_lang)}: "
     f"{RichPresence.lookup('Period', mem_period)} | "
     f"{RichPresence.lookup('Teams', mem_team1)} {RichPresence.value(mem_score1)}-{RichPresence.value(mem_score2)} {RichPresence.lookup('Teams', mem_team2)} | "
     f"⌚ Time: {RichPresence.value(mem_time_m10)}{RichPresence.value(mem_time_m1)}:{RichPresence.value(mem_time_s10)}{RichPresence.value(mem_time_s1)}"
@@ -117,6 +130,7 @@ rp.add_display(
 # Partida nos pênaltis (4)
 rp.add_display(
     [mem_period == 4],
+    f"{RichPresence.lookup('Language', mem_lang)}: "
     f"{RichPresence.lookup('Period', mem_period)} | "
     f"{RichPresence.lookup('Teams', mem_team1)} {RichPresence.value(mem_pen_score1)}-{RichPresence.value(mem_pen_score2)} {RichPresence.lookup('Teams', mem_team2)}"
 )

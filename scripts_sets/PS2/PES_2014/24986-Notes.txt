@@ -1,7 +1,63 @@
 Game ID: 24986
 Source: RA Server
-Total Notes: 11
+Total Notes: 53
 ============================================================
+
+0x3e2850: [8-bit] Player Settings Menu - Cursor Position P1
+0x00 = None
+0x01 = Home / Away
+0x02 = Cursor Change
+0x03 = Goalkeeper Cursor
+0x04 = Cursor Type
+
+0x3e2851: [8-bit] P1 Side & Control Type
+0x00 = Not Playing
+0x01 = Away
+0x02 = Away (Auto Subs/Tactics)
+0x03 = Away (CPU Controls All)
+0xff = Home
+0xfd = Home (CPU Controls All)
+0xfe = Home (Auto Subs/Tactics)
+
+0x3e2852: [8-bit] Cursor Change Assistance P1
+0x00 = Fixed Player
+0x01 = Unassisted
+0x02 = Semi-Assisted
+0x03 = Level 1
+0x04 = Level 2
+0x05 = Level 3
+0x06 = Level 4
+0x07 = Level 5
+0x08 = Level 6
+0x09 = Level 7
+0x0a = Level 8
+
+0x3e2853: [8-bit] Cursor Name Display P1
+0x00 = Custom Name
+0x01 = None
+0x02 = Real Player Name
+
+0x3e2882: [8-bit] Goalkeeper Cursor Control P1
+0x00 = Disabled
+0x01 = Enabled
+
+0x56ae70: [32-bit] Text Language
+0x00000000 = English
+0x00000004 = Spanish
+0x0000000a = Portuguese
+0x0000000c = Russian (Русский)
+0x0000000e = Swedish (Svenska)
+0x0000000f = Dutch (Nederlands)
+0x00000011 = Turkish (Türkçe)
+
+0x56ae74: [32-bit] Language
+0x00000000 = English
+0x00000004 = Spanish
+0x0000000a = Portuguese
+0x0000000c = Russian (Русский)
+0x0000000e = Swedish (Svenska)
+0x0000000f = Dutch (Nederlands)
+0x00000011 = Turkish (Türkçe)
 
 0x62f4de: [16-bit] Home Team ID
 // == Europe A ==
@@ -315,9 +371,9 @@ Total Notes: 11
 
 0xd319e0: [8-bit] Penalty Shootout - Away Team Score
 
-0xd41bf6: [8-bit] Home Team Score
+0xd41bf6: [16-bit] Home Team Score
 
-0xd41bfa: [8-bit] Away Team Score
+0xd41bfa: [16-bit] Away Team Score
 
 0xd41c06: [16-bit] Match Period
 0x00 = 1st Half
@@ -334,3 +390,149 @@ Total Notes: 11
 
 0xd41c0b: [8-bit BCD] Timer - Seconds Tens
 
+0x1890c9c: [BitFlag] Pes Shop - Players 1 Unlocked
+
+0x1890c9d: [BitFlag] Pes Shop - Players 2 Unlocked
+
+0x1890c9e: [BitFlag] Pes Shop - Players 3 Unlocked
+
+0x1890c9f: [BitFlag] Pes Shop - Players 4 Unlocked
+
+0x1890ca0: [BitFlag] Pes Shop - Players 5 Unlocked
+
+0x1890ca1: [BitFlag] Pes Shop - Players 6 Unlocked
+
+0x1890ca2: [BitFlag] Pes Shop - Players 7 Unlocked
+
+0x1890ca3: [BitFlag] Pes Shop - Players 8 Unlocked
+
+0x1890ca4: [BitFlag] Pes Shop - Players 8 Unlocked
+
+0x1890ca5: [BitFlag] Pes Shop - Players 9 Unlocked
+
+0x1890ca6: [BitFlag] Pes Shop - Players 10 Unlocked
+
+0x1890ca7: [BitFlag] Pes Shop - Players 11 Unlocked
+
+0x1890ca8: [BitFlag] Pes Shop - Players 12 Unlocked
+
+0x1890ca9: [BitFlag] Pes Shop - Players 13 Unlocked
+
+0x1890caa: [BitFlag] Pes Shop - Players 14 Unlocked
+
+0x1890cab: [BitFlag] Pes Shop - Players 15 Unlocked
+
+0x1890cac: [BitFlag] Pes Shop - Players 16 Unlocked
+
+0x1890cad: [BitFlag] Pes Shop - Players 17 Unlocked
+
+0x1890cae: [BitFlag] Pes Shop - Players 18 Unlocked
+
+0x1890caf: [BitFlag] Pes Shop - Players 19 Unlocked
+
+0x1890cb0: [BitFlag] PES Shop - Stadium/Ball Effects/Stadium Viewer Unlocked
+Bit3 = Stadium Viewer Unlocks
+Bit4 = Ball Rainbow Effect
+Bit5 = Club House
+
+0x1890cb1: [BitFlag] PES Shop - Camera Type/Speed In Match Unlocked
+Bit1 = Bird's eye View
+Bit3 = Double Speed Match
+
+0x1890cb2: [BitFlag] PES Shop - Appearance Unlocked
+Bit1 = Special Hairstyle 19
+Bit2 = Special Hairstyle 20
+Bit3 = Special Hairstyle 21
+Bit4 = Special Hairstyle 22
+Bit5 = Special Hairstyle 23
+Bit6 = Special Hairstyle 24
+Bit7 = Special Hairstyle 25
+
+0x1890cb3: [BitFlag] PES Shop - Appearance/Goal celebration/League Structure Unlocked
+Bit0 = Special Hairstyle 26
+Bit1 = Special Hairstyle 27
+Bit2 = Special Hairstyle 28
+Bit3 = Special Hairstyle 29
+Bit4 = Goal Celebration 74
+Bit5 = Goal Celebration 75
+Bit6 = Goal Celebration 76
+Bit7 = Master League Structure
+
+0x1890cb4: [BitFlag] PES Shop - Exhibition Mode Unlocked
+Bit6 = European Masters Cup
+
+0x1890cb5: [BitFlag] PES Shop - Classic Teams Unlocked
+Bit0 = Classic England
+Bit1 = Classic France
+Bit2 = Classic Germany
+Bit3 = Classic Italy
+Bit4 = Classic Netherlands
+Bit5 = Classic Argentina
+Bit6 = Classic Brazil
+
+0x1890ce4: [32-bit] PES Shop Points
+
+0x1890f6c: [8-bit] Match Time (Exhibition)
+0x00 = 5 Min.
+0x01 = 10 Min.
+0x02 = 15 Min.
+0x03 = 20 Min.
+0x04 = 25 Min.
+0x05 = 30 Min.
+
+0x1890f6d: [8-bit] Difficulty Level (Exhibition)
+0x00 = Beginner
+0x01 = Amateur
+0x02 = Regular
+0x03 = Professional
+0x04 = Top Player
+
+0x1890f6e: [8-bit] Injuries (Exhibition)
+0x00 = Off
+0x01 = On
+
+0x1890f6f: [8-bit] Home Team Condition (Exhibition)
+0x00 = Random
+0x01 = Excellent
+0x02 = Good
+0x03 = Normal
+0x04 = Bad
+0x05 = Terrible
+
+0x1890f70: [8-bit] Away Team Condition (Exhibition)
+0x00 = Random
+0x01 = Excellent
+0x02 = Good
+0x03 = Normal
+0x04 = Bad
+0x05 = Terrible
+
+0x1890f80: [8-bit] Home Team - Starting 11 Confirmed / Locked
+0x00 = Off (Editing Formation)
+0x01 = On (Ready)
+
+0x1890f81: [8-bit] Away Team - Starting 11 Confirmed / Locked
+0x00 = Off (Editing Formation)
+0x01 = On (Ready)
+
+0x1890fa5: [8-bit] Ball Type (Exhibition)
+0x00 = Classic
+0x01 = Plain
+0x02 = We-pes 2002
+0x03 = We-pes 2003
+0x04 = We-pes 2007
+0x05 = We-pes 2008
+0x06 = We-pes 2009 Claw
+0x07 = We-pes 2010
+0x08 = We-pes 2011
+0x09 = We-pes 2012
+0x0a = We-pes 2013
+0x0b = We-pes 2014
+0x0c = Predator Glider - Blue
+0x0d = Predator Glider - Green
+0x0e = Incyte
+0x0f = PowerCat 1.12
+0x10 = King Match
+0x11 = Neo 150 Elite
+0x12 = Ceramica
+0x18 = Random
