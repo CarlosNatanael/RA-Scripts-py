@@ -111,3 +111,13 @@ Total Notes: 23
 
 0x001ccc: [8-bit BCD] Screen Display Digit (Visual Buffer)
 Note: This address only transmits the graphic tile/digit to the screen
+
+1.4.2.0
+Spider-Man & Venom: Maximum Carnage
+N0:0x000b0e:"[8-bit] Item do Herio que ajuda\r\n0x00 = \r\n0x02 = SombraQ"
+111000001:"O:0x 000a0e=58_T:0x 000a0e=56_d0x 000a0e=16_0xH00088e=0":[Void] Secret Room2:Secret Room - San Francisco:::missable:Cnat:2:::::00000
+111000002:"T:0x 000a0e=54_d0x 000a0e=26_0xH00088e=0":[Void] Secret Room3:Secret Room - Fantastic Four Lab:::missable:Cnat:2:::::00000
+111000004:"0x 000a0e=60_d0x 000a0e=34_0xH00088e=0":[Void] Secret Room4:Secret Room - Police Station:::missable:Cnat:2:::::00000
+111000005:"T:0x 000a0e=62_d0x 000a0e=38_0xH00088e=0":[Void] Secret Room5:Secret Room - Manhattan Rooftop:::missable:Cnat:2:::::00000
+111000006:"0x 000a0e=60_d0x 000a0e=52_0xH00088e=0":[Void] Secret Room6:Secret Room - Ruined Boy's Home:::missable:Cnat:2:::::00000
+111000007:"T:0x 000a0e=48_d0x 000a0e=42_0xH00088e=0":[Void] Secret Room7:Secret Room - Statue of Liberty:::missable:Cnat:5:::::00000
