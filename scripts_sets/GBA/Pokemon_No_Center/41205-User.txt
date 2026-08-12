@@ -1,0 +1,42 @@
+1.4.2.0
+~Hack~  Pokémon: No Center Challenge
+1:"0x 0406ae=414_I:0xW005010_0xM0051fc=1_I:0xW005010_d0xM0051fc=0_N:0xX02bfe8=33554448_I:0xW005008_P:0x 00801c!=3.1.SI:0xW005008_O:0x 00801c=0_I:0xW005008_R:0x 00801c=253":Rock-Solid Immunity:Defeat Brock:::progression:Cnat:5:::::00000
+2:"0x 0406ae=415_I:0xW005010_0xN0051fc=1_I:0xW005010_d0xN0051fc=0_N:0xX02bfe8=33554448_I:0xW005008_P:0x 00801c!=3.1.SI:0xW005008_O:0x 00801c=0_I:0xW005008_R:0x 00801c=253":Hydrotherapy:Defeat Misty:::progression:Cnat:5:::::00000
+3:"0x 0406ae=416_I:0xW005010_0xO0051fc=1_I:0xW005010_d0xO0051fc=0_N:0xX02bfe8=33554448_I:0xW005008_P:0x 00801c!=3.1.SI:0xW005008_O:0x 00801c=0_I:0xW005008_R:0x 00801c=253":Shock Treatment:Defeat Lt Surge:::missable:Cnat:5:::::00000
+4:"0x 0406ae=417_I:0xW005010_0xP0051fc=1_I:0xW005010_d0xP0051fc=0_N:0xX02bfe8=33554448_I:0xW005008_P:0x 00801c!=3.1.SI:0xW005008_O:0x 00801c=0_I:0xW005008_R:0x 00801c=253":Alternative Medicine:Defeat Erika:::progression:Cnat:5:::::00000
+5:"0x 0406ae=418_I:0xW005010_0xQ0051fc=1_I:0xW005010_d0xQ0051fc=0_N:0xX02bfe8=33554448_I:0xW005008_P:0x 00801c!=3.1.SI:0xW005008_O:0x 00801c=0_I:0xW005008_R:0x 00801c=253":Venom Tolerance:Defeat Koga:::progression:Cnat:5:::::00000
+6:"0x 0406ae=420_I:0xW005010_0xR0051fc=1_I:0xW005010_d0xR0051fc=0_N:0xX02bfe8=33554448_I:0xW005008_P:0x 00801c!=3.1.SI:0xW005008_O:0x 00801c=0_I:0xW005008_R:0x 00801c=253":Psychological Evaluation:Defeat Sabrina:::progression:Cnat:5:::::00000
+7:"0x 0406ae=419_I:0xW005010_0xS0051fc=1_I:0xW005010_d0xS0051fc=0_N:0xX02bfe8=33554448_I:0xW005008_P:0x 00801c!=3.1.SI:0xW005008_O:0x 00801c=0_I:0xW005008_R:0x 00801c=253":Third-Degree Burns:Defeat Blaine:::progression:Cnat:5:::::00000
+8:"0x 0406ae=350_I:0xW005010_0xT0051fc=1_I:0xW005010_d0xT0051fc=0_N:0xX02bfe8=33554448_I:0xW005008_P:0x 00801c!=3.1.SI:0xW005008_O:0x 00801c=0_I:0xW005008_R:0x 00801c=253":The Final Prescription:Defeat Head Nurse Joy at the Viridian Gym:::progression:Cnat:5:::::00000
+9:"0x 0406ae=414_T:0xH02be8a=1_d0xH02be8a=0_N:0xX02bfe8=33554448_I:0xW005008_P:0x 00801c!=3.1._R:0xH02c2d8>=14_R:0xH02c33c>=14_R:0xH02c3a0>=14_R:0xH02c404>=14_R:0xH02c468>=14_R:0xH02c4cc>=14":Triage:Defeat Brock in using Pokémon at level 14 or less:::missable:Cnat:10:::::00000
+10:"":First Aid:Defeat Misty while respecting the level cap:::missable:Cnat:10:::::00000
+11:"":Defibrillator:Defeat Lt Surge while respecting the level cap:::missable:Cnat:10:::::00000
+12:"":Herbal Remedy:Defeat Erika while respecting the level cap:::missable:Cnat:10:::::00000
+13:"":Toxicology:Defeat Koga while respecting the level cap:::missable:Cnat:10:::::00000
+14:"":Psychiatry:Defeat Sabrina while respecting the level cap:::missable:Cnat:10:::::00000
+15:"":Burn Treatment:Defeat Blaine while respecting the level cap:::missable:Cnat:10:::::00000
+16:"":Discharged!:Survive Head Nurse Joy while respecting the level cap:::missable:Cnat:25:::::00000
+17:"I:0xW005008_0x 008004=10499_O:0x 0406ae=329_O:0x 0406ae=330_0x 0406ae=331_T:0xH02be8a=1_d0xH02be8a=0_N:0xX02bfe8=33554448_I:0xW005008_P:0x 00801c!=3.1.SI:0xW005008_O:0x 00801c=0_I:0xW005008_R:0x 00801c=253":Survival of the Fittest:Defeat the Rival on Route 22:::missable:Cnat:5:::::00000
+18:"":Contraband Confiscated:Defeat Nurse Joy in the Game Corner Hideout::::Cnat:5:::::00000
+19:"":Autopsy Report:Defeat the RESEARCHER in the Pokémon Tower and expel Team Rocket::::Cnat:10:::::00000
+20:"":Patent Denied:Defeat Nurse Joy at Silph Co and prevent the corporate monopoly::::Cnat:25:::::00000
+21:"":Malpractice Ended:Defeat the Admin on Five Island and shut down Team Rocket's last illegal clinic::::Cnat:10:::::00000
+22:"":Medical History:Gather all of Head Nurse Joy's medical records in the Fame Checker::::Cnat:5:::::00000
+23:"":Unethical Origins:Defeat the Geneticist in Cerulean Cave::::Cnat:10:::::00000
+24:"":Gene Therapy:Capture Mewtwo in Cerulean Cave::::Cnat:10:::::00000
+25:"":Patient Zero:Defeat Lorelei::::Cnat:5:::::00000
+26:"":Cryogenics:Defeat Agatha::::Cnat:5:::::00000
+27:"":Blunt Force Trauma:Defeat Bruno::::Cnat:5:::::00000
+28:"":Terminal Diagnosis:Defeat Lance::::Cnat:10:::::00000
+29:"":Open-Heart Surgeon:Defeat Rival in Pokémon League::::Cnat:25:::::00000
+30:"":Board Certification:Defeat the Pokémon League Rematch::::Cnat:25:::::00000
+31:"":Second Opinion:Reach Level 90::::Cnat:5:::::00000
+32:"":Perfect Immunity:Obtain the National Pokédex::::Cnat:5:::::00000
+33:"":Extensive Research:Defeat a Gym Leader using only a Pokémon that knows at least 3 HM moves::::Cnat:10:::::00000
+34:"":General Practitioner:Discover the whereabouts of Team Rocket's true creator::::Cnat:10:::::00000
+35:"":The Amphibian Anomaly:Defeat the secret trainer obsessed with frogs::::Cnat:25:::::00000
+36:"":Reviewer:Defeat the engineer hidden in the map::::Cnat:25:::::00000
+37:"":The Sprite Artist:Defeat the master of custom art::::Cnat:25:::::00000
+38:"":Chaotic Results:Survive the chaos of the secret trainer::::Cnat:25:::::00000
+39:"":Malevolent Intent:Defeat the trainer with a malevolent aura::::Cnat:25:::::00000
+40:"":Moonlight Sonata:Defeat the secret trainer isolated in the shadows::::Cnat:25:::::00000
