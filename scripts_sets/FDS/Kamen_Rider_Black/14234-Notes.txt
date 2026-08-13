@@ -1,0 +1,80 @@
+Game ID: 14234
+Source: RA Server
+Total Notes: 11
+============================================================
+
+0x000060: [24-bit BCD] Score
+0x0860 [Lower4] = Units digit
+0x0860 [Upper4] = Tens digit
+0x0861 [Lower4] = Hundreds digit
+0x0861 [Upper4] = Thousands digit
+0x0862 [Lower4] = Millions digit
+0x0862 [Upper4] = Ten-thousands digit
+
+0x000065: [8-bit BCD] Boss Battle Timer
+Note: This address tracks the timer when the boss fight begins
+
+0x000066: [8-bit] Player Health Bar
+0x40 = Max HP
+
+0x000067: [8-bit] Boss Health Bar
+0x00 = None / Dead
+0x2d = Spider Mutant / Leopard Mutant / Bombyx Mutant / Longhorn Beetle Mutant / Rhinoceros Mutant / Cicada Mutant / Stickleback Mutant / Dogfish Mutant
+0x30 = Flea Mutant / Lizard Mutant / Cactus Kaijin / Tortoise Mutant / Crab Mutant
+0x33 = Eagle Mutant / Bee Mutant
+0x40 = High Priestess Bishum / High Priest Darom / High Priest Baraom / Shadow Moon
+
+0x000073: [8-bit] Controller Input Bitmask
+Bit0 = Right
+Bit1 = Left
+Bit2 = Down
+Bit3 = Up
+Bit4 = Start
+Bit5 = Select
+Bit6 = Button 2 (Punch)
+Bit7 = Button 1 (Jump)
+
+0x000410: [8-bit] Invincibility
+0xc0 = Active
+
+0x000557: [8-bit] Option Charge - Rider Punch
+0x0e = Max Charge
+
+0x000559: [8-bit] Option Charge - Rider Chop
+0x0e = Max Charge
+
+0x00055b: [8-bit] Option Charge - Rider Kick
+0x0e = Max Charge
+
+0x00055e: [8-bit] Level State / Sub-Level ID
+// Normal Levels
+0x00 = Level 1
+0x01 = Level 2
+0x02 = Level 3
+0x03 = Level 4
+0x04 = Stage Transition
+
+// Boss Fights (Bit 6 Active)
+0x40 = Boss - Stage 1-1
+0x41 = Boss - Stage 1-2
+0x42 = Boss - Stage 1-3, 3-3
+
+// Victory / Result Screens (Bit 7 Active)
+0xc0 = Result Screen Boss - Stage 1-1
+0xc1 = Result Screen Boss - Stage 1-2
+0xc3 = Result Screen Boss - Stage 1-3
+0x83 = Result Screen Boss - Stage 1-4, 2-4, 3-4
+0x80 = Result Screen Boss - Stage 2-1, 3-1, 4-1, 5-1
+0x81 = Result Screen Boss - Stage 2-2, 3-2, 4-2, 5-2
+0x82 = Result Screen Boss - Stage 2-3, 4-3, 5-3
+
+0x000560: [8-bit] Macro Stage ID
+0x00 = Stage 1
+0x02 = Stage 1 Boss Fight
+0x04 = Stage 2
+0x06 = Stage 2 Boss Fight
+0x08 = Stage 3
+0x0a = Stage 3 Boss Fight
+0x0c = Stage 4
+0x10 = Stage 5 Boss Fight
+0x14 = Stage 6 Boss Fight
