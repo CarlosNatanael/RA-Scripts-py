@@ -40,3 +40,6 @@
 38:"":Chaotic Results:Survive the chaos of the secret trainer::::Cnat:25:::::00000
 39:"":Malevolent Intent:Defeat the trainer with a malevolent aura::::Cnat:25:::::00000
 40:"":Moonlight Sonata:Defeat the secret trainer isolated in the shadows::::Cnat:25:::::00000
+
+
+🏥 Respawn: @LastHealLoc(I:0xW005008_M:0x 00801c)

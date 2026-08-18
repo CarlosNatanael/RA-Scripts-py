@@ -1,6 +1,6 @@
 Game ID: 41205
 Source: RA Server
-Total Notes: 8
+Total Notes: 14
 ============================================================
 
 0x005008: [24-bit Pointer] gSaveBlock1Ptr
@@ -365,39 +365,38 @@ Total Notes: 8
 
 0x00500c: [24-bit Pointer] gSaveBlock2Ptr
 +0x8f20 | XOR Key
-+0x8000 | Player Name Letter 1
-+0x8007 | Player Name Letter 7
-+0x8008 | Player Gender [8-bit]
++0x8000 | [8-bit] Player Name Letter 1
++0x8007 | [8-bit] Player Name Letter 7
++0x8008 | [8-bit] Player Gender
 .0x00 = Boy
 .0x01 = Girl
-+0x800a | Trainer ID
-+0x800c | Secret ID
-+0x800e | Playtime Hours [16-bit]
-+0x8010 | Playtime Minutes
-+0x8013 | Options 1
++0x800a | [16-bit] Trainer ID
++0x800c | [16-bit] Secret ID
++0x800e | [16-bit] Playtime Hours
++0x8010 | [16-bit] Playtime Minutes
++0x8013 | [8-bit BitFlags] Options 1
 .Bit0-1 = Button Mode
 .None = Help
 .Bit0 = LR
 .Bit1 = L=A
-+0x8014 | Options 2
-.Bit0-2=Text Speed
-.None=Slow
-.bit0=Med
-.bit1=Fast
-.bit2=Instant (Unused)
-.Bit3-7=Frame Type
-+0x8015 | Options 3
-.Bit0=Sound
-.00=Mono
-.01=Stereo
-.bit1=Battle Style (Actually Important)
-.00=Shift
-.01=Set
-.Bit2=Battle Animations
-.00=On
-.01=Off
++0x8014 | [8-bit BitFlags] Options 2
+.None = Slow
+.Bit0 = Med
+.Bit1 = Fast
+.Bit2 = Instant (Unused)
+.Bit3-7 = Frame Type
++0x8015 | [8-bit BitFlags] Options 3
+.Bit0 = Sound
+.00 = Mono
+.01 = Stereo
+.Bit1 = Battle Style (Actually Important)
+.00 = Shift
+.01 = Set
+.Bit2 = Battle Animations
+.00 = On
+.01 = Off
 
-+0x8028 | Pokedex Caught 001-008 [8-bit Bitflags]
++0x8028 | [8-bit Bitflags] Pokedex Caught 001-008
 .Bit0 = Bulbasaur
 .Bit1 = Ivysaur
 .Bit2 = Venusaur
@@ -406,7 +405,7 @@ Total Notes: 8
 .Bit5 = Charizard
 .Bit6 = Squirtle
 .Bit7 = Wartortle
-+0x8029 | Pokedex Caught 009-016 [8-bit Bitflags]
++0x8029 | [8-bit Bitflags] Pokedex Caught 009-016
 .Bit0 = Blastoise
 .Bit1 = Caterpie
 .Bit2 = Metapod
@@ -415,7 +414,7 @@ Total Notes: 8
 .Bit5 = Kakuna
 .Bit6 = Beedrill
 .Bit7 = Pidgey
-+0x802a | Pokedex Caught 017-024 [8-bit Bitflags]
++0x802a | [8-bit Bitflags] Pokedex Caught 017-024
 .Bit0 = Pidgeotto
 .Bit1 = Pidgeot
 .Bit2 = Rattata
@@ -424,7 +423,7 @@ Total Notes: 8
 .Bit5 = Fearow
 .Bit6 = Ekans
 .Bit7 = Arbok
-+0x802b | Pokedex Caught 025-032 [8-bit Bitflags]
++0x802b | [8-bit Bitflags] Pokedex Caught 025-032
 .Bit0 = Pikachu
 .Bit1 = Raichu
 .Bit2 = Sandshrew
@@ -433,7 +432,7 @@ Total Notes: 8
 .Bit5 = Nidorina
 .Bit6 = Nidoqueen
 .Bit7 = Nidoran-M
-+0x802c | Pokedex Caught 033-040 [8-bit Bitflags]
++0x802c | [8-bit Bitflags] Pokedex Caught 033-040
 .Bit0 = Nidorino
 .Bit1 = Nidoking
 .Bit2 = Clefairy
@@ -442,7 +441,7 @@ Total Notes: 8
 .Bit5 = Ninetales
 .Bit6 = Jigglypuff
 .Bit7 = Wigglytuff
-+0x802d | Pokedex Caught 041-048 [8-bit Bitflags]
++0x802d | [8-bit Bitflags] Pokedex Caught 041-048
 .Bit0 = Zubat
 .Bit1 = Golbat
 .Bit2 = Oddish
@@ -451,7 +450,7 @@ Total Notes: 8
 .Bit5 = Paras
 .Bit6 = Parasect
 .Bit7 = Venonat
-+0x802e | Pokedex Caught 049-056 [8-bit Bitflags]
++0x802e | [8-bit Bitflags] Pokedex Caught 049-056
 .Bit0 = Venomoth
 .Bit1 = Diglett
 .Bit2 = Dugtrio
@@ -460,7 +459,7 @@ Total Notes: 8
 .Bit5 = Psyduck
 .Bit6 = Golduck
 .Bit7 = Mankey
-+0x802f | Pokedex Caught 057-064 [8-bit Bitflags]
++0x802f | [8-bit Bitflags] Pokedex Caught 057-064
 .Bit0 = Primeape
 .Bit1 = Growlithe
 .Bit2 = Arcanine
@@ -469,7 +468,7 @@ Total Notes: 8
 .Bit5 = Poliwrath
 .Bit6 = Abra
 .Bit7 = Kadabra
-+0x8030 | Pokedex Caught 065-072 [8-bit Bitflags]
++0x8030 | [8-bit Bitflags] Pokedex Caught 065-072
 .Bit0 = Alakazam
 .Bit1 = Machop
 .Bit2 = Machoke
@@ -478,7 +477,7 @@ Total Notes: 8
 .Bit5 = Weepinbell
 .Bit6 = Victreebel
 .Bit7 = Tentacool
-+0x8031 | Pokedex Caught 073-080 [8-bit Bitflags]
++0x8031 | [8-bit Bitflags] Pokedex Caught 073-080
 .Bit0 = Tentacruel
 .Bit1 = Geodude
 .Bit2 = Graveler
@@ -487,7 +486,7 @@ Total Notes: 8
 .Bit5 = Rapidash
 .Bit6 = Slowpoke
 .Bit7 = Slowbro
-+0x8032 | Pokedex Caught 081-088 [8-bit Bitflags]
++0x8032 | [8-bit Bitflags] Pokedex Caught 081-088
 .Bit0 = Magnemite
 .Bit1 = Magneton
 .Bit2 = Farfetch'd
@@ -496,7 +495,7 @@ Total Notes: 8
 .Bit5 = Seel
 .Bit6 = Dewgong
 .Bit7 = Grimer
-+0x8033 | Pokedex Caught 089-096 [8-bit Bitflags]
++0x8033 | [8-bit Bitflags] Pokedex Caught 089-096
 .Bit0 = Muk
 .Bit1 = Shellder
 .Bit2 = Cloyster
@@ -505,7 +504,7 @@ Total Notes: 8
 .Bit5 = Gengar
 .Bit6 = Onix
 .Bit7 = Drowzee
-+0x8034 | Pokedex Caught 097-104 [8-bit Bitflags]
++0x8034 | [8-bit Bitflags] Pokedex Caught 097-104
 .Bit0 = Hypno
 .Bit1 = Krabby
 .Bit2 = Kingler
@@ -514,7 +513,7 @@ Total Notes: 8
 .Bit5 = Exeggcute
 .Bit6 = Exeggutor
 .Bit7 = Cubone
-+0x8035 | Pokedex Caught 105-112 [8-bit Bitflags]
++0x8035 | [8-bit Bitflags] Pokedex Caught 105-112
 .Bit0 = Marowak
 .Bit1 = Hitmonlee
 .Bit2 = Hitmonchan
@@ -523,7 +522,7 @@ Total Notes: 8
 .Bit5 = Weezing
 .Bit6 = Rhyhorn
 .Bit7 = Rhydon
-+0x8036 | Pokedex Caught 113-120 [8-bit Bitflags]
++0x8036 | [8-bit Bitflags] Pokedex Caught 113-120
 .Bit0 = Chansey
 .Bit1 = Tangela
 .Bit2 = Kangaskhan
@@ -532,7 +531,7 @@ Total Notes: 8
 .Bit5 = Goldeen
 .Bit6 = Seaking
 .Bit7 = Staryu
-+0x8037 | Pokedex Caught 121-128 [8-bit Bitflags]
++0x8037 | [8-bit Bitflags] Pokedex Caught 121-128
 .Bit0 = Starmie
 .Bit1 = Mr. Mime
 .Bit2 = Scyther
@@ -541,7 +540,7 @@ Total Notes: 8
 .Bit5 = Magmar
 .Bit6 = Pinsir
 .Bit7 = Tauros
-+0x8038 | Pokedex Caught 129-136 [8-bit Bitflags]
++0x8038 | [8-bit Bitflags] Pokedex Caught 129-136
 .Bit0 = Magikarp
 .Bit1 = Gyarados
 .Bit2 = Lapras
@@ -550,7 +549,7 @@ Total Notes: 8
 .Bit5 = Vaporeon
 .Bit6 = Jolteon
 .Bit7 = Flareon
-+0x8039 | Pokedex Caught 137-144 [8-bit Bitflags]
++0x8039 | [8-bit Bitflags] Pokedex Caught 137-144
 .Bit0 = Porygon
 .Bit1 = Omanyte
 .Bit2 = Omastar
@@ -559,7 +558,7 @@ Total Notes: 8
 .Bit5 = Aerodactyl
 .Bit6 = Snorlax
 .Bit7 = Articuno
-+0x803a | Pokedex Caught 145-152 [8-bit Bitflags]
++0x803a | [8-bit Bitflags] Pokedex Caught 145-152
 .Bit0 = Zapdos
 .Bit1 = Moltres
 .Bit2 = Dratini
@@ -568,7 +567,7 @@ Total Notes: 8
 .Bit5 = Mewtwo
 .Bit6 = Mew
 .Bit7 = Chikorita
-+0x803b | Pokedex Caught 153-160 [8-bit Bitflags]
++0x803b | [8-bit Bitflags] Pokedex Caught 153-160
 .Bit0 = Bayleef
 .Bit1 = Meganium
 .Bit2 = Cyndaquil
@@ -577,7 +576,7 @@ Total Notes: 8
 .Bit5 = Totodile
 .Bit6 = Croconaw
 .Bit7 = Feraligatr
-+0x803c | Pokedex Caught 161-168 [8-bit Bitflags]
++0x803c | [8-bit Bitflags] Pokedex Caught 161-168
 .Bit0 = Sentret
 .Bit1 = Furret
 .Bit2 = Hoothoot
@@ -586,7 +585,7 @@ Total Notes: 8
 .Bit5 = Ledian
 .Bit6 = Spinarak
 .Bit7 = Ariados
-+0x803d | Pokedex Caught 169-176 [8-bit Bitflags]
++0x803d | [8-bit Bitflags] Pokedex Caught 169-176
 .Bit0 = Crobat
 .Bit1 = Chinchou
 .Bit2 = Lanturn
@@ -595,7 +594,7 @@ Total Notes: 8
 .Bit5 = Igglybuff
 .Bit6 = Togepi
 .Bit7 = Togetic
-+0x803e | Pokedex Caught 177-184 [8-bit Bitflags]
++0x803e | [8-bit Bitflags] Pokedex Caught 177-184
 .Bit0 = Natu
 .Bit1 = Xatu
 .Bit2 = Mareep
@@ -604,7 +603,7 @@ Total Notes: 8
 .Bit5 = Bellossom
 .Bit6 = Marill
 .Bit7 = Azumarill
-+0x803f | Pokedex Caught 185-192 [8-bit Bitflags]
++0x803f | [8-bit Bitflags] Pokedex Caught 185-192
 .Bit0 = Sudowoodo
 .Bit1 = Politoed
 .Bit2 = Hoppip
@@ -613,7 +612,7 @@ Total Notes: 8
 .Bit5 = Aipom
 .Bit6 = Sunkern
 .Bit7 = Sunflora
-+0x8040 | Pokedex Caught 193-200 [8-bit Bitflags]
++0x8040 | [8-bit Bitflags] Pokedex Caught 193-200
 .Bit0 = Yanma
 .Bit1 = Wooper
 .Bit2 = Quagsire
@@ -622,7 +621,7 @@ Total Notes: 8
 .Bit5 = Murkrow
 .Bit6 = Slowking
 .Bit7 = Misdreavus
-+0x8041 | Pokedex Caught 201-208 [8-bit Bitflags]
++0x8041 | [8-bit Bitflags] Pokedex Caught 201-208
 .Bit0 = Unown
 .Bit1 = Wobbuffet
 .Bit2 = Girafarig
@@ -631,7 +630,7 @@ Total Notes: 8
 .Bit5 = Dunsparce
 .Bit6 = Gligar
 .Bit7 = Steelix
-+0x8042 | Pokedex Caught 209-216 [8-bit Bitflags]
++0x8042 | [8-bit Bitflags] Pokedex Caught 209-216
 .Bit0 = Snubbull
 .Bit1 = Granbull
 .Bit2 = Qwilfish
@@ -640,7 +639,7 @@ Total Notes: 8
 .Bit5 = Heracross
 .Bit6 = Sneasel
 .Bit7 = Teddiursa
-+0x8043 | Pokedex Caught 217-224 [8-bit Bitflags]
++0x8043 | [8-bit Bitflags] Pokedex Caught 217-224
 .Bit0 = Ursaring
 .Bit1 = Slugma
 .Bit2 = Magcargo
@@ -649,7 +648,7 @@ Total Notes: 8
 .Bit5 = Corsola
 .Bit6 = Remoraid
 .Bit7 = Octillery
-+0x8044 | Pokedex Caught 225-232 [8-bit Bitflags]
++0x8044 | [8-bit Bitflags] Pokedex Caught 225-232
 .Bit0 = Delibird
 .Bit1 = Mantine
 .Bit2 = Skarmory
@@ -658,7 +657,7 @@ Total Notes: 8
 .Bit5 = Kingdra
 .Bit6 = Phanpy
 .Bit7 = Donphan
-+0x8045 | Pokedex Caught 233-240 [8-bit Bitflags]
++0x8045 | [8-bit Bitflags] Pokedex Caught 233-240
 .Bit0 = Porygon2
 .Bit1 = Stantler
 .Bit2 = Smeargle
@@ -667,7 +666,7 @@ Total Notes: 8
 .Bit5 = Smoochum
 .Bit6 = Elekid
 .Bit7 = Magby
-+0x8046 | Pokedex Caught 241-248 [8-bit Bitflags]
++0x8046 | [8-bit Bitflags] Pokedex Caught 241-248
 .Bit0 = Miltank
 .Bit1 = Blissey
 .Bit2 = Raikou
@@ -676,7 +675,7 @@ Total Notes: 8
 .Bit5 = Larvitar
 .Bit6 = Pupitar
 .Bit7 = Tyranitar
-+0x8047 | Pokedex Caught 249-256 [8-bit Bitflags]
++0x8047 | [8-bit Bitflags] Pokedex Caught 249-256
 .Bit0 = Lugia
 .Bit1 = Ho-Oh
 .Bit2 = Celebi
@@ -685,7 +684,7 @@ Total Notes: 8
 .Bit5 = Sceptile
 .Bit6 = Torchic
 .Bit7 = Combusken
-+0x8048 | Pokedex Caught 257-264 [8-bit Bitflags]
++0x8048 | [8-bit Bitflags] Pokedex Caught 257-264
 .Bit0 = Blaziken
 .Bit1 = Mudkip
 .Bit2 = Marshtomp
@@ -694,7 +693,7 @@ Total Notes: 8
 .Bit5 = Mightyena
 .Bit6 = Zigzagoon
 .Bit7 = Linoone
-+0x8049 | Pokedex Caught 265-272 [8-bit Bitflags]
++0x8049 | [8-bit Bitflags] Pokedex Caught 265-272
 .Bit0 = Wurmple
 .Bit1 = Silcoon
 .Bit2 = Beautifly
@@ -703,7 +702,7 @@ Total Notes: 8
 .Bit5 = Lotad
 .Bit6 = Lombre
 .Bit7 = Ludicolo
-+0x804a | Pokedex Caught 273-280 [8-bit Bitflags]
++0x804a | [8-bit Bitflags] Pokedex Caught 273-280
 .Bit0 = Seedot
 .Bit1 = Nuzleaf
 .Bit2 = Shiftry
@@ -712,7 +711,7 @@ Total Notes: 8
 .Bit5 = Wingull
 .Bit6 = Pelipper
 .Bit7 = Ralts
-+0x804b | Pokedex Caught 281-288 [8-bit Bitflags]
++0x804b | [8-bit Bitflags] Pokedex Caught 281-288
 .Bit0 = Kirlia
 .Bit1 = Gardevoir
 .Bit2 = Surskit
@@ -721,7 +720,7 @@ Total Notes: 8
 .Bit5 = Breloom
 .Bit6 = Slakoth
 .Bit7 = Vigoroth
-+0x804c | Pokedex Caught 289-296 [8-bit Bitflags]
++0x804c | [8-bit Bitflags] Pokedex Caught 289-296
 .Bit0 = Slaking
 .Bit1 = Nincada
 .Bit2 = Ninjask
@@ -730,7 +729,7 @@ Total Notes: 8
 .Bit5 = Loudred
 .Bit6 = Exploud
 .Bit7 = Makuhita
-+0x804d | Pokedex Caught 297-304 [8-bit Bitflags]
++0x804d | [8-bit Bitflags] Pokedex Caught 297-304
 .Bit0 = Hariyama
 .Bit1 = Azurill
 .Bit2 = Nosepass
@@ -739,7 +738,7 @@ Total Notes: 8
 .Bit5 = Sableye
 .Bit6 = Mawile
 .Bit7 = Aron
-+0x804e | Pokedex Caught 305-312 [8-bit Bitflags]
++0x804e | [8-bit Bitflags] Pokedex Caught 305-312
 .Bit0 = Lairon
 .Bit1 = Aggron
 .Bit2 = Meditite
@@ -748,7 +747,7 @@ Total Notes: 8
 .Bit5 = Manectric
 .Bit6 = Plusle
 .Bit7 = Minun
-+0x804f | Pokedex Caught 313-320 [8-bit Bitflags]
++0x804f | [8-bit Bitflags] Pokedex Caught 313-320
 .Bit0 = Volbeat
 .Bit1 = Illumise
 .Bit2 = Roselia
@@ -757,7 +756,7 @@ Total Notes: 8
 .Bit5 = Carvanha
 .Bit6 = Sharpedo
 .Bit7 = Wailmer
-+0x8050 | Pokedex Caught 321-328 [8-bit Bitflags]
++0x8050 | [8-bit Bitflags] Pokedex Caught 321-328
 .Bit0 = Wailord
 .Bit1 = Numel
 .Bit2 = Camerupt
@@ -766,7 +765,7 @@ Total Notes: 8
 .Bit5 = Grumpig
 .Bit6 = Spinda
 .Bit7 = Trapinch
-+0x8051 | Pokedex Caught 329-336 [8-bit Bitflags]
++0x8051 | [8-bit Bitflags] Pokedex Caught 329-336
 .Bit0 = Vibrava
 .Bit1 = Flygon
 .Bit2 = Cacnea
@@ -775,7 +774,7 @@ Total Notes: 8
 .Bit5 = Altaria
 .Bit6 = Zangoose
 .Bit7 = Seviper
-+0x8052 | Pokedex Caught 337-344 [8-bit Bitflags]
++0x8052 | [8-bit Bitflags] Pokedex Caught 337-344
 .Bit0 = Lunatone
 .Bit1 = Solrock
 .Bit2 = Barboach
@@ -784,7 +783,7 @@ Total Notes: 8
 .Bit5 = Crawdaunt
 .Bit6 = Baltoy
 .Bit7 = Claydol
-+0x8053 | Pokedex Caught 345-352 [8-bit Bitflags]
++0x8053 | [8-bit Bitflags] Pokedex Caught 345-352
 .Bit0 = Lileep
 .Bit1 = Cradily
 .Bit2 = Anorith
@@ -793,7 +792,7 @@ Total Notes: 8
 .Bit5 = Milotic
 .Bit6 = Castform
 .Bit7 = Kecleon
-+0x8054 | Pokedex Caught 353-360 [8-bit Bitflags]
++0x8054 | [8-bit Bitflags] Pokedex Caught 353-360
 .Bit0 = Shuppet
 .Bit1 = Banette
 .Bit2 = Duskull
@@ -802,7 +801,7 @@ Total Notes: 8
 .Bit5 = Chimecho
 .Bit6 = Absol
 .Bit7 = Wynaut
-+0x8055 | Pokedex Caught 361-368 [8-bit Bitflags]
++0x8055 | [8-bit Bitflags] Pokedex Caught 361-368
 .Bit0 = Snorunt
 .Bit1 = Glalie
 .Bit2 = Spheal
@@ -811,7 +810,7 @@ Total Notes: 8
 .Bit5 = Clamperl
 .Bit6 = Huntail
 .Bit7 = Gorebyss
-+0x8056 | Pokedex Caught 369-376 [8-bit Bitflags]
++0x8056 | [8-bit Bitflags] Pokedex Caught 369-376
 .Bit0 = Relicanth
 .Bit1 = Luvdisc
 .Bit2 = Bagon
@@ -820,7 +819,7 @@ Total Notes: 8
 .Bit5 = Beldum
 .Bit6 = Metang
 .Bit7 = Metagross
-+0x8057 | Pokedex Caught 377-384 [8-bit Bitflags]
++0x8057 | [8-bit Bitflags] Pokedex Caught 377-384
 .Bit0 = Regirock
 .Bit1 = Regice
 .Bit2 = Registeel
@@ -829,11 +828,11 @@ Total Notes: 8
 .Bit5 = Kyogre
 .Bit6 = Groudon
 .Bit7 = Rayquaza
-+0x8058 | Pokedex Caught 385-386 [8-bit Bitflags]
++0x8058 | [8-bit Bitflags] Pokedex Caught 385-386
 .Bit0 = Jirachi
 .Bit1 = Deoxys
 
-+0x805c | Pokedex Seen 001-008 [8-bit Bitflags]
++0x805c | [8-bit Bitflags] Pokedex Seen 001-008
 .Bit0 = Bulbasaur
 .Bit1 = Ivysaur
 .Bit2 = Venusaur
@@ -842,7 +841,7 @@ Total Notes: 8
 .Bit5 = Charizard
 .Bit6 = Squirtle
 .Bit7 = Wartortle
-+0x805d | Pokedex Seen 009-016 [8-bit Bitflags]
++0x805d | [8-bit Bitflags] Pokedex Seen 009-016
 .Bit0 = Blastoise
 .Bit1 = Caterpie
 .Bit2 = Metapod
@@ -851,7 +850,7 @@ Total Notes: 8
 .Bit5 = Kakuna
 .Bit6 = Beedrill
 .Bit7 = Pidgey
-+0x805e | Pokedex Seen 017-024 [8-bit Bitflags]
++0x805e | [8-bit Bitflags] Pokedex Seen 017-024
 .Bit0 = Pidgeotto
 .Bit1 = Pidgeot
 .Bit2 = Rattata
@@ -860,7 +859,7 @@ Total Notes: 8
 .Bit5 = Fearow
 .Bit6 = Ekans
 .Bit7 = Arbok
-+0x805f | Pokedex Seen 025-032 [8-bit Bitflags]
++0x805f | [8-bit Bitflags] Pokedex Seen 025-032
 .Bit0 = Pikachu
 .Bit1 = Raichu
 .Bit2 = Sandshrew
@@ -869,7 +868,7 @@ Total Notes: 8
 .Bit5 = Nidorina
 .Bit6 = Nidoqueen
 .Bit7 = Nidoran-M
-+0x8060 | Pokedex Seen 033-040 [8-bit Bitflags]
++0x8060 | [8-bit Bitflags] Pokedex Seen 033-040
 .Bit0 = Nidorino
 .Bit1 = Nidoking
 .Bit2 = Clefairy
@@ -878,7 +877,7 @@ Total Notes: 8
 .Bit5 = Ninetales
 .Bit6 = Jigglypuff
 .Bit7 = Wigglytuff
-+0x8061 | Pokedex Seen 041-048 [8-bit Bitflags]
++0x8061 | [8-bit Bitflags] Pokedex Seen 041-048
 .Bit0 = Zubat
 .Bit1 = Golbat
 .Bit2 = Oddish
@@ -887,7 +886,7 @@ Total Notes: 8
 .Bit5 = Paras
 .Bit6 = Parasect
 .Bit7 = Venonat
-+0x8062 | Pokedex Seen 049-056 [8-bit Bitflags]
++0x8062 | [8-bit Bitflags] Pokedex Seen 049-056
 .Bit0 = Venomoth
 .Bit1 = Diglett
 .Bit2 = Dugtrio
@@ -896,7 +895,7 @@ Total Notes: 8
 .Bit5 = Psyduck
 .Bit6 = Golduck
 .Bit7 = Mankey
-+0x8063 | Pokedex Seen 057-064 [8-bit Bitflags]
++0x8063 | [8-bit Bitflags] Pokedex Seen 057-064
 .Bit0 = Primeape
 .Bit1 = Growlithe
 .Bit2 = Arcanine
@@ -905,7 +904,7 @@ Total Notes: 8
 .Bit5 = Poliwrath
 .Bit6 = Abra
 .Bit7 = Kadabra
-+0x8064 | Pokedex Seen 065-072 [8-bit Bitflags]
++0x8064 | [8-bit Bitflags] Pokedex Seen 065-072
 .Bit0 = Alakazam
 .Bit1 = Machop
 .Bit2 = Machoke
@@ -914,7 +913,7 @@ Total Notes: 8
 .Bit5 = Weepinbell
 .Bit6 = Victreebel
 .Bit7 = Tentacool
-+0x8065 | Pokedex Seen 073-080 [8-bit Bitflags]
++0x8065 | [8-bit Bitflags] Pokedex Seen 073-080
 .Bit0 = Tentacruel
 .Bit1 = Geodude
 .Bit2 = Graveler
@@ -923,7 +922,7 @@ Total Notes: 8
 .Bit5 = Rapidash
 .Bit6 = Slowpoke
 .Bit7 = Slowbro
-+0x8066 | Pokedex Seen 081-088 [8-bit Bitflags]
++0x8066 | [8-bit Bitflags] Pokedex Seen 081-088
 .Bit0 = Magnemite
 .Bit1 = Magneton
 .Bit2 = Farfetch'd
@@ -932,7 +931,7 @@ Total Notes: 8
 .Bit5 = Seel
 .Bit6 = Dewgong
 .Bit7 = Grimer
-+0x8067 | Pokedex Seen 089-096 [8-bit Bitflags]
++0x8067 | [8-bit Bitflags] Pokedex Seen 089-096
 .Bit0 = Muk
 .Bit1 = Shellder
 .Bit2 = Cloyster
@@ -941,7 +940,7 @@ Total Notes: 8
 .Bit5 = Gengar
 .Bit6 = Onix
 .Bit7 = Drowzee
-+0x8068 | Pokedex Seen 097-104 [8-bit Bitflags]
++0x8068 | [8-bit Bitflags] Pokedex Seen 097-104
 .Bit0 = Hypno
 .Bit1 = Krabby
 .Bit2 = Kingler
@@ -950,7 +949,7 @@ Total Notes: 8
 .Bit5 = Exeggcute
 .Bit6 = Exeggutor
 .Bit7 = Cubone
-+0x8069 | Pokedex Seen 105-112 [8-bit Bitflags]
++0x8069 | [8-bit Bitflags] Pokedex Seen 105-112
 .Bit0 = Marowak
 .Bit1 = Hitmonlee
 .Bit2 = Hitmonchan
@@ -959,7 +958,7 @@ Total Notes: 8
 .Bit5 = Weezing
 .Bit6 = Rhyhorn
 .Bit7 = Rhydon
-+0x806a | Pokedex Seen 113-120 [8-bit Bitflags]
++0x806a | [8-bit Bitflags] Pokedex Seen 113-120
 .Bit0 = Chansey
 .Bit1 = Tangela
 .Bit2 = Kangaskhan
@@ -968,7 +967,7 @@ Total Notes: 8
 .Bit5 = Goldeen
 .Bit6 = Seaking
 .Bit7 = Staryu
-+0x806b | Pokedex Seen 121-128 [8-bit Bitflags]
++0x806b | [8-bit Bitflags] Pokedex Seen 121-128
 .Bit0 = Starmie
 .Bit1 = Mr. Mime
 .Bit2 = Scyther
@@ -977,7 +976,7 @@ Total Notes: 8
 .Bit5 = Magmar
 .Bit6 = Pinsir
 .Bit7 = Tauros
-+0x806c | Pokedex Seen 129-136 [8-bit Bitflags]
++0x806c | [8-bit Bitflags] Pokedex Seen 129-136
 .Bit0 = Magikarp
 .Bit1 = Gyarados
 .Bit2 = Lapras
@@ -986,7 +985,7 @@ Total Notes: 8
 .Bit5 = Vaporeon
 .Bit6 = Jolteon
 .Bit7 = Flareon
-+0x806d | Pokedex Seen 137-144 [8-bit Bitflags]
++0x806d | [8-bit Bitflags] Pokedex Seen 137-144
 .Bit0 = Porygon
 .Bit1 = Omanyte
 .Bit2 = Omastar
@@ -995,7 +994,7 @@ Total Notes: 8
 .Bit5 = Aerodactyl
 .Bit6 = Snorlax
 .Bit7 = Articuno
-+0x806e | Pokedex Seen 145-152 [8-bit Bitflags]
++0x806e | [8-bit Bitflags] Pokedex Seen 145-152
 .Bit0 = Zapdos
 .Bit1 = Moltres
 .Bit2 = Dratini
@@ -1004,7 +1003,7 @@ Total Notes: 8
 .Bit5 = Mewtwo
 .Bit6 = Mew
 .Bit7 = Chikorita
-+0x806f | Pokedex Seen 153-160 [8-bit Bitflags]
++0x806f | [8-bit Bitflags] Pokedex Seen 153-160
 .Bit0 = Bayleef
 .Bit1 = Meganium
 .Bit2 = Cyndaquil
@@ -1013,7 +1012,7 @@ Total Notes: 8
 .Bit5 = Totodile
 .Bit6 = Croconaw
 .Bit7 = Feraligatr
-+0x8070 | Pokedex Seen 161-168 [8-bit Bitflags]
++0x8070 | [8-bit Bitflags] Pokedex Seen 161-168
 .Bit0 = Sentret
 .Bit1 = Furret
 .Bit2 = Hoothoot
@@ -1022,7 +1021,7 @@ Total Notes: 8
 .Bit5 = Ledian
 .Bit6 = Spinarak
 .Bit7 = Ariados
-+0x8071 | Pokedex Seen 169-176 [8-bit Bitflags]
++0x8071 | [8-bit Bitflags] Pokedex Seen 169-176
 .Bit0 = Crobat
 .Bit1 = Chinchou
 .Bit2 = Lanturn
@@ -1031,7 +1030,7 @@ Total Notes: 8
 .Bit5 = Igglybuff
 .Bit6 = Togepi
 .Bit7 = Togetic
-+0x8072 | Pokedex Seen 177-184 [8-bit Bitflags]
++0x8072 | [8-bit Bitflags] Pokedex Seen 177-184
 .Bit0 = Natu
 .Bit1 = Xatu
 .Bit2 = Mareep
@@ -1040,7 +1039,7 @@ Total Notes: 8
 .Bit5 = Bellossom
 .Bit6 = Marill
 .Bit7 = Azumarill
-+0x8073 | Pokedex Seen 185-192 [8-bit Bitflags]
++0x8073 | [8-bit Bitflags] Pokedex Seen 185-192
 .Bit0 = Sudowoodo
 .Bit1 = Politoed
 .Bit2 = Hoppip
@@ -1049,7 +1048,7 @@ Total Notes: 8
 .Bit5 = Aipom
 .Bit6 = Sunkern
 .Bit7 = Sunflora
-+0x8074 | Pokedex Seen 193-200 [8-bit Bitflags]
++0x8074 | [8-bit Bitflags] Pokedex Seen 193-200
 .Bit0 = Yanma
 .Bit1 = Wooper
 .Bit2 = Quagsire
@@ -1058,7 +1057,7 @@ Total Notes: 8
 .Bit5 = Murkrow
 .Bit6 = Slowking
 .Bit7 = Misdreavus
-+0x8075 | Pokedex Seen 201-208 [8-bit Bitflags]
++0x8075 | [8-bit Bitflags] Pokedex Seen 201-208
 .Bit0 = Unown
 .Bit1 = Wobbuffet
 .Bit2 = Girafarig
@@ -1067,7 +1066,7 @@ Total Notes: 8
 .Bit5 = Dunsparce
 .Bit6 = Gligar
 .Bit7 = Steelix
-+0x8076 | Pokedex Seen 209-216 [8-bit Bitflags]
++0x8076 | [8-bit Bitflags] Pokedex Seen 209-216
 .Bit0 = Snubbull
 .Bit1 = Granbull
 .Bit2 = Qwilfish
@@ -1076,7 +1075,7 @@ Total Notes: 8
 .Bit5 = Heracross
 .Bit6 = Sneasel
 .Bit7 = Teddiursa
-+0x8077 | Pokedex Seen 217-224 [8-bit Bitflags]
++0x8077 | [8-bit Bitflags] Pokedex Seen 217-224
 .Bit0 = Ursaring
 .Bit1 = Slugma
 .Bit2 = Magcargo
@@ -1085,7 +1084,7 @@ Total Notes: 8
 .Bit5 = Corsola
 .Bit6 = Remoraid
 .Bit7 = Octillery
-+0x8078 | Pokedex Seen 225-232 [8-bit Bitflags]
++0x8078 | [8-bit Bitflags] Pokedex Seen 225-232
 .Bit0 = Delibird
 .Bit1 = Mantine
 .Bit2 = Skarmory
@@ -1094,7 +1093,7 @@ Total Notes: 8
 .Bit5 = Kingdra
 .Bit6 = Phanpy
 .Bit7 = Donphan
-+0x8079 | Pokedex Seen 233-240 [8-bit Bitflags]
++0x8079 | [8-bit Bitflags] Pokedex Seen 233-240
 .Bit0 = Porygon2
 .Bit1 = Stantler
 .Bit2 = Smeargle
@@ -1103,7 +1102,7 @@ Total Notes: 8
 .Bit5 = Smoochum
 .Bit6 = Elekid
 .Bit7 = Magby
-+0x807a | Pokedex Seen 241-248 [8-bit Bitflags]
++0x807a | [8-bit Bitflags] Pokedex Seen 241-248
 .Bit0 = Miltank
 .Bit1 = Blissey
 .Bit2 = Raikou
@@ -1112,7 +1111,7 @@ Total Notes: 8
 .Bit5 = Larvitar
 .Bit6 = Pupitar
 .Bit7 = Tyranitar
-+0x807b | Pokedex Seen 249-256 [8-bit Bitflags]
++0x807b | [8-bit Bitflags] Pokedex Seen 249-256
 .Bit0 = Lugia
 .Bit1 = Ho-Oh
 .Bit2 = Celebi
@@ -1121,7 +1120,7 @@ Total Notes: 8
 .Bit5 = Sceptile
 .Bit6 = Torchic
 .Bit7 = Combusken
-+0x807c | Pokedex Seen 257-264 [8-bit Bitflags]
++0x807c | [8-bit Bitflags] Pokedex Seen 257-264
 .Bit0 = Blaziken
 .Bit1 = Mudkip
 .Bit2 = Marshtomp
@@ -1130,7 +1129,7 @@ Total Notes: 8
 .Bit5 = Mightyena
 .Bit6 = Zigzagoon
 .Bit7 = Linoone
-+0x807d | Pokedex Seen 265-272 [8-bit Bitflags]
++0x807d | [8-bit Bitflags] Pokedex Seen 265-272
 .Bit0 = Wurmple
 .Bit1 = Silcoon
 .Bit2 = Beautifly
@@ -1139,7 +1138,7 @@ Total Notes: 8
 .Bit5 = Lotad
 .Bit6 = Lombre
 .Bit7 = Ludicolo
-+0x807e | Pokedex Seen 273-280 [8-bit Bitflags]
++0x807e | [8-bit Bitflags] Pokedex Seen 273-280
 .Bit0 = Seedot
 .Bit1 = Nuzleaf
 .Bit2 = Shiftry
@@ -1148,7 +1147,7 @@ Total Notes: 8
 .Bit5 = Wingull
 .Bit6 = Pelipper
 .Bit7 = Ralts
-+0x807f | Pokedex Seen 281-288 [8-bit Bitflags]
++0x807f | [8-bit Bitflags] Pokedex Seen 281-288
 .Bit0 = Kirlia
 .Bit1 = Gardevoir
 .Bit2 = Surskit
@@ -1157,7 +1156,7 @@ Total Notes: 8
 .Bit5 = Breloom
 .Bit6 = Slakoth
 .Bit7 = Vigoroth
-+0x8080 | Pokedex Seen 289-296 [8-bit Bitflags]
++0x8080 | [8-bit Bitflags] Pokedex Seen 289-296
 .Bit0 = Slaking
 .Bit1 = Nincada
 .Bit2 = Ninjask
@@ -1166,7 +1165,7 @@ Total Notes: 8
 .Bit5 = Loudred
 .Bit6 = Exploud
 .Bit7 = Makuhita
-+0x8081 | Pokedex Seen 297-304 [8-bit Bitflags]
++0x8081 | [8-bit Bitflags] Pokedex Seen 297-304
 .Bit0 = Hariyama
 .Bit1 = Azurill
 .Bit2 = Nosepass
@@ -1175,7 +1174,7 @@ Total Notes: 8
 .Bit5 = Sableye
 .Bit6 = Mawile
 .Bit7 = Aron
-+0x8082 | Pokedex Seen 305-312 [8-bit Bitflags]
++0x8082 | [8-bit Bitflags] Pokedex Seen 305-312
 .Bit0 = Lairon
 .Bit1 = Aggron
 .Bit2 = Meditite
@@ -1184,7 +1183,7 @@ Total Notes: 8
 .Bit5 = Manectric
 .Bit6 = Plusle
 .Bit7 = Minun
-+0x8083 | Pokedex Seen 313-320 [8-bit Bitflags]
++0x8083 | [8-bit Bitflags] Pokedex Seen 313-320
 .Bit0 = Volbeat
 .Bit1 = Illumise
 .Bit2 = Roselia
@@ -1193,7 +1192,7 @@ Total Notes: 8
 .Bit5 = Carvanha
 .Bit6 = Sharpedo
 .Bit7 = Wailmer
-+0x8084 | Pokedex Seen 321-328 [8-bit Bitflags]
++0x8084 | [8-bit Bitflags] Pokedex Seen 321-328
 .Bit0 = Wailord
 .Bit1 = Numel
 .Bit2 = Camerupt
@@ -1202,7 +1201,7 @@ Total Notes: 8
 .Bit5 = Grumpig
 .Bit6 = Spinda
 .Bit7 = Trapinch
-+0x8085 | Pokedex Seen 329-336 [8-bit Bitflags]
++0x8085 | [8-bit Bitflags] Pokedex Seen 329-336
 .Bit0 = Vibrava
 .Bit1 = Flygon
 .Bit2 = Cacnea
@@ -1211,7 +1210,7 @@ Total Notes: 8
 .Bit5 = Altaria
 .Bit6 = Zangoose
 .Bit7 = Seviper
-+0x8086 | Pokedex Seen 337-344 [8-bit Bitflags]
++0x8086 | [8-bit Bitflags] Pokedex Seen 337-344
 .Bit0 = Lunatone
 .Bit1 = Solrock
 .Bit2 = Barboach
@@ -1220,7 +1219,7 @@ Total Notes: 8
 .Bit5 = Crawdaunt
 .Bit6 = Baltoy
 .Bit7 = Claydol
-+0x8087 | Pokedex Seen 345-352 [8-bit Bitflags]
++0x8087 | [8-bit Bitflags] Pokedex Seen 345-352
 .Bit0 = Lileep
 .Bit1 = Cradily
 .Bit2 = Anorith
@@ -1229,7 +1228,7 @@ Total Notes: 8
 .Bit5 = Milotic
 .Bit6 = Castform
 .Bit7 = Kecleon
-+0x8088 | Pokedex Seen 353-360 [8-bit Bitflags]
++0x8088 | [8-bit Bitflags] Pokedex Seen 353-360
 .Bit0 = Shuppet
 .Bit1 = Banette
 .Bit2 = Duskull
@@ -1238,7 +1237,7 @@ Total Notes: 8
 .Bit5 = Chimecho
 .Bit6 = Absol
 .Bit7 = Wynaut
-+0x8089 | Pokedex Seen 361-368 [8-bit Bitflags]
++0x8089 | [8-bit Bitflags] Pokedex Seen 361-368
 .Bit0 = Snorunt
 .Bit1 = Glalie
 .Bit2 = Spheal
@@ -1247,7 +1246,7 @@ Total Notes: 8
 .Bit5 = Clamperl
 .Bit6 = Huntail
 .Bit7 = Gorebyss
-+0x808a | Pokedex Seen 369-376 [8-bit Bitflags]
++0x808a | [8-bit Bitflags] Pokedex Seen 369-376
 .Bit0 = Relicanth
 .Bit1 = Luvdisc
 .Bit2 = Bagon
@@ -1256,7 +1255,7 @@ Total Notes: 8
 .Bit5 = Beldum
 .Bit6 = Metang
 .Bit7 = Metagross
-+0x808b | Pokedex Seen 377-384 [8-bit Bitflags]
++0x808b | [8-bit Bitflags] Pokedex Seen 377-384
 .Bit0 = Regirock
 .Bit1 = Regice
 .Bit2 = Registeel
@@ -1265,30 +1264,30 @@ Total Notes: 8
 .Bit5 = Kyogre
 .Bit6 = Groudon
 .Bit7 = Rayquaza
-+0x808c | Pokedex Seen 385-386 [8-bit Bitflags]
++0x808c | [8-bit Bitflags] Pokedex Seen 385-386
 .Bit0 = Jirachi
 .Bit1 = Deoxys
 
 +0x9234 | [32-bit] Money
 +0x9238 | [16-bit] Game Corner Coins
-+0x92b4 | Items Pocket Item 1 ID
++0x92b4 | [8-bit] Items Pocket Item 1 ID
 +0x9fe4 | [8-bit] Repel Steps Left
-+0xa028 | Current Print Type
++0xa028 | [8-bit] Current Print Type
 .0x00 = Normal
 .0x01 = Black
 .0x02 = Pink
 .0x03 = Sepia
-+0xa02a = [8-bit] Printed Pokemon ID 1
-+0xa02e = [8-bit] Printed Pokemon ID 2
-+0xa030 = [8-bit] Printed Pokemon ID 3
-+0xa032 = [8-bit] Printed Pokemon ID 4
-+0xa034 = [8-bit] Printed Pokemon ID 5
-+0xa036 = [8-bit] Printed Pokemon ID 6
++0xa02a | [8-bit] Printed Pokemon ID 1
++0xa02e | [8-bit] Printed Pokemon ID 2
++0xa030 | [8-bit] Printed Pokemon ID 3
++0xa032 | [8-bit] Printed Pokemon ID 4
++0xa034 | [8-bit] Printed Pokemon ID 5
++0xa036 | [8-bit] Printed Pokemon ID 6
 +0xccd8 | [32-bit] Pokemon Tower Mode
-0x00 = Single
-0x01 = Double
-0x02 = Knockout
-0x03 = Mixed. Wow!
+.0x00 = Single
+.0x01 = Double
+.0x02 = Knockout
+.0x03 = Mixed. Wow!
 
 0x005010: [24-bit Pointer] gPokemonStoragePtr
 +0x3282 | [8-bit] Time
@@ -1757,6 +1756,18 @@ Values are in decimal (0-412)
 0x0d = Nothing (Fainted)
 0xff = None Selected
 
+0x02c2d8: [8-bit] Party Pokémon - Slot 1 Level
+
+0x02c33c: [8-bit] Party Pokémon - Slot 2 Level
+
+0x02c3a0: [8-bit] Party Pokémon - Slot 3 Level
+
+0x02c404: [8-bit] Party Pokémon - Slot 4 Level
+
+0x02c468: [8-bit] Party Pokémon - Slot 5 Level
+
+0x02c4cc: [8-bit] Party Pokémon - Slot 6 Level
+
 0x0406ae: [16-Bit] Current Enemy Trainer ID
 0x0000 = Trainer None
 0x0001 = Trainer Aqua Leader
@@ -2106,9 +2117,9 @@ Values are in decimal (0-412)
 0x0159 = Trainer Scientist Travis
 0x015a = Trainer Scientist Braydon
 0x015b = Trainer Scientist Ivan
-0x015c = Trainer Boss Giovanni
-0x015d = Trainer Boss Giovanni 2
-0x015e = Trainer Leader Giovanni
+0x015c = Trainer Boss Norse Joy
+0x015d = Trainer Boss Norse Joy 2
+0x015e = Trainer Leader Norse Joy
 0x015f = Trainer Team Rocket Grunt
 0x0160 = Trainer Team Rocket Grunt 2
 0x0161 = Trainer Team Rocket Grunt 3
@@ -2501,4 +2512,12 @@ Values are in decimal (0-412)
 0x02e4 = Trainer Champion Rematch Bulbasaur
 0x02e5 = Trainer Champion Rematch Charmander
 0x02e6 = Trainer Cue Ball Paxton
+0x02e7 = Trainer RA TorchicZK
+0x02e8 = Trainer RA Chaotic
+0x02e9 = Trainer RA S4NSAN
+0x02ea = Trainer RA Malevolent
+0x02eb = Trainer RA Cnat
+0x02ec = Trainer RA GreninjaMan
+0x02ed = Trainer Fallen Giovanni
+0x02ee = Trainer Rocket Scientist
 
