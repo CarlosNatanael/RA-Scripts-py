@@ -8,7 +8,7 @@
 
 ### <img src="https://static.retroachievements.org/assets/images/system/gba.png" height="30" align="middle"> &nbsp; Game Boy Advance
 - [Batman: Vengeance](https://retroachievements.org/game/2428)
-- [~Hack~ Pokémon: No Center Challenge](https://retroachievements.org/game/41205)
+- [Pokémon: No Center Challenge](https://retroachievements.org/game/41205)
 
 ### <img src="https://static.retroachievements.org/assets/images/system/gg.png" height="30" align="middle"> &nbsp; Game Gear
 - [Captain America and the Avengers](https://retroachievements.org/game/14286)
