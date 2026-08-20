@@ -1,10 +1,11 @@
 Game ID: 41205
 Source: RA Server
-Total Notes: 14
+Total Notes: 28
 ============================================================
 
 0x005008: [24-bit Pointer] gSaveBlock1Ptr
-+0x8004 | [16-bit] Location
++0x8004: [16-bit] Location
+.0x0000 = None / Titlescreen
 // Pallet Town
 .0x0003 = Pallet Town
 .0x0004 = Pallet House 1F
@@ -340,7 +341,7 @@ Total Notes: 14
 .0x4901 = Cerulean Cave 2F
 .0x4a01 = Cerulean Cave B1F
 .0x001e = Sea Cottage
-+0x801c | [16-bit] Last Heal Location
++0x801C: [16-bit] Last Heal Location
 .0x0000 = None
 .0x0003 = Pallet House
 .0x0103 = Viridian Center
@@ -363,6 +364,150 @@ Total Notes: 14
 .0x1603 = Mt. Moon Center
 .0x1c03 = Poke Center Route 10
 
++0xba54 | [8-bit] Fame Checker - Oak
+.Bit1 = Oak Unlocked
+.Bit2 = Sign - Pallet Town
+.Bit3 = Prof. Oak - Reseach Lab
+.Bit4 = Aide - Reseach Lab
+.Bit5 = Pokémon Journal - Viridian City
+.Bit6 = Agatha - Pokémon League
+.Bit7 = Aide - Reseach Lab
+
++0xba58 | [8-bit] Fame Checker - Daisy
+.Bit1 = Daisy Unlocked
+.Bit2 = Aide - Research Lab
+.Bit3 = Woman - Vermilion City
+.Bit4 = Man - Water Labyrinth
+.Bit5 = Pokémon Journal Viridian City
+.Bit6 = Old Lady - Celadon Mansion
+.Bit7 = Pokémon Journal - Four Island
+
++0xba5c | [8-bit] Fame Checker - Brock
+.Bit1 = Brock Unlocked
+.Bit2 = Sign - Pewter City
+.Bit3 = Brock - Pewter Gym
+.Bit4 = Young Man - Pewter City
+.Bit5 = Boy - Route 4
+.Bit6 = Man - Mt. Moon
+.Bit7 = Pokémon Journal - Pewter Museum
+
++0xba60 | [8-bit] Fame Checker - Misty
+.Bit1 = Misty Unlocked
+.Bit2 = Sign - Cerulean Gym
+.Bit3 = Misty - Cerulean Gym
+.Bit4 = Luis - Cerulean Gym
+.Bit5 = Young Man - Seafoam Islands
+.Bit6 = Dame - Cerulean Cape
+.Bit7 = Pokémon Journal - Cerulean City
+
++0xba64 | [8-bit] Fame Checker - Lt. Surge
+.Bit1 = Lt. Surge Unlocked
+.Bit2 = Sign - Vermilion City
+.Bit3 = Lt. Surge - Vermilion Gym
+.Bit4 = Tucker - Vermilion Gym
+.Bit5 = Tucker - Vermilion Gym
+.Bit6 = Dwayne - Vermilion Gym
+.Bit7 = Pokémon Journal - Vermilion City
+
++0xba68 | [8-bit] Fame Checker - Erika
+.Bit1 = Erika Unlocked
+.Bit2 = Sign - Celadon City
+.Bit3 = Erika - Celadon Gym
+.Bit4 = Lola - Celadon Gym
+.Bit5 = Tamia - Celadon Gym
+.Bit6 = Erika - Celadon Gym
+.Bit7 = Pokémon Journal - Celadon Mansion
+
++0xba6c | [8-bit] Fame Checker - Koga
+.Bit1 = Unlocked
+.Bit2 = Sign - Fuchsia City
+.Bit3 = Koga - Fuchsia Gym
+.Bit4 = Kirk - Fuchsia Gym
+.Bit5 = Charine - Fuchsia City
+.Bit6 = Pokémon Journal - Fuchsia City
+.Bit7 = Man - Safari Zone
+
++0xba70 | [8-bit] Fame Checker - Sabrina
+.Bit1 = Sabrina Unlocked
+.Bit2 = Sign - Saffron City
+.Bit3 = Young Man - Three Island
+.Bit4 = Sabrina - Saffron Gym
+.Bit5 = Sabrina - Saffron Gym
+.Bit6 = Pokémon Journal - Saffron City
+.Bit7 = Tyron - Saffron Gym
+
++0xba74 | [8-bit] Fame Checker - Blaine
+.Bit1 = Blaine Unlocked
+.Bit2 = Sign - Cinnabar Island
+.Bit3 = Blane - Cinnabar Gym
+.Bit4 = Derek - Cinnabar Gym
+.Bit5 = Woman - Cinnabar Island
+.Bit6 = Photo - Cinnabar Gym
+.Bit7 = Pokémon Journal - Resort Gorgeous
+
++0xba90 | [8-bit] Fame Checker - Joy
+.Bit1 = Joy Unlocked
+.Bit2 = Nurse Joy - Rocket Hideout
+.Bit3 = Scientist - Silph Co.
+.Bit4 = Scientist - Silph Co.
+.Bit5 = Nurse Joy - Viridian Gym
+.Bit6 = Man - Viridian Gym
+.Bit7 = Gideon - Rocket WareHouse
+
++0xba78 | [8-bit] Fame Checker - Lorelei
+.Bit1 = Lorelei Unlocked
+.Bit2 = Lorelei - Pokémon League
+.Bit3 = Lorelei - Pokémon League
+.Bit4 = Old Man - Four Island
+.Bit5 = Pokémon Journal - Five Island
+.Bit6 = Little Girl - Four Island
+.Bit7 = Old Lady - Four Island
+
++0xba7c | [8-bit] Fame Checker - Bruno
+.Bit1 = Bruno Unlocked
+.Bit2 = Bruno - Pokémon League
+.Bit3 = Bruno - Pokémon League
+.Bit4 = Pokémon Journal - Saffron City
+.Bit5 = Crusher - Ember Spa
+.Bit6 = Woman - Two Island
+.Bit7 = Crusher - Sevault Canyon
+
++0xba80 | [8-bit] Fame Checker - Agatha
+.Bit1 = Agatha Unlocked
+.Bit2 = Agatha - Pokémon League
+.Bit3 = Crusher - Indigo Plateau
+.Bit4 = Crusher - Indigo Plateau
+.Bit5 = Pokémon Journal - Seven Island
+.Bit6 = Agatha - Pokémon League
+.Bit7 = Old Lady - Six Island
+
++0xba84 | [8-bit] Fame Checker - Lance
+.Bit1 = Lance Unlocked
+.Bit2 = Lance - Pokémon League
+.Bit3 = Lance - Pokémon League
+.Bit4 = Woman - Saffron City
+.Bit5 = Little Girl - Celadon Dept.
+.Bit6 = Pokémon Journal - Indigo Plateau
+.Bit7 = Young Man - Indigo Plateau
+
++0xba88 | [8-bit] Fame Checker - Bill
+.Bit1 = Bill Unlocked
+.Bit2 = Rival - Cerulean City
+.Bit3 = Little Boy - Cerulean City
+.Bit4 = Old Man - Fucshia City
+.Bit5 = Celio - One Island
+.Bit6 = Celio - One Island
+.Bit7 = Celio - One Island
+
++0xba8c | [8-bit] Fame Checker - Fuji
+.Bit1 = Fuji Unlocked
+.Bit2 = Little Girl - Lavender Town
+.Bit3 = Team Rocket - Pokémon Tower
+.Bit4 = Magazine - Lavender Town
+.Bit5 = Man - Lavender Town
+.Bit6 = Photo - Cinnabar Gym
+.Bit7 = Pokémon Journal - Cinnabar Island
+
 0x00500c: [24-bit Pointer] gSaveBlock2Ptr
 +0x8f20 | XOR Key
 +0x8000 | [8-bit] Player Name Letter 1
@@ -373,19 +518,21 @@ Total Notes: 14
 +0x800a | [16-bit] Trainer ID
 +0x800c | [16-bit] Secret ID
 +0x800e | [16-bit] Playtime Hours
-+0x8010 | [16-bit] Playtime Minutes
-+0x8013 | [8-bit BitFlags] Options 1
++0x8010 | [8-bit] Playtime Minutes
++0x8011 | [8-bit] Playtime Seconds
++0x8012 | [8-bit] Playtime Frames / VBlanks
++0x8013 | [8-bit] Options 1
 .Bit0-1 = Button Mode
 .None = Help
 .Bit0 = LR
 .Bit1 = L=A
-+0x8014 | [8-bit BitFlags] Options 2
++0x8014 | [8-bit] Options 2
 .None = Slow
 .Bit0 = Med
 .Bit1 = Fast
 .Bit2 = Instant (Unused)
 .Bit3-7 = Frame Type
-+0x8015 | [8-bit BitFlags] Options 3
++0x8015 | [8-bit] Options 3
 .Bit0 = Sound
 .00 = Mono
 .01 = Stereo
@@ -396,7 +543,7 @@ Total Notes: 14
 .00 = On
 .01 = Off
 
-+0x8028 | [8-bit Bitflags] Pokedex Caught 001-008
++0x8028 | [8-bit] Pokedex Caught 001-008
 .Bit0 = Bulbasaur
 .Bit1 = Ivysaur
 .Bit2 = Venusaur
@@ -405,7 +552,7 @@ Total Notes: 14
 .Bit5 = Charizard
 .Bit6 = Squirtle
 .Bit7 = Wartortle
-+0x8029 | [8-bit Bitflags] Pokedex Caught 009-016
++0x8029 | [8-bit] Pokedex Caught 009-016
 .Bit0 = Blastoise
 .Bit1 = Caterpie
 .Bit2 = Metapod
@@ -414,7 +561,7 @@ Total Notes: 14
 .Bit5 = Kakuna
 .Bit6 = Beedrill
 .Bit7 = Pidgey
-+0x802a | [8-bit Bitflags] Pokedex Caught 017-024
++0x802a | [8-bit] Pokedex Caught 017-024
 .Bit0 = Pidgeotto
 .Bit1 = Pidgeot
 .Bit2 = Rattata
@@ -423,7 +570,7 @@ Total Notes: 14
 .Bit5 = Fearow
 .Bit6 = Ekans
 .Bit7 = Arbok
-+0x802b | [8-bit Bitflags] Pokedex Caught 025-032
++0x802b | [8-bit] Pokedex Caught 025-032
 .Bit0 = Pikachu
 .Bit1 = Raichu
 .Bit2 = Sandshrew
@@ -432,7 +579,7 @@ Total Notes: 14
 .Bit5 = Nidorina
 .Bit6 = Nidoqueen
 .Bit7 = Nidoran-M
-+0x802c | [8-bit Bitflags] Pokedex Caught 033-040
++0x802c | [8-bit] Pokedex Caught 033-040
 .Bit0 = Nidorino
 .Bit1 = Nidoking
 .Bit2 = Clefairy
@@ -441,7 +588,7 @@ Total Notes: 14
 .Bit5 = Ninetales
 .Bit6 = Jigglypuff
 .Bit7 = Wigglytuff
-+0x802d | [8-bit Bitflags] Pokedex Caught 041-048
++0x802d | [8-bit] Pokedex Caught 041-048
 .Bit0 = Zubat
 .Bit1 = Golbat
 .Bit2 = Oddish
@@ -450,7 +597,7 @@ Total Notes: 14
 .Bit5 = Paras
 .Bit6 = Parasect
 .Bit7 = Venonat
-+0x802e | [8-bit Bitflags] Pokedex Caught 049-056
++0x802e | [8-bit] Pokedex Caught 049-056
 .Bit0 = Venomoth
 .Bit1 = Diglett
 .Bit2 = Dugtrio
@@ -459,7 +606,7 @@ Total Notes: 14
 .Bit5 = Psyduck
 .Bit6 = Golduck
 .Bit7 = Mankey
-+0x802f | [8-bit Bitflags] Pokedex Caught 057-064
++0x802f | [8-bit] Pokedex Caught 057-064
 .Bit0 = Primeape
 .Bit1 = Growlithe
 .Bit2 = Arcanine
@@ -468,7 +615,7 @@ Total Notes: 14
 .Bit5 = Poliwrath
 .Bit6 = Abra
 .Bit7 = Kadabra
-+0x8030 | [8-bit Bitflags] Pokedex Caught 065-072
++0x8030 | [8-bit] Pokedex Caught 065-072
 .Bit0 = Alakazam
 .Bit1 = Machop
 .Bit2 = Machoke
@@ -477,7 +624,7 @@ Total Notes: 14
 .Bit5 = Weepinbell
 .Bit6 = Victreebel
 .Bit7 = Tentacool
-+0x8031 | [8-bit Bitflags] Pokedex Caught 073-080
++0x8031 | [8-bit] Pokedex Caught 073-080
 .Bit0 = Tentacruel
 .Bit1 = Geodude
 .Bit2 = Graveler
@@ -486,7 +633,7 @@ Total Notes: 14
 .Bit5 = Rapidash
 .Bit6 = Slowpoke
 .Bit7 = Slowbro
-+0x8032 | [8-bit Bitflags] Pokedex Caught 081-088
++0x8032 | [8-bit] Pokedex Caught 081-088
 .Bit0 = Magnemite
 .Bit1 = Magneton
 .Bit2 = Farfetch'd
@@ -495,7 +642,7 @@ Total Notes: 14
 .Bit5 = Seel
 .Bit6 = Dewgong
 .Bit7 = Grimer
-+0x8033 | [8-bit Bitflags] Pokedex Caught 089-096
++0x8033 | [8-bit] Pokedex Caught 089-096
 .Bit0 = Muk
 .Bit1 = Shellder
 .Bit2 = Cloyster
@@ -504,7 +651,7 @@ Total Notes: 14
 .Bit5 = Gengar
 .Bit6 = Onix
 .Bit7 = Drowzee
-+0x8034 | [8-bit Bitflags] Pokedex Caught 097-104
++0x8034 | [8-bit] Pokedex Caught 097-104
 .Bit0 = Hypno
 .Bit1 = Krabby
 .Bit2 = Kingler
@@ -513,7 +660,7 @@ Total Notes: 14
 .Bit5 = Exeggcute
 .Bit6 = Exeggutor
 .Bit7 = Cubone
-+0x8035 | [8-bit Bitflags] Pokedex Caught 105-112
++0x8035 | [8-bit] Pokedex Caught 105-112
 .Bit0 = Marowak
 .Bit1 = Hitmonlee
 .Bit2 = Hitmonchan
@@ -522,7 +669,7 @@ Total Notes: 14
 .Bit5 = Weezing
 .Bit6 = Rhyhorn
 .Bit7 = Rhydon
-+0x8036 | [8-bit Bitflags] Pokedex Caught 113-120
++0x8036 | [8-bit] Pokedex Caught 113-120
 .Bit0 = Chansey
 .Bit1 = Tangela
 .Bit2 = Kangaskhan
@@ -531,7 +678,7 @@ Total Notes: 14
 .Bit5 = Goldeen
 .Bit6 = Seaking
 .Bit7 = Staryu
-+0x8037 | [8-bit Bitflags] Pokedex Caught 121-128
++0x8037 | [8-bit] Pokedex Caught 121-128
 .Bit0 = Starmie
 .Bit1 = Mr. Mime
 .Bit2 = Scyther
@@ -540,7 +687,7 @@ Total Notes: 14
 .Bit5 = Magmar
 .Bit6 = Pinsir
 .Bit7 = Tauros
-+0x8038 | [8-bit Bitflags] Pokedex Caught 129-136
++0x8038 | [8-bit] Pokedex Caught 129-136
 .Bit0 = Magikarp
 .Bit1 = Gyarados
 .Bit2 = Lapras
@@ -549,7 +696,7 @@ Total Notes: 14
 .Bit5 = Vaporeon
 .Bit6 = Jolteon
 .Bit7 = Flareon
-+0x8039 | [8-bit Bitflags] Pokedex Caught 137-144
++0x8039 | [8-bit] Pokedex Caught 137-144
 .Bit0 = Porygon
 .Bit1 = Omanyte
 .Bit2 = Omastar
@@ -558,7 +705,7 @@ Total Notes: 14
 .Bit5 = Aerodactyl
 .Bit6 = Snorlax
 .Bit7 = Articuno
-+0x803a | [8-bit Bitflags] Pokedex Caught 145-152
++0x803a | [8-bit] Pokedex Caught 145-152
 .Bit0 = Zapdos
 .Bit1 = Moltres
 .Bit2 = Dratini
@@ -567,7 +714,7 @@ Total Notes: 14
 .Bit5 = Mewtwo
 .Bit6 = Mew
 .Bit7 = Chikorita
-+0x803b | [8-bit Bitflags] Pokedex Caught 153-160
++0x803b | [8-bit] Pokedex Caught 153-160
 .Bit0 = Bayleef
 .Bit1 = Meganium
 .Bit2 = Cyndaquil
@@ -576,7 +723,7 @@ Total Notes: 14
 .Bit5 = Totodile
 .Bit6 = Croconaw
 .Bit7 = Feraligatr
-+0x803c | [8-bit Bitflags] Pokedex Caught 161-168
++0x803c | [8-bit] Pokedex Caught 161-168
 .Bit0 = Sentret
 .Bit1 = Furret
 .Bit2 = Hoothoot
@@ -585,7 +732,7 @@ Total Notes: 14
 .Bit5 = Ledian
 .Bit6 = Spinarak
 .Bit7 = Ariados
-+0x803d | [8-bit Bitflags] Pokedex Caught 169-176
++0x803d | [8-bit] Pokedex Caught 169-176
 .Bit0 = Crobat
 .Bit1 = Chinchou
 .Bit2 = Lanturn
@@ -594,7 +741,7 @@ Total Notes: 14
 .Bit5 = Igglybuff
 .Bit6 = Togepi
 .Bit7 = Togetic
-+0x803e | [8-bit Bitflags] Pokedex Caught 177-184
++0x803e | [8-bit] Pokedex Caught 177-184
 .Bit0 = Natu
 .Bit1 = Xatu
 .Bit2 = Mareep
@@ -603,7 +750,7 @@ Total Notes: 14
 .Bit5 = Bellossom
 .Bit6 = Marill
 .Bit7 = Azumarill
-+0x803f | [8-bit Bitflags] Pokedex Caught 185-192
++0x803f | [8-bit] Pokedex Caught 185-192
 .Bit0 = Sudowoodo
 .Bit1 = Politoed
 .Bit2 = Hoppip
@@ -612,7 +759,7 @@ Total Notes: 14
 .Bit5 = Aipom
 .Bit6 = Sunkern
 .Bit7 = Sunflora
-+0x8040 | [8-bit Bitflags] Pokedex Caught 193-200
++0x8040 | [8-bit] Pokedex Caught 193-200
 .Bit0 = Yanma
 .Bit1 = Wooper
 .Bit2 = Quagsire
@@ -621,7 +768,7 @@ Total Notes: 14
 .Bit5 = Murkrow
 .Bit6 = Slowking
 .Bit7 = Misdreavus
-+0x8041 | [8-bit Bitflags] Pokedex Caught 201-208
++0x8041 | [8-bit] Pokedex Caught 201-208
 .Bit0 = Unown
 .Bit1 = Wobbuffet
 .Bit2 = Girafarig
@@ -630,7 +777,7 @@ Total Notes: 14
 .Bit5 = Dunsparce
 .Bit6 = Gligar
 .Bit7 = Steelix
-+0x8042 | [8-bit Bitflags] Pokedex Caught 209-216
++0x8042 | [8-bit] Pokedex Caught 209-216
 .Bit0 = Snubbull
 .Bit1 = Granbull
 .Bit2 = Qwilfish
@@ -639,7 +786,7 @@ Total Notes: 14
 .Bit5 = Heracross
 .Bit6 = Sneasel
 .Bit7 = Teddiursa
-+0x8043 | [8-bit Bitflags] Pokedex Caught 217-224
++0x8043 | [8-bit] Pokedex Caught 217-224
 .Bit0 = Ursaring
 .Bit1 = Slugma
 .Bit2 = Magcargo
@@ -648,7 +795,7 @@ Total Notes: 14
 .Bit5 = Corsola
 .Bit6 = Remoraid
 .Bit7 = Octillery
-+0x8044 | [8-bit Bitflags] Pokedex Caught 225-232
++0x8044 | [8-bit] Pokedex Caught 225-232
 .Bit0 = Delibird
 .Bit1 = Mantine
 .Bit2 = Skarmory
@@ -657,7 +804,7 @@ Total Notes: 14
 .Bit5 = Kingdra
 .Bit6 = Phanpy
 .Bit7 = Donphan
-+0x8045 | [8-bit Bitflags] Pokedex Caught 233-240
++0x8045 | [8-bit] Pokedex Caught 233-240
 .Bit0 = Porygon2
 .Bit1 = Stantler
 .Bit2 = Smeargle
@@ -666,7 +813,7 @@ Total Notes: 14
 .Bit5 = Smoochum
 .Bit6 = Elekid
 .Bit7 = Magby
-+0x8046 | [8-bit Bitflags] Pokedex Caught 241-248
++0x8046 | [8-bit] Pokedex Caught 241-248
 .Bit0 = Miltank
 .Bit1 = Blissey
 .Bit2 = Raikou
@@ -675,7 +822,7 @@ Total Notes: 14
 .Bit5 = Larvitar
 .Bit6 = Pupitar
 .Bit7 = Tyranitar
-+0x8047 | [8-bit Bitflags] Pokedex Caught 249-256
++0x8047 | [8-bit] Pokedex Caught 249-256
 .Bit0 = Lugia
 .Bit1 = Ho-Oh
 .Bit2 = Celebi
@@ -684,7 +831,7 @@ Total Notes: 14
 .Bit5 = Sceptile
 .Bit6 = Torchic
 .Bit7 = Combusken
-+0x8048 | [8-bit Bitflags] Pokedex Caught 257-264
++0x8048 | [8-bit] Pokedex Caught 257-264
 .Bit0 = Blaziken
 .Bit1 = Mudkip
 .Bit2 = Marshtomp
@@ -693,7 +840,7 @@ Total Notes: 14
 .Bit5 = Mightyena
 .Bit6 = Zigzagoon
 .Bit7 = Linoone
-+0x8049 | [8-bit Bitflags] Pokedex Caught 265-272
++0x8049 | [8-bit] Pokedex Caught 265-272
 .Bit0 = Wurmple
 .Bit1 = Silcoon
 .Bit2 = Beautifly
@@ -702,7 +849,7 @@ Total Notes: 14
 .Bit5 = Lotad
 .Bit6 = Lombre
 .Bit7 = Ludicolo
-+0x804a | [8-bit Bitflags] Pokedex Caught 273-280
++0x804a | [8-bit] Pokedex Caught 273-280
 .Bit0 = Seedot
 .Bit1 = Nuzleaf
 .Bit2 = Shiftry
@@ -711,7 +858,7 @@ Total Notes: 14
 .Bit5 = Wingull
 .Bit6 = Pelipper
 .Bit7 = Ralts
-+0x804b | [8-bit Bitflags] Pokedex Caught 281-288
++0x804b | [8-bit] Pokedex Caught 281-288
 .Bit0 = Kirlia
 .Bit1 = Gardevoir
 .Bit2 = Surskit
@@ -720,7 +867,7 @@ Total Notes: 14
 .Bit5 = Breloom
 .Bit6 = Slakoth
 .Bit7 = Vigoroth
-+0x804c | [8-bit Bitflags] Pokedex Caught 289-296
++0x804c | [8-bit] Pokedex Caught 289-296
 .Bit0 = Slaking
 .Bit1 = Nincada
 .Bit2 = Ninjask
@@ -729,7 +876,7 @@ Total Notes: 14
 .Bit5 = Loudred
 .Bit6 = Exploud
 .Bit7 = Makuhita
-+0x804d | [8-bit Bitflags] Pokedex Caught 297-304
++0x804d | [8-bit] Pokedex Caught 297-304
 .Bit0 = Hariyama
 .Bit1 = Azurill
 .Bit2 = Nosepass
@@ -738,7 +885,7 @@ Total Notes: 14
 .Bit5 = Sableye
 .Bit6 = Mawile
 .Bit7 = Aron
-+0x804e | [8-bit Bitflags] Pokedex Caught 305-312
++0x804e | [8-bit] Pokedex Caught 305-312
 .Bit0 = Lairon
 .Bit1 = Aggron
 .Bit2 = Meditite
@@ -747,7 +894,7 @@ Total Notes: 14
 .Bit5 = Manectric
 .Bit6 = Plusle
 .Bit7 = Minun
-+0x804f | [8-bit Bitflags] Pokedex Caught 313-320
++0x804f | [8-bit] Pokedex Caught 313-320
 .Bit0 = Volbeat
 .Bit1 = Illumise
 .Bit2 = Roselia
@@ -756,7 +903,7 @@ Total Notes: 14
 .Bit5 = Carvanha
 .Bit6 = Sharpedo
 .Bit7 = Wailmer
-+0x8050 | [8-bit Bitflags] Pokedex Caught 321-328
++0x8050 | [8-bit] Pokedex Caught 321-328
 .Bit0 = Wailord
 .Bit1 = Numel
 .Bit2 = Camerupt
@@ -765,7 +912,7 @@ Total Notes: 14
 .Bit5 = Grumpig
 .Bit6 = Spinda
 .Bit7 = Trapinch
-+0x8051 | [8-bit Bitflags] Pokedex Caught 329-336
++0x8051 | [8-bit] Pokedex Caught 329-336
 .Bit0 = Vibrava
 .Bit1 = Flygon
 .Bit2 = Cacnea
@@ -774,7 +921,7 @@ Total Notes: 14
 .Bit5 = Altaria
 .Bit6 = Zangoose
 .Bit7 = Seviper
-+0x8052 | [8-bit Bitflags] Pokedex Caught 337-344
++0x8052 | [8-bit] Pokedex Caught 337-344
 .Bit0 = Lunatone
 .Bit1 = Solrock
 .Bit2 = Barboach
@@ -783,7 +930,7 @@ Total Notes: 14
 .Bit5 = Crawdaunt
 .Bit6 = Baltoy
 .Bit7 = Claydol
-+0x8053 | [8-bit Bitflags] Pokedex Caught 345-352
++0x8053 | [8-bit] Pokedex Caught 345-352
 .Bit0 = Lileep
 .Bit1 = Cradily
 .Bit2 = Anorith
@@ -792,7 +939,7 @@ Total Notes: 14
 .Bit5 = Milotic
 .Bit6 = Castform
 .Bit7 = Kecleon
-+0x8054 | [8-bit Bitflags] Pokedex Caught 353-360
++0x8054 | [8-bit] Pokedex Caught 353-360
 .Bit0 = Shuppet
 .Bit1 = Banette
 .Bit2 = Duskull
@@ -801,7 +948,7 @@ Total Notes: 14
 .Bit5 = Chimecho
 .Bit6 = Absol
 .Bit7 = Wynaut
-+0x8055 | [8-bit Bitflags] Pokedex Caught 361-368
++0x8055 | [8-bit] Pokedex Caught 361-368
 .Bit0 = Snorunt
 .Bit1 = Glalie
 .Bit2 = Spheal
@@ -810,7 +957,7 @@ Total Notes: 14
 .Bit5 = Clamperl
 .Bit6 = Huntail
 .Bit7 = Gorebyss
-+0x8056 | [8-bit Bitflags] Pokedex Caught 369-376
++0x8056 | [8-bit] Pokedex Caught 369-376
 .Bit0 = Relicanth
 .Bit1 = Luvdisc
 .Bit2 = Bagon
@@ -819,7 +966,7 @@ Total Notes: 14
 .Bit5 = Beldum
 .Bit6 = Metang
 .Bit7 = Metagross
-+0x8057 | [8-bit Bitflags] Pokedex Caught 377-384
++0x8057 | [8-bit] Pokedex Caught 377-384
 .Bit0 = Regirock
 .Bit1 = Regice
 .Bit2 = Registeel
@@ -828,11 +975,11 @@ Total Notes: 14
 .Bit5 = Kyogre
 .Bit6 = Groudon
 .Bit7 = Rayquaza
-+0x8058 | [8-bit Bitflags] Pokedex Caught 385-386
++0x8058 | [8-bit] Pokedex Caught 385-386
 .Bit0 = Jirachi
 .Bit1 = Deoxys
 
-+0x805c | [8-bit Bitflags] Pokedex Seen 001-008
++0x805c | [8-bit] Pokedex Seen 001-008
 .Bit0 = Bulbasaur
 .Bit1 = Ivysaur
 .Bit2 = Venusaur
@@ -841,7 +988,7 @@ Total Notes: 14
 .Bit5 = Charizard
 .Bit6 = Squirtle
 .Bit7 = Wartortle
-+0x805d | [8-bit Bitflags] Pokedex Seen 009-016
++0x805d | [8-bit] Pokedex Seen 009-016
 .Bit0 = Blastoise
 .Bit1 = Caterpie
 .Bit2 = Metapod
@@ -850,7 +997,7 @@ Total Notes: 14
 .Bit5 = Kakuna
 .Bit6 = Beedrill
 .Bit7 = Pidgey
-+0x805e | [8-bit Bitflags] Pokedex Seen 017-024
++0x805e | [8-bit] Pokedex Seen 017-024
 .Bit0 = Pidgeotto
 .Bit1 = Pidgeot
 .Bit2 = Rattata
@@ -859,7 +1006,7 @@ Total Notes: 14
 .Bit5 = Fearow
 .Bit6 = Ekans
 .Bit7 = Arbok
-+0x805f | [8-bit Bitflags] Pokedex Seen 025-032
++0x805f | [8-bit] Pokedex Seen 025-032
 .Bit0 = Pikachu
 .Bit1 = Raichu
 .Bit2 = Sandshrew
@@ -868,7 +1015,7 @@ Total Notes: 14
 .Bit5 = Nidorina
 .Bit6 = Nidoqueen
 .Bit7 = Nidoran-M
-+0x8060 | [8-bit Bitflags] Pokedex Seen 033-040
++0x8060 | [8-bit] Pokedex Seen 033-040
 .Bit0 = Nidorino
 .Bit1 = Nidoking
 .Bit2 = Clefairy
@@ -877,7 +1024,7 @@ Total Notes: 14
 .Bit5 = Ninetales
 .Bit6 = Jigglypuff
 .Bit7 = Wigglytuff
-+0x8061 | [8-bit Bitflags] Pokedex Seen 041-048
++0x8061 | [8-bit] Pokedex Seen 041-048
 .Bit0 = Zubat
 .Bit1 = Golbat
 .Bit2 = Oddish
@@ -886,7 +1033,7 @@ Total Notes: 14
 .Bit5 = Paras
 .Bit6 = Parasect
 .Bit7 = Venonat
-+0x8062 | [8-bit Bitflags] Pokedex Seen 049-056
++0x8062 | [8-bit] Pokedex Seen 049-056
 .Bit0 = Venomoth
 .Bit1 = Diglett
 .Bit2 = Dugtrio
@@ -895,7 +1042,7 @@ Total Notes: 14
 .Bit5 = Psyduck
 .Bit6 = Golduck
 .Bit7 = Mankey
-+0x8063 | [8-bit Bitflags] Pokedex Seen 057-064
++0x8063 | [8-bit] Pokedex Seen 057-064
 .Bit0 = Primeape
 .Bit1 = Growlithe
 .Bit2 = Arcanine
@@ -904,7 +1051,7 @@ Total Notes: 14
 .Bit5 = Poliwrath
 .Bit6 = Abra
 .Bit7 = Kadabra
-+0x8064 | [8-bit Bitflags] Pokedex Seen 065-072
++0x8064 | [8-bit] Pokedex Seen 065-072
 .Bit0 = Alakazam
 .Bit1 = Machop
 .Bit2 = Machoke
@@ -913,7 +1060,7 @@ Total Notes: 14
 .Bit5 = Weepinbell
 .Bit6 = Victreebel
 .Bit7 = Tentacool
-+0x8065 | [8-bit Bitflags] Pokedex Seen 073-080
++0x8065 | [8-bit] Pokedex Seen 073-080
 .Bit0 = Tentacruel
 .Bit1 = Geodude
 .Bit2 = Graveler
@@ -922,7 +1069,7 @@ Total Notes: 14
 .Bit5 = Rapidash
 .Bit6 = Slowpoke
 .Bit7 = Slowbro
-+0x8066 | [8-bit Bitflags] Pokedex Seen 081-088
++0x8066 | [8-bit] Pokedex Seen 081-088
 .Bit0 = Magnemite
 .Bit1 = Magneton
 .Bit2 = Farfetch'd
@@ -931,7 +1078,7 @@ Total Notes: 14
 .Bit5 = Seel
 .Bit6 = Dewgong
 .Bit7 = Grimer
-+0x8067 | [8-bit Bitflags] Pokedex Seen 089-096
++0x8067 | [8-bit] Pokedex Seen 089-096
 .Bit0 = Muk
 .Bit1 = Shellder
 .Bit2 = Cloyster
@@ -940,7 +1087,7 @@ Total Notes: 14
 .Bit5 = Gengar
 .Bit6 = Onix
 .Bit7 = Drowzee
-+0x8068 | [8-bit Bitflags] Pokedex Seen 097-104
++0x8068 | [8-bit] Pokedex Seen 097-104
 .Bit0 = Hypno
 .Bit1 = Krabby
 .Bit2 = Kingler
@@ -949,7 +1096,7 @@ Total Notes: 14
 .Bit5 = Exeggcute
 .Bit6 = Exeggutor
 .Bit7 = Cubone
-+0x8069 | [8-bit Bitflags] Pokedex Seen 105-112
++0x8069 | [8-bit] Pokedex Seen 105-112
 .Bit0 = Marowak
 .Bit1 = Hitmonlee
 .Bit2 = Hitmonchan
@@ -958,7 +1105,7 @@ Total Notes: 14
 .Bit5 = Weezing
 .Bit6 = Rhyhorn
 .Bit7 = Rhydon
-+0x806a | [8-bit Bitflags] Pokedex Seen 113-120
++0x806a | [8-bit] Pokedex Seen 113-120
 .Bit0 = Chansey
 .Bit1 = Tangela
 .Bit2 = Kangaskhan
@@ -967,7 +1114,7 @@ Total Notes: 14
 .Bit5 = Goldeen
 .Bit6 = Seaking
 .Bit7 = Staryu
-+0x806b | [8-bit Bitflags] Pokedex Seen 121-128
++0x806b | [8-bit] Pokedex Seen 121-128
 .Bit0 = Starmie
 .Bit1 = Mr. Mime
 .Bit2 = Scyther
@@ -976,7 +1123,7 @@ Total Notes: 14
 .Bit5 = Magmar
 .Bit6 = Pinsir
 .Bit7 = Tauros
-+0x806c | [8-bit Bitflags] Pokedex Seen 129-136
++0x806c | [8-bit] Pokedex Seen 129-136
 .Bit0 = Magikarp
 .Bit1 = Gyarados
 .Bit2 = Lapras
@@ -985,7 +1132,7 @@ Total Notes: 14
 .Bit5 = Vaporeon
 .Bit6 = Jolteon
 .Bit7 = Flareon
-+0x806d | [8-bit Bitflags] Pokedex Seen 137-144
++0x806d | [8-bit] Pokedex Seen 137-144
 .Bit0 = Porygon
 .Bit1 = Omanyte
 .Bit2 = Omastar
@@ -994,7 +1141,7 @@ Total Notes: 14
 .Bit5 = Aerodactyl
 .Bit6 = Snorlax
 .Bit7 = Articuno
-+0x806e | [8-bit Bitflags] Pokedex Seen 145-152
++0x806e | [8-bit] Pokedex Seen 145-152
 .Bit0 = Zapdos
 .Bit1 = Moltres
 .Bit2 = Dratini
@@ -1003,7 +1150,7 @@ Total Notes: 14
 .Bit5 = Mewtwo
 .Bit6 = Mew
 .Bit7 = Chikorita
-+0x806f | [8-bit Bitflags] Pokedex Seen 153-160
++0x806f | [8-bit] Pokedex Seen 153-160
 .Bit0 = Bayleef
 .Bit1 = Meganium
 .Bit2 = Cyndaquil
@@ -1012,7 +1159,7 @@ Total Notes: 14
 .Bit5 = Totodile
 .Bit6 = Croconaw
 .Bit7 = Feraligatr
-+0x8070 | [8-bit Bitflags] Pokedex Seen 161-168
++0x8070 | [8-bit] Pokedex Seen 161-168
 .Bit0 = Sentret
 .Bit1 = Furret
 .Bit2 = Hoothoot
@@ -1021,7 +1168,7 @@ Total Notes: 14
 .Bit5 = Ledian
 .Bit6 = Spinarak
 .Bit7 = Ariados
-+0x8071 | [8-bit Bitflags] Pokedex Seen 169-176
++0x8071 | [8-bit] Pokedex Seen 169-176
 .Bit0 = Crobat
 .Bit1 = Chinchou
 .Bit2 = Lanturn
@@ -1030,7 +1177,7 @@ Total Notes: 14
 .Bit5 = Igglybuff
 .Bit6 = Togepi
 .Bit7 = Togetic
-+0x8072 | [8-bit Bitflags] Pokedex Seen 177-184
++0x8072 | [8-bit] Pokedex Seen 177-184
 .Bit0 = Natu
 .Bit1 = Xatu
 .Bit2 = Mareep
@@ -1039,7 +1186,7 @@ Total Notes: 14
 .Bit5 = Bellossom
 .Bit6 = Marill
 .Bit7 = Azumarill
-+0x8073 | [8-bit Bitflags] Pokedex Seen 185-192
++0x8073 | [8-bit] Pokedex Seen 185-192
 .Bit0 = Sudowoodo
 .Bit1 = Politoed
 .Bit2 = Hoppip
@@ -1048,7 +1195,7 @@ Total Notes: 14
 .Bit5 = Aipom
 .Bit6 = Sunkern
 .Bit7 = Sunflora
-+0x8074 | [8-bit Bitflags] Pokedex Seen 193-200
++0x8074 | [8-bit] Pokedex Seen 193-200
 .Bit0 = Yanma
 .Bit1 = Wooper
 .Bit2 = Quagsire
@@ -1057,7 +1204,7 @@ Total Notes: 14
 .Bit5 = Murkrow
 .Bit6 = Slowking
 .Bit7 = Misdreavus
-+0x8075 | [8-bit Bitflags] Pokedex Seen 201-208
++0x8075 | [8-bit] Pokedex Seen 201-208
 .Bit0 = Unown
 .Bit1 = Wobbuffet
 .Bit2 = Girafarig
@@ -1066,7 +1213,7 @@ Total Notes: 14
 .Bit5 = Dunsparce
 .Bit6 = Gligar
 .Bit7 = Steelix
-+0x8076 | [8-bit Bitflags] Pokedex Seen 209-216
++0x8076 | [8-bit] Pokedex Seen 209-216
 .Bit0 = Snubbull
 .Bit1 = Granbull
 .Bit2 = Qwilfish
@@ -1075,7 +1222,7 @@ Total Notes: 14
 .Bit5 = Heracross
 .Bit6 = Sneasel
 .Bit7 = Teddiursa
-+0x8077 | [8-bit Bitflags] Pokedex Seen 217-224
++0x8077 | [8-bit] Pokedex Seen 217-224
 .Bit0 = Ursaring
 .Bit1 = Slugma
 .Bit2 = Magcargo
@@ -1084,7 +1231,7 @@ Total Notes: 14
 .Bit5 = Corsola
 .Bit6 = Remoraid
 .Bit7 = Octillery
-+0x8078 | [8-bit Bitflags] Pokedex Seen 225-232
++0x8078 | [8-bit] Pokedex Seen 225-232
 .Bit0 = Delibird
 .Bit1 = Mantine
 .Bit2 = Skarmory
@@ -1093,7 +1240,7 @@ Total Notes: 14
 .Bit5 = Kingdra
 .Bit6 = Phanpy
 .Bit7 = Donphan
-+0x8079 | [8-bit Bitflags] Pokedex Seen 233-240
++0x8079 | [8-bit] Pokedex Seen 233-240
 .Bit0 = Porygon2
 .Bit1 = Stantler
 .Bit2 = Smeargle
@@ -1102,7 +1249,7 @@ Total Notes: 14
 .Bit5 = Smoochum
 .Bit6 = Elekid
 .Bit7 = Magby
-+0x807a | [8-bit Bitflags] Pokedex Seen 241-248
++0x807a | [8-bit] Pokedex Seen 241-248
 .Bit0 = Miltank
 .Bit1 = Blissey
 .Bit2 = Raikou
@@ -1111,7 +1258,7 @@ Total Notes: 14
 .Bit5 = Larvitar
 .Bit6 = Pupitar
 .Bit7 = Tyranitar
-+0x807b | [8-bit Bitflags] Pokedex Seen 249-256
++0x807b | [8-bit] Pokedex Seen 249-256
 .Bit0 = Lugia
 .Bit1 = Ho-Oh
 .Bit2 = Celebi
@@ -1120,7 +1267,7 @@ Total Notes: 14
 .Bit5 = Sceptile
 .Bit6 = Torchic
 .Bit7 = Combusken
-+0x807c | [8-bit Bitflags] Pokedex Seen 257-264
++0x807c | [8-bit] Pokedex Seen 257-264
 .Bit0 = Blaziken
 .Bit1 = Mudkip
 .Bit2 = Marshtomp
@@ -1129,7 +1276,7 @@ Total Notes: 14
 .Bit5 = Mightyena
 .Bit6 = Zigzagoon
 .Bit7 = Linoone
-+0x807d | [8-bit Bitflags] Pokedex Seen 265-272
++0x807d | [8-bit] Pokedex Seen 265-272
 .Bit0 = Wurmple
 .Bit1 = Silcoon
 .Bit2 = Beautifly
@@ -1138,7 +1285,7 @@ Total Notes: 14
 .Bit5 = Lotad
 .Bit6 = Lombre
 .Bit7 = Ludicolo
-+0x807e | [8-bit Bitflags] Pokedex Seen 273-280
++0x807e | [8-bit] Pokedex Seen 273-280
 .Bit0 = Seedot
 .Bit1 = Nuzleaf
 .Bit2 = Shiftry
@@ -1147,7 +1294,7 @@ Total Notes: 14
 .Bit5 = Wingull
 .Bit6 = Pelipper
 .Bit7 = Ralts
-+0x807f | [8-bit Bitflags] Pokedex Seen 281-288
++0x807f | [8-bit] Pokedex Seen 281-288
 .Bit0 = Kirlia
 .Bit1 = Gardevoir
 .Bit2 = Surskit
@@ -1156,7 +1303,7 @@ Total Notes: 14
 .Bit5 = Breloom
 .Bit6 = Slakoth
 .Bit7 = Vigoroth
-+0x8080 | [8-bit Bitflags] Pokedex Seen 289-296
++0x8080 | [8-bit] Pokedex Seen 289-296
 .Bit0 = Slaking
 .Bit1 = Nincada
 .Bit2 = Ninjask
@@ -1165,7 +1312,7 @@ Total Notes: 14
 .Bit5 = Loudred
 .Bit6 = Exploud
 .Bit7 = Makuhita
-+0x8081 | [8-bit Bitflags] Pokedex Seen 297-304
++0x8081 | [8-bit] Pokedex Seen 297-304
 .Bit0 = Hariyama
 .Bit1 = Azurill
 .Bit2 = Nosepass
@@ -1174,7 +1321,7 @@ Total Notes: 14
 .Bit5 = Sableye
 .Bit6 = Mawile
 .Bit7 = Aron
-+0x8082 | [8-bit Bitflags] Pokedex Seen 305-312
++0x8082 | [8-bit] Pokedex Seen 305-312
 .Bit0 = Lairon
 .Bit1 = Aggron
 .Bit2 = Meditite
@@ -1183,7 +1330,7 @@ Total Notes: 14
 .Bit5 = Manectric
 .Bit6 = Plusle
 .Bit7 = Minun
-+0x8083 | [8-bit Bitflags] Pokedex Seen 313-320
++0x8083 | [8-bit] Pokedex Seen 313-320
 .Bit0 = Volbeat
 .Bit1 = Illumise
 .Bit2 = Roselia
@@ -1192,7 +1339,7 @@ Total Notes: 14
 .Bit5 = Carvanha
 .Bit6 = Sharpedo
 .Bit7 = Wailmer
-+0x8084 | [8-bit Bitflags] Pokedex Seen 321-328
++0x8084 | [8-bit] Pokedex Seen 321-328
 .Bit0 = Wailord
 .Bit1 = Numel
 .Bit2 = Camerupt
@@ -1201,7 +1348,7 @@ Total Notes: 14
 .Bit5 = Grumpig
 .Bit6 = Spinda
 .Bit7 = Trapinch
-+0x8085 | [8-bit Bitflags] Pokedex Seen 329-336
++0x8085 | [8-bit] Pokedex Seen 329-336
 .Bit0 = Vibrava
 .Bit1 = Flygon
 .Bit2 = Cacnea
@@ -1210,7 +1357,7 @@ Total Notes: 14
 .Bit5 = Altaria
 .Bit6 = Zangoose
 .Bit7 = Seviper
-+0x8086 | [8-bit Bitflags] Pokedex Seen 337-344
++0x8086 | [8-bit] Pokedex Seen 337-344
 .Bit0 = Lunatone
 .Bit1 = Solrock
 .Bit2 = Barboach
@@ -1219,7 +1366,7 @@ Total Notes: 14
 .Bit5 = Crawdaunt
 .Bit6 = Baltoy
 .Bit7 = Claydol
-+0x8087 | [8-bit Bitflags] Pokedex Seen 345-352
++0x8087 | [8-bit] Pokedex Seen 345-352
 .Bit0 = Lileep
 .Bit1 = Cradily
 .Bit2 = Anorith
@@ -1228,7 +1375,7 @@ Total Notes: 14
 .Bit5 = Milotic
 .Bit6 = Castform
 .Bit7 = Kecleon
-+0x8088 | [8-bit Bitflags] Pokedex Seen 353-360
++0x8088 | [8-bit] Pokedex Seen 353-360
 .Bit0 = Shuppet
 .Bit1 = Banette
 .Bit2 = Duskull
@@ -1237,7 +1384,7 @@ Total Notes: 14
 .Bit5 = Chimecho
 .Bit6 = Absol
 .Bit7 = Wynaut
-+0x8089 | [8-bit Bitflags] Pokedex Seen 361-368
++0x8089 | [8-bit] Pokedex Seen 361-368
 .Bit0 = Snorunt
 .Bit1 = Glalie
 .Bit2 = Spheal
@@ -1246,7 +1393,7 @@ Total Notes: 14
 .Bit5 = Clamperl
 .Bit6 = Huntail
 .Bit7 = Gorebyss
-+0x808a | [8-bit Bitflags] Pokedex Seen 369-376
++0x808a | [8-bit] Pokedex Seen 369-376
 .Bit0 = Relicanth
 .Bit1 = Luvdisc
 .Bit2 = Bagon
@@ -1255,7 +1402,7 @@ Total Notes: 14
 .Bit5 = Beldum
 .Bit6 = Metang
 .Bit7 = Metagross
-+0x808b | [8-bit Bitflags] Pokedex Seen 377-384
++0x808b | [8-bit] Pokedex Seen 377-384
 .Bit0 = Regirock
 .Bit1 = Regice
 .Bit2 = Registeel
@@ -1264,7 +1411,7 @@ Total Notes: 14
 .Bit5 = Kyogre
 .Bit6 = Groudon
 .Bit7 = Rayquaza
-+0x808c | [8-bit Bitflags] Pokedex Seen 385-386
++0x808c | [8-bit] Pokedex Seen 385-386
 .Bit0 = Jirachi
 .Bit1 = Deoxys
 
@@ -1290,21 +1437,1486 @@ Total Notes: 14
 .0x03 = Mixed. Wow!
 
 0x005010: [24-bit Pointer] gPokemonStoragePtr
-+0x3282 | [8-bit] Time
-+0x327C | [8-bit] Gender (allows Brendan/May)
-+0x327E | [16bit] Trainer ID
-+0x5130 | [8-bit] Events
-+0x51FC | [8-bit Bitflags]
-.Bit0 = Badge 1
-.Bit1 = Badge 2
-.Bit2 = Badge 3
-.Bit3 = Badge 4
-.Bit4 = Badge 5
-.Bit5 = Badge 6
-.Bit6 = Badge 7
-.Bit7 = Badge 8
-+0x5200 | [BitFlag] Elite 4 Rematch Teams on
++0x3282: [8-bit] Time
++0x327C: [8-bit] Gender (allows Brendan/May)
++0x327E: [16-bit] Trainer ID
++0x5130: [8-bit] Events
++0x51FC: [8-bit] Badge Flags
+.Bit0 = Boulder Badge
+.Bit1 = Cascade Badge
+.Bit2 = Thunder Badge
+.Bit3 = Rainbow Badge
+.Bit4 = Soul Badge
+.Bit5 = Marsh Badge
+.Bit6 = Volcano Badge
+.Bit7 = Earth Badge
++0x5200: [8-bit] Elite 4 Rematch
 .Bit4 = Rematch On
+
+0x02b3f2: [8-bit] Active Battle Pokémon - Level
+
+0x02bbe4: [16-bit] Active Battle Pokémon - Species ID
+
+0x02bbf0: [16-bit] Active Battle Pokémon - Move 1 ID
+0x0000 = None
+0x0001 = Pound
+0x0002 = Karate Chop
+0x0003 = Double Slap
+0x0004 = Comet Punch
+0x0005 = Mega Punch
+0x0006 = Pay Day
+0x0007 = Fire Punch
+0x0008 = Ice Punch
+0x0009 = Thunder Punch
+0x000a = Scratch
+0x000b = Vice Grip
+0x000c = Guillotine
+0x000d = Razor Wind
+0x000e = Swords Dance
+0x000f = Cut
+0x0010 = Gust
+0x0011 = Wing Attack
+0x0012 = Whirlwind
+0x0013 = Fly
+0x0014 = Bind
+0x0015 = Slam
+0x0016 = Vine Whip
+0x0017 = Stomp
+0x0018 = Double Kick
+0x0019 = Mega Kick
+0x001a = Jump Kick
+0x001b = Rolling Kick
+0x001c = Sand Attack
+0x001d = Headbutt
+0x001e = Horn Attack
+0x001f = Fury Attack
+0x0020 = Horn Drill
+0x0021 = Tackle
+0x0022 = Body Slam
+0x0023 = Wrap
+0x0024 = Take Down
+0x0025 = Thrash
+0x0026 = Double Edge
+0x0027 = Tail Whip
+0x0028 = Poison Sting
+0x0029 = Twineedle
+0x002a = Pin Missile
+0x002b = Leer
+0x002c = Bite
+0x002d = Growl
+0x002e = Roar
+0x002f = Sing
+0x0030 = Supersonic
+0x0031 = Sonic Boom
+0x0032 = Disable
+0x0033 = Acid
+0x0034 = Ember
+0x0035 = Flamethrower
+0x0036 = Mist
+0x0037 = Water Gun
+0x0038 = Hydro Pump
+0x0039 = Surf
+0x003a = Ice Beam
+0x003b = Blizzard
+0x003c = Psybeam
+0x003d = Bubble Beam
+0x003e = Aurora Beam
+0x003f = Hyper Beam
+0x0040 = Peck
+0x0041 = Drill Peck
+0x0042 = Submission
+0x0043 = Low Kick
+0x0044 = Counter
+0x0045 = Seismic Toss
+0x0046 = Strength
+0x0047 = Absorb
+0x0048 = Mega Drain
+0x0049 = Leech Seed
+0x004a = Growth
+0x004b = Razor Leaf
+0x004c = Solar Beam
+0x004d = Poison Powder
+0x004e = Stun Spore
+0x004f = Sleep Powder
+0x0050 = Petal Dance
+0x0051 = String Shot
+0x0052 = Dragon Rage
+0x0053 = Fire Spin
+0x0054 = Thunder Shock
+0x0055 = Thunderbolt
+0x0056 = Thunder Wave
+0x0057 = Thunder
+0x0058 = Rock Throw
+0x0059 = Earthquake
+0x005a = Fissure
+0x005b = Dig
+0x005c = Toxic
+0x005d = Confusion
+0x005e = Psychic
+0x005f = Hypnosis
+0x0060 = Meditate
+0x0061 = Agility
+0x0062 = Quick Attack
+0x0063 = Rage
+0x0064 = Teleport
+0x0065 = Night Shade
+0x0066 = Mimic
+0x0067 = Screech
+0x0068 = Double Team
+0x0069 = Recover
+0x006a = Harden
+0x006b = Minimize
+0x006c = Smokescreen
+0x006d = Confuse Ray
+0x006e = Withdraw
+0x006f = Defense Curl
+0x0070 = Barrier
+0x0071 = Light Screen
+0x0072 = Haze
+0x0073 = Reflect
+0x0074 = Focus Energy
+0x0075 = Bide
+0x0076 = Metronome
+0x0077 = Mirror Move
+0x0078 = Self Destruct
+0x0079 = Egg Bomb
+0x007a = Lick
+0x007b = Smog
+0x007c = Sludge
+0x007d = Bone Club
+0x007e = Fire Blast
+0x007f = Waterfall
+0x0080 = Clamp
+0x0081 = Swift
+0x0082 = Skull Bash
+0x0083 = Spike Cannon
+0x0084 = Constrict
+0x0085 = Amnesia
+0x0086 = Kinesis
+0x0087 = Soft Boiled
+0x0088 = Hi Jump Kick
+0x0089 = Glare
+0x008a = Dream Eater
+0x008b = Poison Gas
+0x008c = Barrage
+0x008d = Leech Life
+0x008e = Lovely Kiss
+0x008f = Sky Attack
+0x0090 = Transform
+0x0091 = Bubble
+0x0092 = Dizzy Punch
+0x0093 = Spore
+0x0094 = Flash
+0x0095 = Psywave
+0x0096 = Splash
+0x0097 = Acid Armor
+0x0098 = Crabhammer
+0x0099 = Explosion
+0x009a = Fury Swipes
+0x009b = Bonemerang
+0x009c = Rest
+0x009d = Rock Slide
+0x009e = Hyper Fang
+0x009f = Sharpen
+0x00a0 = Conversion
+0x00a1 = Tri Attack
+0x00a2 = Super Fang
+0x00a3 = Slash
+0x00a4 = Substitute
+0x00a5 = Struggle
+0x00a6 = Sketch
+0x00a7 = Triple Kick
+0x00a8 = Thief
+0x00a9 = Spider Web
+0x00aa = Mind Reader
+0x00ab = Nightmare
+0x00ac = Flame Wheel
+0x00ad = Snore
+0x00ae = Curse
+0x00af = Flail
+0x00b0 = Conversion 2
+0x00b1 = Aeroblast
+0x00b2 = Cotton Spore
+0x00b3 = Reversal
+0x00b4 = Spite
+0x00b5 = Powder Snow
+0x00b6 = Protect
+0x00b7 = Mach Punch
+0x00b8 = Scary Face
+0x00b9 = Faint Attack
+0x00ba = Sweet Kiss
+0x00bb = Belly Drum
+0x00bc = Sludge Bomb
+0x00bd = Mud Slap
+0x00be = Octazooka
+0x00bf = Spikes
+0x00c0 = Zap Cannon
+0x00c1 = Foresight
+0x00c2 = Destiny Bond
+0x00c3 = Perish Song
+0x00c4 = Icy Wind
+0x00c5 = Detect
+0x00c6 = Bone Rush
+0x00c7 = Lock On
+0x00c8 = Outrage
+0x00c9 = Sandstorm
+0x00ca = Giga Drain
+0x00cb = Endure
+0x00cc = Charm
+0x00cd = Rollout
+0x00ce = False Swipe
+0x00cf = Swagger
+0x00d0 = Milk Drink
+0x00d1 = Spark
+0x00d2 = Fury Cutter
+0x00d3 = Steel Wing
+0x00d4 = Mean Look
+0x00d5 = Attract
+0x00d6 = Sleep Talk
+0x00d7 = Heal Bell
+0x00d8 = Return
+0x00d9 = Present
+0x00da = Frustration
+0x00db = Safeguard
+0x00dc = Pain Split
+0x00dd = Sacred Fire
+0x00de = Magnitude
+0x00df = Dynamic Punch
+0x00e0 = Megahorn
+0x00e1 = Dragon Breath
+0x00e2 = Baton Pass
+0x00e3 = Encore
+0x00e4 = Pursuit
+0x00e5 = Rapid Spin
+0x00e6 = Sweet Scent
+0x00e7 = Iron Tail
+0x00e8 = Metal Claw
+0x00e9 = Vital Throw
+0x00ea = Morning Sun
+0x00eb = Synthesis
+0x00ec = Moonlight
+0x00ed = Hidden Power
+0x00ee = Cross Chop
+0x00ef = Twister
+0x00f0 = Rain Dance
+0x00f1 = Sunny Day
+0x00f2 = Crunch
+0x00f3 = Mirror Coat
+0x00f4 = Psych Up
+0x00f5 = Extreme Speed
+0x00f6 = Ancient Power
+0x00f7 = Shadow Ball
+0x00f8 = Future Sight
+0x00f9 = Rock Smash
+0x00fa = Whirlpool
+0x00fb = Beat Up
+0x00fc = Fake Out
+0x00fd = Uproar
+0x00fe = Stockpile
+0x00ff = Spit Up
+0x0100 = Swallow
+0x0101 = Heat Wave
+0x0102 = Hail
+0x0103 = Torment
+0x0104 = Flatter
+0x0105 = Will O Wisp
+0x0106 = Memento
+0x0107 = Facade
+0x0108 = Focus Punch
+0x0109 = Smelling Salt
+0x010a = Follow Me
+0x010b = Nature Power
+0x010c = Charge
+0x010d = Taunt
+0x010e = Helping Hand
+0x010f = Trick
+0x0110 = Role Play
+0x0111 = Wish
+0x0112 = Assist
+0x0113 = Ingrain
+0x0114 = Superpower
+0x0115 = Magic Coat
+0x0116 = Recycle
+0x0117 = Revenge
+0x0118 = Brick Break
+0x0119 = Yawn
+0x011a = Knock Off
+0x011b = Endeavor
+0x011c = Eruption
+0x011d = Skill Swap
+0x011e = Imprison
+0x011f = Refresh
+0x0120 = Grudge
+0x0121 = Snatch
+0x0122 = Secret Power
+0x0123 = Dive
+0x0124 = Arm Thrust
+0x0125 = Camouflage
+0x0126 = Tail Glow
+0x0127 = Luster Purge
+0x0128 = Mist Ball
+0x0129 = Feather Dance
+0x012a = Teeter Dance
+0x012b = Blaze Kick
+0x012c = Mud Sport
+0x012d = Ice Ball
+0x012e = Needle Arm
+0x012f = Slack Off
+0x0130 = Hyper Voice
+0x0131 = Poison Fang
+0x0132 = Crush Claw
+0x0133 = Blast Burn
+0x0134 = Hydro Cannon
+0x0135 = Meteor Mash
+0x0136 = Astonish
+0x0137 = Weather Ball
+0x0138 = Aromatherapy
+0x0139 = Fake Tears
+0x013a = Air Cutter
+0x013b = Overheat
+0x013c = Odor Sleuth
+0x013d = Rock Tomb
+0x013e = Silver Wind
+0x013f = Metal Sound
+0x0140 = Grass Whistle
+0x0141 = Tickle
+0x0142 = Cosmic Power
+0x0143 = Water Spout
+0x0144 = Signal Beam
+0x0145 = Shadow Punch
+0x0146 = Extrasensory
+0x0147 = Sky Uppercut
+0x0148 = Sand Tomb
+0x0149 = Sheer Cold
+0x014a = Muddy Water
+0x014b = Bullet Seed
+0x014c = Aerial Ace
+0x014d = Icicle Spear
+0x014e = Iron Defense
+0x014f = Block
+0x0150 = Howl
+0x0151 = Dragon Claw
+0x0152 = Frenzy Plant
+0x0153 = Bulk Up
+0x0154 = Bounce
+0x0155 = Mud Shot
+0x0156 = Poison Tail
+0x0157 = Covet
+0x0158 = Volt Tackle
+0x0159 = Magical Leaf
+0x015a = Water Sport
+0x015b = Calm Mind
+0x015c = Leaf Blade
+0x015d = Dragon Dance
+0x015e = Rock Blast
+0x015f = Shock Wave
+0x0160 = Water Pulse
+0x0161 = Doom Desire
+0x0162 = Psycho Boos
+
+0x02bbf2: [16-bit] Active Battle Pokémon - Move 2 ID
+0x0000 = None
+0x0001 = Pound
+0x0002 = Karate Chop
+0x0003 = Double Slap
+0x0004 = Comet Punch
+0x0005 = Mega Punch
+0x0006 = Pay Day
+0x0007 = Fire Punch
+0x0008 = Ice Punch
+0x0009 = Thunder Punch
+0x000a = Scratch
+0x000b = Vice Grip
+0x000c = Guillotine
+0x000d = Razor Wind
+0x000e = Swords Dance
+0x000f = Cut
+0x0010 = Gust
+0x0011 = Wing Attack
+0x0012 = Whirlwind
+0x0013 = Fly
+0x0014 = Bind
+0x0015 = Slam
+0x0016 = Vine Whip
+0x0017 = Stomp
+0x0018 = Double Kick
+0x0019 = Mega Kick
+0x001a = Jump Kick
+0x001b = Rolling Kick
+0x001c = Sand Attack
+0x001d = Headbutt
+0x001e = Horn Attack
+0x001f = Fury Attack
+0x0020 = Horn Drill
+0x0021 = Tackle
+0x0022 = Body Slam
+0x0023 = Wrap
+0x0024 = Take Down
+0x0025 = Thrash
+0x0026 = Double Edge
+0x0027 = Tail Whip
+0x0028 = Poison Sting
+0x0029 = Twineedle
+0x002a = Pin Missile
+0x002b = Leer
+0x002c = Bite
+0x002d = Growl
+0x002e = Roar
+0x002f = Sing
+0x0030 = Supersonic
+0x0031 = Sonic Boom
+0x0032 = Disable
+0x0033 = Acid
+0x0034 = Ember
+0x0035 = Flamethrower
+0x0036 = Mist
+0x0037 = Water Gun
+0x0038 = Hydro Pump
+0x0039 = Surf
+0x003a = Ice Beam
+0x003b = Blizzard
+0x003c = Psybeam
+0x003d = Bubble Beam
+0x003e = Aurora Beam
+0x003f = Hyper Beam
+0x0040 = Peck
+0x0041 = Drill Peck
+0x0042 = Submission
+0x0043 = Low Kick
+0x0044 = Counter
+0x0045 = Seismic Toss
+0x0046 = Strength
+0x0047 = Absorb
+0x0048 = Mega Drain
+0x0049 = Leech Seed
+0x004a = Growth
+0x004b = Razor Leaf
+0x004c = Solar Beam
+0x004d = Poison Powder
+0x004e = Stun Spore
+0x004f = Sleep Powder
+0x0050 = Petal Dance
+0x0051 = String Shot
+0x0052 = Dragon Rage
+0x0053 = Fire Spin
+0x0054 = Thunder Shock
+0x0055 = Thunderbolt
+0x0056 = Thunder Wave
+0x0057 = Thunder
+0x0058 = Rock Throw
+0x0059 = Earthquake
+0x005a = Fissure
+0x005b = Dig
+0x005c = Toxic
+0x005d = Confusion
+0x005e = Psychic
+0x005f = Hypnosis
+0x0060 = Meditate
+0x0061 = Agility
+0x0062 = Quick Attack
+0x0063 = Rage
+0x0064 = Teleport
+0x0065 = Night Shade
+0x0066 = Mimic
+0x0067 = Screech
+0x0068 = Double Team
+0x0069 = Recover
+0x006a = Harden
+0x006b = Minimize
+0x006c = Smokescreen
+0x006d = Confuse Ray
+0x006e = Withdraw
+0x006f = Defense Curl
+0x0070 = Barrier
+0x0071 = Light Screen
+0x0072 = Haze
+0x0073 = Reflect
+0x0074 = Focus Energy
+0x0075 = Bide
+0x0076 = Metronome
+0x0077 = Mirror Move
+0x0078 = Self Destruct
+0x0079 = Egg Bomb
+0x007a = Lick
+0x007b = Smog
+0x007c = Sludge
+0x007d = Bone Club
+0x007e = Fire Blast
+0x007f = Waterfall
+0x0080 = Clamp
+0x0081 = Swift
+0x0082 = Skull Bash
+0x0083 = Spike Cannon
+0x0084 = Constrict
+0x0085 = Amnesia
+0x0086 = Kinesis
+0x0087 = Soft Boiled
+0x0088 = Hi Jump Kick
+0x0089 = Glare
+0x008a = Dream Eater
+0x008b = Poison Gas
+0x008c = Barrage
+0x008d = Leech Life
+0x008e = Lovely Kiss
+0x008f = Sky Attack
+0x0090 = Transform
+0x0091 = Bubble
+0x0092 = Dizzy Punch
+0x0093 = Spore
+0x0094 = Flash
+0x0095 = Psywave
+0x0096 = Splash
+0x0097 = Acid Armor
+0x0098 = Crabhammer
+0x0099 = Explosion
+0x009a = Fury Swipes
+0x009b = Bonemerang
+0x009c = Rest
+0x009d = Rock Slide
+0x009e = Hyper Fang
+0x009f = Sharpen
+0x00a0 = Conversion
+0x00a1 = Tri Attack
+0x00a2 = Super Fang
+0x00a3 = Slash
+0x00a4 = Substitute
+0x00a5 = Struggle
+0x00a6 = Sketch
+0x00a7 = Triple Kick
+0x00a8 = Thief
+0x00a9 = Spider Web
+0x00aa = Mind Reader
+0x00ab = Nightmare
+0x00ac = Flame Wheel
+0x00ad = Snore
+0x00ae = Curse
+0x00af = Flail
+0x00b0 = Conversion 2
+0x00b1 = Aeroblast
+0x00b2 = Cotton Spore
+0x00b3 = Reversal
+0x00b4 = Spite
+0x00b5 = Powder Snow
+0x00b6 = Protect
+0x00b7 = Mach Punch
+0x00b8 = Scary Face
+0x00b9 = Faint Attack
+0x00ba = Sweet Kiss
+0x00bb = Belly Drum
+0x00bc = Sludge Bomb
+0x00bd = Mud Slap
+0x00be = Octazooka
+0x00bf = Spikes
+0x00c0 = Zap Cannon
+0x00c1 = Foresight
+0x00c2 = Destiny Bond
+0x00c3 = Perish Song
+0x00c4 = Icy Wind
+0x00c5 = Detect
+0x00c6 = Bone Rush
+0x00c7 = Lock On
+0x00c8 = Outrage
+0x00c9 = Sandstorm
+0x00ca = Giga Drain
+0x00cb = Endure
+0x00cc = Charm
+0x00cd = Rollout
+0x00ce = False Swipe
+0x00cf = Swagger
+0x00d0 = Milk Drink
+0x00d1 = Spark
+0x00d2 = Fury Cutter
+0x00d3 = Steel Wing
+0x00d4 = Mean Look
+0x00d5 = Attract
+0x00d6 = Sleep Talk
+0x00d7 = Heal Bell
+0x00d8 = Return
+0x00d9 = Present
+0x00da = Frustration
+0x00db = Safeguard
+0x00dc = Pain Split
+0x00dd = Sacred Fire
+0x00de = Magnitude
+0x00df = Dynamic Punch
+0x00e0 = Megahorn
+0x00e1 = Dragon Breath
+0x00e2 = Baton Pass
+0x00e3 = Encore
+0x00e4 = Pursuit
+0x00e5 = Rapid Spin
+0x00e6 = Sweet Scent
+0x00e7 = Iron Tail
+0x00e8 = Metal Claw
+0x00e9 = Vital Throw
+0x00ea = Morning Sun
+0x00eb = Synthesis
+0x00ec = Moonlight
+0x00ed = Hidden Power
+0x00ee = Cross Chop
+0x00ef = Twister
+0x00f0 = Rain Dance
+0x00f1 = Sunny Day
+0x00f2 = Crunch
+0x00f3 = Mirror Coat
+0x00f4 = Psych Up
+0x00f5 = Extreme Speed
+0x00f6 = Ancient Power
+0x00f7 = Shadow Ball
+0x00f8 = Future Sight
+0x00f9 = Rock Smash
+0x00fa = Whirlpool
+0x00fb = Beat Up
+0x00fc = Fake Out
+0x00fd = Uproar
+0x00fe = Stockpile
+0x00ff = Spit Up
+0x0100 = Swallow
+0x0101 = Heat Wave
+0x0102 = Hail
+0x0103 = Torment
+0x0104 = Flatter
+0x0105 = Will O Wisp
+0x0106 = Memento
+0x0107 = Facade
+0x0108 = Focus Punch
+0x0109 = Smelling Salt
+0x010a = Follow Me
+0x010b = Nature Power
+0x010c = Charge
+0x010d = Taunt
+0x010e = Helping Hand
+0x010f = Trick
+0x0110 = Role Play
+0x0111 = Wish
+0x0112 = Assist
+0x0113 = Ingrain
+0x0114 = Superpower
+0x0115 = Magic Coat
+0x0116 = Recycle
+0x0117 = Revenge
+0x0118 = Brick Break
+0x0119 = Yawn
+0x011a = Knock Off
+0x011b = Endeavor
+0x011c = Eruption
+0x011d = Skill Swap
+0x011e = Imprison
+0x011f = Refresh
+0x0120 = Grudge
+0x0121 = Snatch
+0x0122 = Secret Power
+0x0123 = Dive
+0x0124 = Arm Thrust
+0x0125 = Camouflage
+0x0126 = Tail Glow
+0x0127 = Luster Purge
+0x0128 = Mist Ball
+0x0129 = Feather Dance
+0x012a = Teeter Dance
+0x012b = Blaze Kick
+0x012c = Mud Sport
+0x012d = Ice Ball
+0x012e = Needle Arm
+0x012f = Slack Off
+0x0130 = Hyper Voice
+0x0131 = Poison Fang
+0x0132 = Crush Claw
+0x0133 = Blast Burn
+0x0134 = Hydro Cannon
+0x0135 = Meteor Mash
+0x0136 = Astonish
+0x0137 = Weather Ball
+0x0138 = Aromatherapy
+0x0139 = Fake Tears
+0x013a = Air Cutter
+0x013b = Overheat
+0x013c = Odor Sleuth
+0x013d = Rock Tomb
+0x013e = Silver Wind
+0x013f = Metal Sound
+0x0140 = Grass Whistle
+0x0141 = Tickle
+0x0142 = Cosmic Power
+0x0143 = Water Spout
+0x0144 = Signal Beam
+0x0145 = Shadow Punch
+0x0146 = Extrasensory
+0x0147 = Sky Uppercut
+0x0148 = Sand Tomb
+0x0149 = Sheer Cold
+0x014a = Muddy Water
+0x014b = Bullet Seed
+0x014c = Aerial Ace
+0x014d = Icicle Spear
+0x014e = Iron Defense
+0x014f = Block
+0x0150 = Howl
+0x0151 = Dragon Claw
+0x0152 = Frenzy Plant
+0x0153 = Bulk Up
+0x0154 = Bounce
+0x0155 = Mud Shot
+0x0156 = Poison Tail
+0x0157 = Covet
+0x0158 = Volt Tackle
+0x0159 = Magical Leaf
+0x015a = Water Sport
+0x015b = Calm Mind
+0x015c = Leaf Blade
+0x015d = Dragon Dance
+0x015e = Rock Blast
+0x015f = Shock Wave
+0x0160 = Water Pulse
+0x0161 = Doom Desire
+0x0162 = Psycho Boos
+
+0x02bbf4: [16-bit] Active Battle Pokémon - Move 3 ID
+0x0000 = None
+0x0001 = Pound
+0x0002 = Karate Chop
+0x0003 = Double Slap
+0x0004 = Comet Punch
+0x0005 = Mega Punch
+0x0006 = Pay Day
+0x0007 = Fire Punch
+0x0008 = Ice Punch
+0x0009 = Thunder Punch
+0x000a = Scratch
+0x000b = Vice Grip
+0x000c = Guillotine
+0x000d = Razor Wind
+0x000e = Swords Dance
+0x000f = Cut
+0x0010 = Gust
+0x0011 = Wing Attack
+0x0012 = Whirlwind
+0x0013 = Fly
+0x0014 = Bind
+0x0015 = Slam
+0x0016 = Vine Whip
+0x0017 = Stomp
+0x0018 = Double Kick
+0x0019 = Mega Kick
+0x001a = Jump Kick
+0x001b = Rolling Kick
+0x001c = Sand Attack
+0x001d = Headbutt
+0x001e = Horn Attack
+0x001f = Fury Attack
+0x0020 = Horn Drill
+0x0021 = Tackle
+0x0022 = Body Slam
+0x0023 = Wrap
+0x0024 = Take Down
+0x0025 = Thrash
+0x0026 = Double Edge
+0x0027 = Tail Whip
+0x0028 = Poison Sting
+0x0029 = Twineedle
+0x002a = Pin Missile
+0x002b = Leer
+0x002c = Bite
+0x002d = Growl
+0x002e = Roar
+0x002f = Sing
+0x0030 = Supersonic
+0x0031 = Sonic Boom
+0x0032 = Disable
+0x0033 = Acid
+0x0034 = Ember
+0x0035 = Flamethrower
+0x0036 = Mist
+0x0037 = Water Gun
+0x0038 = Hydro Pump
+0x0039 = Surf
+0x003a = Ice Beam
+0x003b = Blizzard
+0x003c = Psybeam
+0x003d = Bubble Beam
+0x003e = Aurora Beam
+0x003f = Hyper Beam
+0x0040 = Peck
+0x0041 = Drill Peck
+0x0042 = Submission
+0x0043 = Low Kick
+0x0044 = Counter
+0x0045 = Seismic Toss
+0x0046 = Strength
+0x0047 = Absorb
+0x0048 = Mega Drain
+0x0049 = Leech Seed
+0x004a = Growth
+0x004b = Razor Leaf
+0x004c = Solar Beam
+0x004d = Poison Powder
+0x004e = Stun Spore
+0x004f = Sleep Powder
+0x0050 = Petal Dance
+0x0051 = String Shot
+0x0052 = Dragon Rage
+0x0053 = Fire Spin
+0x0054 = Thunder Shock
+0x0055 = Thunderbolt
+0x0056 = Thunder Wave
+0x0057 = Thunder
+0x0058 = Rock Throw
+0x0059 = Earthquake
+0x005a = Fissure
+0x005b = Dig
+0x005c = Toxic
+0x005d = Confusion
+0x005e = Psychic
+0x005f = Hypnosis
+0x0060 = Meditate
+0x0061 = Agility
+0x0062 = Quick Attack
+0x0063 = Rage
+0x0064 = Teleport
+0x0065 = Night Shade
+0x0066 = Mimic
+0x0067 = Screech
+0x0068 = Double Team
+0x0069 = Recover
+0x006a = Harden
+0x006b = Minimize
+0x006c = Smokescreen
+0x006d = Confuse Ray
+0x006e = Withdraw
+0x006f = Defense Curl
+0x0070 = Barrier
+0x0071 = Light Screen
+0x0072 = Haze
+0x0073 = Reflect
+0x0074 = Focus Energy
+0x0075 = Bide
+0x0076 = Metronome
+0x0077 = Mirror Move
+0x0078 = Self Destruct
+0x0079 = Egg Bomb
+0x007a = Lick
+0x007b = Smog
+0x007c = Sludge
+0x007d = Bone Club
+0x007e = Fire Blast
+0x007f = Waterfall
+0x0080 = Clamp
+0x0081 = Swift
+0x0082 = Skull Bash
+0x0083 = Spike Cannon
+0x0084 = Constrict
+0x0085 = Amnesia
+0x0086 = Kinesis
+0x0087 = Soft Boiled
+0x0088 = Hi Jump Kick
+0x0089 = Glare
+0x008a = Dream Eater
+0x008b = Poison Gas
+0x008c = Barrage
+0x008d = Leech Life
+0x008e = Lovely Kiss
+0x008f = Sky Attack
+0x0090 = Transform
+0x0091 = Bubble
+0x0092 = Dizzy Punch
+0x0093 = Spore
+0x0094 = Flash
+0x0095 = Psywave
+0x0096 = Splash
+0x0097 = Acid Armor
+0x0098 = Crabhammer
+0x0099 = Explosion
+0x009a = Fury Swipes
+0x009b = Bonemerang
+0x009c = Rest
+0x009d = Rock Slide
+0x009e = Hyper Fang
+0x009f = Sharpen
+0x00a0 = Conversion
+0x00a1 = Tri Attack
+0x00a2 = Super Fang
+0x00a3 = Slash
+0x00a4 = Substitute
+0x00a5 = Struggle
+0x00a6 = Sketch
+0x00a7 = Triple Kick
+0x00a8 = Thief
+0x00a9 = Spider Web
+0x00aa = Mind Reader
+0x00ab = Nightmare
+0x00ac = Flame Wheel
+0x00ad = Snore
+0x00ae = Curse
+0x00af = Flail
+0x00b0 = Conversion 2
+0x00b1 = Aeroblast
+0x00b2 = Cotton Spore
+0x00b3 = Reversal
+0x00b4 = Spite
+0x00b5 = Powder Snow
+0x00b6 = Protect
+0x00b7 = Mach Punch
+0x00b8 = Scary Face
+0x00b9 = Faint Attack
+0x00ba = Sweet Kiss
+0x00bb = Belly Drum
+0x00bc = Sludge Bomb
+0x00bd = Mud Slap
+0x00be = Octazooka
+0x00bf = Spikes
+0x00c0 = Zap Cannon
+0x00c1 = Foresight
+0x00c2 = Destiny Bond
+0x00c3 = Perish Song
+0x00c4 = Icy Wind
+0x00c5 = Detect
+0x00c6 = Bone Rush
+0x00c7 = Lock On
+0x00c8 = Outrage
+0x00c9 = Sandstorm
+0x00ca = Giga Drain
+0x00cb = Endure
+0x00cc = Charm
+0x00cd = Rollout
+0x00ce = False Swipe
+0x00cf = Swagger
+0x00d0 = Milk Drink
+0x00d1 = Spark
+0x00d2 = Fury Cutter
+0x00d3 = Steel Wing
+0x00d4 = Mean Look
+0x00d5 = Attract
+0x00d6 = Sleep Talk
+0x00d7 = Heal Bell
+0x00d8 = Return
+0x00d9 = Present
+0x00da = Frustration
+0x00db = Safeguard
+0x00dc = Pain Split
+0x00dd = Sacred Fire
+0x00de = Magnitude
+0x00df = Dynamic Punch
+0x00e0 = Megahorn
+0x00e1 = Dragon Breath
+0x00e2 = Baton Pass
+0x00e3 = Encore
+0x00e4 = Pursuit
+0x00e5 = Rapid Spin
+0x00e6 = Sweet Scent
+0x00e7 = Iron Tail
+0x00e8 = Metal Claw
+0x00e9 = Vital Throw
+0x00ea = Morning Sun
+0x00eb = Synthesis
+0x00ec = Moonlight
+0x00ed = Hidden Power
+0x00ee = Cross Chop
+0x00ef = Twister
+0x00f0 = Rain Dance
+0x00f1 = Sunny Day
+0x00f2 = Crunch
+0x00f3 = Mirror Coat
+0x00f4 = Psych Up
+0x00f5 = Extreme Speed
+0x00f6 = Ancient Power
+0x00f7 = Shadow Ball
+0x00f8 = Future Sight
+0x00f9 = Rock Smash
+0x00fa = Whirlpool
+0x00fb = Beat Up
+0x00fc = Fake Out
+0x00fd = Uproar
+0x00fe = Stockpile
+0x00ff = Spit Up
+0x0100 = Swallow
+0x0101 = Heat Wave
+0x0102 = Hail
+0x0103 = Torment
+0x0104 = Flatter
+0x0105 = Will O Wisp
+0x0106 = Memento
+0x0107 = Facade
+0x0108 = Focus Punch
+0x0109 = Smelling Salt
+0x010a = Follow Me
+0x010b = Nature Power
+0x010c = Charge
+0x010d = Taunt
+0x010e = Helping Hand
+0x010f = Trick
+0x0110 = Role Play
+0x0111 = Wish
+0x0112 = Assist
+0x0113 = Ingrain
+0x0114 = Superpower
+0x0115 = Magic Coat
+0x0116 = Recycle
+0x0117 = Revenge
+0x0118 = Brick Break
+0x0119 = Yawn
+0x011a = Knock Off
+0x011b = Endeavor
+0x011c = Eruption
+0x011d = Skill Swap
+0x011e = Imprison
+0x011f = Refresh
+0x0120 = Grudge
+0x0121 = Snatch
+0x0122 = Secret Power
+0x0123 = Dive
+0x0124 = Arm Thrust
+0x0125 = Camouflage
+0x0126 = Tail Glow
+0x0127 = Luster Purge
+0x0128 = Mist Ball
+0x0129 = Feather Dance
+0x012a = Teeter Dance
+0x012b = Blaze Kick
+0x012c = Mud Sport
+0x012d = Ice Ball
+0x012e = Needle Arm
+0x012f = Slack Off
+0x0130 = Hyper Voice
+0x0131 = Poison Fang
+0x0132 = Crush Claw
+0x0133 = Blast Burn
+0x0134 = Hydro Cannon
+0x0135 = Meteor Mash
+0x0136 = Astonish
+0x0137 = Weather Ball
+0x0138 = Aromatherapy
+0x0139 = Fake Tears
+0x013a = Air Cutter
+0x013b = Overheat
+0x013c = Odor Sleuth
+0x013d = Rock Tomb
+0x013e = Silver Wind
+0x013f = Metal Sound
+0x0140 = Grass Whistle
+0x0141 = Tickle
+0x0142 = Cosmic Power
+0x0143 = Water Spout
+0x0144 = Signal Beam
+0x0145 = Shadow Punch
+0x0146 = Extrasensory
+0x0147 = Sky Uppercut
+0x0148 = Sand Tomb
+0x0149 = Sheer Cold
+0x014a = Muddy Water
+0x014b = Bullet Seed
+0x014c = Aerial Ace
+0x014d = Icicle Spear
+0x014e = Iron Defense
+0x014f = Block
+0x0150 = Howl
+0x0151 = Dragon Claw
+0x0152 = Frenzy Plant
+0x0153 = Bulk Up
+0x0154 = Bounce
+0x0155 = Mud Shot
+0x0156 = Poison Tail
+0x0157 = Covet
+0x0158 = Volt Tackle
+0x0159 = Magical Leaf
+0x015a = Water Sport
+0x015b = Calm Mind
+0x015c = Leaf Blade
+0x015d = Dragon Dance
+0x015e = Rock Blast
+0x015f = Shock Wave
+0x0160 = Water Pulse
+0x0161 = Doom Desire
+0x0162 = Psycho Boos
+
+0x02bbf6: [16-bit] Active Battle Pokémon - Move 4 ID
+0x0000 = None
+0x0001 = Pound
+0x0002 = Karate Chop
+0x0003 = Double Slap
+0x0004 = Comet Punch
+0x0005 = Mega Punch
+0x0006 = Pay Day
+0x0007 = Fire Punch
+0x0008 = Ice Punch
+0x0009 = Thunder Punch
+0x000a = Scratch
+0x000b = Vice Grip
+0x000c = Guillotine
+0x000d = Razor Wind
+0x000e = Swords Dance
+0x000f = Cut
+0x0010 = Gust
+0x0011 = Wing Attack
+0x0012 = Whirlwind
+0x0013 = Fly
+0x0014 = Bind
+0x0015 = Slam
+0x0016 = Vine Whip
+0x0017 = Stomp
+0x0018 = Double Kick
+0x0019 = Mega Kick
+0x001a = Jump Kick
+0x001b = Rolling Kick
+0x001c = Sand Attack
+0x001d = Headbutt
+0x001e = Horn Attack
+0x001f = Fury Attack
+0x0020 = Horn Drill
+0x0021 = Tackle
+0x0022 = Body Slam
+0x0023 = Wrap
+0x0024 = Take Down
+0x0025 = Thrash
+0x0026 = Double Edge
+0x0027 = Tail Whip
+0x0028 = Poison Sting
+0x0029 = Twineedle
+0x002a = Pin Missile
+0x002b = Leer
+0x002c = Bite
+0x002d = Growl
+0x002e = Roar
+0x002f = Sing
+0x0030 = Supersonic
+0x0031 = Sonic Boom
+0x0032 = Disable
+0x0033 = Acid
+0x0034 = Ember
+0x0035 = Flamethrower
+0x0036 = Mist
+0x0037 = Water Gun
+0x0038 = Hydro Pump
+0x0039 = Surf
+0x003a = Ice Beam
+0x003b = Blizzard
+0x003c = Psybeam
+0x003d = Bubble Beam
+0x003e = Aurora Beam
+0x003f = Hyper Beam
+0x0040 = Peck
+0x0041 = Drill Peck
+0x0042 = Submission
+0x0043 = Low Kick
+0x0044 = Counter
+0x0045 = Seismic Toss
+0x0046 = Strength
+0x0047 = Absorb
+0x0048 = Mega Drain
+0x0049 = Leech Seed
+0x004a = Growth
+0x004b = Razor Leaf
+0x004c = Solar Beam
+0x004d = Poison Powder
+0x004e = Stun Spore
+0x004f = Sleep Powder
+0x0050 = Petal Dance
+0x0051 = String Shot
+0x0052 = Dragon Rage
+0x0053 = Fire Spin
+0x0054 = Thunder Shock
+0x0055 = Thunderbolt
+0x0056 = Thunder Wave
+0x0057 = Thunder
+0x0058 = Rock Throw
+0x0059 = Earthquake
+0x005a = Fissure
+0x005b = Dig
+0x005c = Toxic
+0x005d = Confusion
+0x005e = Psychic
+0x005f = Hypnosis
+0x0060 = Meditate
+0x0061 = Agility
+0x0062 = Quick Attack
+0x0063 = Rage
+0x0064 = Teleport
+0x0065 = Night Shade
+0x0066 = Mimic
+0x0067 = Screech
+0x0068 = Double Team
+0x0069 = Recover
+0x006a = Harden
+0x006b = Minimize
+0x006c = Smokescreen
+0x006d = Confuse Ray
+0x006e = Withdraw
+0x006f = Defense Curl
+0x0070 = Barrier
+0x0071 = Light Screen
+0x0072 = Haze
+0x0073 = Reflect
+0x0074 = Focus Energy
+0x0075 = Bide
+0x0076 = Metronome
+0x0077 = Mirror Move
+0x0078 = Self Destruct
+0x0079 = Egg Bomb
+0x007a = Lick
+0x007b = Smog
+0x007c = Sludge
+0x007d = Bone Club
+0x007e = Fire Blast
+0x007f = Waterfall
+0x0080 = Clamp
+0x0081 = Swift
+0x0082 = Skull Bash
+0x0083 = Spike Cannon
+0x0084 = Constrict
+0x0085 = Amnesia
+0x0086 = Kinesis
+0x0087 = Soft Boiled
+0x0088 = Hi Jump Kick
+0x0089 = Glare
+0x008a = Dream Eater
+0x008b = Poison Gas
+0x008c = Barrage
+0x008d = Leech Life
+0x008e = Lovely Kiss
+0x008f = Sky Attack
+0x0090 = Transform
+0x0091 = Bubble
+0x0092 = Dizzy Punch
+0x0093 = Spore
+0x0094 = Flash
+0x0095 = Psywave
+0x0096 = Splash
+0x0097 = Acid Armor
+0x0098 = Crabhammer
+0x0099 = Explosion
+0x009a = Fury Swipes
+0x009b = Bonemerang
+0x009c = Rest
+0x009d = Rock Slide
+0x009e = Hyper Fang
+0x009f = Sharpen
+0x00a0 = Conversion
+0x00a1 = Tri Attack
+0x00a2 = Super Fang
+0x00a3 = Slash
+0x00a4 = Substitute
+0x00a5 = Struggle
+0x00a6 = Sketch
+0x00a7 = Triple Kick
+0x00a8 = Thief
+0x00a9 = Spider Web
+0x00aa = Mind Reader
+0x00ab = Nightmare
+0x00ac = Flame Wheel
+0x00ad = Snore
+0x00ae = Curse
+0x00af = Flail
+0x00b0 = Conversion 2
+0x00b1 = Aeroblast
+0x00b2 = Cotton Spore
+0x00b3 = Reversal
+0x00b4 = Spite
+0x00b5 = Powder Snow
+0x00b6 = Protect
+0x00b7 = Mach Punch
+0x00b8 = Scary Face
+0x00b9 = Faint Attack
+0x00ba = Sweet Kiss
+0x00bb = Belly Drum
+0x00bc = Sludge Bomb
+0x00bd = Mud Slap
+0x00be = Octazooka
+0x00bf = Spikes
+0x00c0 = Zap Cannon
+0x00c1 = Foresight
+0x00c2 = Destiny Bond
+0x00c3 = Perish Song
+0x00c4 = Icy Wind
+0x00c5 = Detect
+0x00c6 = Bone Rush
+0x00c7 = Lock On
+0x00c8 = Outrage
+0x00c9 = Sandstorm
+0x00ca = Giga Drain
+0x00cb = Endure
+0x00cc = Charm
+0x00cd = Rollout
+0x00ce = False Swipe
+0x00cf = Swagger
+0x00d0 = Milk Drink
+0x00d1 = Spark
+0x00d2 = Fury Cutter
+0x00d3 = Steel Wing
+0x00d4 = Mean Look
+0x00d5 = Attract
+0x00d6 = Sleep Talk
+0x00d7 = Heal Bell
+0x00d8 = Return
+0x00d9 = Present
+0x00da = Frustration
+0x00db = Safeguard
+0x00dc = Pain Split
+0x00dd = Sacred Fire
+0x00de = Magnitude
+0x00df = Dynamic Punch
+0x00e0 = Megahorn
+0x00e1 = Dragon Breath
+0x00e2 = Baton Pass
+0x00e3 = Encore
+0x00e4 = Pursuit
+0x00e5 = Rapid Spin
+0x00e6 = Sweet Scent
+0x00e7 = Iron Tail
+0x00e8 = Metal Claw
+0x00e9 = Vital Throw
+0x00ea = Morning Sun
+0x00eb = Synthesis
+0x00ec = Moonlight
+0x00ed = Hidden Power
+0x00ee = Cross Chop
+0x00ef = Twister
+0x00f0 = Rain Dance
+0x00f1 = Sunny Day
+0x00f2 = Crunch
+0x00f3 = Mirror Coat
+0x00f4 = Psych Up
+0x00f5 = Extreme Speed
+0x00f6 = Ancient Power
+0x00f7 = Shadow Ball
+0x00f8 = Future Sight
+0x00f9 = Rock Smash
+0x00fa = Whirlpool
+0x00fb = Beat Up
+0x00fc = Fake Out
+0x00fd = Uproar
+0x00fe = Stockpile
+0x00ff = Spit Up
+0x0100 = Swallow
+0x0101 = Heat Wave
+0x0102 = Hail
+0x0103 = Torment
+0x0104 = Flatter
+0x0105 = Will O Wisp
+0x0106 = Memento
+0x0107 = Facade
+0x0108 = Focus Punch
+0x0109 = Smelling Salt
+0x010a = Follow Me
+0x010b = Nature Power
+0x010c = Charge
+0x010d = Taunt
+0x010e = Helping Hand
+0x010f = Trick
+0x0110 = Role Play
+0x0111 = Wish
+0x0112 = Assist
+0x0113 = Ingrain
+0x0114 = Superpower
+0x0115 = Magic Coat
+0x0116 = Recycle
+0x0117 = Revenge
+0x0118 = Brick Break
+0x0119 = Yawn
+0x011a = Knock Off
+0x011b = Endeavor
+0x011c = Eruption
+0x011d = Skill Swap
+0x011e = Imprison
+0x011f = Refresh
+0x0120 = Grudge
+0x0121 = Snatch
+0x0122 = Secret Power
+0x0123 = Dive
+0x0124 = Arm Thrust
+0x0125 = Camouflage
+0x0126 = Tail Glow
+0x0127 = Luster Purge
+0x0128 = Mist Ball
+0x0129 = Feather Dance
+0x012a = Teeter Dance
+0x012b = Blaze Kick
+0x012c = Mud Sport
+0x012d = Ice Ball
+0x012e = Needle Arm
+0x012f = Slack Off
+0x0130 = Hyper Voice
+0x0131 = Poison Fang
+0x0132 = Crush Claw
+0x0133 = Blast Burn
+0x0134 = Hydro Cannon
+0x0135 = Meteor Mash
+0x0136 = Astonish
+0x0137 = Weather Ball
+0x0138 = Aromatherapy
+0x0139 = Fake Tears
+0x013a = Air Cutter
+0x013b = Overheat
+0x013c = Odor Sleuth
+0x013d = Rock Tomb
+0x013e = Silver Wind
+0x013f = Metal Sound
+0x0140 = Grass Whistle
+0x0141 = Tickle
+0x0142 = Cosmic Power
+0x0143 = Water Spout
+0x0144 = Signal Beam
+0x0145 = Shadow Punch
+0x0146 = Extrasensory
+0x0147 = Sky Uppercut
+0x0148 = Sand Tomb
+0x0149 = Sheer Cold
+0x014a = Muddy Water
+0x014b = Bullet Seed
+0x014c = Aerial Ace
+0x014d = Icicle Spear
+0x014e = Iron Defense
+0x014f = Block
+0x0150 = Howl
+0x0151 = Dragon Claw
+0x0152 = Frenzy Plant
+0x0153 = Bulk Up
+0x0154 = Bounce
+0x0155 = Mud Shot
+0x0156 = Poison Tail
+0x0157 = Covet
+0x0158 = Volt Tackle
+0x0159 = Magical Leaf
+0x015a = Water Sport
+0x015b = Calm Mind
+0x015c = Leaf Blade
+0x015d = Dragon Dance
+0x015e = Rock Blast
+0x015f = Shock Wave
+0x0160 = Water Pulse
+0x0161 = Doom Desire
+0x0162 = Psycho Boos
+
+0x02bc05: [8-bit] Active Battle Pokémon - Type 1
+0x00 = Normal
+0x01 = Fighting
+0x02 = Flying
+0x03 = Poison
+0x04 = Ground
+0x05 = Rock
+0x06 = Bug
+0x07 = Ghost
+0x08 = Steel
+0x09 = [Unused]
+0x0a = Fire
+0x0b = Water
+0x0c = Grass
+0x0d = Electric
+0x0e = Psychic
+0x0f = Ice
+0x10 = Dragon
+0x11 = Dark
+
+0x02bc06: [8-bit] Active Battle Pokémon - Type 2
+Note: Same values as Type 1
+
+0x02bc08: [8-bit] Active Battle Pokémon - Move 1 PP (Current)
+
+0x02bc09: [8-bit] Active Battle Pokémon - Move 2 PP (Current)
+
+0x02bc0a: [8-bit] Active Battle Pokémon - Move 3 PP (Current)
+
+0x02bc0b: [8-bit] Active Battle Pokémon - Move 4 PP (Current)
+
+0x02bc0c: [16-bit] Active Battle Pokémon - Current HP
 
 0x02bc3c: [16-bit] Pokémon Wild Species ID
 Values are in decimal (0-412)
@@ -1723,6 +3335,7 @@ Values are in decimal (0-412)
 0x019C = Egg
 
 0x02be8a: [8-bit] Battle Outcome
+0x00 = None
 0x01 = Won
 0x02 = Lost
 0x03 = Drew
@@ -1755,6 +3368,15 @@ Values are in decimal (0-412)
 0x0c = Finished / Cancel Partner
 0x0d = Nothing (Fainted)
 0xff = None Selected
+
+0x02c029: [8-bit] Current Party Size (Number of Pokémon)
+0x00 = 0 Pokémon (Usually before getting the starter)
+0x01 = 1 Pokémon
+0x02 = 2 Pokémon
+0x03 = 3 Pokémon
+0x04 = 4 Pokémon
+0x05 = 5 Pokémon
+0x06 = 6 Pokémon (Full Party)
 
 0x02c2d8: [8-bit] Party Pokémon - Slot 1 Level
 
