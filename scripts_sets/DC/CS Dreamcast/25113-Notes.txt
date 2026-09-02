@@ -1,0 +1,34 @@
+Game ID: 25113
+Source: RA Server
+Total Notes: 5
+============================================================
+
+0xc78b2c: [32-bit] Pistol Ammo
+
+0xc78c34: [32-bit] AK-47 Ammo
+
+0xc78f4c: [32-bit] Shotgun Ammo
+
+0xc7ab80: [32-bit] HP Player
+
+0xddf4a0: [32-bit] Current Weapon ID
+// Modo TR Soldado
+0x6c = Bomba de controle
+// Modo TR Sniper
+0x41 = Faca
+0x44 = Pitola Automatic
+0x4f = Pitola
+0x49 = AK-47
+0x3c = Shotgun
+0x60 = Rifle
+0x72 = Bomba encendiaria
+0x62 = Bomba de controle
+// Modo Pratice
+0xb9 = Knife
+0xc7 = Pistol
+0xc1 = AK-47
+0xb4 = Shotgun
+
+[32-bit] Player Armor / Kevlar Shield
+0x00 = No Armor
+0x64 = 100 Armor (Full)

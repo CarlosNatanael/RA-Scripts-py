@@ -1,0 +1,215 @@
+Game ID: 309
+Source: RA Server
+Total Notes: 46
+============================================================
+
+0x000039: [8-bit] Game Mode
+0x00 = Super Battle
+0x01 = Vs Battle
+0x02 = Group Battle
+0x03 = Tournament Battle
+0x04 = Time Challenge
+
+0x000531: [8-bit] P1 Health Bar / KO State
+0xb0 = Max Health
+0x00 = Depleted
+0xff = KO State Flag (Confirmed Loss)
+
+0x0005d0: [8-bit] P1 - Rounds Won
+0x00 = 0 Rounds
+0x01 = 1 Round
+0x02 = 2 Rounds (Default Match Victory)
+
+0x0005d1: [8-bit] P1 - Character
+0x00 = Ryu
+0x01 = E. Honda
+0x02 = Blanka
+0x03 = Guile
+0x04 = Ken
+0x05 = Chun-Li
+0x06 = Zangief
+0x07 = Dhalsim
+0x08 = M. Bison
+0x09 = Sagat
+0x0a = Balrog
+0x0b = Vega
+0x0c = Cammy
+0x0d = T. Hawk
+0x0e = Fei Long
+0x0f = Dee Jay
+
+0x0005da: [8-bit] P2/CPU - Character
+0x00 = Ryu
+0x01 = E. Honda
+0x02 = Blanka
+0x03 = Guile
+0x04 = Ken
+0x05 = Chun-Li
+0x06 = Zangief
+0x07 = Dhalsim
+0x08 = M. Bison
+0x09 = Sagat
+0x0a = Balrog
+0x0b = Vega
+0x0c = Cammy
+0x0d = T. Hawk
+0x0e = Fei Long
+0x0f = Dee Jay
+
+0x00068d: [24-bit BCD] P1 - Bonus Score
+
+0x000702: [8-bit BCD] P1 - Score (0,000,0XX)
+
+0x000703: [8-bit BCD] P1 - Score (0,00X,X00)
+
+0x000704: [8-bit BCD] P1 - Score (0,XX0,000)
+
+0x000705: [8-bit BCD] P1 - Score (X,000,000)
+
+0x000771: [8-bit] P2/CPU Health Bar / KO State
+0xb0 = Max Health
+0x00 = Depleted
+0xff = KO State Flag (Confirmed Loss)
+
+0x000801: [8-bit] P1 - Control Flag
+0x00 = CPU Controlled
+0x01 = Player
+
+0x00080e: [8-bit] P2 - Control Flag
+0x00 = CPU Controlled
+0x01 = Player
+
+0x000810: [8-bit] P2/CPU - Rounds Won
+0x00 = 0 Rounds
+0x01 = 1 Round
+0x02 = 2 Rounds (Default Match Victory)
+
+0x000811: [8-bit] P2/CPU - Character
+0x00 = Ryu
+0x01 = E. Honda
+0x02 = Blanka
+0x03 = Guile
+0x04 = Ken
+0x05 = Chun-Li
+0x06 = Zangief
+0x07 = Dhalsim
+0x08 = M. Bison
+0x09 = Sagat
+0x0a = Balrog
+0x0b = Vega
+0x0c = Cammy
+0x0d = T. Hawk
+0x0e = Fei Long
+0x0f = Dee Jay
+
+0x00081a: [8-bit] P1 - Character
+0x00 = Ryu
+0x01 = E. Honda
+0x02 = Blanka
+0x03 = Guile
+0x04 = Ken
+0x05 = Chun-Li
+0x06 = Zangief
+0x07 = Dhalsim
+0x08 = M. Bison
+0x09 = Sagat
+0x0a = Balrog
+0x0b = Vega
+0x0c = Cammy
+0x0d = T. Hawk
+0x0e = Fei Long
+0x0f = Dee Jay
+
+0x000942: [8-bit BCD] P2 - Score (0,000,0XX)
+
+0x000943: [8-bit BCD] P2 - Score (0,00X,X00)
+
+0x000944: [8-bit BCD] P2 - Score (0,XX0,000)
+
+0x000945: [8-bit BCD] P2 - Score (X,000,000)
+
+0x00185c: [8-bit] Bonus Stage - Car Destruction State
+0x0e = Perfect! (Car is fully destroyed)
+
+0x0018bb: [8-bit] Background Stage
+
+0x0018bc: [8-bit] Arcade Mode Progression / Current Match
+0x00 = Match 1
+0x01 = Match 2
+0x02 = Match 3
+0x03 = Match 4
+0x04 = Match 5
+0x05 = Match 6
+0x06 = Match 7
+0x07 = Match 8
+0x08 = Match 9
+0x09 = Match 10
+0x0a = Match 11
+0x0b = Match 12 (Final Boss)
+0x0c = Ending Scene / Victory
+
+0x0018ca: [8-bit] Ending Sequence Active Flag
+
+0x0018cb: [8-bit] Trigger Ending Sequence (Post-Battle Flag)
+
+0x0018d2: [8-bit] Continues Used
+
+0x0018dc: [8-bit] Bonus Stage Active Flag
+0x00 = Off (Normal Match / Menus)
+0x01 = On (Bonus Stage Active)
+
+0x0018e8: [8-bit] Bonus Stage ID
+0x00 = Car
+0x01 = Stone
+0x02 = Barrel
+
+0x0018ed: [8-bit] Total Matches Fought (Includes Losses)
+
+0x001929: [8-bit BCD] Timer
+
+0x001957: [8-bit] Bonus Stage - Stone/Bricks Destruction State
+0x0a = Perfect! (Fully destroyed)
+
+0x001d23: [8-bit] Option Mode - Difficulty Level
+0x00 = Level 1
+0x01 = Level 2
+0x02 = Level 3
+0x03 = Level 4
+0x04 = Level 5
+0x05 = Level 6
+0x06 = Level 7
+0x07 = Level 8
+
+0x001d24: [8-bit] Option Mode - Time Limi
+0x00 = Yes
+0x01 = No
+
+0x001d25: [8-bit] Option Mode - P1 Config: L. Punch
+
+0x001d26: [8-bit] Option Mode - P1 Config: M. Punch
+
+0x001d27: [8-bit] Option Mode - P1 Config: H. Punch
+
+0x001d28: [8-bit] Option Mode - P1 Config: L. Kick
+
+0x001d29: [8-bit] Option Mode - P1 Config: M. Kick
+
+0x001d2a: [8-bit] Option Mode - P1 Config: H. Kick
+
+0x001d2b: [8-bit] Option Mode - P2 Config: L. Punch
+
+0x001d2c: [8-bit] Option Mode - P2 Config: M. Punch
+
+0x001d2d: [8-bit] Option Mode - P2 Config: H. Punch
+
+0x001d2e: [8-bit] Option Mode - P2 Config: L. Kick
+
+0x001d2f: [8-bit] Option Mode - P2 Config: M. Kick
+
+0x001d30: [8-bit] Option Mode - P2 Config: H. Kick
+
+0x001d3f: [8-bit] Speed Game
+0x00 = 0 Stars
+0x02 = 1 Stars
+0x04 = 2 Stars
+0x06 = 3 Stars

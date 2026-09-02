@@ -147,8 +147,8 @@ Total Notes: 28
 .0x4b01 = Indigo Plateau - Lorelei Rom
 .0x4c01 = Indigo Plateau - Bruno Room
 .0x4d01 = Indigo Plateau - Agatha Room
-.0x4e04 = Indigo Plateau - Lance Room
-.0x4f05 = Indigo Plateau - Champion Room
+.0x4e01 = Indigo Plateau - Lance Room
+.0x4f01 = Indigo Plateau - Champion Room
 .0x5001 = Indigo Plateau - Hall Of Fame
 // Island Locations
 .0x0420 = One Island Port
@@ -1450,7 +1450,8 @@ Total Notes: 28
 .Bit5 = Marsh Badge
 .Bit6 = Volcano Badge
 .Bit7 = Earth Badge
-+0x5200: [8-bit] Elite 4 Rematch
++0x5200: [8-bit] Events
+.Bit0 = National Pokédex On
 .Bit4 = Rematch On
 
 0x02b3f2: [8-bit] Active Battle Pokémon - Level
@@ -4142,4 +4143,3 @@ Values are in decimal (0-412)
 0x02ec = Trainer RA GreninjaMan
 0x02ed = Trainer Fallen Giovanni
 0x02ee = Trainer Rocket Scientist
-
