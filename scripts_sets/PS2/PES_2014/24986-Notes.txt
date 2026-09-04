@@ -1,6 +1,6 @@
 Game ID: 24986
 Source: RA Server
-Total Notes: 53
+Total Notes: 69
 ============================================================
 
 0x3e2850: [8-bit] Player Settings Menu - Cursor Position P1
@@ -40,6 +40,28 @@ Total Notes: 53
 0x3e2882: [8-bit] Goalkeeper Cursor Control P1
 0x00 = Disabled
 0x01 = Enabled
+
+0x42a37c: [8-bit] Game Mode
+0x00 = Match
+0x01 = Become a Legend
+0x02 = Master League
+0x03 = UEFA Champions League
+0x04 = Community
+0x05 = League
+0x06 = Cup
+0x07 = Selection Match
+0x08 = Training
+0x09 = Edit
+0x0a = Gallery
+0x0b = System Settings
+0x0c = World Player
+0x0d = Copa Libertadores
+
+0x42ad98: [8-bit] Strip Selection
+0x00 = 1st Strip / 1st Strip
+0x01 = 1st Strip / 2nd Strip
+0x02 = 2nd Strip / 1st Strip
+0x03 = 2nd Strip / 2nd Strip
 
 0x56ae70: [32-bit] Text Language
 0x00000000 = English
@@ -363,6 +385,8 @@ Total Notes: 53
 0x012f = Longuedez
 0x0130 = Bosedez
 0x0131 = Maccingami FC
+0x00c3 = Babilayna FC
+0x00c4 = Athletic Club Salsabie
 
 0x62f4e0: [16-bit] Away Team ID
 [Note: Uses the exact same Team ID dictionary as the Home Team address (0x0062f4de)]
@@ -506,6 +530,104 @@ Bit6 = Classic Brazil
 0x03 = Normal
 0x04 = Bad
 0x05 = Terrible
+
+0x1890f71: [8-bit] Max Substitutions (Exhibition)
+0x00 = 0 Players
+0x01 = 1 Player
+0x02 = 2 Players
+0x03 = 3 Players
+0x04 = 4 Players
+0x05 = 5 Players
+0x06 = 6 Players
+0x07 = 7 Players
+
+0x1890f72: [8-bit] Extra Time (Exhibition)
+0x00 = Off
+0x01 = On
+
+0x1890f73: [8-bit] Penalties (Exhibition)
+0x00 = Off
+0x01 = On
+
+0x1890f74: [8-bit] Time of Day (Exhibition)
+0x00 = Day
+0x01 = Night
+0x02 = Random
+
+0x1890f75: [8-bit] Season (Exhibition)
+0x00 = Summer
+0x01 = Winter
+0x02 = Random
+
+0x1890f76: [8-bit] Weather (Exhibition)
+0x00 = Fine
+0x01 = Rain
+0x02 = Snow
+0x03 = Random
+
+0x1890f77: [8-bit] Crowd: Home (Exhibition)
+0x00 = None
+0x01 = Level 1 (Low)
+0x02 = Level 2 (Medium)
+0x03 = Level 3 (Full)
+0x04 = Random
+
+0x1890f78: [8-bit] Crowd: Away (Exhibition)
+0x00 = None
+0x01 = Level 1 (Low)
+0x02 = Level 2 (Medium)
+0x03 = Level 3 (Full)
+0x04 = Random
+
+0x1890f79: [8-bit] Stadium (Exhibition)
+0x00 = Wembley Stadium
+0x01 = Allianz Arena
+0x02 = Blautraum Stadium
+0x03 = Old Trafford
+0x04 = Stade Louis II
+0x05 = San Siro
+0x06 = Guiseppe Meazza
+0x07 = Stadio Olimpico
+0x08 = Artemio  Franchi
+0x09 = Estadio Do Dragão
+0x0a = Estadio Da Luz
+0x0b = Estadio De Escorpiao
+0x0c = Estadio Gran Chaco
+0x0d = Amerigo Atlantis
+0x0e = Saitama Stadium 2002
+0x0f = Cuito Cuanavale
+0x11 = Random
+
+0x1890f7a: [8-bit] Support Type (Exhibition)
+0x00 = Home & Away
+0x01 = Neutral
+0x02 = Player
+
+0x1890f7b: [8-bit] Entrance Scene (Exhibition)
+0x00 = Off
+0x01 = On
+
+0x1890f7d: [8-bit] Home and Away (Exhibition)
+0x00 = Off
+0x01 = On
+
+0x1890f7e: [8-bit] Away Goals Rule (Exhibition)
+[Note: Depends on 0x01890f7d being On]
+0x00 = Off
+0x01 = On
+
+0x1890f7f: [8-bit] Scoreboard (Exhibition)
+0x00 = Exhibition
+0x01 = Cup
+0x02 = International League
+0x03 = English League
+0x04 = Spanish League
+0x05 = Serie A
+0x06 = League One
+0x07 = Eredivisie
+0x08 = Master League D1
+0x09 = Master League D2
+0x0f = Random
 
 0x1890f80: [8-bit] Home Team - Starting 11 Confirmed / Locked
 0x00 = Off (Editing Formation)
