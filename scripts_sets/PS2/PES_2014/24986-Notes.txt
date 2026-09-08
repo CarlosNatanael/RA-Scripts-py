@@ -1,6 +1,6 @@
 Game ID: 24986
 Source: RA Server
-Total Notes: 69
+Total Notes: 145
 ============================================================
 
 0x3e2850: [8-bit] Player Settings Menu - Cursor Position P1
@@ -80,6 +80,10 @@ Total Notes: 69
 0x0000000e = Swedish (Svenska)
 0x0000000f = Dutch (Nederlands)
 0x00000011 = Turkish (Türkçe)
+
+0x56ae78: [8-bit] Video Mode Region
+0x00 = NTSC (60Hz)
+0x01 = PAL (50Hz)
 
 0x62f4de: [16-bit] Home Team ID
 // == Europe A ==
@@ -658,3 +662,154 @@ Bit6 = Classic Brazil
 0x11 = Neo 150 Elite
 0x12 = Ceramica
 0x18 = Random
+
+0x1de010c: [32-Bits] Track Record - Time -> Total
+
+0x1de0110: [32-Bits] Track Record - Time -> Match
+
+0x1de0114: [32-Bits] Track Record - Time -> Master League
+
+0x1de0118: [32-Bits] Track Record - Time -> Become a Legend
+
+0x1de011c: [32-Bits] Track Record - Time -> World Player
+
+0x1de0120: [32-Bits] Track Record - Time -> UEFA Champions League
+
+0x1de0124: [32-Bits] Track Record - Time -> Copa Libertadores
+
+0x1de0128: [32-Bits] Track Record - Time -> Community
+
+0x1de012c: [32-Bits] Track Record - Time -> League
+
+0x1de0130: [32-Bits] Track Record - Time -> Cup
+
+0x1de0134: [32-Bits] Track Record - Time -> Selection Match
+
+0x1de0138: [32-Bits] Track Record - Time -> Training
+
+0x1de013c: [32-Bits] Track Record - Time -> Edit
+
+0x1de0148: [32-Bits BE] Track Record - Time -> Last Save Date
+
+0x1de014c: [16-Bits] Track Record - Titles -> First Glory
+
+0x1de014e: [16-Bits] Track Record - Titles -> Perfect 10
+
+0x1de0150: [16-Bits] Track Record - Titles -> Hat-trick Hero
+
+0x1de0152: [16-Bits] Track Record - Titles -> The Gentleman
+
+0x1de0154: [16-Bits] Track Record - Titles -> Possession Play
+
+0x1de0156: [16-Bits] Track Record - Titles -> Long Ranger
+
+0x1de0158: [16-Bits] Track Record - Titles -> Stadium Tourist
+
+0x1de015a: [16-Bits] Track Record - Titles -> Master from 12 Yards
+
+0x1de015c: [16-Bits] Track Record - Titles -> 1st Century
+
+0x1de015e: [16-Bits] Track Record - Titles -> Master Provider
+
+0x1de0160: [16-Bits] Track Record - Titles -> The Ever Present
+
+0x1de0162: [16-Bits] Track Record - Titles -> 100 Wins
+
+0x1de0164: [16-Bits] Track Record - Titles -> Predatory Striker
+
+0x1de0166: [16-Bits] Track Record - Titles -> Clinical Striker
+
+0x1de0168: [16-Bits] Track Record - Titles -> The Conductor
+
+0x1de016a: [16-Bits] Track Record - Titles -> Sharp Shooter
+
+0x1de016c: [16-Bits] Track Record - Titles -> 100 Clean Sheets
+
+0x1de016e: [16-Bits] Track Record - Titles -> English League owned
+
+0x1de0170: [16-Bits] Track Record - Titles -> Ligue 1 owned
+
+0x1de0172: [16-Bits] Track Record - Titles -> Italian Leafue owned
+
+0x1de0174: [16-Bits] Track Record - Titles -> Eredivisie owned
+
+0x1de0176: [16-Bits] Track Record - Titles -> LIGA BBVA owned
+
+0x1de0178: [16-Bits] Track Record - Titles -> National Teams owned
+
+0x1de017a: [16-Bits] Track Record - Titles -> The Debutant
+
+0x1de017c: [16-Bits] Track Record - Titles -> First Strike
+
+0x1de017e: [16-Bits] Track Record - Titles -> First Time Hero
+
+0x1de0180: [16-Bits] Track Record - Titles -> Super Sub
+
+0x1de0182: [16-Bits] Track Record - Titles -> First Cap
+
+0x1de0184: [16-Bits] Track Record - Titles -> Century of Goals
+
+0x1de0186: [16-Bits] Track Record - Titles -> Double Century of Goals
+
+0x1de0188: [16-Bits] Track Record - Titles -> The Journeyman
+
+0x1de018a: [16-Bits] Track Record - Titles -> Internacional Legend
+
+0x1de018c: [16-Bits] Track Record - Titles -> Club Legend
+
+0x1de01aa: [16-Bits] Track Record - Results/Goals Scored -> Matches
+
+0x1de01ac: [16-Bits] Track Record - Results/Goals Scored -> Wins
+
+0x1de01ae: [16-Bits] Track Record - Results/Goals Scored -> Losses
+
+0x1de01b0: [16-Bits] Track Record - Results/Goals Scored -> Draws
+
+0x1de01b2: [16-Bits] Track Record - Results/Goals Scored -> Goals Scored
+
+0x1de01b4: [16-Bits] Track Record - Results/Goals Scored -> Goals Conceded
+
+0x1de01b6: [16-Bits] Track Record - Results/Goals Scored -> Shots on Goal
+
+0x1de01b8: [16-Bits] Track Record - Results/Goals Scored -> Shots Faced
+
+0x1de01bc: [16-Bits] Track Record - Set Pieces/Fouls -> Penalties
+
+0x1de01be: [16-Bits] Track Record - Set Pieces/Fouls -> Free Kicks
+
+0x1de01c0: [16-Bits] Track Record - Set Pieces/Fouls -> Corner Kicks
+
+0x1de01c2: [16-Bits] Track Record - Set Pieces/Fouls -> Fouls
+
+0x1de01c4: [16-Bits] Track Record - Set Pieces/Fouls -> Times Fouled
+
+0x1de01c6: [16-Bits] Track Record - Set Pieces/Fouls -> Yellow Cards
+
+0x1de01c8: [16-Bits] Track Record - Set Pieces/Fouls -> Red Cards
+
+0x1de01ca: [16-Bits] Track Record - Set Pieces/Fouls -> Offsides
+
+0x1de01cc: [16-Bits] Track Record - Record -> Injuries
+
+0x1de01ce: [16-Bits] Track Record - Record -> Total Mayches
+
+0x1de01d0: [16-Bits] Track Record - Record -> P1 vs. COM Matches
+
+0x1de01d4: [16-Bits] Track Record - Record -> Own Goals
+
+0x1de01d6: [16-Bits] Track Record - Record -> Most Goals Scored in a Match
+
+0x1de01d8: [16-Bits] Track Record - Record -> Most Goals Conceded in a Match
+
+0x1de01da: [16-Bits] Track Record - Record ->  Consecutive Wins
+
+0x1de01dc: [16-Bits] Track Record - Record -> Consecutive Losses
+
+0x1de01de: [16-Bits] Track Record - Record -> Most Possesion
+
+0x1de01e0: [16-Bits] Track Record - Record -> Least Possesion
+
+0x1de01e2: [16-Bits] Track Record - Record -> Hat-Tricks
+
+0x1de01e4: [16-Bits] Track Record - Record -> Longest Shot Scored
+
