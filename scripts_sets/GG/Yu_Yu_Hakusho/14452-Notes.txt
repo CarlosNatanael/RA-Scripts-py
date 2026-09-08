@@ -1,6 +1,6 @@
 Game ID: 14452
 Source: RA Server
-Total Notes: 15
+Total Notes: 18
 ============================================================
 
 0x000010: [16-bit] Score
@@ -18,10 +18,18 @@ Total Notes: 15
 0x00001e: [8-bit] Credits
 0x03 = Max Credits
 
+0x000022: [8-bit] Pause Flag
+0x00 = In Game
+0xff = Game paused
+
 0x000044: [8-bit] Music ID
 [Note: These addresses only update when actively using the Sound mode in the Options menu. They do NOT track real-time gameplay audio.]
 
 0x000045: [8-bit] Sound Effect ID
+
+0x000100: [8-bit] Game State
+0x01 = Ending Credits Scene
+0x0a = In-Game
 
 0x000150: [8-bit] Map ID
 0x00 = Map A
@@ -30,6 +38,12 @@ Total Notes: 15
 0x03 = Map D
 0x04 = Castle
 0x05 = Demon Realm
+
+0x000155: [Bitflag] Map Cleared Flags
+Bit 0 = Map A Cleared
+Bit 1 = Map B Cleared
+Bit 2 = Map C Cleared
+Bit 3 = Map D Cleared
 
 0x000b19: [8-bit] Player HP
 0x50 = Max HP
@@ -65,4 +79,3 @@ Total Notes: 15
 
 0x000e8c: [8-bit] Special Power Charges (Boss Fight State)
 0x04 = Max Charges
-

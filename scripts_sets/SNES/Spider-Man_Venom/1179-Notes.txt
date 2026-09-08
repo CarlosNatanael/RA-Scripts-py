@@ -1,36 +1,34 @@
 Game ID: 1179
 Source: RA Server
-Total Notes: 23
+Total Notes: 25
 ============================================================
+
+0x000000: [Notes] Set created with the help of PyCheevos scripts:
+https://github.com/CarlosNatanael/RA-Scripts-py/tree/main/scripts_sets/SNES/Spider-Man_Venom
 
 0x00088e: [8-bit] Pause Flag
 0x00 = In Game
 0xff = Game paused
 
 0x000966: [16-bit] Stage Hit Counter
-[Note: Resets on stage clear]
-(Original Note by jackolantern)
+Resets on stage clear
 
 0x00097a: [8-bit] Score - Units / Tens
-(Original Note by mickyt888)
 
 0x00097c: [8-bit] Score - Hundreds
-(Original Note by PabloTMF)
 
 0x00097e: [8-bit] Score - Thousands
-(Original Note by mickyt888)
 
 0x000980: [8-bit] Score - Tens of Thousands
-(Original Note by mickyt888)
 
 0x000982: [8-bit] Score - Hundreds of Thousands
-(Original Note by mickyt888)
 
 0x000990: [16-bit] Lives
-(Original Note by jackolantern)
+
+0x000992: [16-bit] Reserve Lives
+This address tracks the lives of the reserve/alternate character
 
 0x000994: [16-bit] Continues
-(Original Note by mickyt888)
 
 0x000996: [8-bit] Invincibility
 0x5b = Active
@@ -69,23 +67,19 @@ Total Notes: 23
 0x32 = "The End?" Cutscene then Manhattan Street 2
 0x34 = Ruined Boys Home
 0x36 = Secret Room (Fantastic 4 Lab)
-0x38 = Secret Room (San Franciso)
-0x3a = Secret Room (Climb/San Franciso)
+0x38 = Secret Room (San Franciso2)
+0x3a = Secret Room (Climb/San Franciso1)
 0x3c = Secret Room (Police Station/Ruined Boy's Home)
 0x3e = Secret Room (Manhattan Rooftop)
 0x44 = Cutscene Intro
 
 0x000b7c: [16-bit] Health Bar - Player
-(Original Note by jackolantern)
 
 0x000d4c: [16-bit] Enemy health - Slot 2
-(Original Note by jackolantern)
 
 0x000dc0: [16-bit] Enemy health - Slot 1
-(Original Note by jackolantern)
 
 0x000e34: [16-bit] Enemy health - Slot 3
-(Original Note by jackolantern)
 
 0x000ea8: [16-bit] Enemy health - Slot 4
 
@@ -104,20 +98,9 @@ Total Notes: 23
 0x001c68: [8-bit] Enemies on Screen
 
 0x001cca: [8-bit] Stage Fighting Accuracy
+Updates to the final accuracy value on the results screen
 0x00 = During Gameplay
 0xff = Stage Clear Transition
-[Note: Updates to the final accuracy value on the results screen]
-(Original Note by mickyt888)
 
-0x001ccc: [8-bit BCD] Screen Display Digit (Visual Buffer)
+0x001ccc: [16-bit BCD] Screen Display Digit (Visual Buffer)
 Note: This address only transmits the graphic tile/digit to the screen
-
-1.4.2.0
-Spider-Man & Venom: Maximum Carnage
-N0:0x000b0e:"[8-bit] Item do Herio que ajuda\r\n0x00 = \r\n0x02 = SombraQ"
-111000001:"O:0x 000a0e=58_T:0x 000a0e=56_d0x 000a0e=16_0xH00088e=0":[Void] Secret Room2:Secret Room - San Francisco:::missable:Cnat:2:::::00000
-111000002:"T:0x 000a0e=54_d0x 000a0e=26_0xH00088e=0":[Void] Secret Room3:Secret Room - Fantastic Four Lab:::missable:Cnat:2:::::00000
-111000004:"0x 000a0e=60_d0x 000a0e=34_0xH00088e=0":[Void] Secret Room4:Secret Room - Police Station:::missable:Cnat:2:::::00000
-111000005:"T:0x 000a0e=62_d0x 000a0e=38_0xH00088e=0":[Void] Secret Room5:Secret Room - Manhattan Rooftop:::missable:Cnat:2:::::00000
-111000006:"0x 000a0e=60_d0x 000a0e=52_0xH00088e=0":[Void] Secret Room6:Secret Room - Ruined Boy's Home:::missable:Cnat:2:::::00000
-111000007:"T:0x 000a0e=48_d0x 000a0e=42_0xH00088e=0":[Void] Secret Room7:Secret Room - Statue of Liberty:::missable:Cnat:5:::::00000

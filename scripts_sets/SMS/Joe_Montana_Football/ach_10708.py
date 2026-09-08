@@ -41,7 +41,6 @@ cond_match_end = [
 # 3. ESTATÍSTICAS E ACUMULADORES (MEASURED)
 stats_data = [
     (617228, "Ball Hawk", "Perform 3 interceptions on defense in a single match", 10, [mem_state <= 0x02, (mem_interceptions.delta() == 0x02), measured(mem_interceptions == 0x03)]),
-    (617229, "Air Raid Siren", "Accumulate 300 or more passing yards in a single match", 10, [mem_state == 0x01, (mem_pass_yards.delta() < 300), measured(mem_pass_yards >= 300)]),
     (617230, "Ground and Pound", "Accumulate 150 or more rushing yards in a single match", 10, [mem_state == 0x01, (mem_rush_yards.delta() < 150), measured(mem_rush_yards >= 150)]),
     (617231, "Chain Mover", "Achieve 15 or more First Downs in a single match", 10, [mem_state == 0x01, (mem_first_downs.delta() < 15), measured(mem_first_downs >= 15)]),
 ]
@@ -50,6 +49,18 @@ for a_id, title, desc, pts, logic_list in stats_data:
     ach = Achievement(id=a_id, title=title, description=desc, points=pts)
     ach.add_core([*cond_in_match, *logic_list])
     my_set.add_achievement(ach)
+
+ach = Achievement(id=617229, title="Air Raid Siren", description="Accumulate 300 or more passing yards in a single match", points=10)
+ach.add_core([
+    reset_if(mem_state == 0x08),
+    (mem_p2_team == 0xff).with_hits(1),
+    or_next(mem_state == 0x01),
+    (mem_state == 0x02),
+    (mem_pass_yards >= 0x0300),
+    (mem_pass_yards.delta() < 0x0300),
+    reset_if(mem_pass_yards >= 0x9999)
+])
+my_set.add_achievement(ach)
 
 # 4. AÇÕES ESPECÍFICAS DE JOGO
 ach = Achievement(id=617223, title="Call It in the Air", description="Guess the coin toss correctly at the start of a match", points=1)

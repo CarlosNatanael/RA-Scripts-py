@@ -1,6 +1,6 @@
 Game ID: 14234
 Source: RA Server
-Total Notes: 11
+Total Notes: 13
 ============================================================
 
 0x000060: [24-bit BCD] Score
@@ -33,6 +33,18 @@ Bit4 = Start
 Bit5 = Select
 Bit6 = Button 2 (Punch)
 Bit7 = Button 1 (Jump)
+
+0x0000e9: [8-bit] Menu Command
+0x00 = Continue
+0x01 = Multi Eve
+0x02 = Power Stripes / Vital Chatge
+0x03 = Rider Punch
+0x04 = Rider Chop
+0x05 = Rider Kick
+
+0x000111: [8-bit] Game State
+0x80 = In Game
+0xa0 = Pause Game
 
 0x000410: [8-bit] Invincibility
 0xc0 = Active

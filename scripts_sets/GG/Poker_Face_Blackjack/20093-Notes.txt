@@ -1,7 +1,14 @@
 Game ID: 20093
 Source: RA Server
-Total Notes: 15
+Total Notes: 17
 ============================================================
+
+0x000000: [Notes] Set created with the help of PyCheevos scripts:
+https://github.com/CarlosNatanael/RA-Scripts-py/tree/main/scripts_sets/GG/Poker_Face_Blackjack
+
+0x000036: [8-bit] Primary Mode Flag
+0x00 = Menu / Setup Mode
+0x01 = Active Game Mode
 
 0x00008d: [8-bit] Main Game State
 0x01 = Menu Setup
@@ -61,6 +68,7 @@ Total Notes: 15
 0x001b9b: [8-bit] Hand Outcome Message
 0x00 = Busted
 0x01 = Player Wins
+0x02 = Blackjack Win
 0x03 = Push / Tie (Final state)
 0x04 = Dealer Wins
 0x05 = Blackjack 
@@ -70,10 +78,10 @@ Total Notes: 15
 [Note: Credit to lonegraywolf2000]
 
 0x001db3: [8-bit] Menu State Flag
+0xff = Betting Screen
 0x00 = In-Game Actions (Hit, Stand, D.Down)
 0x01 = Help/Pause Menu Active (Count, Help, Quit)
 
 0x001dd7: Blackjack Setup: Which Column?
 
 0x001dd8: Blackjack Setup: Which Row?
-

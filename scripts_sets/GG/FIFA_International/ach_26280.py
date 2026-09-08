@@ -108,13 +108,12 @@ my_set.add_achievement(ach_dominance)
 # First-Half Blitz
 ach = Achievement(id=609904, title="First-Half Blitz", description="Score at least 2 goals during the first half of an Exhibition match with the half length set to 2 minutes", points=5)
 ach.add_core([
-    (mem_half_len == 0x01),
-    (mem_comp_mode == 0x00),
-    (mem_player_team != 0xff),
     (mem_period == 0x00),
-    or_next(mem_score_p1.delta() == 0x01),
-    (mem_score_p1.delta() == 0x00),
-    trigger(mem_score_p1 == 0x02)
+    (mem_half_len == 0x01),
+    (mem_game_state == 0x01),
+    (mem_comp_mode == 0x00),
+    trigger(mem_score_p1 >= 0x02),
+    (mem_score_p1.delta() < 0x00),
 ])
 my_set.add_achievement(ach)
 

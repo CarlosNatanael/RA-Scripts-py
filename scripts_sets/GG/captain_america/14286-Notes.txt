@@ -1,7 +1,10 @@
 Game ID: 14286
 Source: RA Server
-Total Notes: 23
+Total Notes: 24
 ============================================================
+
+0x000000: [Notes] Set created with the help of PyCheevos scripts:
+https://github.com/CarlosNatanael/RA-Scripts-py/tree/main/scripts_sets/GG/captain_america
 
 0x00031f: [8-bit] Hero Chosen
 0x00 = Captain America
@@ -69,7 +72,7 @@ Total Notes: 23
 [Note: Reused memory address based on Game State 0x1d22]
 Options Menu Context (Continues):
 
-[8-bit] In-Game Credit
+[8-bit] In-Game Credit 
 In-Game Context: Represents current active credit
 0x00 = Game Over
 0x01 = 0 Credits (Last Chance)

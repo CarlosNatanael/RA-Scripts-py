@@ -59,10 +59,8 @@ for a_id, title, desc, pts, badge, stage_val in treasure_data:
     ach = Achievement(id=a_id, title=title, description=desc, points=pts, badge=badge, type=AchievementType.MISSABLE)
     ach.add_core([
         measured_if(mem_stage == stage_val),
-        add_source(mem_treas_1),
-        measured(mem_treas_2 == 0x0c), # 12 tesouros
-        (mem_last_tr == 0x01),
-        (mem_last_tr.delta() == 0x00),
+        add_source(mem_treas_1.delta()),
+        measured(mem_treas_2 >= 0x0c), # 12 tesouros
     ])
     my_set.add_achievement(ach)
 

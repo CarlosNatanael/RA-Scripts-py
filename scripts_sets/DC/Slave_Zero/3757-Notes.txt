@@ -1,7 +1,11 @@
 Game ID: 3757
 Source: RA Server
-Total Notes: 12
+Total Notes: 15
 ============================================================
+
+0x009be4: [24-bit] Pointer - Entity: Titan 3
++0xf4 | [Float] Titan 03
+100.0 = Titan 03 Max HP (Normal/Easy)
 
 0x130ca4: [24-bit] Pointer - Entity: Argilus
 +0x7c | [Float] Argilus HP
@@ -27,54 +31,7 @@ Total Notes: 12
 +0xd4 | [Float] HP - Rebel Base
 .690.0 = Rebel Base Max HP (Normal/Easy)
 
-0x130ff8: [24-bit] Pointer - Titan Encounter Group Base
-+0x12 | [32-bit ASCII] Entity ASCII Signature
-.0x6d696e69 = "mini" (miniboss_titan)
-.0x74697461 = "tita" (titan_02)
-
-+0xf4 | [Float] Current Titan HP
-.160.0 = Miniboss Titan Max HP (Easy)
-.200.0 = Miniboss Titan Max HP (Normal)
-.100.0 = Titan 2 Max HP (Easy)
-.100.0 = Titan 2 Max HP (Normal)
-
-+0x5c | [24-bit] Pointer - Titan 01 Base
-++0x12 | [32-bit ASCII] Titan 01 ASCII Signature
-..0x74697461 = "tita" (titan_01)
-
-++0xf4 | [Float] Current Titan HP
-..100.0 = Titan 01 Max HP (Easy)
-..100.0 = Titan 01 Max HP (Normal)
-
-0x131bf0: [8-bit] Objective: Ships to Protect
-0x06 = 6 Ships Remaining (Start)
-0x00 = 0 Ships (Mission Failed)
-
-0x131ea8: [32-bit] Game State / Level ID
-0x09 = Main Menu
-0x3b = Story Intro / Cutscene
-0x6a = Level 1 - Area 1
-0x6b = Level 1 - Area 2
-0x5e = Level 2 - Area 1
-0x52 = Level 2 - Area 2
-0x53 = Level 3 - Area 1
-0x56 = Level 3 - Area 2
-0x65 = Level 3 - Area 3
-0x62 = Level 4 - Area 1
-0x5c = Level 4 - Area 2
-0x57 = Level 5 - Area 1
-0x54 = Level 5 - Area 2
-0x65 = Level 6 - Area 1
-
-0x131ec0: [24-bit] Pointer - Entity: Generator 01
-+0x01b0 | [Float] Generator 01 HP
-.50.0 = Generator 01 Max HP (Normal/Easy)
-
-0x131ee4: [24-bit] Pointer - Entity: Generator 03
-+0x2ec | [Float] Generator 03 HP
-.80.0 = Generator 03 Max HP (Normal/Easy)
-
-0x20a3d8: [24-bit] Pointer - Player Entity Base
+0x130f14: [24-bit] Pointer - Player Entity Base
 +0xf0 | [Float] Player HP
 [Note: Max/Initial value is 100.0 Value can drop below 0.0 upon death]
 
@@ -118,11 +75,67 @@ Total Notes: 12
 .0x02 = Holding Girder / Metal Bar
 [Note: Resets to 0x00 when the object is thrown or dropped]
 
+0x130ff8: [24-bit] Pointer - Titan Encounter Group Base
++0x12 | [32-bit ASCII] Entity ASCII Signature
+.0x6d696e69 = "mini" (miniboss_titan)
+.0x74697461 = "tita" (titan_02)
+
++0xf4 | [Float] Current Titan HP
+.160.0 = Miniboss Titan Max HP (Easy)
+.200.0 = Miniboss Titan Max HP (Normal)
+.100.0 = Titan 2 Max HP (Easy)
+.100.0 = Titan 2 Max HP (Normal)
+
++0x5c | [24-bit] Pointer - Titan 01 Base
+++0x12 | [32-bit ASCII] Titan 01 ASCII Signature
+..0x74697461 = "tita" (titan_01)
+
+++0xf4 | [Float] Current Titan HP
+..100.0 = Titan 01 Max HP (Easy)
+..100.0 = Titan 01 Max HP (Normal)
+
+0x131b30: [8-bit] Current Phase
+[Note: Linked to 0x131ea8]
+
+0x131bf0: [8-bit] Objective: Ships to Protect
+0x06 = 6 Ships Remaining (Start)
+0x00 = 0 Ships (Mission Failed)
+
+0x131ea8: [32-bit] Game State / Level ID
+0x09 = Main Menu
+0x3b = Story Intro / Cutscene
+0x6a = Level 1 - Area 1
+0x6b = Level 1 - Area 2
+0x5e = Level 2 - Area 1
+0x52 = Level 2 - Area 2
+0x53 = Level 3 - Area 1
+0x56 = Level 3 - Area 2
+0x65 = Level 3 - Area 3
+0x62 = Level 4 - Area 1
+0x5c = Level 4 - Area 2
+0x57 = Level 5 - Area 1
+0x54 = Level 5 - Area 2
+0x65 = Level 6 - Area 1
+0x72 = Level 6 - Area 2
+0x68 = Level 6 - Area 3
+0x63 = Level 6 - Area 4
+
+0x131ec0: [24-bit] Pointer - Entity: Generator 01
++0x01b0 | [Float] Generator 01 HP
+.50.0 = Generator 01 Max HP (Normal/Easy/Hard)
+
+0x131ee4: [24-bit] Pointer - Entity: Generator 03
++0x2ec | [Float] Generator 03 HP
+.80.0 = Generator 03 Max HP (Normal/Easy)
+
+0x179914: [24-bit] Pointer - Entity: Train Array
++0x2ac | [Float] Train Array Hp
+975.0 = Train Array Max HP (Normal/Easy)
+
 0x20a798: [8-bit] Difficulty Setting
 0x00 = Normal
 0x01 = Easy
 0x02 = Hard
-(Original Note by Pudpod)
 
 0x20bae8: [8-bit] Game State
 0x00 = Menu / Pause game

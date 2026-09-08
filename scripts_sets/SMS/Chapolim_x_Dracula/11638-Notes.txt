@@ -1,7 +1,10 @@
 Game ID: 11638
 Source: RA Server
-Total Notes: 17
+Total Notes: 18
 ============================================================
+
+0x000000: [Notes] Set created with the help of PyCheevos scripts:
+https://github.com/CarlosNatanael/RA-Scripts-py/tree/main/scripts_sets/SMS/Chapolim_x_Dracula
 
 0x000191: [8-bit] Game State
 0x10 = Player

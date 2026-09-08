@@ -1,7 +1,10 @@
 Game ID: 36560
 Source: RA Server
-Total Notes: 35
+Total Notes: 37
 ============================================================
+
+0x000000: [Notes] Set created with the help of PyCheevos scripts:
+https://github.com/CarlosNatanael/RA-Scripts-py/tree/main/scripts_sets/ARCD/Arch_Rivals
 
 0x0001e2: [8-bit] Current Period
 0x00 = Menu game
@@ -124,6 +127,13 @@ Total Notes: 35
 0x03 = Slot 3 (Away P2 / CPU)
 0x04 = Slot 4 (Away CPU)
 
+0x000d9f: [8-bit] Matchup Stable Anchor / Secondary ID
+[Note: Works as a secondary anchor because 0x0371 overwrites itself to 0x01 at the victory screen.]
+0x00 = Natural High vs Los Angeles / Brawl State vs Los Angeles
+0x01 = Los Angeles vs Chicago
+0x04 = Chicago vs Brawl State
+0x06 = Brawl State vs Natural High / Natural High vs Chicago
+
 0x001e16: [16-bit] Coin Counter
 
 0x001f2b: [8-bit] Shot Clock Timer
@@ -135,4 +145,3 @@ Total Notes: 35
 0x008518: [8-bit] Period State Flag
 0xff = In-Game
 0x00 = Quarter Ended / Time Up
-

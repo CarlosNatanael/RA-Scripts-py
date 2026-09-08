@@ -1,10 +1,10 @@
 Game ID: 23035
 Source: RA Server
-Total Notes: 20
+Total Notes: 37
 ============================================================
 
 0x000100: [16-bit] Save File Profile Select
-This address determines which save file profile is selected for saving progress.
+This address determines which save file profile is selected for saving progress
 0x00 = File-01
 0x01 = File-02
 0x02 = File-03
@@ -71,6 +71,22 @@ This address determines which save file profile is selected for saving progress.
 
 0x000110: [16-bit] Character Voice - Option
 
+0x000121: [8-bit] Advance Mode - Menu Game
+0xd6 = Menu Advanced
+0xd3 = Item Shop
+0xd7 = Central Gate
+0xd9 = Battle Tycoon Venue
+0xdb = Result Screens
+
+0x000206: [16-bit] Advance Mode - Invested Points: Attack
+
+0x000208: [16-bit] Advance Mode - Invested Points: Guard
+
+0x00020a: [16-bit] Advance Mode - Invested Points: Speed
+
+0x00020d: [8-bit] Advance Mode - Available Stat Points
+Note: These track added points only, not the total stat displayed on screen
+
 0x00022b: [8-bit] Game Mode Select
 0x00 = Versus
 0x01 = Advance
@@ -81,6 +97,19 @@ This address determines which save file profile is selected for saving progress.
 0x01 = COM Battle
 0x02 = COM vs COM Battle
 
+0x00023b: [8-bit] Versus Mode - Battle Number
+0x00 = Battle 1
+0x01 = Battle 2
+0x02 = Battle 3
+0x03 = Battle 4
+0x04 = Battle 5
+0x05 = Battle 6
+0x06 = Battle 7
+0x07 = Battle 8
+0x08 = Battle 9
+0x09 = Boss Battle
+0x0a = Victory Cutscene
+
 0x0002a5: [8-bit] P1 Rounds Won
 0x00 = None
 0x01 = 1 Win
@@ -88,6 +117,20 @@ This address determines which save file profile is selected for saving progress.
 
 0x0002ab: [8-bit] P1 Health Bar
 0x64 = Maximum HP
+
+0x0002bb: [8-bit] Advance Mode - Skill/Total Stat: Attack
+
+0x0002bd: [8-bit] Advance Mode - Skill/Total Stat: Guard
+
+0x0002bf: [8-bit] Advance Mode - Skill/Total Stat: Speed
+
+0x000319: [8-bit] P1 Character Skin / Palette
+0x00 = Default
+0x01 = Skin 2
+0x02 = Skin 3
+0x03 = Skin 4
+0x04 = Skin 5
+0x05 = Skin 6
 
 0x0003a5: [8-bit] P2/COM Rounds Won
 0x00 = None
@@ -97,9 +140,25 @@ This address determines which save file profile is selected for saving progress.
 0x0003ab: [8-bit] P2/COM Health Bar
 0x64 = Maximum HP
 
-0x0006ef: [2-Bytes BCD] Timer
-0x0006ef [Lower4] = Units digit
-0x0006f0 [Lower4] = Tens digit
+0x000419: [8-bit] P2 Character Skin / Palette
+0x00 = Default
+0x01 = Skin 2
+0x02 = Skin 3
+0x03 = Skin 4
+0x04 = Skin 5
+0x05 = Skin 6
+
+0x000447: [8-bit] Advance Mode - Menu Screen ID
+0x00 = File Management Center
+0x01 = Item Shop
+0x02 = Athletes' Dormitory / Players' Quarters
+0x03 = Underground Arena
+0x04 = Central Gate
+0x05 = Battle Tycoon Venue
+
+0x0006ef: [8-bit] [Lower4] Timer Units digit
+
+0x0006f0: [8-bit] [Lower4] Timer Tens digit
 
 0x00093a: [16-bit] Player 1 Select - Versus
 0x00 = Bang
@@ -111,12 +170,13 @@ This address determines which save file profile is selected for saving progress.
 0x0c = Seena
 0x0e = Guston
 0x10 = Pachet
-0x12 = Load 4
-0x14 = Load 3
-0x16 = Load 2
-0x18 = Load 1
+0x12 = Save File Character
+0x14 = Save File Character
+0x16 = J. Lance / Save File Character
+0x18 = Save File Character
+0x1a = Save File Character
 
-0x00093c: [16-bit] Player 2/COM Select - Versus
+0x00093c: [16-bit] Player 1 Select - Versus
 0x00 = Bang
 0x02 = Tiria
 0x04 = Ottoh
@@ -126,10 +186,11 @@ This address determines which save file profile is selected for saving progress.
 0x0c = Seena
 0x0e = Guston
 0x10 = Pachet
-0x12 = Load 4
-0x14 = Load 3
-0x16 = Load 2
-0x18 = Load 1
+0x12 = Save File Character
+0x14 = Save File Character
+0x16 = J. Lance / Save File Character
+0x18 = Save File Character
+0x1a = Save File Character
 
 0x002134: [16-bit] Advance Mode - Selected Character
 0x00 = Bang
@@ -142,7 +203,7 @@ This address determines which save file profile is selected for saving progress.
 0x0e = Guston
 0x10 = Pachet
 
-0x002136: [16-bit] Difficulty Rank - Advance
+0x002136: [16-bit] Advance Mode - Difficulty Rank
 0x00 = Easy
 0x01 = Normal
 0x02 = Hard
@@ -150,3 +211,15 @@ This address determines which save file profile is selected for saving progress.
 0x04 = Truth
 0x05 = Death
 
+0x002138: [16-bit] Advance Mode - Character Level
+Note: Displayed Level = Memory Value + 1
+
+0x00213c: [32-bit] Advance Mode - Gold
+
+0x002146: [8-bit] Advance Mode - Player Option
+0x00 = Manual
+0x01 = Auto
+
+0x014000: [8-bit] Battle Status
+0x00 = Not in battle
+0x01 = In battle

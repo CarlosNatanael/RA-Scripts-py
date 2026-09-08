@@ -1,7 +1,10 @@
 Game ID: 26225
 Source: RA Server
-Total Notes: 14
+Total Notes: 16
 ============================================================
+
+0x000000: [Notes] Set created with the help of PyCheevos scripts:
+https://github.com/CarlosNatanael/RA-Scripts-py/tree/main/scripts_sets/GG/Kenyuu_Densetsu_Yaiba
 
 0x000009: [8-bit BCD] Fighting Spirit
 
@@ -71,7 +74,7 @@ Bit4 = Button B
 Bit5 = Button A
 Bit7 = Start
 
-0x0000c3: [8-bit] I still don't know what it is!
+0x0000c3: [8-bit] Number of Continues Used
 
 0x0000f6: [8-bit] Stage ID
 0x00 = 1 Stage
@@ -115,3 +118,7 @@ Bit7 = Start
 0x001e42: [8-bit] Active Gameplay Flag
 0x00 = Paused / Dead
 0x01 = In Game
+
+0x001f3c: [8-bit] Stage 1-1 Item - Strength
+0x00 = Not Collected
+0x01 = Collected

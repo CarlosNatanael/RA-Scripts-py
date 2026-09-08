@@ -16,6 +16,7 @@ mem_gold_100k = byte(0x0024)
 mem_gold_1k = byte(0x0023)
 mem_gamestate = byte(0x03d5)
 mem_endgame = byte(0x0107)
+mem_end_level = byte(0x0134)
 
 # 2. PROGRESSÃO
 prog_data = [
@@ -66,19 +67,24 @@ for a_id, title, desc, pts, stage in flawless_data:
 
 # Flawless Mountain (Lógica de trigger diferente)
 ach_flaw_mt = Achievement(id=613408, title="Flawless Mountain", description="Clear Level 6 without losing a life", points=50)
+
 ach_flaw_mt.add_core([
-        reset_next_if(mem_lives == 0x00),
-        pause_if((mem_lives < mem_lives.delta()).with_hits(1)),
-        (mem_stage == 0x06),
-        (mem_endgame.delta() == 0x00),
-        trigger(mem_endgame == 0xff),
+    and_next(mem_stage == 0x06),
+    pause_if((mem_lives < mem_lives.delta()).with_hits(1)),
+    (mem_stage == 0x06),
+    (mem_endgame.delta() == 0x00),
+    trigger(mem_endgame == 0xff),
 ])
+
+ach_flaw_mt.add_alt([
+    reset_if(mem_lives == 0x00),
+])
+
 my_set.add_achievement(ach_flaw_mt)
 
 # 4. SWIFT LOOTER (TIME ATTACK)
 swift_data = [
     (613416, "Swift Looter I", "Clear Level 1 with at least 40 seconds remaining", 2, 1),
-    (613417, "Swift Looter III", "Clear Level 3 with at least 40 seconds remaining", 5, 3),
     (613418, "Swift Looter V", "Clear Level 5 with at least 40 seconds remaining", 10, 5),
 ]
 
@@ -92,6 +98,18 @@ for a_id, title, desc, pts, stage in swift_data:
         (mem_time_s >= 0x40), # 0x40 representa 40 em BCD
     ])
     my_set.add_achievement(ach)
+
+ach = Achievement(id=613417, title="Swift Looter III", description="Clear Level 3 with at least 40 seconds remaining", points=5)
+ach.add_core([
+    (mem_end_level.delta() == 0x00),
+    trigger(mem_end_level == 0x01),
+    or_next(mem_time_m >= 0x01),
+    (mem_time_s >= 0x40),
+    or_next(mem_pause == 0xff),
+    (mem_pause == 0x00),
+    (mem_stage == 0x03),
+])
+my_set.add_achievement(ach)
 
 # 5. MISC (COLETÁVEIS, UPGRADES, DESAFIOS)
 ach = Achievement(id=613409, title="A Prosperous Life", description="Clear the game without using any continues", points=50)

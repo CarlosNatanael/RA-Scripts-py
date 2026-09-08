@@ -1,7 +1,24 @@
 Game ID: 286
 Source: RA Server
-Total Notes: 139
+Total Notes: 140
 ============================================================
+
+0x000000: [Notes] Set created with the help of PyCheevos scripts:
+https://github.com/CarlosNatanael/RA-Scripts-py/blob/main/scripts_sets/SNES/ISSD
+
+0x000020: [Bitfield] P1 Controller Input
+Bit4 = R
+Bit5 = L
+Bit6 = X
+Bit7 = A
+
+0x000021: [Bitfield] P1 Controller Input
+Bit0 = Right
+Bit1 = Left
+Bit2 = Down
+Bit3 = Up
+Bit6 = Y
+Bit7 = B
 
 0x000032: [8-bit] Screen ID 
 0x00 = Konami logo (on boot)
@@ -12,12 +29,10 @@ Total Notes: 139
 0x09 = Intro (before title screen)
 
 Note: Seems to be 0x06 consistently during all normal game modes after the mode select screen. Seems consistent.
-(Original Note by TheMysticalOne)
 
 0x000052: [8-bit] CPU Active
 0x00 = Yes
 0x01 = No
-(Original Note by MarioJunior10)
 
 0x000057: [8-bit] [Bitfield] Screen Condition Win
 Bit3 = International and World Series winning screen
@@ -26,14 +41,16 @@ Bit3 = International and World Series winning screen
 0x00 = Off
 0x01 = On
 0x03 = Penalty shootout
-(Original Note by mickyt888)
+
+0x000062: [8-bit] Season World Series
+0x01 = 1st Season
+0x02 = 2nd Season
 
 0x0000a8: [8-bit] Match - Period
 0x00 = 1st half
 0x01 = 2nd half
 0x02 = 1st half extra time
 0x03 = 2nd half extra time
-(Original Note by MelodyAsh)
 
 0x000da0: [8-bit] Team P1 ID 
 0x00 = Italy
@@ -79,10 +96,7 @@ Bit3 = International and World Series winning screen
 0x50 = African Start
 0x52 = All American Start
 
-(Original Note by SamuraiGoroh)
-
 0x000da2: [8-bit] P1 Score
-(Original Note by Dissection)
 
 0x000da6: [8-bit] P1 Team Formation
 0x00 = 4-5-1
@@ -103,21 +117,16 @@ Bit3 = International and World Series winning screen
 0x0f = 1-4-5
 
 0x000daa: [8-bit] P1 Total Shots
-(Original Note by mickyt888)
 
 0x000dab: [8-bit] P1 Total Free Kicks
-(Original Note by mickyt888)
 
 0x000dac: [8-bit] P1 Total Corner Kicks
-(Original Note by mickyt888)
 
 0x000dad: [8-bit] P1 Total Penalties
 
 0x000dae: [8-bit] P1 Total Yellow Cards
-(Original Note by mickyt888)
 
 0x000daf: [8-bit] P1 Total Red Cards
-(Original Note by mickyt888)
 
 0x000db0: [8-bit] P1 Total Substitutions
 
@@ -172,10 +181,7 @@ Bit3 = International and World Series winning screen
 0x50 = African Start
 0x52 = All American Start
 
-(Original Note by mickyt888)
-
 0x000ea2: [8-bit] P2/CPU Score
-(Original Note by mickyt888)
 
 0x000ea6: [8-bit] P2/CPU Team Formation
 0x00 = 4-5-1
@@ -196,13 +202,10 @@ Bit3 = International and World Series winning screen
 0x0f = 1-4-5
 
 0x000eaa: [8-bit] P2/CPU Total Shots
-(Original Note by mickyt888)
 
 0x000eab: [8-bit] P2/CPU Total Free Kicks
-(Original Note by mickyt888)
 
 0x000eac: [8-bit] P2/CPU Total Corner Kicks
-(Original Note by mickyt888)
 
 0x000ead: [8-bit] P2/CPU Total Penalties
 
@@ -218,6 +221,10 @@ Bit3 = International and World Series winning screen
 0x02 = Normal
 0x03 = Good
 0x04 = Strong
+
+0x00104c: [8-bit] CPU/P2 Has Ball Possession
+0x00 = No
+0x01 = Yes
 
 0x0011e6: [8-bit] Options - Players Mode
 0x00 = 1P vs CPU
@@ -241,7 +248,6 @@ Bit3 = International and World Series winning screen
 0x001652: [8-bit] World Series - Round Completed
 0x01 = 1st round
 0x23 = Last round (35º round)
-(Original Note by mickyt888)
 
 0x001654: [8-bit] Game Mode - Pre and post-match
 0x00 = Open Game
@@ -252,7 +258,6 @@ Bit3 = International and World Series winning screen
 0x06 = Scenario
 0x07 = Challenge
 0x08 = Training
-(Original Note by Jamiras)
 
 0x00167c: [8-bit] Number of Players - Short League and Short Tournament
 0x01 = 1 Player
@@ -265,19 +270,14 @@ Bit3 = International and World Series winning screen
 0x08 = 8 Players
 
 0x0016d2: [8-bit BCD] Timer - Seconds
-(Original Note by Jamiras)
 
 0x0016d3: [8-bit BCD] Timer - Minutes
-(Original Note by Jamiras)
 
 0x0016d4: [8-bit BCD] Timer - frames
-(Original Note by Jamiras)
 
-0x0019c4: [8-bit] Value of Scenario total tries ?
-(Original Note by Jamiras)
+0x0019c4: [8-bit] Value of Scenario total tries
 
 0x001cfa: [16-bit] Score in Challenge Mode
-(Original Note by Jamiras)
 
 0x001d08: [8-bit] Voice Line ID
 0x00 = Intro " International Superstar Soccer Deluxe"
@@ -337,8 +337,6 @@ Bit3 = International and World Series winning screen
 0x46 = Final goal shout
 0x48 = Barking (dog referee active)
 
-(Original Note by MelodyAsh)
-
 0x001e5e: [8-bit] Main Menu Option
 Note: Stores the currently selected main game mode.
 0x00 = Quick Match
@@ -349,7 +347,6 @@ Note: Stores the currently selected main game mode.
 0x05 = Penalties
 0x06 = Training
 0x07 = Options
-(Original Note by MelodyAsh)
 
 0x001e68: [8-bit] P1 Number of Players
 0x06 = 7
@@ -369,7 +366,6 @@ Note: Stores the currently selected main game mode.
 0x00 = 3 Minutes
 0x01 = 5 Minutes
 0x02 = 7 Minutes
-(Original Note by Jamiras)
 
 0x001f90: [8-bit] Sound Setting
 0x00 = Stereo
@@ -378,17 +374,14 @@ Note: Stores the currently selected main game mode.
 0x001f92: [8-bit] Offside Enabled
 0x00 = Yes
 0x01 = No
-(Original Note by mickyt888)
 
 0x001f98: [8-bit] Fouls Enabled
 0x00 = Yes
 0x01 = No
-(Original Note by Jamiras)
 
 0x001f9a: [8-bit] Yellow Card Enabled
 0x00 = Yes
 0x01 = No
-(Original Note by Jamiras)
 
 0x001f9c: [8-bit] Game Difficulty
 0x00 = Level 1
@@ -396,14 +389,12 @@ Note: Stores the currently selected main game mode.
 0x02 = Level 3
 0x03 = Level 4
 0x04 = Level 5
-(Original Note by mickyt888)
 
 0x001fa0: [8-bit] Referee Selection
 0x00 = Carlos
 0x01 = Heinz
 0x02 = Hasegaa
 0x03 = Random
-(Original Note by Jamiras)
 
 0x001fa2: [8-bit] Stadiums
 0x00 = Japan
@@ -422,16 +413,14 @@ Note: Stores the currently selected main game mode.
 0x002f1f: [8-bit] Game State - Match
 0x00 = Not in Match / Menu
 0x01 = In Match
-(Note: Does not register during Penalty Kicks and Scenario)
+Note: Does not register during Penalty Kicks and Scenario
 
 0x00a23e: [8-bit Bitfield] Screen Condition Win
 Bit5 = Short Tournament  and Short League Winning Screen
 
 0x00d442: [8-bit] P1 Penalty Score
-(Original Note by Jamiras)
 
 0x00d443: [8-bit] P2/CPU Penalty Score
-(Original Note by Jamiras)
 
 0x00d474: [8-bit] P1 Player Condition
 0x00 = Terrible 
@@ -454,7 +443,6 @@ Bit7 = 9 Scenario
 Bit6 = 10 Scenario
 Bit5 = 11 Scenario
 Bit4 = 12 Scenario
-(Original Note by s0uth)
 
 0x00d854: [8-bit] Referee Dog
 0x00 = Disabled
@@ -469,7 +457,6 @@ Bit3 = 5 Scenario
 Bit2 = 6 Scenario
 Bit1 = 7 Scenario
 Bit0 = 8 Scenario
-(Original Note by s0uth)
 
 0x00d88e: [8-bit] Scenario 1 Attempt Count
 
@@ -488,37 +475,28 @@ Bit0 = 8 Scenario
 0x00d895: [8-bit] Scenario 8 Attempt Count
 
 0x00d896: [8-bit] Scenario 9 Attempt Count
-(Original Note by mickyt888)
 
 0x00d897: [8-bit] Scenario 10 Attempt Count
-(Original Note by Jamiras)
 
 0x00d898: [8-bit] Scenario 11 Attempt Count
 
 0x00d899: [8-bit] Scenario 12 Attempt Count
-(Original Note by MelodyAsh)
 
 0x00d8be: [16-bit BCD] Training: Dribble Challenge Lv1 - Best Time
 
 0x00d8c4: [16-bit] Training: Dribble Challenge Lv1 - Best Score
-(Original Note by Jamiras)
 
 0x00d8c9: [16-bit BCD] Training: Pass Challenge Lv1 - Best Time
 
 0x00d8cf: [16-bit] Training: Pass Challenge Lv1 - Best Score
-(Original Note by mickyt888)
 
 0x00d8d4: [16-bit BCD] Training: Kick Challenge Lv1 - Best Time
 
 0x00d8da: [16-bit] Training: Kick Challenge Lv1 - Best Score
-(Original Note by Jamiras)
 
 0x00d8df: [16-bit BCD] Training: Defense Challenge Lv1 - Best Time
 
 0x00d8e5: [16-bit] Training: Defense Challenge Lv1 - Best Score
-(Original Note by mickyt888)
-
-0x00d8e6: [8-bit] Wrong Annotation - Logic Fix
 
 0x00d8ea: [16-bit BCD] Training: Corner Kick Challenge Lv1 - Best Time
 
@@ -544,8 +522,6 @@ Bit0 = 8 Scenario
 
 0x00d927: [16-bit] Training: Defense Challenge Lv2 - Best Score
 
-0x00d928: [8-bit] Wrong Annotation - Logic Fix
-
 0x00d92c: [16-bit BCD] Training: Corner Kick Challenge Lv2 - Best Time
 
 0x00d932: [16-bit] Training: Corner Kick Challenge Lv2 - Best Score
@@ -553,8 +529,6 @@ Bit0 = 8 Scenario
 0x00d937: [16-bit BCD] Training: Free Kick Challenge Lv2 - Best Time
 
 0x00d93d: [16-bit] Training: Free Kick Challenge Lv2 - Best Score
-
-0x00d93e: [8-bit] Wrong Annotation - Logic Fix
 
 0x00d942: [16-bit BCD] Training: Dribble Challenge Lv3 - Best Time
 
@@ -579,8 +553,6 @@ Bit0 = 8 Scenario
 0x00d979: [16-bit BCD] Training: Free Kick Challenge Lv3 - Best Time
 
 0x00d97f: [16-bit] Training: Free Kick Challenge Lv3 - Best Score
-
-0x00d980: [8-bit] Wrong Annotation - Logic Fix
 
 0x00d984: [16-bit BCD] Training: Dribble Challenge Lv4 - Best Time
 
@@ -656,7 +628,6 @@ Note: Stores the currently selected scenario (01-12)
 0x09 = Scenario 10
 0x0a = Scenario 11
 0x0b = Scenario 12
-(Original Note by mickyt888)
 
 0x00e52c: [8-bit] Training - Challenge Type
 0x00 = Dribble
@@ -675,9 +646,7 @@ Note: Stores the currently selected scenario (01-12)
 0x00e532: [8-bit] Scenario Mode
 0x00 = No
 0x01 = Yes
-(Original Note by Hotscrock)
 
 0x00e534: [8-bit] Training mode
 0x00 = No
 0x01 = Yes
-(Original Note by Hotscrock)

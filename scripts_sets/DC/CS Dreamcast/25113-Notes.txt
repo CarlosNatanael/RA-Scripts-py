@@ -1,34 +1,161 @@
 Game ID: 25113
 Source: RA Server
-Total Notes: 5
+Total Notes: 42
 ============================================================
+
+0xb222bc: [8-bit] Player Team (CT or TR)
+0x00 = Terrorist
+0x20 = Counter-Terrorist
+
+0xc60f38: [8-bit] Cheat Flag - Flying Mode
+This flag is unlocked by entering the correct code on the select screen.
+0x00 = Not discovered / Locked
+0x01 = Visible in cheat UD (Unlock Display)
+
+0xc60f3c: [8-bit] Cheat Flag - Flying Mode
+0x00 = Disabled
+0x01 = Enabled
+
+0xc60f68: [8-bit] Cheat Flag - Get Well Soon
+0x00 = Not discovered / Locked
+0x01 = Visible in cheat UD (Unlock Display)
+
+0xc60f6c: [8-bit] Cheat Flag - Get Well Soon
+0x00 = Disabled
+0x01 = Enabled
+
+0xc60f98: [8-bit] Cheat Flag - Infinite Ammo
+0x00 = Not discovered / Locked
+0x01 = Visible in cheat UD (Unlock Display)
+
+0xc60f9c: [8-bit] Cheat Flag - Infinite Ammo
+0x00 = Disabled
+0x01 = Enabled
+
+0xc60fc8: [8-bit] Cheat Flag - Invulnerability
+0x00 = Not discovered / Locked
+0x01 = Visible in cheat UD (Unlock Display)
+
+0xc60fcc: [8-bit] Cheat Flag - Invulnerability
+0x00 = Disabled
+0x01 = Enabled
+
+0xc60ff8: [8-bit] Cheat Flag - Lock And Load
+0x00 = Not discovered / Locked
+0x01 = Visible in cheat UD (Unlock Display)
+
+0xc60ffc: [8-bit] Cheat Flag - Lock And Load
+0x00 = Disabled
+0x01 = Enabled
+
+0xc61028: [8-bit] Cheat Flag - Lock And Load
+0x00 = Not discovered / Locked
+0x01 = Visible in cheat UD (Unlock Display)
+
+0xc6102c: [8-bit] Cheat Flag - Shopping Trip
+0x00 = Disabled
+0x01 = Enabled
+
+0xc61058: [8-bit] Cheat Flag - Unforeseen Consequences
+
+0xc61088: [8-bit] Cheat Flag - We've Got Hostiles
+
+0xc610b8: [8-bit] Cheat Flag - Power Up
+
+0xc610e8: [8-bit] Cheat Flag - Apprehesion
+
+0xc61118: [8-bit] Cheat Flag - Questionable Ethics
+
+0xc61148: [8-bit] Cheat Flag - Forget About Freeman
+
+0xc61178: [8-bit] Cheat Flag - Xen
+
+0xc611a8: [8-bit] Cheat Flag - Gonarch's Lair
+
+0xc611d8: [8-bit] Cheat Flag - EndGame
+
+0xc61208: [8-bit] Cheat Flag - Duty Calls
+
+0xc61238: [8-bit] Cheat Flag - Focal Point
+
+0xc61268: [8-bit] Cheat Flag - A Leap Of Faith
+
+0xc78a24: [32-bit] Automatic Pistol Ammo
 
 0xc78b2c: [32-bit] Pistol Ammo
 
 0xc78c34: [32-bit] AK-47 Ammo
 
+0xc78e44: [32-bit] Rifle Ammo
+
 0xc78f4c: [32-bit] Shotgun Ammo
 
-0xc7ab80: [32-bit] HP Player
+0xc7a948: [32-bit] Shotgun Ammo (Reserve / Extra)
 
-0xddf4a0: [32-bit] Current Weapon ID
-// Modo TR Soldado
-0x6c = Bomba de controle
-// Modo TR Sniper
-0x41 = Faca
-0x44 = Pitola Automatic
-0x4f = Pitola
-0x49 = AK-47
-0x3c = Shotgun
-0x60 = Rifle
-0x72 = Bomba encendiaria
-0x62 = Bomba de controle
-// Modo Pratice
-0xb9 = Knife
-0xc7 = Pistol
-0xc1 = AK-47
-0xb4 = Shotgun
+0xc7a94c: [32-bit] AK-47 Ammo (Reserve / Extra)
 
-[32-bit] Player Armor / Kevlar Shield
+0xc7a968: [32-bit] Remote Bomb Ammo
+
+0xc7a96c: [32-bit] Fire Bomb Ammo
+
+0xc7ab60: [32-bit] Current Weapon ID
+0x001d18bc = Knife
+0x001d19c4 = Automatic Pistol
+0x001d1acc = Pistol
+0x001d1bd4 = AK-47
+0x001d1de4 = Rifle
+0x001d1eec = Shotgun
+0x001d1ff4 = RPG
+0x001d20fc = Tau Cannon
+0x001d2204 = Gluon Gun
+0x001d230c = Hivehand
+0x001d2414 = Fire Bomb
+0x001d2624 = Remote Bomb
+0x001d251c = Laser Tripmine
+0x001d272c = Snarks
+
+0xc7ab80: [32-bit] Player Current HP
+
+0xc7aca8: [32-bit] Player Armor / Kevlar Shield
 0x00 = No Armor
 0x64 = 100 Armor (Full)
+
+0xc7ad00: [32-bit] Flashlight Battery Level
+0x00 = Empty
+0x64 = Full
+
+0xc7ad04: [32-bit] Flashlight
+0x00 = Off
+0x01 = On
+
+0xca5d74: [32-bit] Class ID
+0x00 = None
+0x01 = Soldier
+0x02 = Sniper
+0x03 = Elite
+
+0xd951f9: [15-bytes ASCII BE] Current Map Name
+"c0a0.bs" = Main CT
+"ba_tram1" = Main TR
+"t0a0" = Training
+"de_dust" = Dust
+"de_dust2" = Dust2
+"de_dust2t" = Dust2 TR
+"de_aztec2" = Aztec
+"de_inferno" = Inferno
+"de_nuke" = Nuke
+"de_nostromo" = Nostromo
+"de_prodigy" = Prodigy
+"de_train" = Train
+"cs_assault2" = Assault
+"cs_italy" = Italy
+"cs_militia" = Militia
+"cs_rio" = Rio
+"cs_007facility" = 007 Bunker
+"as_secretbase" = Secret Base
+"as_oilrig" = Oilrig
+"as_tundra2" = Tundra CT
+"as_tundrat" = Tundra TR
+
+0xddf4a0: [32-bit] Player State
+0x00 = Menu / Map Transition

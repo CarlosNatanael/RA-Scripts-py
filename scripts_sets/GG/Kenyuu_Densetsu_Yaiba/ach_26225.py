@@ -139,7 +139,7 @@ my_set.add_achievement(ach)
 # 8. SPEEDRUNS
 speed_data = [
     (622170, "Swift as a Jungle Boy I", "Speedrun Stage 1-1 and beat the Developer time", 2, 0x02, 2300),
-    (622171, "Swift as a Jungle Boy II", "Speedrun Stage 2-2 and beat the Developer time", 2, 0x0d, 600),
+    (622171, "Swift as a Jungle Boy II", "Speedrun Stage 2-2 and beat the Developer time", 2, 0x0d, 750),
     (622172, "Swift as a Jungle Boy III", "Speedrun Stage 2-4 and beat the Developer time", 2, 0x11, 600),
     (622173, "Swift as a Jungle Boy IV", "Speedrun Stage 2-6 and beat the Developer time", 2, 0x15, 1100),
 ]

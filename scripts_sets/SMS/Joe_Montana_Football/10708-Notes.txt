@@ -11,6 +11,8 @@ https://github.com/CarlosNatanael/RA-Scripts-py/tree/main/scripts_sets/SMS/Joe_M
 0x10 = Player 1
 0xfe = Player 2 / CPU
 
+0x0007e3: [8-bit] Player 2 Controller
+
 0x00083b: [8-bit BCD] Current Down
 [Note: Tracks the current attempt from 1st to 4th down]
 

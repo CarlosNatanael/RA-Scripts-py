@@ -40,7 +40,7 @@ bankroll_data = [
 for a_id, title, desc_val, target, pts, badge in bankroll_data:
     ach = Achievement(id=a_id, title=title, description=f"Reach a total bankroll of {desc_val}", points=pts, badge=badge)
     ach.add_core([
-        (mem_state == 0x01),
+        (mem_loc > 0x00),
         (mem_bankroll.delta() < target),
         (mem_bankroll >= target),
     ])
@@ -60,7 +60,6 @@ my_set.add_achievement(ach)
 # Ações de Mesa (Split, Double Down, Insurance)
 action_data = [
     (608996, "Divide and Conquer", "Choose to Split a pair and win your hands", 5, 0x05, "690811"),
-    (608997, "Double or Nothing", "Choose to Double Down and win the hand", 10, 0x04, "690812"),
     (608998, "Safe Bet", "Successfully win an Insurance bet against the Dealer", 5, 0x0a, "690813"),
 ]
 
@@ -78,6 +77,17 @@ for a_id, title, desc, pts, act_val, badge in action_data:
         trigger(mem_result == 0x01),
     ])
     my_set.add_achievement(ach)
+
+ach = Achievement(id=608997, title="Double or Nothing", description="Choose to Double Down and win the hand", points=10, badge="690814")
+ach.add_core([
+    reset_if(mem_turn == 0x00),
+    reset_if(mem_menu == 0x08),
+    (mem_action == 0x01).with_hits(1),
+    (mem_turn == 0xff),
+    (mem_result.delta() != 0x01),
+    trigger(mem_result == 0x01),
+])
+my_set.add_achievement(ach)
 
 # 5. DESAFIOS (STREAK)
 ach = Achievement(id=608999, title="Unbreakable Streak", description="Win 5 consecutive hands without tying or losing", points=10, badge="690814")

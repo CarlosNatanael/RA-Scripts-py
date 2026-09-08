@@ -96,9 +96,17 @@ for a_id, title, desc, pts, mem_addr, target in upgrade_data:
 # The Cyber Shinobi
 ach = Achievement(id=610610, title="The Cyber Shinobi", description="Reach level 8 in Power and Ninjutsu", points=25)
 ach.add_core([
-    (mem_state == 0x05),
-    (mem_power == 0x08), (mem_power.delta() < 0x08),
-    (mem_ninjutsu == 0x08), (mem_ninjutsu.delta() < 0x08),
+    (mem_state == 0x05)
+])
+ach.add_alt([
+    (mem_power == 0x08),
+    (mem_power.delta() < 0x08),
+    (mem_ninjutsu == 0x08)
+])
+ach.add_alt([
+    (mem_ninjutsu == 0x08),
+    (mem_ninjutsu.delta() < 0x08),
+    (mem_power == 0x08)
 ])
 my_set.add_achievement(ach)
 

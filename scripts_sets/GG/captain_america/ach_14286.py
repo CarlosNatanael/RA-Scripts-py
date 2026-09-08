@@ -11,6 +11,7 @@ mem_state = byte(0x1d22)
 mem_diff  = byte(0x1d0f)
 mem_cont  = byte(0x1d10)
 mem_hp    = byte(0x0320)
+mem_boss  = byte(0x1d15)
 
 # Endereços do Score (Nibbles/Low4)
 score_high = low4(0x1d59)
@@ -54,8 +55,7 @@ ach.add_core([
     pause_if((mem_cont < mem_cont.delta()).with_hits(1)),
     (mem_stage == 0x00).with_hits(1),
     (mem_state == 0x03).with_hits(1),
-    (mem_state == 0x03),
-    trigger(mem_stage.delta() == 0x1c),
+    trigger((mem_stage.delta() == 0x1c).with_hits(1)),
     trigger(mem_stage == 0x1d)
 ])
 ach.add_alt([reset_if(mem_state == 0x01)])
@@ -112,6 +112,7 @@ boss_data = [
 for a_id, title, desc, pts, delta_stage in boss_data:
     ach = Achievement(id=a_id, title=title, description=desc.replace("...", " without taking any damage on Normal or Challenge difficulty"), points=pts, badge="00000", type=AchievementType.MISSABLE)
     ach.add_core([
+        and_next(mem_boss == 0x00),
         pause_if((mem_hp < mem_hp.delta()).with_hits(1)),
         (mem_stage.delta() == delta_stage),
         (mem_diff >= 0x01),

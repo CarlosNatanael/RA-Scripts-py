@@ -1,7 +1,10 @@
 Game ID: 12344
 Source: RA Server
-Total Notes: 18
+Total Notes: 19
 ============================================================
+
+0x000000: [Notes] Set created with the help of PyCheevos scripts:
+https://github.com/CarlosNatanael/RA-Scripts-py/tree/main/scripts_sets/ARCD/Power_Spikes
 
 0x000022: [16-bit] Main Game State
 0x00 = Boot / Null

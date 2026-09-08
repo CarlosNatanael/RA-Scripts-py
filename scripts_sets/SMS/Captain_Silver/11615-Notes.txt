@@ -1,6 +1,6 @@
 Game ID: 11615
 Source: RA Server
-Total Notes: 35
+Total Notes: 36
 ============================================================
 
 0x000000: [Notes] Set created with the help of PyCheevos scripts:
@@ -94,6 +94,12 @@ https://github.com/CarlosNatanael/RA-Scripts-py/tree/main/scripts_sets/SMS/Capta
 0x00 = Inactive
 0xff = Active
 [Note: This value then changes to 0x01 to display the final story]
+
+0x000134: [8-bit] End of Level / Time Bonus Tally Flag
+0x00 = Inactive
+0x01 = Active
+0x03 = Active
+[Note: Triggers after defeating a boss to initiate the time-to-score conversion]
 
 0x000140: [16-bit] Herb Effect Active (Invincibility)
 0x0000 = No

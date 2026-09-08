@@ -1,11 +1,24 @@
 Game ID: 25619
 Source: RA Server
-Total Notes: 13
+Total Notes: 18
 ============================================================
+
+0x000000: [Notes] Set created with the help of PyCheevos scripts:
+https://github.com/CarlosNatanael/RA-Scripts-py/tree/main/scripts_sets/GB/Kaijuu_Ou_Gojira
 
 0x00d886: [8-bit] Pause Flag
 0x00 = In-Game
 0x01 = Paused
+
+0x00da02: [8-bit] Joypad Input
+Bit 0 = A
+Bit 1 = B
+Bit 2 = Select
+Bit 3 = Start
+Bit 4 = Right
+Bit 5 = Left
+Bit 6 = Up
+Bit 7 = Down
 
 0x00da2c: [8-bit] Current Stage ID
 0x00 = Stage 1
@@ -13,13 +26,27 @@ Total Notes: 13
 0x02 = Stage 3
 0x03 = Stage 4
 0x04 = Stage 5
-0x05 = Stage 6
 
 0x00db37: [8-bit] Continues Used
 0x00 = 0 Continues
 0x01 = 1 Continue
 0x02 = 2 Continues
 0x03 = 3 Continues (Max / Game Over)
+
+0x00dc34: [8-bit] Monsters ID Slot 1
+0x05 = Mothra Egg
+0x06 = Battra
+0x07 = Mothra Larva
+0x0e = Super X
+0x10 = Super X2
+0x18 = Gabara
+0x19 = Jet Jaguar
+0x1a = Gezora
+0x1b = King Caesar
+0x1d = Ganime
+0x1f = Flying Mechagodzilla
+0x20 = Varan
+0x21 = Rodan
 
 0x00dc43: [8-bit] Enemy Slot 1 / Main Body - HP
 // Stage 1:
@@ -57,6 +84,10 @@ Total Notes: 13
 0xfa = Varan (250)
 [Note: Starts at 0xc2 (194), drops to 0x02, refills to 0xfa, then drops to 0x00 upon death]
 
+0x00dc54: [8-bit] Monsters ID Slot 2
+0x04 = Ebirah
+0x15 = Flying Hedorah
+
 0x00dc63: [8-bit] Enemy Slot 2 / Sub-Entity - HP
 // Stage 2:
 0xfe = Biollante Lower Tentacle - 2nd Fight (254)
@@ -73,9 +104,27 @@ Total Notes: 13
 // Stage 2:
 0xfe = Biollante Lower Tentacle (254)
 
+0x00dd34: [8-bit] Monsters ID Slot 3
+0x84 = Battra
+0x8c = Anguirus
+0x8a = Biollante
+0x8b = Biollante Final Form
+0x8d = Manda
+0x8f = Kamacuras
+0x8e = Final Hedorah
+0x90 = Kumonga
+0x91 = King Ghidorah
+0x92 = Gigan
+0x93 = Megalon
+0x95 = Mecha King Ghidorah
+0x96 = Fake Godzila
+0x97 = Titanosaurus
+0x98 = Mechagodzilla
+0x99 = Mechagodzilla Final
+
 0x00dd43: [8-bit] Enemy Boss Core - HP
 // Stage 1:
-0xc8 = Mothra Larva 2 (200)
+0xc8 = Battra (200)
 0xfc = Mothra Imago (252)
 [Note: Imago phase starts at 0x04, then changes to 0xfc]
 0x7c = Mothra Final (124)
@@ -112,7 +161,7 @@ Total Notes: 13
 
 // Stage 5:
 0xf8 = Fake Godzilla (248)
-[Note: Starts at 0xe0 (224), drops to 0x00, refills to 0xf8, then drops to 0x00 upon death]
+[Note: Starts at 0xe0 (224), drops to 0x00, refills to 0xf0, then drops to 0x00 upon death]
 0xf8 = Mechagodzilla 2 (248)
 [Note: Starts at 0xd8 (216), drops to 0x00, refills to 0xf8, then drops to 0x00 upon death]
 0xf8 = Titanosaurus (248)

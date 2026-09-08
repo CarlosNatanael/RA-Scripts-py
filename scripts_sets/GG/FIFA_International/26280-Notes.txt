@@ -1,16 +1,25 @@
 Game ID: 26280
 Source: RA Server
-Total Notes: 178
+Total Notes: 181
 ============================================================
+
+0x000000: [Notes] Set created with the help of PyCheevos scripts:
+https://github.com/CarlosNatanael/RA-Scripts-py/tree/main/scripts_sets/GG/FIFA_International
 
 0x000a34: [11-byte] Selected Team Name (ASCII String)
 [Note: Stores the name of the player's chosen team in ASCII format.]
 
-0x000ad4: [8-bit] Match Clock: Minutes
+0x000ad4: [8-bit BCD] Match Clock: Minutes
 
-0x000ad5: [8-bit] Match Clock: Seconds
+0x000ad5: [8-bit BCD] Match Clock: Seconds
 
 0x000ad6: [8-bit] Match Clock: Frames / Sub-seconds
+
+0x000ad7: [8-bit] Match End / Full-Time Flag
+0x00 = Match Active / Time Running
+0xff = Match Over / Full-Time
+
+[Note: Switches to 0xff at the exact frame the referee blows the final whistle to end the match. Highly reliable flag to trigger post-game achievement validations]
 
 0x000af0: [8-bit] Match Period
 0x00 = 1st Half
@@ -278,6 +287,10 @@ Total Notes: 178
 0x01 = Active Match Gameplay (On the Field)
 0x04 = Tournament Champions Screen
 0x09 = League Champions Screen
+
+0x000bd1: [8-bit] Gameplay Active Flag
+0x01 = Pause Menu / Inactive Gameplay
+0x00 = Active Match Gameplay
 
 0x000c6a: [8-bit] Screen State / Transition Flag
 0x01 = Pre-Menu / Title Screen
