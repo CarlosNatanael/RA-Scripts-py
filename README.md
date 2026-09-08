@@ -19,14 +19,17 @@
 
 ### <img src="https://static.retroachievements.org/assets/images/system/md.png" height="30" align="middle"> &nbsp; Genesis/Mega Drive
 - [Academia do Saber](https://retroachievements.org/game/26848)
-- [Show do Milhão](https://retroachievements.org/game/125) - Rich Presence
+- [Show do Milhão](https://retroachievements.org/game/125) - Update Rich Presence
 
 ### <img src="https://static.retroachievements.org/assets/images/system/sms.png" height="30" align="middle"> &nbsp; Master System
 - [Captain Silver](https://retroachievements.org/game/11615)
 - [Chapolim x Dracula: Um Duelo Assustador](https://retroachievements.org/game/11638)
 - [Joe Montana Football](https://retroachievements.org/game/10708)
-- [Kung Fu Kid](https://retroachievements.org/game/10203) - Rich Presence
+- [Kung Fu Kid](https://retroachievements.org/game/10203) - Add Rich Presence
 - [The Cyber Shinobi](https://retroachievements.org/game/10764)
+
+### <img src="https://static.retroachievements.org/assets/images/system/sms.png" height="30" align="middle"> &nbsp; NES/Famicom
+- [Gun Nac](https://retroachievements.org/game/1728) - Revision
 
 ### <img src="https://static.retroachievements.org/assets/images/system/ps1.png" height="30" align="middle"> &nbsp; PlayStation
 - [Boxing](https://retroachievements.org/game/36353)
@@ -39,3 +42,4 @@
 - [International Superstar Soccer Deluxe](https://retroachievements.org/game/286) - Revision
 - [Sonic Blast Man](https://retroachievements.org/game/1167)
 - [Spider-Man & Venom: Maximum Carnage](https://retroachievements.org/game/1179) - Revision
+- [Super Street Fighter II: The New Challengers](https://retroachievements.org/game/309) - Revision
