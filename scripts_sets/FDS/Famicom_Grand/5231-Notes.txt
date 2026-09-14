@@ -1,0 +1,157 @@
+Game ID: 5231
+Source: RA Server
+Total Notes: 34
+============================================================
+
+0x00003e: [8-bit] Time Trial - Player Count
+Determines how many players participate in Time Trial mode
+0x01 = 1 Player
+0x02 = 2 Players
+0x03 = 3 Players
+0x04 = 4 Players
+
+0x00003f: [8-bit] Time Trial - Lap Count
+0x01 = 1 Lap
+0x02 = 2 Laps
+0x03 = 3 Laps
+0x04 = 4 Laps
+0x05 = 5 Laps
+0x06 = 6 Laps
+0x07 = 7 Laps
+0x08 = 8 Laps
+0x09 = 9 Laps
+
+0x000040: [8-bit] Time Trial - Circuit Select
+0x01 = Circuit 1
+0x02 = Circuit 2
+0x03 = Circuit 3
+0x04 = Circuit 4
+0x05 = Circuit 5
+0x06 = Circuit 6
+
+0x000041: [8-bit] Time Trial - Turbo Mode
+0x01 = No Turbo
+0x02 = Turbo
+
+0x000110: [8-bit] Game State Racing
+0x00 = Not racing
+0x01 = Racing
+
+0x00040c: [8-bit] Invincibility
+0x06 = Enabled
+
+0x0004ef: [8-bit] Car Body / Damage
+Tracks the car's body condition. The value decreases as the car takes damage from collisions or wear during the race.
+0x00 = Car destroyed
+
+0x0004f0: [8-bit] Tire Condition
+Tracks the tire wear. The value decreases as the tires wear down during the race.
+0x00 = Tires completely worn out
+
+0x0004f1: [8-bit] Fuel Condition
+0x00 = Empty
+0x18 = Max
+
+0x0006b9: [8-bit] Level
+0x01 = Level 1
+0x02 = Level 2
+0x03 = Level 3
+0x04 = Level 4
+
+0x0006bb: [8-bit] Stage
+0x01 = Stage 1
+0x02 = Stage 2
+0x03 = Stage 3
+0x04 = Stage 4
+
+0x0006c8: [8-bit] Current Circuit
+0x01 = Circuit 1
+0x02 = Circuit 2
+0x03 = Circuit 3
+0x04 = Circuit 4
+0x05 = Circuit 5
+0x06 = Circuit 6
+0x07 = Circuit 7
+0x08 = Circuit 8
+0x09 = Circuit 9
+0x0a = Circuit 10
+
+0x000703: [24-bit] Car PS (Pferdestärke)
+Indicates the car's engine power
+
+0x000726: [8-bit] Car Body - Tens Digit
+
+0x000727: [8-bit] Car Body - Units Digit
+
+0x00072f: [8-bit] Selected Car
+0x01 = Car 1 (No Turbo)
+0x02 = Car 2 (No Turbo)
+0x03 = Car 3 (Turbo)
+0x04 = Car 4 (Turbo)
+0x05 = Car 5 (Turbo)
+0x06 = Car 6 (No Turbo)
+0x07 = Car 7 (Turbo)
+0x08 = Car 8 (No Turbo)
+0x09 = Car 9 (Turbo)
+0x0a = Car 10 (Turbo)
+0x0b = Car 11 (Turbo)
+0x0c = Car 12 (No Turbo)
+
+0x000741: [8-bit] Car Tires- Tens Digit
+
+0x000742: [8-bit] Car Tires- Units Digit
+
+0x0007d6: [8-bit] Game State
+0x1a = Grand Prix Race
+0xff = Menu title
+0xe9 = Time Trial Race
+
+0x007213: [8-bit] Player Position - Tens Digit
+Stores the tens digit of the player's position (decimal value 1-2)
+Note: When the position is 1st-9th, this holds 0x3c (blank/hidden digit). When the position is 10th-20th, it uses the actual decimal value (e.g., 0x01 or 0x02).
+0x01 = 10th Place-19th Place
+0x02 = 20th Place
+0x3c = Hidden Digit
+
+0x007214: [8-bit] Player Position - Units Digit
+Stores the units digit of the player's position (decimal value 0-9)
+0x01 = 1st Place
+0x02 = 2rd Place
+0x03 = 3th Place
+0x04 = 4th Place
+0x05 = 5th Place
+0x06 = 6th Place
+0x07 = 7th Place
+0x08 = 8th Place
+0x09 = 9th Place
+
+0x007218: [8-bit] Timer - Minutes (Tens)
+
+0x007219: [8-bit] Timer - Minutes (Units)
+
+0x00721b: [8-bit] Timer - Seconds (Tens)
+
+0x00721c: [8-bit] Timer - Seconds (Units)
+
+0x00721e: [8-bit] Timer - Milliseconds (Tens)
+
+0x00721f: [8-bit] Timer - Milliseconds (Units)
+
+0x007274: [8-bit] Remaining Laps
+0x00 = Race finished
+0x01 = 1 Lap / Final lap
+0x02 = 2 Laps / Third lap
+0x03 = 3 Laps / Second lap
+0x04 = 4 Laps / First lap
+
+0x007278: [8-bit] Best Timer - Minutes (Tens)
+
+0x007279: [8-bit] Best Timer - Minutes (Unit)
+
+0x00727b: [8-bit] Best Timer - Seconds (Tens)
+
+0x00727c: [8-bit] Best Timer - Seconds (Unit)
+
+0x00727e: [8-bit] Best Timer - Milliseconds (Tens)
+
+0x00727f: [8-bit] Best Timer - Milliseconds (Unit)

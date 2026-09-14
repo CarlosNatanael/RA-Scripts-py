@@ -1,0 +1,2543 @@
+Game ID: 16493
+Source: RA Server
+Total Notes: 678
+============================================================
+
+0x074000: -------------------------------------------------------------
+Start of PF2 recommended static range
+-------------------------------------------------------------
+
+0x088ef4: [24-bit] Pointer to Game State Data
+
++0x250 = [24-bit] pointer
+
+++0xe4 = [24-bit] Pointer to Fossil Cleaning Data
++++0xb8 = [24-bit] pointer
+++++0x08 = [8-bit] Cleaning score result (maximum is 0x64 -> 100% accuracy)
+
+++0x54 = [24-bit] pointer to Battle Data
++++0x38 = [24-bit] pointer
+
+++++0x2d0 = [24-bit] pointer to first party member (0x0 if not present)
++++++0xe4 = [16-bit] current HP
++++++0xe8 = [16-bit] total HP
++++++0xb0 = [16-bit] ID
++++++0xb4 = [16-bit] Position
+
+++++0x2d4 = [24-bit] pointer to second party member (0x0 if not present)
++++++0xe0 = [16-bit] current HP
++++++0xe4 = [16-bit] total HP
++++++0xac = [16-bit] ID
++++++0xb0 = [16-bit] Position
+
+0x089000: -------------------------------------------------------------
+End of PF2 recommended static range
+-------------------------------------------------------------
+
+0x0c8c4e: [8-bit] [Boolean] Text is on screen
+
+0x01 - has text
+0x00 - has no text
+
+0x0c8dfc: [32-bit] Current Music ID (Unaffected by mute)
+
+0xffffffff = No Music
+
+0x51 = Title Screen
+0x01 = on the corridor before a level up battle
+0x37 = Battle Victory
+0x4e = Fossil cleaning success
+0x4d = Fossil cleaning Failure
+0x1f = preparing for a Fossil Battle
+0x0c = using the VMM
+
+0x4a, 0x4b = cleaning a fossil
+0x1e, 0x20, 0x21, 0x22, 0x23, 0x24, 0x25, 0x26, 0x41 = having a Fossil Battle
+
+0x0cc00c: [24-bit] Pointer - Game State
++0x8c | [24-bit] Pointer - Player Stats
+.+0x1c | [8-bit] [Lower4] Case - Storage
+..0x1 = 8 Slots
+..0x2 = 16 Slots
+..0x3 = 24 Slots
+..0x4 = 32 Slots
+..0x6 = 48 Slots
+..0x8 = 64 Slots
+.+0x18 | [32-bit] Gold
+.+0x2c | [32-bit] Donation Points
+.+0x34 | [16-bit] KL-33N Level
+.+0x37 | [8-bit] [Upper4] Sonar - Monitor
+..0x5 = Default
+..0xf = All Upgrades
+.+0x38 | [8-bit] [Lower4] Sonar - Fossil Filter
+..0x1 = Default
+..0x2 = Filter 1
+..0x3 = Filter 2
+
+.+0x15 | [8-bit] Player Level (Bitpacked Flag + Level Index)
+Note: Bit 7 (0x80) acts as an independent flag. Lower bits control the level index
+Values with Flag 0x80 Active:
+..0x84 = Level 1
+..0x88 = Level 2
+..0x8c = Level 3
+..0x90 = Level 4
+..0x94 = Level 5
+..0x98 = Level 6
+..0x9c = Master
+Values with Flag 0x80 Inactive:
+..0x04 = Level 1
+..0x08 = Level 2
+..0x0c = Level 3
+..0x10 = Level 4
+
+.+0x14 | [8-bit] Current Mask
+..0x00 = Default
+..0x01 = Dropping Mask
+..0x02 = Hip-Shaker Mask
+..0x03 = Stone Mask
+..0x04 = Gold Mask
+..0x05 = Samurai Mask
+..0x06 = Completist Mask
+..0x07 = Green Hero Mask
+..0x08 = Purple Hero Mask
+..0x09 = Master Mask
+..0x0a = Saur Mask
+..0x0b = Diving Mask
+..0x0c = Oonga Oonga Mask
+..0x0d = Officer Mask
+..0x0e = Mole Mask
+..0x0f = Digadig Mask
+..0x10 = Chieftain Mask
+..0x11 = BB Boy Mask
+..0x12 = BB Girl Mask
+..0x13 = Dinaurian Mask
+
+0x14d35c: Battle Id - Preparation [16-bit] [Dynamic]
+0009 = [Debug] 敵のサン
+
+0x14d370: Battle Id - Preparation [16-bit] [Dynamic]
+0009 = [Debug] 敵のサン
+
+0x14d3d4: Battle Id - Preparation [16-bit] [Dynamic]
+0009 = [Debug] 敵のサン
+
+0x14fe68: Options - Music Volume [8-bit]
+00 = Mute
+7f = Max
+
+0x14feb0: Options - Sound Volume [8-bit]
+00 = Mute
+7f = Max
+
+0x1cd27c: Event Triggers [16-bit]
+
+0x1d3011: [8-bit] [Bitfield] Key Items
+
+0 | Fighter license level 1
+1 | Fighter license level 2
+2 | Fighter license level 3
+3 | Fighter license level 4
+4 | Fighter license level 5
+5 | Fighter license level 6
+6 | Fighter license level 7
+7 | Fossil Appraiser: A Grade
+
+0x1d3012: Important Items [8-bit]
+Bit 0 = Fossil Appraiser: AAA Grade
+Bit 1 = Normal Sonar
+Bit 2 = Upgraded Sonar
+Bit 3 = Idol Sonar
+Bit 4 = Monitor Upgrade 1
+Bit 5 = Monitor Upgrade 2
+Bit 6 = Fossil Filter 1
+Bit 7 = Fossil Filter 2
+
+0x1d3013: Important Items [8-bit]
+Bit 0 = Fossil Chip 1
+Bit 1 = Fossil Chip 2
+Bit 2 = 8-Slot Case
+Bit 3 = 16-Slot Case
+Bit 4 = 24-Slot Case
+Bit 5 = 32-Slot Case
+Bit 6 = 48-Slot Case
+Bit 7 = 64-Slot Case
+
+0x1d3014: Important Items [8-bit]
+Bit 0 = Pickax
+Bit 1 = Super Drill
+Bit 2 = Hyper Hammer
+Bit 3 = Dino Cakes
+Bit 4 = Clearance Card
+Bit 5 = Keymonite Rock
+Bit 6 = Keymonite
+Bit 7 = Ancestral Key
+
+0x1d3015: Important Items [8-bit]
+Bit 0 = Tacky Idol (Ruins)
+Bit 1 =  Mega-wrench
+Bit 2 = Multipurpose Pliers
+Bit 3 = (Deleted) Custom Wrench
+Bit 4 = (Deleted) Old Chisel
+Bit 5 = Electrominite
+Bit 6 = Tacky Idol (Tunnels)
+Bit 7 = Sandal Fossil
+
+0x1d3016: Important Items [8-bit]
+Bit 0 = Shark Dentures
+Bit 1 = Molten Bug Shell
+Bit 2 = Beard Ribbon
+Bit 3 = Tacky Idol (Pirate Ship)
+Bit 4 = Tacky Idol (Mt. Lavaflow)
+Bit 5 = Doglish Translator
+Bit 6 = Chiserator 2000
+Bit 7 = Ignosaurus
+
+0x1d3017: Important Items [8-bit]
+Bit 0 = Idol Fragment (Greenhorn Plains)
+Bit 1 = Idol Fragment (Knotwood Forest)
+Bit 2 = Idol Fragment (Rivet Ravine)
+Bit 3 = Idol Fragment (Bottomsup Bay)
+Bit 4 = Idol Fragment (Mt. Lavaflow)
+Bit 5 = Last Fragment
+Bit 6 = Oasis Seed
+Bit 7 = Snowberries
+
+0x1d3018: Important Items [8-bit]
+Bit 0 = Team Skill
+Bit 1 =  Ignosaurus Fossil Rock
+Bit 2 = Mega-wrench
+Bit 3 = Multipurpose Pliers
+Bit 4 = Electrominite
+Bit 5 = Saur Mask
+Bit 6 = Goldonite
+Bit 7 = Diver's Watch
+
+0x1d3019: Important Items [8-bit]
+Bit 0 = Idolcomp Component
+
+0x1d30a4: [24-bit] Pointer Base - Battle Party
++0x130   | [24-bit] Pointer to linked data
+.+0x1fc  | [24-bit] Pointer to linked data
+..+0x54  | [24-bit] Pointer Battle Party Monster 1
+...+0x60 | [16-bit] Dinosaur ID
+....0x01 = T-Rex
+....0x02 = Daspleto
+....0x03 = Gorgo
+....0x04 = Tarbo
+....0x05 = Alio
+....0x06 = Siamo
+....0x07 = Alectro
+....0x08 = Guan
+....0x09 = Shanshan
+....0x0a = Allo
+....0x0b = Metria
+....0x0c = Regalo
+....0x0d = Venator
+....0x0e = S-Raptor
+....0x0f = Giganto
+....0x10 = Cryo
+....0x11 = Carchar
+....0x12 = Acro
+....0x13 = F-Raptor
+....0x14 = Spinax
+....0x15 = Neo
+....0x16 = Compso
+....0x17 = Sopteryx
+....0x18 = Delta
+....0x19 = Tro
+....0x1a = Nychus
+....0x1b = M-Raptor
+....0x1c = U-Raptor
+....0x1d = V-Raptor
+....0x1e = Breme
+....0x1f = Aopteryx
+....0x20 = Coelo
+....0x21 = Dilopho
+....0x22 = Spino
+....0x23 = Angato
+....0x24 = Sucho
+....0x25 = Onyx
+....0x26 = Cerato
+....0x27 = Carno
+....0x28 = Orno
+....0x29 = Cheirus
+....0x2a = O-Raptor
+....0x2b = Zino
+....0x2c = Brachio
+....0x2d = Salto
+....0x2e = Shuno
+....0x2f = Perso
+....0x30 = Seismo
+....0x31 = Apato
+....0x32 = Amargo
+....0x33 = Stego
+....0x34 = Yango
+....0x35 = Jiango
+....0x36 = Kentro
+....0x37 = Lexo
+....0x38 = Nodo
+....0x39 = Ankylo
+....0x3a = Saichan
+....0x3b = Goyle
+....0x3c = Pelto
+....0x3d = Hypsi
+....0x3e = Nasaur
+....0x3f = Igua
+....0x40 = Ourano
+....0x41 = Lambeo
+....0x42 = Maia
+....0x43 = Anato
+....0x44 = Paraloph
+....0x45 = Pachy
+....0x46 = Stygi
+....0x47 = Goyo
+....0x48 = Proto
+....0x49 = Tricera
+....0x4a = Styraco
+....0x4b = Einio
+....0x4c = Centro
+....0x4d = Penta
+....0x4e = Pachrino
+....0x4f = Mihu
+....0x50 = Ptera
+....0x51 = Coatlus
+....0x52 = Jara
+....0x53 = Dimorph
+....0x54 = Guera
+....0x55 = Krona
+....0x56 = Futabi
+....0x57 = Elasmo
+....0x58 = Plesio
+....0x59 = Shoni
+....0x5a = Arsith
+....0x5b = Brontoth
+....0x5c = Elasmoth
+....0x5d = Hoplo
+....0x5e = Andrarch
+....0x5f = Paki
+....0x60 = Smilo
+....0x61 = Mammoth
+....0x62 = Tryma
+....0x63 = Megath
+....0x64 = Chelon
+....0x65 = Dinomaton
+....0x66 = Duna
+....0x67 = Raptin
+....0x68 = Dynal
+....0x69 = Frigi
+....0x6a = Igno
+....0x6b = Squik
+....0x6c = Squirk
+....0x6d = Squirth
+....0x6e = Squilk
+....0x6f = Squiro
+....0x70 = Guhweep
+....0x71 = Guhvorn
+....0x72 = Guhlith
+...+0x64 | [16-bit] Position ID
+...+0x94 | [16-bit] Current HP
+...+0x98 | [16-bit] Total HP
+...+0x9c | [16-bit] Status - Attack
+...+0xa0 | [16-bit] Status - Defense
+...+0xa4 | [16-bit] Status - Precision
+...+0xa8 | [16-bit] Status - Speed
+...+0xac | [16-bit] Status - Level
+
++0x190   | [24-bit] Pointer to linked data
+.+0x118  | [24-bit] Pointer to linked data
+..+0x200 | [24-bit] Pointer Battle Party Monster 2
+...+0xac | [16-bit] Dinosaur ID
+....0x01 = T-Rex
+....0x02 = Daspleto
+....0x03 = Gorgo
+....0x04 = Tarbo
+....0x05 = Alio
+....0x06 = Siamo
+....0x07 = Alectro
+....0x08 = Guan
+....0x09 = Shanshan
+....0x0a = Allo
+....0x0b = Metria
+....0x0c = Regalo
+....0x0d = Venator
+....0x0e = S-Raptor
+....0x0f = Giganto
+....0x10 = Cryo
+....0x11 = Carchar
+....0x12 = Acro
+....0x13 = F-Raptor
+....0x14 = Spinax
+....0x15 = Neo
+....0x16 = Compso
+....0x17 = Sopteryx
+....0x18 = Delta
+....0x19 = Tro
+....0x1a = Nychus
+....0x1b = M-Raptor
+....0x1c = U-Raptor
+....0x1d = V-Raptor
+....0x1e = Breme
+....0x1f = Aopteryx
+....0x20 = Coelo
+....0x21 = Dilopho
+....0x22 = Spino
+....0x23 = Angato
+....0x24 = Sucho
+....0x25 = Onyx
+....0x26 = Cerato
+....0x27 = Carno
+....0x28 = Orno
+....0x29 = Cheirus
+....0x2a = O-Raptor
+....0x2b = Zino
+....0x2c = Brachio
+....0x2d = Salto
+....0x2e = Shuno
+....0x2f = Perso
+....0x30 = Seismo
+....0x31 = Apato
+....0x32 = Amargo
+....0x33 = Stego
+....0x34 = Yango
+....0x35 = Jiango
+....0x36 = Kentro
+....0x37 = Lexo
+....0x38 = Nodo
+....0x39 = Ankylo
+....0x3a = Saichan
+....0x3b = Goyle
+....0x3c = Pelto
+....0x3d = Hypsi
+....0x3e = Nasaur
+....0x3f = Igua
+....0x40 = Ourano
+....0x41 = Lambeo
+....0x42 = Maia
+....0x43 = Anato
+....0x44 = Paraloph
+....0x45 = Pachy
+....0x46 = Stygi
+....0x47 = Goyo
+....0x48 = Proto
+....0x49 = Tricera
+....0x4a = Styraco
+....0x4b = Einio
+....0x4c = Centro
+....0x4d = Penta
+....0x4e = Pachrino
+....0x4f = Mihu
+....0x50 = Ptera
+....0x51 = Coatlus
+....0x52 = Jara
+....0x53 = Dimorph
+....0x54 = Guera
+....0x55 = Krona
+....0x56 = Futabi
+....0x57 = Elasmo
+....0x58 = Plesio
+....0x59 = Shoni
+....0x5a = Arsith
+....0x5b = Brontoth
+....0x5c = Elasmoth
+....0x5d = Hoplo
+....0x5e = Andrarch
+....0x5f = Paki
+....0x60 = Smilo
+....0x61 = Mammoth
+....0x62 = Tryma
+....0x63 = Megath
+....0x64 = Chelon
+....0x65 = Dinomaton
+....0x66 = Duna
+....0x67 = Raptin
+....0x68 = Dynal
+....0x69 = Frigi
+....0x6a = Igno
+....0x6b = Squik
+....0x6c = Squirk
+....0x6d = Squirth
+....0x6e = Squilk
+....0x6f = Squiro
+....0x70 = Guhweep
+....0x71 = Guhvorn
+....0x72 = Guhlith
+...+0xb0 | [16-bit] Position ID
+...+0xe0 | [16-bit] Current HP
+...+0xe4 | [16-bit] Total HP
+...+0xe8 | [16-bit] Status - Attack
+...+0xec | [16-bit] Status - Defense
+...+0xf0 | [16-bit] Status - Precision
+...+0xf4 | [16-bit] Status - Speed
+...+0xf8 | [16-bit] Status - Level
+
+0x1e557c: Status Menu [8-bit]
+00 = Player/Team
+01 = Case
+02 = Important Items
+
+0x1e5d28: Masks [8-bit]
+Bit 1 = Dropping Mask
+Bit 2 = Hip-shaker Mask
+Bit 3 = Stone Mask
+Bit 4 = Gold Mask
+Bit 5 = Samurai Mask
+Bit 6 = Completist Mask
+Bit 7 = Green Hero Mask
+
+0x1e5d29: Masks [8-bit]
+Bit 0 = Purple Hero Mask
+Bit 1 = Master Mask
+Bit 2 = Saur Mask
+Bit 3 = Diving Mask
+Bit 4 = Oonga Oonga Mask
+Bit 5 = Officer Mask
+Bit 6 = Mole Mask
+Bit 7 = Digadig Mask
+
+0x1e5d2a: Masks [8-bit]
+Bit 0 = Chieftain Mask
+Bit 1 = BB Boy Mask
+Bit 2 = BB Girl Mask
+Bit 3 = Dinaurian Mask
+
+0x1e5e58: Name - Char 1 [8-bit]
+
+0x1e5e5a: Name - Char 2 [8-bit]
+
+0x1e5e5c: Name - Char 3 [8-bit]
+
+0x1e5e5e: Name - Char 4 [8-bit]
+
+0x1e5e60: Name - Char 5 [8-bit]
+
+0x1e5e62: Name - Char 6 [8-bit]
+
+0x1e5e64: Name - Char 7 [8-bit]
+
+0x1e5e66: Name - Char 8 [8-bit]
+
+0x1e62a2: [8-bit] Team 1 - Slot 1
+0x01 = T-Rex
+0x02 = Daspleto
+0x03 = Gorgo
+0x04 = Tarbo
+0x05 = Alio
+0x06 = Siamo
+0x07 = Alectro
+0x08 = Guan
+0x09 = Shanshan
+0x0a = Allo
+0x0b = Metria
+0x0c = Regalo
+0x0d = Venator
+0x0e = S-Raptor
+0x0f = Giganto
+0x10 = Cryo
+0x11 = Carchar
+0x12 = Acro
+0x13 = F-Raptor
+0x14 = Spinax
+0x15 = Neo
+0x16 = Compso
+0x17 = Sopteryx
+0x18 = Delta
+0x19 = Tro
+0x1a = Nychus
+0x1b = M-Raptor
+0x1c = U-Raptor
+0x1d = V-Raptor
+0x1e = Breme
+0x1f = Aopteryx
+0x20 = Coelo
+0x21 = Dilopho
+0x22 = Spino
+0x23 = Angato
+0x24 = Sucho
+0x25 = Onyx
+0x26 = Cerato
+0x27 = Carno
+0x28 = Orno
+0x29 = Cheirus
+0x2a = O-Raptor
+0x2b = Zino
+0x2c = Brachio
+0x2d = Salto
+0x2e = Shuno
+0x2f = Perso
+0x30 = Seismo
+0x31 = Apato
+0x32 = Amargo
+0x33 = Stego
+0x34 = Yango
+0x35 = Jiango
+0x36 = Kentro
+0x37 = Lexo
+0x38 = Nodo
+0x39 = Ankylo
+0x3a = Saichan
+0x3b = Goyle
+0x3c = Pelto
+0x3d = Hypsi
+0x3e = Nasaur
+0x3f = Igua
+0x40 = Ourano
+0x41 = Lambeo
+0x42 = Maia
+0x43 = Anato
+0x44 = Paraloph
+0x45 = Pachy
+0x46 = Stygi
+0x47 = Goyo
+0x48 = Proto
+0x49 = Tricera
+0x4a = Styraco
+0x4b = Einio
+0x4c = Centro
+0x4d = Penta
+0x4e = Pachrino
+0x4f = Mihu
+0x50 = Ptera
+0x51 = Coatlus
+0x52 = Jara
+0x53 = Dimorph
+0x54 = Guera
+0x55 = Krona
+0x56 = Futabi
+0x57 = Elasmo
+0x58 = Plesio
+0x59 = Shoni
+0x5a = Arsith
+0x5b = Brontoth
+0x5c = Elasmoth
+0x5d = Hoplo
+0x5e = Andrarch
+0x5f = Paki
+0x60 = Smilo
+0x61 = Mammoth
+0x62 = Tryma
+0x63 = Megath
+0x64 = Chelon
+0x65 = Dinomaton
+0x66 = Duna
+0x67 = Raptin
+0x68 = Dynal
+0x69 = Frigi
+0x6a = Igno
+0x6b = Squik
+0x6c = Squirk
+0x6d = Squirth
+0x6e = Squilk
+0x6f = Squiro
+0x70 = Guhweep
+0x71 = Guhvorn
+0x72 = Guhlith
+
+0x1e62a3: [8-bit] Team 1 - Slot 2
+0x01 = T-Rex
+0x02 = Daspleto
+0x03 = Gorgo
+0x04 = Tarbo
+0x05 = Alio
+0x06 = Siamo
+0x07 = Alectro
+0x08 = Guan
+0x09 = Shanshan
+0x0a = Allo
+0x0b = Metria
+0x0c = Regalo
+0x0d = Venator
+0x0e = S-Raptor
+0x0f = Giganto
+0x10 = Cryo
+0x11 = Carchar
+0x12 = Acro
+0x13 = F-Raptor
+0x14 = Spinax
+0x15 = Neo
+0x16 = Compso
+0x17 = Sopteryx
+0x18 = Delta
+0x19 = Tro
+0x1a = Nychus
+0x1b = M-Raptor
+0x1c = U-Raptor
+0x1d = V-Raptor
+0x1e = Breme
+0x1f = Aopteryx
+0x20 = Coelo
+0x21 = Dilopho
+0x22 = Spino
+0x23 = Angato
+0x24 = Sucho
+0x25 = Onyx
+0x26 = Cerato
+0x27 = Carno
+0x28 = Orno
+0x29 = Cheirus
+0x2a = O-Raptor
+0x2b = Zino
+0x2c = Brachio
+0x2d = Salto
+0x2e = Shuno
+0x2f = Perso
+0x30 = Seismo
+0x31 = Apato
+0x32 = Amargo
+0x33 = Stego
+0x34 = Yango
+0x35 = Jiango
+0x36 = Kentro
+0x37 = Lexo
+0x38 = Nodo
+0x39 = Ankylo
+0x3a = Saichan
+0x3b = Goyle
+0x3c = Pelto
+0x3d = Hypsi
+0x3e = Nasaur
+0x3f = Igua
+0x40 = Ourano
+0x41 = Lambeo
+0x42 = Maia
+0x43 = Anato
+0x44 = Paraloph
+0x45 = Pachy
+0x46 = Stygi
+0x47 = Goyo
+0x48 = Proto
+0x49 = Tricera
+0x4a = Styraco
+0x4b = Einio
+0x4c = Centro
+0x4d = Penta
+0x4e = Pachrino
+0x4f = Mihu
+0x50 = Ptera
+0x51 = Coatlus
+0x52 = Jara
+0x53 = Dimorph
+0x54 = Guera
+0x55 = Krona
+0x56 = Futabi
+0x57 = Elasmo
+0x58 = Plesio
+0x59 = Shoni
+0x5a = Arsith
+0x5b = Brontoth
+0x5c = Elasmoth
+0x5d = Hoplo
+0x5e = Andrarch
+0x5f = Paki
+0x60 = Smilo
+0x61 = Mammoth
+0x62 = Tryma
+0x63 = Megath
+0x64 = Chelon
+0x65 = Dinomaton
+0x66 = Duna
+0x67 = Raptin
+0x68 = Dynal
+0x69 = Frigi
+0x6a = Igno
+0x6b = Squik
+0x6c = Squirk
+0x6d = Squirth
+0x6e = Squilk
+0x6f = Squiro
+0x70 = Guhweep
+0x71 = Guhvorn
+0x72 = Guhlith
+
+0x1e62a4: [8-bit] Team 1 - Slot 3
+0x01 = T-Rex
+0x02 = Daspleto
+0x03 = Gorgo
+0x04 = Tarbo
+0x05 = Alio
+0x06 = Siamo
+0x07 = Alectro
+0x08 = Guan
+0x09 = Shanshan
+0x0a = Allo
+0x0b = Metria
+0x0c = Regalo
+0x0d = Venator
+0x0e = S-Raptor
+0x0f = Giganto
+0x10 = Cryo
+0x11 = Carchar
+0x12 = Acro
+0x13 = F-Raptor
+0x14 = Spinax
+0x15 = Neo
+0x16 = Compso
+0x17 = Sopteryx
+0x18 = Delta
+0x19 = Tro
+0x1a = Nychus
+0x1b = M-Raptor
+0x1c = U-Raptor
+0x1d = V-Raptor
+0x1e = Breme
+0x1f = Aopteryx
+0x20 = Coelo
+0x21 = Dilopho
+0x22 = Spino
+0x23 = Angato
+0x24 = Sucho
+0x25 = Onyx
+0x26 = Cerato
+0x27 = Carno
+0x28 = Orno
+0x29 = Cheirus
+0x2a = O-Raptor
+0x2b = Zino
+0x2c = Brachio
+0x2d = Salto
+0x2e = Shuno
+0x2f = Perso
+0x30 = Seismo
+0x31 = Apato
+0x32 = Amargo
+0x33 = Stego
+0x34 = Yango
+0x35 = Jiango
+0x36 = Kentro
+0x37 = Lexo
+0x38 = Nodo
+0x39 = Ankylo
+0x3a = Saichan
+0x3b = Goyle
+0x3c = Pelto
+0x3d = Hypsi
+0x3e = Nasaur
+0x3f = Igua
+0x40 = Ourano
+0x41 = Lambeo
+0x42 = Maia
+0x43 = Anato
+0x44 = Paraloph
+0x45 = Pachy
+0x46 = Stygi
+0x47 = Goyo
+0x48 = Proto
+0x49 = Tricera
+0x4a = Styraco
+0x4b = Einio
+0x4c = Centro
+0x4d = Penta
+0x4e = Pachrino
+0x4f = Mihu
+0x50 = Ptera
+0x51 = Coatlus
+0x52 = Jara
+0x53 = Dimorph
+0x54 = Guera
+0x55 = Krona
+0x56 = Futabi
+0x57 = Elasmo
+0x58 = Plesio
+0x59 = Shoni
+0x5a = Arsith
+0x5b = Brontoth
+0x5c = Elasmoth
+0x5d = Hoplo
+0x5e = Andrarch
+0x5f = Paki
+0x60 = Smilo
+0x61 = Mammoth
+0x62 = Tryma
+0x63 = Megath
+0x64 = Chelon
+0x65 = Dinomaton
+0x66 = Duna
+0x67 = Raptin
+0x68 = Dynal
+0x69 = Frigi
+0x6a = Igno
+0x6b = Squik
+0x6c = Squirk
+0x6d = Squirth
+0x6e = Squilk
+0x6f = Squiro
+0x70 = Guhweep
+0x71 = Guhvorn
+0x72 = Guhlith
+
+0x1e62a5: [8-bit] Team 1 - Slot 4
+0x01 = T-Rex
+0x02 = Daspleto
+0x03 = Gorgo
+0x04 = Tarbo
+0x05 = Alio
+0x06 = Siamo
+0x07 = Alectro
+0x08 = Guan
+0x09 = Shanshan
+0x0a = Allo
+0x0b = Metria
+0x0c = Regalo
+0x0d = Venator
+0x0e = S-Raptor
+0x0f = Giganto
+0x10 = Cryo
+0x11 = Carchar
+0x12 = Acro
+0x13 = F-Raptor
+0x14 = Spinax
+0x15 = Neo
+0x16 = Compso
+0x17 = Sopteryx
+0x18 = Delta
+0x19 = Tro
+0x1a = Nychus
+0x1b = M-Raptor
+0x1c = U-Raptor
+0x1d = V-Raptor
+0x1e = Breme
+0x1f = Aopteryx
+0x20 = Coelo
+0x21 = Dilopho
+0x22 = Spino
+0x23 = Angato
+0x24 = Sucho
+0x25 = Onyx
+0x26 = Cerato
+0x27 = Carno
+0x28 = Orno
+0x29 = Cheirus
+0x2a = O-Raptor
+0x2b = Zino
+0x2c = Brachio
+0x2d = Salto
+0x2e = Shuno
+0x2f = Perso
+0x30 = Seismo
+0x31 = Apato
+0x32 = Amargo
+0x33 = Stego
+0x34 = Yango
+0x35 = Jiango
+0x36 = Kentro
+0x37 = Lexo
+0x38 = Nodo
+0x39 = Ankylo
+0x3a = Saichan
+0x3b = Goyle
+0x3c = Pelto
+0x3d = Hypsi
+0x3e = Nasaur
+0x3f = Igua
+0x40 = Ourano
+0x41 = Lambeo
+0x42 = Maia
+0x43 = Anato
+0x44 = Paraloph
+0x45 = Pachy
+0x46 = Stygi
+0x47 = Goyo
+0x48 = Proto
+0x49 = Tricera
+0x4a = Styraco
+0x4b = Einio
+0x4c = Centro
+0x4d = Penta
+0x4e = Pachrino
+0x4f = Mihu
+0x50 = Ptera
+0x51 = Coatlus
+0x52 = Jara
+0x53 = Dimorph
+0x54 = Guera
+0x55 = Krona
+0x56 = Futabi
+0x57 = Elasmo
+0x58 = Plesio
+0x59 = Shoni
+0x5a = Arsith
+0x5b = Brontoth
+0x5c = Elasmoth
+0x5d = Hoplo
+0x5e = Andrarch
+0x5f = Paki
+0x60 = Smilo
+0x61 = Mammoth
+0x62 = Tryma
+0x63 = Megath
+0x64 = Chelon
+0x65 = Dinomaton
+0x66 = Duna
+0x67 = Raptin
+0x68 = Dynal
+0x69 = Frigi
+0x6a = Igno
+0x6b = Squik
+0x6c = Squirk
+0x6d = Squirth
+0x6e = Squilk
+0x6f = Squiro
+0x70 = Guhweep
+0x71 = Guhvorn
+0x72 = Guhlith
+
+0x1e62a6: [8-bit] Team 1 - Slot 5
+0x01 = T-Rex
+0x02 = Daspleto
+0x03 = Gorgo
+0x04 = Tarbo
+0x05 = Alio
+0x06 = Siamo
+0x07 = Alectro
+0x08 = Guan
+0x09 = Shanshan
+0x0a = Allo
+0x0b = Metria
+0x0c = Regalo
+0x0d = Venator
+0x0e = S-Raptor
+0x0f = Giganto
+0x10 = Cryo
+0x11 = Carchar
+0x12 = Acro
+0x13 = F-Raptor
+0x14 = Spinax
+0x15 = Neo
+0x16 = Compso
+0x17 = Sopteryx
+0x18 = Delta
+0x19 = Tro
+0x1a = Nychus
+0x1b = M-Raptor
+0x1c = U-Raptor
+0x1d = V-Raptor
+0x1e = Breme
+0x1f = Aopteryx
+0x20 = Coelo
+0x21 = Dilopho
+0x22 = Spino
+0x23 = Angato
+0x24 = Sucho
+0x25 = Onyx
+0x26 = Cerato
+0x27 = Carno
+0x28 = Orno
+0x29 = Cheirus
+0x2a = O-Raptor
+0x2b = Zino
+0x2c = Brachio
+0x2d = Salto
+0x2e = Shuno
+0x2f = Perso
+0x30 = Seismo
+0x31 = Apato
+0x32 = Amargo
+0x33 = Stego
+0x34 = Yango
+0x35 = Jiango
+0x36 = Kentro
+0x37 = Lexo
+0x38 = Nodo
+0x39 = Ankylo
+0x3a = Saichan
+0x3b = Goyle
+0x3c = Pelto
+0x3d = Hypsi
+0x3e = Nasaur
+0x3f = Igua
+0x40 = Ourano
+0x41 = Lambeo
+0x42 = Maia
+0x43 = Anato
+0x44 = Paraloph
+0x45 = Pachy
+0x46 = Stygi
+0x47 = Goyo
+0x48 = Proto
+0x49 = Tricera
+0x4a = Styraco
+0x4b = Einio
+0x4c = Centro
+0x4d = Penta
+0x4e = Pachrino
+0x4f = Mihu
+0x50 = Ptera
+0x51 = Coatlus
+0x52 = Jara
+0x53 = Dimorph
+0x54 = Guera
+0x55 = Krona
+0x56 = Futabi
+0x57 = Elasmo
+0x58 = Plesio
+0x59 = Shoni
+0x5a = Arsith
+0x5b = Brontoth
+0x5c = Elasmoth
+0x5d = Hoplo
+0x5e = Andrarch
+0x5f = Paki
+0x60 = Smilo
+0x61 = Mammoth
+0x62 = Tryma
+0x63 = Megath
+0x64 = Chelon
+0x65 = Dinomaton
+0x66 = Duna
+0x67 = Raptin
+0x68 = Dynal
+0x69 = Frigi
+0x6a = Igno
+0x6b = Squik
+0x6c = Squirk
+0x6d = Squirth
+0x6e = Squilk
+0x6f = Squiro
+0x70 = Guhweep
+0x71 = Guhvorn
+0x72 = Guhlith
+
+0x1e62ca: Team 2 - Slot 1 [8-bit]
+
+0x1e62cb: Team 2 - Slot 2 [8-bit]
+
+0x1e62cc: Team 2 - Slot 3 [8-bit]
+
+0x1e62cd: Team 2 - Slot 4 [8-bit]
+
+0x1e62ce: Team 2 - Slot 5 [8-bit]
+
+0x1e62f2: Team 3 - Slot 1 [8-bit]
+
+0x1e62f3: Team 3 - Slot 2 [8-bit]
+
+0x1e62f4: Team 3 - Slot 3 [8-bit]
+
+0x1e62f5: Team 3 - Slot 4 [8-bit]
+
+0x1e62f6: Team 3 - Slot 5 [8-bit]
+
+0x1e66bc: Event Triggers [16-bit]
+N/A for Ch.2/4
+
+0x209693: Parchment Desert Fossils [16-bit]
+Seems to be related to the fossils in the ground.
+(Value changes after an Oasis spawns.)
+0040 = 1 Oasis
+00c0 = 2 Oases
+01c0 = 3 Oases
+03c0 = 4 Oases
+
+0x209780: [8-bit] Current Chapter
+
+0x00 - Prologue
+0x01 - Day 1
+0x02 - Day 2
+0x03 - Day 3
+0x04 - Day 4
+0x05 - Day 5
+0x06 - Day 6
+0x07 - Day 7
+0x08 - Day 8
+0x09 - Postgame
+
+0x2097d8: Nick Nack Dropping Fossil Total [8-bit]
+
+0x20a4d8: [8-bit] Character Skin - Body Outfit
+0x00 = Red Outfit
+0x01 = Purple Outfit
+0x02 = Red and Blue Outfit
+0x03 = Black Outfit
+0x04 = Blue and Black Outfit
+0x05 = White and Pink Outfit
+0x06 = Yellow and Green Outfit
+0x07 = White and Yellow Outfit
+
+0x20a4d9: [8-bit] Character Skin - Headwear & Hair
+0x00 = Red Hair, Black Hat (Red details)
+0x01 = Black Hair, Blue Hat (Purple details)
+0x02 = Blue Hair, Yellow Hat (Red details)
+0x03 = Dark Gray Hair, Light Gray Hat (Dark Gray details)
+0x04 = Dark Gray Hair, Yellow Hat (Blue details)
+0x05 = Pink Hair, Light Pink Hat (White details)
+0x06 = Dark Red Hair, Strong Red Hat (Yellow details)
+0x07 = Light Yellow Hair, Light Blue Hat (White details)
+0x08 = Dropping Mask
+0x09 = Hip-Shaker Mask
+0x0a = Stone Mask
+0x0b = Gold Mask
+0x0c = Samurai Mask
+0x0d = Completist Mask
+0x0e = Green Hero Mask
+0x0f = Purple Hero Mask
+0x10 = Master Mask
+0x11 = Saur Mask
+0x12 = Diving Mask
+
+0x20a4da: [8-bit] Current Map
+
+0x21 - Greenhorn Plains
+
+4-6= in an unused area.
+
+7= in the Junk Depot.
+
+8,11,12,18,19,84,97,122= in the Fossil Center.
+10= in Diggin's Room.
+
+9= in the Fossil Guild.
+
+13,16,17= in the Richmond Building.
+
+14= in Rosie's Room.
+
+15= in Richmond's Office.
+
+20-25,82,83= in the Hotel.
+
+26-29= in the Fossil Stadium.
+
+30-32= in the Police Station.
+
+33= at Greenhorn Plains.
+
+34,35,116= at Knotwood Forest.
+
+41= inside the Digadigamid.
+
+36,37= inside the Digadigamid (1F).
+
+38= inside the Digadigamid (2F).
+
+39= inside the Digadigamid (3F).
+
+40= inside the Digadigamid (4F).
+
+42= at Rivet Ravine.
+43= inside Tunnel #1.
+
+44= inside Tunnel #2.
+
+45= inside Tunnel #3.
+
+46= inside Tunnel #4.
+
+47= inside Tunnel #5.
+
+48= inside the Tunnel Entrance.
+
+49= at Parchment Desert.
+
+50,52-54= at Bottomsup Bay.
+
+51= in Woolbeard's Room.
+
+55,58,59= inside the Pirate Ship (1F).
+
+56,89,91= inside the Pirate Ship (2F).
+
+57,90= inside the Pirate Ship (3F).
+
+60= inside the BB Base (1F).
+
+61= inside the BB Base (2F).
+
+86= inside the BB Base (3F).
+
+87= inside the BB Base (4F).
+
+88= inside the BB Base (5F).
+
+62= inside the BB Base (6F).
+
+63= at Coldfeet Glacier.
+
+64,67= at Mt. LavaFlow.
+
+65,68= at Mt. LavaFlow (N).
+
+66= at Mt. LavaFlow (NE).
+
+69= at Mt.LavaFlow (NW).
+
+70-74,92= on a Starship.
+
+75= at the Secret Island.
+
+76-80,93= inside the Crashed Starship.
+
+81= in the Samurai Room.
+
+94,98,99= inside Guhnash.
+
+96= on a cruise.
+
+101,102= inside Secret Tunnel #1.
+
+103,104= inside Secret Tunnel #2.
+
+105= inside Secret Tunnel #3.
+
+106= inside Secret Tunnel #4.
+
+117= at Digadig Village.
+
+118= at the Guild Area
+.
+119= at the Fighter Area.
+
+120,123,85= at the Park Area.
+
+121= at the Trial Dig Site.
+
+0x20b12c: Sidequest - Blambeau Flag [8-bit]
+00 = Off
+01 = On
+
+0x2101fc: Case - Slot 1 [16-bit]
+EA65 = Dropping Fossil
+102A = Metria Body (Red)
+1163 = Shoni Arms (Red)
+0A6B = Dropping Fossil Rock
+
+0x210210: Case - Slot 2 [16-bit]
+
+0x210224: Case - Slot 3 [16-bit]
+
+0x210238: Case - Slot 4 [16-bit]
+
+0x21024c: Case - Slot 5 [16-bit]
+
+0x210260: Case - Slot 6 [16-bit]
+
+0x210274: Case - Slot 7 [16-bit]
+
+0x210288: Case - Slot 8 [16-bit]
+
+0x21029c: Case - Slot 9 [16-bit]
+
+0x2102b0: Case - Slot 10 [16-bit]
+
+0x2102c4: Case - Slot 11 [16-bit]
+
+0x2102d8: Case - Slot 12 [16-bit]
+
+0x2102ec: Case - Slot 13 [16-bit]
+
+0x210300: Case - Slot 14 [16-bit]
+
+0x210314: Case - Slot 15 [16-bit]
+
+0x210328: Case - Slot 16 [16-bit]
+
+0x21033c: Case - Slot 17 [16-bit]
+
+0x210350: Case - Slot 18 [16-bit]
+
+0x210364: Case - Slot 19 [16-bit]
+
+0x210378: Case - Slot 20 [16-bit]
+
+0x21038c: Case - Slot 21 [16-bit]
+
+0x2103a0: Case - Slot 22 [16-bit]
+
+0x2103b4: Case - Slot 23 [16-bit]
+
+0x2103c8: Case - Slot 24 [16-bit]
+
+0x2103dc: Case - Slot 25 [16-bit]
+
+0x2103f0: Case - Slot 26 [16-bit]
+
+0x210404: Case - Slot 27 [16-bit]
+
+0x210418: Case - Slot 28 [16-bit]
+
+0x21042c: Case - Slot 29 [16-bit]
+
+0x210440: Case - Slot 30 [16-bit]
+
+0x210454: Case - Slot 31 [16-bit]
+
+0x210468: Case - Slot 32 [16-bit]
+
+0x21047c: Case - Slot 33 [16-bit]
+
+0x210490: Case - Slot 34 [16-bit]
+
+0x2104a4: Case - Slot 35 [16-bit]
+
+0x2104b8: Case - Slot 36 [16-bit]
+
+0x2104cc: Case - Slot 37 [16-bit]
+
+0x2104e0: Case - Slot 38 [16-bit]
+
+0x2104f4: Case - Slot 39 [16-bit]
+
+0x210508: Case - Slot 40 [16-bit]
+
+0x21051c: Case - Slot 41 [16-bit]
+
+0x210530: Case - Slot 42 [16-bit]
+
+0x210544: Case - Slot 43 [16-bit]
+
+0x210558: Case - Slot 44 [16-bit]
+
+0x21056c: Case - Slot 45 [16-bit]
+
+0x210580: Case - Slot 46 [16-bit]
+
+0x210594: Case - Slot 47 [16-bit]
+
+0x2105a8: Case - Slot 48 [16-bit]
+
+0x2105bc: Case - Slot 49 [16-bit]
+
+0x2105d0: Case - Slot 50 [16-bit]
+
+0x2105e4: Case - Slot 51 [16-bit]
+
+0x2105f8: Case - Slot 52 [16-bit]
+
+0x21060c: Case - Slot 53 [16-bit]
+
+0x210620: Case - Slot 54 [16-bit]
+
+0x210634: Case - Slot 55 [16-bit]
+
+0x210648: Case - Slot 56 [16-bit]
+
+0x21065c: Case - Slot 57 [16-bit]
+
+0x210670: Case - Slot 58 [16-bit]
+
+0x210684: Case - Slot 59 [16-bit]
+
+0x210698: Case - Slot 60 [16-bit]
+
+0x2106ac: Case - Slot 61 [16-bit]
+
+0x2106c0: Case - Slot 62 [16-bit]
+
+0x2106d4: Case - Slot 63 [16-bit]
+
+0x2106e8: Case - Slot 64 [16-bit]
+
+0x213164: ---VIVOSAURS---
+Fossil Parts go up to 125 points MAX.
+Total Points and Battle Points go up to 600 points MAX.
+
+0x213169: 001 - T-Rex [Battle Points] [16-bit]
+
+0x21316c: 001 - T-Rex [Head] [8-bit]
+
+0x213170: 001 - T-Rex [Body] [8-bit]
+
+0x213174: 001 - T-Rex [Arms] [8-bit]
+
+0x213178: 001 - T-Rex [Legs] [8-bit]
+
+0x213181: 002 - Daspleto [Battle Points] [16-bit]
+
+0x213184: 002 - Daspleto [Head] [8-bit]
+
+0x213188: 002 - Daspleto [Body] [8-bit]
+
+0x21318c: 002 - Daspleto [Arms] [8-bit]
+
+0x213190: 002 - Daspleto [Legs] [8-bit]
+
+0x213199: 003 - Gorgo [Battle Points] [16-bit]
+
+0x21319c: 003 - Gorgo [Head] [8-bit]
+
+0x2131a0: 003 - Gorgo [Body] [8-bit]
+
+0x2131a4: 003 - Gorgo [Arms] [8-bit]
+
+0x2131a8: 003 - Gorgo [Legs] [8-bit]
+
+0x2131b1: 004 - Tarbo [Battle Points] [16-bit]
+
+0x2131b4: 004 - Tarbo [Head] [8-bit]
+
+0x2131b8: 004 - Tarbo [Body] [8-bit]
+
+0x2131bc: 004 - Tarbo [Arms] [8-bit]
+
+0x2131c0: 004 - Tarbo [Legs] [8-bit]
+
+0x2131c9: 005 - Alio [Battle Points] [16-bit]
+
+0x2131cc: 005 - Alio [Head] [8-bit]
+
+0x2131d0: 005 - Alio [Body] [8-bit]
+
+0x2131d4: 005 - Alio [Arms] [8-bit]
+
+0x2131d8: 005 - Alio [Legs] [8-bit]
+
+0x2131e1: 006 - Siamo [Battle Points] [16-bit]
+
+0x2131e4: 006 - Siamo [Head] [8-bit]
+
+0x2131e8: 006 - Siamo [Body] [8-bit]
+
+0x2131ec: 006 - Siamo [Arms] [8-bit]
+
+0x2131f0: 006 - Siamo [Legs] [8-bit]
+
+0x2131f9: 007 - Alectro [Battle Points] [16-bit]
+
+0x2131fc: 007 - Alectro [Head] [8-bit]
+
+0x213200: 007 - Alectro [Body] [8-bit]
+
+0x213204: 007 - Alectro [Arms] [8-bit]
+
+0x213208: 007 - Alectro [Legs] [8-bit]
+
+0x213211: 008 - Guan [Battle Points] [16-bit]
+
+0x213214: 008 - Guan [Head] [8-bit]
+
+0x213218: 008 - Guan [Body] [8-bit]
+
+0x21321c: 008 - Guan [Arms] [8-bit]
+
+0x213220: 008 - Guan [Legs] [8-bit]
+
+0x213229: 009 - Shanshan [Battle Points] [16-bit]
+
+0x21322c: 009 - Shanshan [Head] [8-bit]
+
+0x213230: 009 - Shanshan [Body] [8-bit]
+
+0x213234: 009 - Shanshan [Arms] [8-bit]
+
+0x213238: 009 - Shanshan [Legs] [8-bit]
+
+0x213241: 010 - Allo [Battle Points] [16-bit]
+
+0x213244: 010 - Allo [Head] [8-bit]
+
+0x213248: 010 - Allo [Body] [8-bit]
+
+0x21324c: 010 - Allo [Arms] [8-bit]
+
+0x213250: 010 - Allo [Legs] [8-bit]
+
+0x213259: 011 - Metria [Battle Points] [16-bit]
+
+0x21325c: 011 - Metria [Head] [8-bit]
+
+0x213260: 011 - Metria [Body] [8-bit]
+
+0x213264: 011 - Metria [Arms] [8-bit]
+
+0x213268: 011 - Metria [Legs] [8-bit]
+
+0x213271: 012 - Regalo [Battle Points] [16-bit]
+
+0x213274: 012 - Regalo [Head] [8-bit]
+
+0x213278: 012 - Regalo [Body] [8-bit]
+
+0x21327c: 012 - Regalo [Arms] [8-bit]
+
+0x213280: 012 - Regalo [Legs] [8-bit]
+
+0x213289: 013 - Venator [Battle Points] [16-bit]
+
+0x21328c: 013 - Venator [Head] [8-bit]
+
+0x213290: 013 - Venator [Body] [8-bit]
+
+0x213294: 013 - Venator [Arms] [8-bit]
+
+0x213298: 013 - Venator [Legs] [8-bit]
+
+0x2132a1: 014 - S-Raptor [Battle Points] [16-bit]
+
+0x2132a4: 014 - S-Raptor [Head] [8-bit]
+
+0x2132a8: 014 - S-Raptor [Body] [8-bit]
+
+0x2132ac: 014 - S-Raptor [Arms] [8-bit]
+
+0x2132b0: 014 - S-Raptor [Legs] [8-bit]
+
+0x2132b9: 015 - Giganto [Battle Points] [16-bit]
+
+0x2132bc: 015 - Giganto [Head] [8-bit]
+
+0x2132c0: 015 - Giganto [Body] [8-bit]
+
+0x2132c4: 015 - Giganto [Arms] [8-bit]
+
+0x2132c8: 015 - Giganto [Legs] [8-bit]
+
+0x2132d1: 016 - Cryo [Battle Points] [16-bit]
+
+0x2132d4: 016 - Cryo [Head] [8-bit]
+
+0x2132d8: 016 - Cryo [Body] [8-bit]
+
+0x2132dc: 016 - Cryo [Arms] [8-bit]
+
+0x2132e0: 016 - Cryo [Legs] [8-bit]
+
+0x2132e9: 017 - Carchar [Battle Points] [16-bit]
+
+0x2132ec: 017 - Carchar [Head] [8-bit]
+
+0x2132f0: 017 - Carchar [Body] [8-bit]
+
+0x2132f4: 017 - Carchar [Arms] [8-bit]
+
+0x2132f8: 017 - Carchar [Legs] [8-bit]
+
+0x213301: 018 - Acro [Battle Points] [16-bit]
+
+0x213304: 018 - Acro [Head] [8-bit]
+
+0x213308: 018 - Acro [Body] [8-bit]
+
+0x21330c: 018 - Acro [Arms] [8-bit]
+
+0x213310: 018 - Acro [Legs] [8-bit]
+
+0x213319: 019 - F-Raptor [Battle Points] [16-bit]
+
+0x21331c: 019 - F-Raptor [Head] [8-bit]
+
+0x213320: 019 - F-Raptor [Body] [8-bit]
+
+0x213324: 019 - F-Raptor [Arms] [8-bit]
+
+0x213328: 019 - F-Raptor [Legs] [8-bit]
+
+0x213331: 020 - Spinax [Battle Points] [16-bit]
+
+0x213334: 020 - Spinax [Head] [8-bit]
+
+0x213338: 020 - Spinax [Body] [8-bit]
+
+0x21333c: 020 - Spinax [Arms] [8-bit]
+
+0x213340: 020 - Spinax [Legs] [8-bit]
+
+0x213349: 021 - Neo [Battle Points] [16-bit]
+
+0x21334c: 021 - Neo [Head] [8-bit]
+
+0x213350: 021 - Neo [Body] [8-bit]
+
+0x213354: 021 - Neo [Arms] [8-bit]
+
+0x213358: 021 - Neo [Legs] [8-bit]
+
+0x213361: 022 - Compso [Battle Points] [16-bit]
+
+0x213364: 022 - Compso [Head] [8-bit]
+
+0x213368: 022 - Compso [Body] [8-bit]
+
+0x21336c: 022 - Compso [Arms] [8-bit]
+
+0x213370: 022 - Compso [Legs] [8-bit]
+
+0x213379: 023 - Sopteryx [Battle Points] [16-bit]
+
+0x21337c: 023 - Sopteryx [Head] [8-bit]
+
+0x213380: 023 - Sopteryx [Body] [8-bit]
+
+0x213384: 023 - Sopteryx [Arms] [8-bit]
+
+0x213388: 023 - Sopteryx [Legs] [8-bit]
+
+0x213391: 024 - Delta [Battle Points] [16-bit]
+
+0x213394: 024 - Delta [Head] [8-bit]
+
+0x213398: 024 - Delta [Body] [8-bit]
+
+0x21339c: 024 - Delta [Arms] [8-bit]
+
+0x2133a0: 024 - Delta [Legs] [8-bit]
+
+0x2133a9: 025 - Tro [Battle Points] [16-bit]
+
+0x2133ac: 025 - Tro [Head] [8-bit]
+
+0x2133b0: 025 - Tro [Body] [8-bit]
+
+0x2133b4: 025 - Tro [Arms] [8-bit]
+
+0x2133b8: 025 - Tro [Legs] [8-bit]
+
+0x2133c1: 026 - Nychus [Battle Points] [16-bit]
+
+0x2133c4: 026 - Nychus [Head] [8-bit]
+
+0x2133c8: 026 - Nychus [Body] [8-bit]
+
+0x2133cc: 026 - Nychus [Arms] [8-bit]
+
+0x2133d0: 026 - Nychus [Legs] [8-bit]
+
+0x2133d9: 027 - M-Raptor [Battle Points] [16-bit]
+
+0x2133dc: 027 - M-Raptor [Head] [8-bit]
+
+0x2133e0: 027 - M-Raptor [Body] [8-bit]
+
+0x2133e4: 027 - M-Raptor [Arms] [8-bit]
+
+0x2133e8: 027 - M-Raptor [Legs] [8-bit]
+
+0x2133f1: 028 - U-Raptor [Battle Points] [16-bit]
+
+0x2133f4: 028 - U-Raptor [Head] [8-bit]
+
+0x2133f8: 028 - U-Raptor [Body] [8-bit]
+
+0x2133fc: 028 - U-Raptor [Arms] [8-bit]
+
+0x213400: 028 - U-Raptor [Legs] [8-bit]
+
+0x213409: 029 - V-Raptor [Battle Points] [16-bit]
+
+0x21340c: 029 - V-Raptor [Head] [8-bit]
+
+0x213410: 029 - V-Raptor [Body] [8-bit]
+
+0x213414: 029 - V-Raptor [Arms] [8-bit]
+
+0x213418: 029 - V-Raptor [Legs] [8-bit]
+
+0x213421: 030 - Breme [Battle Points] [16-bit]
+
+0x213424: 030 - Breme [Head] [8-bit]
+
+0x213428: 030 - Breme [Body] [8-bit]
+
+0x21342c: 030 - Breme [Arms] [8-bit]
+
+0x213430: 030 - Breme [Legs] [8-bit]
+
+0x213439: 031 - Aopteryx [Battle Points] [16-bit]
+
+0x21343c: 031 - Aopteryx [Head] [8-bit]
+
+0x213440: 031 - Aopteryx [Body] [8-bit]
+
+0x213444: 031 - Aopteryx [Arms] [8-bit]
+
+0x213448: 031 - Aopteryx [Legs] [8-bit]
+
+0x213451: 032 - Coelo [Battle Points] [16-bit]
+
+0x213454: 032 - Coelo [Head] [8-bit]
+
+0x213458: 032 - Coelo [Body] [8-bit]
+
+0x21345c: 032 - Coelo [Arms] [8-bit]
+
+0x213460: 032 - Coelo [Legs] [8-bit]
+
+0x213469: 033 - Dilopho [Battle Points] [16-bit]
+
+0x21346c: 033 - Dilopho [Head] [8-bit]
+
+0x213470: 033 - Dilopho [Body] [8-bit]
+
+0x213474: 033 - Dilopho [Arms] [8-bit]
+
+0x213478: 033 - Dilopho [Legs] [8-bit]
+
+0x213481: 034 - Spino [Battle Points] [16-bit]
+
+0x213484: 034 - Spino [Head] [8-bit]
+
+0x213488: 034 - Spino [Body] [8-bit]
+
+0x21348c: 034 - Spino [Arms] [8-bit]
+
+0x213490: 034 - Spino [Legs] [8-bit]
+
+0x213499: 035 - Angato [Battle Points] [16-bit]
+
+0x21349c: 035 - Angato [Head] [8-bit]
+
+0x2134a0: 035 - Angato [Body] [8-bit]
+
+0x2134a4: 035 - Angato [Arms] [8-bit]
+
+0x2134a8: 035 - Angato [Legs] [8-bit]
+
+0x2134b1: 036 - Sucho [Battle Points] [16-bit]
+
+0x2134b4: 036 - Sucho [Head] [8-bit]
+
+0x2134b8: 036 - Sucho [Body] [8-bit]
+
+0x2134bc: 036 - Sucho [Arms] [8-bit]
+
+0x2134c0: 036 - Sucho [Legs] [8-bit]
+
+0x2134c9: 037 - Onyx [Battle Points] [16-bit]
+
+0x2134cc: 037 - Onyx [Head] [8-bit]
+
+0x2134d0: 037 - Onyx [Body] [8-bit]
+
+0x2134d4: 037 - Onyx [Arms] [8-bit]
+
+0x2134d8: 037 - Onyx [Legs] [8-bit]
+
+0x2134e1: 038 - Cerato [Battle Points] [16-bit]
+
+0x2134e4: 038 - Cerato [Head] [8-bit]
+
+0x2134e8: 038 - Cerato [Body] [8-bit]
+
+0x2134ec: 038 - Cerato [Arms] [8-bit]
+
+0x2134f0: 038 - Cerato [Legs] [8-bit]
+
+0x2134f9: 039 - Carno [Battle Points] [16-bit]
+
+0x2134fc: 039 - Carno [Head] [8-bit]
+
+0x213500: 039 - Carno [Body] [8-bit]
+
+0x213504: 039 - Carno [Arms] [8-bit]
+
+0x213508: 039 - Carno [Legs] [8-bit]
+
+0x213511: 040 - Orno [Battle Points] [16-bit]
+
+0x213514: 040 - Orno [Head] [8-bit]
+
+0x213518: 040 - Orno [Body] [8-bit]
+
+0x21351c: 040 - Orno [Arms] [8-bit]
+
+0x213520: 040 - Orno [Legs] [8-bit]
+
+0x213529: 041 - Cheirus [Battle Points] [16-bit]
+
+0x21352c: 041 - Cheirus [Head] [8-bit]
+
+0x213530: 041 - Cheirus [Body] [8-bit]
+
+0x213534: 041 - Cheirus [Arms] [8-bit]
+
+0x213538: 041 - Cheirus [Legs] [8-bit]
+
+0x213541: 042 - O-Raptor [Battle Points] [16-bit]
+
+0x213544: 042 - O-Raptor [Head] [8-bit]
+
+0x213548: 042 - O-Raptor [Body] [8-bit]
+
+0x21354c: 042 - O-Raptor [Arms] [8-bit]
+
+0x213550: 042 - O-Raptor [Legs] [8-bit]
+
+0x213559: 043 - Zino [Battle Points] [16-bit]
+
+0x21355c: 043 - Zino [Head] [8-bit]
+
+0x213560: 043 - Zino [Body] [8-bit]
+
+0x213564: 043 - Zino [Arms] [8-bit]
+
+0x213568: 043 - Zino [Legs] [8-bit]
+
+0x213571: 044 - Brachio [Battle Points] [16-bit]
+
+0x213574: 044 - Brachio [Head] [8-bit]
+
+0x213578: 044 - Brachio [Body] [8-bit]
+
+0x21357c: 044 - Brachio [Arms] [8-bit]
+
+0x213580: 044 - Brachio [Legs] [8-bit]
+
+0x213589: 045 - Salto [Battle Points] [16-bit]
+
+0x21358c: 045 - Salto [Head] [8-bit]
+
+0x213590: 045 - Salto [Body] [8-bit]
+
+0x213594: 045 - Salto [Arms] [8-bit]
+
+0x213598: 045 - Salto [Legs] [8-bit]
+
+0x2135a1: 046 - Shuno [Battle Points] [16-bit]
+
+0x2135a4: 046 - Shuno [Head] [8-bit]
+
+0x2135a8: 046 - Shuno [Body] [8-bit]
+
+0x2135ac: 046 - Shuno [Arms] [8-bit]
+
+0x2135b0: 046 - Shuno [Legs] [8-bit]
+
+0x2135b9: 047 - Perso [Battle Points] [16-bit]
+
+0x2135bc: 047 - Perso [Head] [8-bit]
+
+0x2135c0: 047 - Perso [Body] [8-bit]
+
+0x2135c4: 047 - Perso [Arms] [8-bit]
+
+0x2135c8: 047 - Perso [Legs] [8-bit]
+
+0x2135d1: 048 - Seismo [Battle Points] [16-bit]
+
+0x2135d4: 048 - Seismo [Head] [8-bit]
+
+0x2135d8: 048 - Seismo [Body] [8-bit]
+
+0x2135dc: 048 - Seismo [Arms] [8-bit]
+
+0x2135e0: 048 - Seismo [Legs] [8-bit]
+
+0x2135e9: 049 - Apato [Battle Points] [16-bit]
+
+0x2135ec: 049 - Apato [Head] [8-bit]
+
+0x2135f0: 049 - Apato [Body] [8-bit]
+
+0x2135f4: 049 - Apato [Arms] [8-bit]
+
+0x2135f8: 049 - Apato [Legs] [8-bit]
+
+0x213601: 050 - Amargo [Battle Points] [16-bit]
+
+0x213604: 050 - Amargo [Head] [8-bit]
+
+0x213608: 050 - Amargo [Body] [8-bit]
+
+0x21360c: 050 - Amargo [Arms] [8-bit]
+
+0x213610: 050 - Amargo [Legs] [8-bit]
+
+0x213619: 051 - Stego [Battle Points] [16-bit]
+
+0x21361c: 051 - Stego [Head] [8-bit]
+
+0x213620: 051 - Stego [Body] [8-bit]
+
+0x213624: 051 - Stego [Arms] [8-bit]
+
+0x213628: 051 - Stego [Legs] [8-bit]
+
+0x213631: 052 - Yango [Battle Points] [16-bit]
+
+0x213634: 052 - Yango [Head] [8-bit]
+
+0x213638: 052 - Yango [Body] [8-bit]
+
+0x21363c: 052 - Yango [Arms] [8-bit]
+
+0x213640: 052 - Yango [Legs] [8-bit]
+
+0x213649: 053 - Jiango [Battle Points] [16-bit]
+
+0x21364c: 053 - Jiango [Head] [8-bit]
+
+0x213650: 053 - Jiango [Body] [8-bit]
+
+0x213654: 053 - Jiango [Arms] [8-bit]
+
+0x213658: 053 - Jiango [Legs] [8-bit]
+
+0x213661: 054 - Kentro [Battle Points] [16-bit]
+
+0x213664: 054 - Kentro [Head] [8-bit]
+
+0x213668: 054 - Kentro [Body] [8-bit]
+
+0x21366c: 054 - Kentro [Arms] [8-bit]
+
+0x213670: 054 - Kentro [Legs] [8-bit]
+
+0x213679: 055 - Lexo [Battle Points] [16-bit]
+
+0x21367c: 055 - Lexo [Head] [8-bit]
+
+0x213680: 055 - Lexo [Body] [8-bit]
+
+0x213684: 055 - Lexo [Arms] [8-bit]
+
+0x213688: 055 - Lexo [Legs] [8-bit]
+
+0x213691: 056 - Nodo [Battle Points] [16-bit]
+
+0x213694: 056 - Nodo [Head] [8-bit]
+
+0x213698: 056 - Nodo [Body] [8-bit]
+
+0x21369c: 056 - Nodo [Arms] [8-bit]
+
+0x2136a0: 056 - Nodo [Legs] [8-bit]
+
+0x2136a9: 057 - Ankylo [Battle Points] [16-bit]
+
+0x2136ac: 057 - Ankylo [Head] [8-bit]
+
+0x2136b0: 057 - Ankylo [Body] [8-bit]
+
+0x2136b4: 057 - Ankylo [Arms] [8-bit]
+
+0x2136b8: 057 - Ankylo [Legs] [8-bit]
+
+0x2136c1: 058 - Saichan [Battle Points] [16-bit]
+
+0x2136c4: 058 - Saichan [Head] [8-bit]
+
+0x2136c8: 058 - Saichan [Body] [8-bit]
+
+0x2136cc: 058 - Saichan [Arms] [8-bit]
+
+0x2136d0: 058 - Saichan [Legs] [8-bit]
+
+0x2136d9: 059 - Goyle [Battle Points] [16-bit]
+
+0x2136dc: 059 - Goyle [Head] [8-bit]
+
+0x2136e0: 059 - Goyle [Body] [8-bit]
+
+0x2136e4: 059 - Goyle [Arms] [8-bit]
+
+0x2136e8: 059 - Goyle [Legs] [8-bit]
+
+0x2136f1: 060 - Pelto [Battle Points] [16-bit]
+
+0x2136f4: 060 - Pelto [Head] [8-bit]
+
+0x2136f8: 060 - Pelto [Body] [8-bit]
+
+0x2136fc: 060 - Pelto [Arms] [8-bit]
+
+0x213700: 060 - Pelto [Legs] [8-bit]
+
+0x213709: 061 - Hypsi [Battle Points] [16-bit]
+
+0x21370c: 061 - Hypsi [Head] [8-bit]
+
+0x213710: 061 - Hypsi [Body] [8-bit]
+
+0x213714: 061 - Hypsi [Arms] [8-bit]
+
+0x213718: 061 - Hypsi [Legs] [8-bit]
+
+0x213721: 062 - Nasaur [Battle Points] [16-bit]
+
+0x213724: 062 - Nasaur [Head] [8-bit]
+
+0x213728: 062 - Nasaur [Body] [8-bit]
+
+0x21372c: 062 - Nasaur [Arms] [8-bit]
+
+0x213730: 062 - Nasaur [Legs] [8-bit]
+
+0x213739: 063 - Igua [Battle Points] [16-bit]
+
+0x21373c: 063 - Igua [Head] [8-bit]
+
+0x213740: 063 - Igua [Body] [8-bit]
+
+0x213744: 063 - Igua [Arms] [8-bit]
+
+0x213748: 063 - Igua [Legs] [8-bit]
+
+0x213751: 064 - Ourano [Battle Points] [16-bit]
+
+0x213754: 064 - Ourano [Head] [8-bit]
+
+0x213758: 064 - Ourano [Body] [8-bit]
+
+0x21375c: 064 - Ourano [Arms] [8-bit]
+
+0x213760: 064 - Ourano [Legs] [8-bit]
+
+0x213769: 065 - Lambeo [Battle Points] [16-bit]
+
+0x21376c: 065 - Lambeo [Head] [8-bit]
+
+0x213770: 065 - Lambeo [Body] [8-bit]
+
+0x213774: 065 - Lambeo [Arms] [8-bit]
+
+0x213778: 065 - Lambeo [Legs] [8-bit]
+
+0x213781: 066 - Maia [Battle Points] [16-bit]
+
+0x213784: 066 - Maia [Head] [8-bit]
+
+0x213788: 066 - Maia [Body] [8-bit]
+
+0x21378c: 066 - Maia [Arms] [8-bit]
+
+0x213790: 066 - Maia [Legs] [8-bit]
+
+0x213799: 067 - Anato [Battle Points] [16-bit]
+
+0x21379c: 067 - Anato [Head] [8-bit]
+
+0x2137a0: 067 - Anato [Body] [8-bit]
+
+0x2137a4: 067 - Anato [Arms] [8-bit]
+
+0x2137a8: 067 - Anato [Legs] [8-bit]
+
+0x2137b1: 068 - Paraloph [Battle Points] [16-bit]
+
+0x2137b4: 068 - Paraloph [Head] [8-bit]
+
+0x2137b8: 068 - Paraloph [Body] [8-bit]
+
+0x2137bc: 068 - Paraloph [Arms] [8-bit]
+
+0x2137c0: 068 - Paraloph [Legs] [8-bit]
+
+0x2137c9: 069 - Pachy [Battle Points] [16-bit]
+
+0x2137cc: 069 - Pachy [Head] [8-bit]
+
+0x2137d0: 069 - Pachy [Body] [8-bit]
+
+0x2137d4: 069 - Pachy [Arms] [8-bit]
+
+0x2137d8: 069 - Pachy [Legs] [8-bit]
+
+0x2137e1: 070 - Stygi [Battle Points] [16-bit]
+
+0x2137e4: 070 - Stygi [Head] [8-bit]
+
+0x2137e8: 070 - Stygi [Body] [8-bit]
+
+0x2137ec: 070 - Stygi [Arms] [8-bit]
+
+0x2137f0: 070 - Stygi [Legs] [8-bit]
+
+0x2137f9: 071 - Goyo [Battle Points] [16-bit]
+
+0x2137fc: 071 - Goyo [Head] [8-bit]
+
+0x213800: 071 - Goyo [Body] [8-bit]
+
+0x213804: 071 - Goyo [Arms] [8-bit]
+
+0x213808: 071 - Goyo [Legs] [8-bit]
+
+0x213811: 072 - Proto [Battle Points] [16-bit]
+
+0x213814: 072 - Proto [Head] [8-bit]
+
+0x213818: 072 - Proto [Body] [8-bit]
+
+0x21381c: 072 - Proto [Arms] [8-bit]
+
+0x213820: 072 - Proto [Legs] [8-bit]
+
+0x213829: 073 - Tricera [Battle Points] [16-bit]
+
+0x21382c: 073 - Tricera [Head] [8-bit]
+
+0x213830: 073 - Tricera [Body] [8-bit]
+
+0x213834: 073 - Tricera [Arms] [8-bit]
+
+0x213838: 073 - Tricera [Legs] [8-bit]
+
+0x213841: 074 - Styraco [Battle Points] [16-bit]
+
+0x213844: 074 - Styraco [Head] [8-bit]
+
+0x213848: 074 - Styraco [Body] [8-bit]
+
+0x21384c: 074 - Styraco [Arms] [8-bit]
+
+0x213850: 074 - Styraco [Legs] [8-bit]
+
+0x213859: 075 - Einio [Battle Points] [16-bit]
+
+0x21385c: 075 - Einio [Head] [8-bit]
+
+0x213860: 075 - Einio [Body] [8-bit]
+
+0x213864: 075 - Einio [Arms] [8-bit]
+
+0x213868: 075 - Einio [Legs] [8-bit]
+
+0x213871: 076 - Centro [Battle Points] [16-bit]
+
+0x213874: 076 - Centro [Head] [8-bit]
+
+0x213878: 076 - Centro [Body] [8-bit]
+
+0x21387c: 076 - Centro [Arms] [8-bit]
+
+0x213880: 076 - Centro [Legs] [8-bit]
+
+0x213889: 077 - Penta [Battle Points] [16-bit]
+
+0x21388c: 077 - Penta [Head] [8-bit]
+
+0x213890: 077 - Penta [Body] [8-bit]
+
+0x213894: 077 - Penta [Arms] [8-bit]
+
+0x213898: 077 - Penta [Legs] [8-bit]
+
+0x2138a1: 078 - Pachrino [Battle Points] [16-bit]
+
+0x2138a4: 078 - Pachrino [Head] [8-bit]
+
+0x2138a8: 078 - Pachrino [Body] [8-bit]
+
+0x2138ac: 078 - Pachrino [Arms] [8-bit]
+
+0x2138b0: 078 - Pachrino [Legs] [8-bit]
+
+0x2138b9: 079 - Mihu [Battle Points] [16-bit]
+
+0x2138bc: 079 - Mihu [Head] [8-bit]
+
+0x2138c0: 079 - Mihu [Body] [8-bit]
+
+0x2138c4: 079 - Mihu [Arms] [8-bit]
+
+0x2138c8: 079 - Mihu [Legs] [8-bit]
+
+0x2138d1: 080 - Ptera [Battle Points] [16-bit]
+
+0x2138d4: 080 - Ptera [Head] [8-bit]
+
+0x2138d8: 080 - Ptera [Body] [8-bit]
+
+0x2138dc: 080 - Ptera [Arms] [8-bit]
+
+0x2138e0: 080 - Ptera [Legs] [8-bit]
+
+0x2138e9: 081 - Coatlus [Battle Points] [16-bit]
+
+0x2138ec: 081 - Coatlus [Head] [8-bit]
+
+0x2138f0: 081 - Coatlus [Body] [8-bit]
+
+0x2138f4: 081 - Coatlus [Arms] [8-bit]
+
+0x2138f8: 081 - Coatlus [Legs] [8-bit]
+
+0x213901: 082 - Jara [Battle Points] [16-bit]
+
+0x213904: 082 - Jara [Head] [8-bit]
+
+0x213908: 082 - Jara [Body] [8-bit]
+
+0x21390c: 082 - Jara [Arms] [8-bit]
+
+0x213910: 082 - Jara [Legs] [8-bit]
+
+0x213919: 083 - Dimorph [Battle Points] [16-bit]
+
+0x21391c: 083 - Dimorph [Head] [8-bit]
+
+0x213920: 083 - Dimorph [Body] [8-bit]
+
+0x213924: 083 - Dimorph [Arms] [8-bit]
+
+0x213928: 083 - Dimorph [Legs] [8-bit]
+
+0x213931: 084 - Guera [Battle Points] [16-bit]
+
+0x213934: 084 - Guera [Head] [8-bit]
+
+0x213938: 084 - Guera [Body] [8-bit]
+
+0x21393c: 084 - Guera [Arms] [8-bit]
+
+0x213940: 084 - Guera [Legs] [8-bit]
+
+0x213949: 085 - Krona [Battle Points] [16-bit]
+
+0x21394c: 085 - Krona [Head] [8-bit]
+
+0x213950: 085 - Krona [Body] [8-bit]
+
+0x213954: 085 - Krona [Arms] [8-bit]
+
+0x213958: 085 - Krona [Legs] [8-bit]
+
+0x213961: 086 - Futabi [Battle Points] [16-bit]
+
+0x213964: 086 - Futabi [Head] [8-bit]
+
+0x213968: 086 - Futabi [Body] [8-bit]
+
+0x21396c: 086 - Futabi [Arms] [8-bit]
+
+0x213970: 086 - Futabi [Legs] [8-bit]
+
+0x213979: 087 - Elasmo [Battle Points] [16-bit]
+
+0x21397c: 087 - Elasmo [Head] [8-bit]
+
+0x213980: 087 - Elasmo [Body] [8-bit]
+
+0x213984: 087 - Elasmo [Arms] [8-bit]
+
+0x213988: 087 - Elasmo [Legs] [8-bit]
+
+0x213991: 088 - Plesio [Battle Points] [16-bit]
+
+0x213994: 088 - Plesio [Head] [8-bit]
+
+0x213998: 088 - Plesio [Body] [8-bit]
+
+0x21399c: 088 - Plesio [Arms] [8-bit]
+
+0x2139a0: 088 - Plesio [Legs] [8-bit]
+
+0x2139a9: 089 - Shoni [Battle Points] [16-bit]
+
+0x2139ac: 089 - Shoni [Head] [8-bit]
+
+0x2139b0: 089 - Shoni [Body] [8-bit]
+
+0x2139b4: 089 - Shoni [Arms] [8-bit]
+
+0x2139b8: 089 - Shoni [Legs] [8-bit]
+
+0x2139c1: 090 - Arsith [Battle Points] [16-bit]
+
+0x2139c4: 090 - Arsith [Head] [8-bit]
+
+0x2139c8: 090 - Arsith [Body] [8-bit]
+
+0x2139cc: 090 - Arsith [Arms] [8-bit]
+
+0x2139d0: 090 - Arsith [Legs] [8-bit]
+
+0x2139d9: 091 - Brontoth [Battle Points] [16-bit]
+
+0x2139dc: 091 - Brontoth [Head] [8-bit]
+
+0x2139e0: 091 - Brontoth [Body] [8-bit]
+
+0x2139e4: 091 - Brontoth [Arms] [8-bit]
+
+0x2139e8: 091 - Brontoth [Legs] [8-bit]
+
+0x2139f1: 092 - Elasmoth [Battle Points] [16-bit]
+
+0x2139f4: 092 - Elasmoth [Head] [8-bit]
+
+0x2139f8: 092 - Elasmoth [Body] [8-bit]
+
+0x2139fc: 092 - Elasmoth [Arms] [8-bit]
+
+0x213a00: 092 - Elasmoth [Legs] [8-bit]
+
+0x213a09: 093 - Hoplo [Battle Points] [16-bit]
+
+0x213a0c: 093 - Hoplo [Head] [8-bit]
+
+0x213a10: 093 - Hoplo [Body] [8-bit]
+
+0x213a14: 093 - Hoplo [Arms] [8-bit]
+
+0x213a18: 093 - Hoplo [Legs] [8-bit]
+
+0x213a21: 094 - Andrarch [Battle Points] [16-bit]
+
+0x213a24: 094 - Andrarch [Head] [8-bit]
+
+0x213a28: 094 - Andrarch [Body] [8-bit]
+
+0x213a2c: 094 - Andrarch [Arms] [8-bit]
+
+0x213a30: 094 - Andrarch [Legs] [8-bit]
+
+0x213a39: 095 - Paki [Battle Points] [16-bit]
+
+0x213a3c: 095 - Paki [Head] [8-bit]
+
+0x213a40: 095 - Paki [Body] [8-bit]
+
+0x213a44: 095 - Paki [Arms] [8-bit]
+
+0x213a48: 095 - Paki [Legs] [8-bit]
+
+0x213a51: 096 - Smilo [Battle Points] [16-bit]
+
+0x213a54: 096 - Smilo [Head] [8-bit]
+
+0x213a58: 096 - Smilo [Body] [8-bit]
+
+0x213a5c: 096 - Smilo [Arms] [8-bit]
+
+0x213a60: 096 - Smilo [Legs] [8-bit]
+
+0x213a69: 097 - Mammoth [Battle Points] [16-bit]
+
+0x213a6c: 097 - Mammoth [Head] [8-bit]
+
+0x213a70: 097 - Mammoth [Body] [8-bit]
+
+0x213a74: 097 - Mammoth [Arms] [8-bit]
+
+0x213a78: 097 - Mammoth [Legs] [8-bit]
+
+0x213a81: 098 - Tryma [Battle Points] [16-bit]
+
+0x213a84: 098 - Tryma [Head] [8-bit]
+
+0x213a88: 098 - Tryma [Body] [8-bit]
+
+0x213a8c: 098 - Tryma [Arms] [8-bit]
+
+0x213a90: 098 - Tryma [Legs] [8-bit]
+
+0x213a99: 099 - Megath [Battle Points] [16-bit]
+
+0x213a9c: 099 - Megath [Head] [8-bit]
+
+0x213aa0: 099 - Megath [Body] [8-bit]
+
+0x213aa4: 099 - Megath [Arms] [8-bit]
+
+0x213aa8: 099 - Megath [Legs] [8-bit]
+
+0x213ab1: 100 - Chelon [Battle Points] [16-bit]
+
+0x213ab4: 100 - Chelon [Head] [8-bit]
+
+0x213ab8: 100 - Chelon [Body] [8-bit]
+
+0x213abc: 100 - Chelon [Arms] [8-bit]
+
+0x213ac0: 100 - Chelon [Legs] [8-bit]
+
+0x213acc: 101 - Dinomaton [Head] [8-bit]
+
+0x213ad0: 101 - Dinomaton [Body] [8-bit]
+
+0x213ad4: 101 - Dinomaton [Arms] [8-bit]
+
+0x213ad8: 101 - Dinomaton [Legs] [8-bit]
+
+0x213ae4: 102 - Duna [Head] [8-bit]
+
+0x213ae8: 102 - Duna [Body] [8-bit]
+
+0x213aec: 102 - Duna [Arms] [8-bit]
+
+0x213af0: 102 - Duna [Legs] [8-bit]
+
+0x213afc: 103 - Raptin [Head] [8-bit]
+
+0x213b00: 103 - Raptin [Body] [8-bit]
+
+0x213b04: 103 - Raptin [Arms] [8-bit]
+
+0x213b08: 103 - Raptin [Legs] [8-bit]
+
+0x213b14: 104 - Dynal [Head] [8-bit]
+
+0x213b18: 104 - Dynal [Body] [8-bit]
+
+0x213b1c: 104 - Dynal [Arms] [8-bit]
+
+0x213b20: 104 - Dynal [Legs] [8-bit]
+
+0x213b2c: 105 - Frigi [Head] [8-bit]
+
+0x213b30: 105 - Frigi [Body] [8-bit]
+
+0x213b34: 105 - Frigi [Arms] [8-bit]
+
+0x213b38: 105 - Frigi [Legs] [8-bit]
+
+0x213b44: 106 - Igno [Head] [8-bit]
+
+0x213b48: 106 - Igno [Body] [8-bit]
+
+0x213b4c: 106 - Igno [Arms] [8-bit]
+
+0x213b50: 106 - Igno [Legs] [8-bit]
+
+0x213b5c: 107 - Squik [Head] [8-bit]
+
+0x213b60: 107 - Squik [Body] [8-bit]
+
+0x213b64: 107 - Squik [Arms] [8-bit]
+
+0x213b68: 107 - Squik [Legs] [8-bit]
+
+0x213b74: 108 - Squirk [Head] [8-bit]
+
+0x213b78: 108 - Squirk [Body] [8-bit]
+
+0x213b7c: 108 - Squirk [Arms] [8-bit]
+
+0x213b80: 108 - Squirk [Legs] [8-bit]
+
+0x213b8c: 109 - Squirth [Head] [8-bit]
+
+0x213b90: 109 - Squirth [Body] [8-bit]
+
+0x213b94: 109 - Squirth [Arms] [8-bit]
+
+0x213b98: 109 - Squirth [Legs] [8-bit]
+
+0x213ba4: 110 - Squilk [Head] [8-bit]
+
+0x213ba8: 110 - Squilk [Body] [8-bit]
+
+0x213bac: 110 - Squilk [Arms] [8-bit]
+
+0x213bb0: 110 - Squilk [Legs] [8-bit]
+
+0x213bbc: 111 - Squiro [Head] [8-bit]
+
+0x213bc0: 111 - Squiro [Body] [8-bit]
+
+0x213bc4: 111 - Squiro [Arms] [8-bit]
+
+0x213bc8: 111 - Squiro [Legs] [8-bit]
+
+0x213bd4: 112 - Guhweep [Head] [8-bit]
+
+0x213bd8: 112 - Guhweep [Body] [8-bit]
+
+0x213bdc: 112 - Guhweep [Arms] [8-bit]
+
+0x213be0: 112 - Guhweep [Legs] [8-bit]
+
+0x213bec: 113 - Guhvorn [Head] [8-bit]
+
+0x213bf0: 113 - Guhvorn [Body] [8-bit]
+
+0x213bf4: 113 - Guhvorn [Arms] [8-bit]
+
+0x213bf8: 113 - Guhvorn [Legs] [8-bit]
+
+0x213c04: 114 - Guhlith [Head] [8-bit]
+
+0x213c08: 114 - Guhlith [Body] [8-bit]
+
+0x213c0c: 114 - Guhlith [Arms] [8-bit]
+
+0x213c10: 114 - Guhlith [Legs] [8-bit]
+
