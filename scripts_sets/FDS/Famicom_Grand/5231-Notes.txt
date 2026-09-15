@@ -1,7 +1,12 @@
 Game ID: 5231
 Source: RA Server
-Total Notes: 34
+Total Notes: 38
 ============================================================
+
+0x000014: [8-bit] Car Slot Used
+0x00 = Slot 1
+0x01 = Slot 2
+0x02 = Slot 3
 
 0x00003e: [8-bit] Time Trial - Player Count
 Determines how many players participate in Time Trial mode
@@ -40,6 +45,8 @@ Determines how many players participate in Time Trial mode
 0x00040c: [8-bit] Invincibility
 0x06 = Enabled
 
+0x00043b: [8-bit] Number of Laps Left
+
 0x0004ef: [8-bit] Car Body / Damage
 Tracks the car's body condition. The value decreases as the car takes damage from collisions or wear during the race.
 0x00 = Car destroyed
@@ -51,6 +58,13 @@ Tracks the tire wear. The value decreases as the tires wear down during the race
 0x0004f1: [8-bit] Fuel Condition
 0x00 = Empty
 0x18 = Max
+
+0x0005ee: [8-bit] Pit Stop Status
+0x00 = Not in pit / Racing
+0x01 = In pit
+
+0x0005ef: [8-bit] Pit Stop Timer
+Tracks the time spent in the pit stop
 
 0x0006b9: [8-bit] Level
 0x01 = Level 1
@@ -64,17 +78,17 @@ Tracks the tire wear. The value decreases as the tires wear down during the race
 0x03 = Stage 3
 0x04 = Stage 4
 
-0x0006c8: [8-bit] Current Circuit
-0x01 = Circuit 1
-0x02 = Circuit 2
-0x03 = Circuit 3
-0x04 = Circuit 4
-0x05 = Circuit 5
-0x06 = Circuit 6
-0x07 = Circuit 7
-0x08 = Circuit 8
-0x09 = Circuit 9
-0x0a = Circuit 10
+0x0006c8: [16-bit] Current Circuit
+0xb701 = Circuit 1
+0xb702 = Circuit 2
+0xb703 = Circuit 3
+0xb704 = Circuit 4
+0xb705 = Circuit 5
+0xb706 = Circuit 6
+0xb707 = Circuit 7
+0xb708 = Circuit 8
+0xb709 = Circuit 9
+0x0001 = Circuit 10
 
 0x000703: [24-bit] Car PS (Pferdestärke)
 Indicates the car's engine power
