@@ -1,7 +1,13 @@
 Game ID: 23035
 Source: RA Server
-Total Notes: 37
+Total Notes: 61
 ============================================================
+
+0x000045: [8-bit] Game Events / Game State
+0x09 = Title Menu
+0x29 = In Battle
+0x69 = Continue Screen / Game Over
+0x43 = Victory Cutscene
 
 0x000100: [16-bit] Save File Profile Select
 This address determines which save file profile is selected for saving progress
@@ -74,6 +80,7 @@ This address determines which save file profile is selected for saving progress
 0x000121: [8-bit] Advance Mode - Menu Game
 0xd6 = Menu Advanced
 0xd3 = Item Shop
+0xd4 = Underground Arena
 0xd7 = Central Gate
 0xd9 = Battle Tycoon Venue
 0xdb = Result Screens
@@ -84,7 +91,7 @@ This address determines which save file profile is selected for saving progress
 
 0x00020a: [16-bit] Advance Mode - Invested Points: Speed
 
-0x00020d: [8-bit] Advance Mode - Available Stat Points
+0x00020d: [8-bit] Available Stat Points
 Note: These track added points only, not the total stat displayed on screen
 
 0x00022b: [8-bit] Game Mode Select
@@ -110,6 +117,20 @@ Note: These track added points only, not the total stat displayed on screen
 0x09 = Boss Battle
 0x0a = Victory Cutscene
 
+0x000247: [8-bit] Underground Arena Select Character 1
+0x00 = Bang
+0x02 = Tiria
+0x04 = Ottoh
+0x06 = Harman
+0x08 = Spenoza
+0x0a = Calnarsa
+0x0c = Seena
+0x0e = Guston
+0x10 = Pachet
+
+0x000277: [8-bit] Super Move Executed
+0x65 = Bang's Super Move
+
 0x0002a5: [8-bit] P1 Rounds Won
 0x00 = None
 0x01 = 1 Win
@@ -132,6 +153,17 @@ Note: These track added points only, not the total stat displayed on screen
 0x04 = Skin 5
 0x05 = Skin 6
 
+0x000347: [8-bit] Underground Arena Select Character 2
+0x00 = Bang
+0x02 = Tiria
+0x04 = Ottoh
+0x06 = Harman
+0x08 = Spenoza
+0x0a = Calnarsa
+0x0c = Seena
+0x0e = Guston
+0x10 = Pachet
+
 0x0003a5: [8-bit] P2/COM Rounds Won
 0x00 = None
 0x01 = 1 Win
@@ -148,17 +180,18 @@ Note: These track added points only, not the total stat displayed on screen
 0x04 = Skin 5
 0x05 = Skin 6
 
-0x000447: [8-bit] Advance Mode - Menu Screen ID
-0x00 = File Management Center
-0x01 = Item Shop
-0x02 = Athletes' Dormitory / Players' Quarters
-0x03 = Underground Arena
-0x04 = Central Gate
-0x05 = Battle Tycoon Venue
-
 0x0006ef: [8-bit] [Lower4] Timer Units digit
 
 0x0006f0: [8-bit] [Lower4] Timer Tens digit
+
+0x000938: [8-bit] Advance Mode - Game State
+0x00 = Character intro for Advance Mode
+0x01 = File Management Center
+0x03 = Item Shop
+0x04 = Underground Arena
+0x06 = Athletes' Dormitory / Players' Quarters
+0x05 = Central Gate
+0x0c = Battle Tycoon Venue
 
 0x00093a: [16-bit] Player 1 Select - Versus
 0x00 = Bang
@@ -176,7 +209,7 @@ Note: These track added points only, not the total stat displayed on screen
 0x18 = Save File Character
 0x1a = Save File Character
 
-0x00093c: [16-bit] Player 1 Select - Versus
+0x00093c: [16-bit] Player 2 Select - Versus
 0x00 = Bang
 0x02 = Tiria
 0x04 = Ottoh
@@ -191,6 +224,64 @@ Note: These track added points only, not the total stat displayed on screen
 0x16 = J. Lance / Save File Character
 0x18 = Save File Character
 0x1a = Save File Character
+
+0x000940: [8-bit] Advance Mode - Bet Character
+0x00 = Character 1
+0x01 = Character 2
+
+0x000942: [16-bit] Advance Mode - Underground Arena Betting Gold
+Tracks the amount of gold wagered in the Underground Arena
+
+0x000944: [8-bit] Character 1 - Betting Odds
+Stores the betting odds value for Character 1. When a character is selected, both Character 1 and Character 2 odds are read from this address
+
+0x000946: [8-bit] Character 2 - Betting Odds
+Stores the betting odds value for Character 2
+
+0x000948: [8-bit] Advance Mode - Shop Items
+0x00 = Item 1 - Attack I
+0x01 = Item 2 - Attack II
+0x02 = Item 3 - Attack III
+0x03 = Item 1 - Guard I
+0x04 = Item 2 - Guard II
+0x05 = Item 3 - Guard III
+0x06 = Item 1 - Special I
+0x07 = Item 2 - Special II
+0x08 = Item 3 - Special III
+0x09 = Item 1 - Speed I
+0x0a = Item 2 - Speed II
+0x0b = Item 3 - Speed III
+
+0x002080: [8-bit] Advance Mode - Bang Level CPU
+
+0x002082: [8-bit] Advance Mode - Tira Level CPU
+
+0x002084: [8-bit] Advance Mode - Ottoh Level CPU
+
+0x002086: [8-bit] Advance Mode - Harman Level CPU
+
+0x002088: [8-bit] Advance Mode - Spenoza Level CPU
+
+0x00208a: [8-bit] Advance Mode - Calnarsa Level CPU
+
+0x00208c: [8-bit] Advance Mode - Seena Level CPU
+
+0x00208e: [8-bit] Advance Mode - Guston Level CPU
+
+0x002090: [8-bit] Advance Mode - Pachet Level CPU
+
+0x002130: [8-bit] Day Counter
+0x00 = Day 1
+0x01 = Day 2
+...
+0x09 = Day 9
+
+0x002132: [8-bit] Time of Day
+0x00 = Dawn
+0x01 = Morning
+0x02 = Daytime
+0x03 = Dusk
+0x04 = Night
 
 0x002134: [16-bit] Advance Mode - Selected Character
 0x00 = Bang
@@ -214,7 +305,103 @@ Note: These track added points only, not the total stat displayed on screen
 0x002138: [16-bit] Advance Mode - Character Level
 Note: Displayed Level = Memory Value + 1
 
-0x00213c: [32-bit] Advance Mode - Gold
+0x00213c: [16-bit] Advance Mode - Gold
+
+0x00213e: [8-bit] Equipped Item - Attack
+0x00 = Default Bang / Harman / Spenoza / Seena
+0x04 = Bang / Harman / Spenoza / Seena Upgrade Item 1
+0x08 = Bang / Harman / Spenoza / Seena Upgrade Item 2
+0x0c = Bang / Harman / Spenoza / Seena Upgrade Item 3
+0x10 = Default Tira
+0x14 = Tira Upgrade Item 1
+0x18 = Tira Upgrade Item 2
+0x1c = Tira Upgrade Item 3
+0x20 = Default Ottoh
+0x24 = Ottoh / Guston Upgrade Item 1
+0x28 = Ottoh Upgrade Item 2
+0x2c = Ottoh Upgrade Item 3
+0x3c = Default Calnarsa
+0x40 = Calnarsa Upgrade Item 1
+0x44 = Calnarsa Upgrade Item 2
+0x48 = Calnarsa Upgrade Item 3
+0x4c = Default Guston
+0x50 = Guston Upgrade Item 2
+0x54 = Guston Upgrade Item 3
+0x58 = Default Pachet
+0x5c = Pachet Upgrade Item 1
+0x60 = Pachet Upgrade Item 2
+0x64 = Pachet Upgrade Item 3
+
+0x002140: [8-bit] Equipped Item - Guard
+0x00 = Default Bang
+0x04 = Bang Upgrade Item 1
+0x08 = Bang Upgrade Item 2
+0x0c = Bang Upgrade Item 3
+0x10 = Default Tira / Seena
+0x14 = Tira / Seena Upgrade Item 1
+0x18 = Tira / Seena Upgrade Item 2
+0x1c = Tira / Seena Upgrade Item 3
+0x20 = Default Ottoh / Guston
+0x24 = Ottoh / Calnarsa / Guston Upgrade Item 1
+0x28 = Ottoh / Calnarsa / Guston Upgrade Item 2
+0x2c = Ottoh / Calnarsa / Guston Upgrade Item 3
+0x30 = Default Harman / Pachet
+0x34 = Harman / Pachet Upgrade Item 1
+0x38 = Harman / Pachet Upgrade Item 2
+0x3c = Harman / Pachet Upgrade Item 3
+0x40 = Default Spenoza
+0x44 = Harman Upgrade Item 1
+0x48 = Harman Upgrade Item 2
+0x4c = Harman Upgrade Item 3
+0x50 = Default Calnarsa
+
+0x002142: [8-bit] Equipped Item - Speed
+0x00 = Default Bang / Tira / Harman / Spenoza / Seena / Pachet
+0x04 = Bang / Tira / Harman / Spenoza / Seena / Pachet Upgrade Item 1
+0x08 = Bang / Tira / Harman / Spenoza / Seena / Pachet Upgrade Item 2
+0x0c = Bang / Tira / Harman / Spenoza / Seena / Pachet Upgrade Item 3
+0x10 = Default Ottoh / Calnarsa / Guston
+0x14 = Ottoh / Calnarsa / Guston Upgrade Item 1
+0x18 = Ottoh / Calnarsa / Guston Upgrade Item 2
+0x1c = Ottoh / Calnarsa / Guston Upgrade Item 3
+
+0x002144: [8-bit] Equipped Item - Special
+0x00 = Default Bang
+0x04 = Bang Upgrade Item 1
+0x08 = Bang Upgrade Item 2
+0x0c = Bang Upgrade Item 3
+0x10 = Default Tira
+0x14 = Tira Upgrade Item 1
+0x18 = Tira Upgrade Item 2
+0x1c = Tira Upgrade Item 3
+0x20 = Default Ottoh
+0x24 = Ottoh Upgrade Item 1
+0x28 = Ottoh Upgrade Item 2
+0x2c = Ottoh Upgrade Item 3
+0x30 = Default Harman
+0x34 = Harman Upgrade Item 1
+0x38 = Harman Upgrade Item 2
+0x3c = Harman Upgrade Item 3
+0x40 = Default Spenoza
+0x44 = Harman Upgrade Item 1
+0x48 = Harman Upgrade Item 2
+0x4c = Harman Upgrade Item 3
+0x50 = Default Calnarsa
+0x54 = Calnarsa Upgrade Item 1
+0x58 = Calnarsa Upgrade Item 2
+0x5c = Calnarsa Upgrade Item 3
+0x60 = Default Seena
+0x64 = Seena Upgrade Item 1
+0x68 = Seena Upgrade Item 2
+0x6c = Seena Upgrade Item 3
+0x70 = Default Guston
+0x74 = Guston Upgrade Item 1
+0x78 = Guston Upgrade Item 2
+0x7c = Guston Upgrade Item 3
+0x80 = Default Guston
+0x84 = Guston Upgrade Item 1
+0x88 = Guston Upgrade Item 2
+0x8c = Guston Upgrade Item 3
 
 0x002146: [8-bit] Advance Mode - Player Option
 0x00 = Manual

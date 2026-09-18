@@ -1,0 +1,87 @@
+Game ID: 14646
+Source: RA Server
+Total Notes: 19
+============================================================
+
+0x01209a: [8-bit] Match End Flag
+This address works as a flag that indicates 1 at the end of the match.
+0x00 = In game / Game menu
+0x01 = Match ended
+
+0x0124d0: [24-bit BCD] Player Score
+
+0x012550: [8-bit] Player 2 score
+
+0x0126d0: [8-bit] Player team
+0x00 = England
+0x01 = Holland
+0x02 = Germany
+0x03 = Italy
+0x04 = Colombia
+0x05 = Brazil
+0x06 = Argentina
+0x07 = France
+
+0x0126d4: [8-bit] Player goals
+
+0x013250: [8-bit] Opponent team
+0x00 = England
+0x01 = Holland
+0x02 = Germany
+0x03 = Italy
+0x04 = Colombia
+0x05 = Brazil
+0x06 = Argentina
+0x07 = France
+
+0x013254: [8-bit] Opponent goals
+
+0x0169e0: [8-bit] Player team
+0x00 = England
+0x01 = Holland
+0x02 = Germany
+0x03 = Italy
+0x04 = Colombia
+0x05 = Brazil
+0x06 = Argentina
+0x07 = France
+
+0x01a738: [8-bit] [BitFlag] Difficulty
+0x08 = Hard
+
+0x01a73a: [8-bit] Credits left
+
+0x01ccb6: [8-bit] Match Timer - Seconds (Units Digit)
+
+0x01ccb7: [8-bit] Match Timer - Seconds (Tens Digit)
+
+0x01ccb8: [8-bit] Match Timer - Minutes
+
+0x01ccbc: [8-bit] Total Time Option
+0x01 = 1:30 min
+0x02 = 2 min / 2:30 min
+0x03 = 3 min
+
+0x01d080: [8-bit] Menu / In-Game Flag
+This address indicates whether the player is in the menu or in-game
+0x00 = Selection menu
+0x01 = In game
+
+0x01d1da: [8-bit] Round
+0x00 = 1st Game
+0x01 = 2nd Game
+0x02 = 3rd Game
+0x03 = 4th Game
+0x04 = 5th Game
+0x05 = 6th Game
+0x06 = Final Game
+
+0x01d1de: [8-bit] Difficulty
+0x00 = Normal
+0x02 = Easy
+0x04 = Hard
+0x06 = Very Easy
+
+0x01d33b: [8-bit] Player goals PK
+
+0x01d33c: [8-bit] Opponent goals PK
