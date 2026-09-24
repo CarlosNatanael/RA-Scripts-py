@@ -1,0 +1,682 @@
+Game ID: 12638
+Source: RA Server
+Total Notes: 183
+============================================================
+
+0x00007f: Class Upgrade
+
+0x0001df: Class (Text)
+
+0x0001f1: Level (Text)
+
+0x000c08: [8-bit] Battle Game State
+0x00 = Moving on the map (used by both heroes and monsters)
+0x01 = Monster attacking
+0x02 = Hero attacking
+0x36 = Title Menu
+
+0x000c0d: Map Stage 2
+
+0x000c10: first byte of the map
+
+0x000c15: [8-bit] Active Unit - Movement
+Indicates which unit is currently being moved
+
+// Party Members
+0x00 = Nick
+0x01 = Roose
+0x02 = Shade
+0x03 = Shig
+0x04 = Wendy
+0x05 = Apis
+0x06 = Clay
+0x07 = Bally
+0x08 = Stock
+0x09 = Mayfair
+0x0a = Isha
+0x0b = Teddy
+0x0c = Domingo
+0x0e = Gates
+0x11 = Amigo
+
+// Monsters
+0x80 = Dark Mage, Dwarf, Dandom
+0x81 = Monster 1
+0x82 = Monster 2
+0x83 = Monster 3
+0x84 = Monster 4
+0x85 = Monster 5
+0x86 = Monster 6
+0x87 = Monster 7
+0x88 = Monster 8
+
+0x000c24: [8-bit] [Bitflag] Chest 1 Opened - Battle 4
+Position X: 4, Position Y: 1
+Bit0 = Opened
+
+0x000c2c: Stage 8 QA
+
+0x000c3b: [8-bit] [Bitflag] Chest 2 Opened - Battle 4
+Position X: 27, Position Y: 1
+Bit0 = Opened
+
+0x000c3d: Stage 7 QA
+
+0x000c4d: Stage 8 QA
+
+0x000c52: Stage 19 Chest
+
+0x000c8b: Map Stage 8
+
+0x000c8e: [8-bit] Stage 4 - Door 1 Map Tile
+Upper4 = Terrain ID (0x08 = Door)
+Lower4 = Occupying Unit ID (0x00 to 0x06 for Stage 4 Party)
+
+0x000ca6: Map Stage 7
+
+0x000cae: Map Stage 7
+
+0x000cc1: Stage 13 Chest
+
+0x000ccd: mage position beginning of lv22
+
+0x000cdb: [8-bit] Stage 6 - Door 1 Map Tile
+Upper4 = Terrain ID (0x08 = Door)
+Lower4 = Occupying Unit ID (0x00 to 0x0b for Stage 6 Party)
+
+0x000cdc: [8-bit] Stage 6 - Door 2 Map Tile
+Upper4 = Terrain ID (0x08 = Door)
+Lower4 = Occupying Unit ID (0x00 to 0x0b for Stage 6 Party)
+
+0x000ce5: Stage 9 Chest
+
+0x000cf8: [8-bit] Stage 4 - Door 2 Map Tile
+Upper4 = Terrain ID (0x08 = Door)
+Lower4 = Occupying Unit ID (0x00 to 0x06 for Stage 4 Party)
+
+0x000cfb: [8-bit] Stage 6 Validation Check
+Validation check. Value must be 62 (0x3e) during Stage 6.
+
+0x000cfc: [8-bit] Stage 6 - Door 3 Map Tile
+Upper4 = Terrain ID (0x08 = Door)
+Lower4 = Occupying Unit ID (0x00 to 0x0b for Stage 6 Party)
+
+0x000d16: Stage 13 Chest
+
+0x000d27: [8-bit] [Bitflag] Chest 3 Opened - Battle 4
+Position X: 7, Position Y: 9
+Bit0 = Opened
+
+0x000d3c: Stage 9 Chest
+
+0x000d4e: [8-bit] Stage 4 - Door 3 Map Tile
+Upper4 = Terrain ID (0x08 = Door)
+Lower4 = Occupying Unit ID (0x00 to 0x06 for Stage 4 Party)
+
+0x000d67: soldier position beginning of lv22
+
+0x000d6d: boss position beginning of lv22
+
+0x000d73: soldier position beginning of lv22
+
+0x000d86: Map Stage 7
+
+0x000d8e: red soldier position beginning of lv22
+
+0x000d90: Map Stage 7
+
+0x000dbb: [8-bit] [Bitflag] Chest 1 Opened - Battle 5
+Position X: 27, Position Y: 13
+Bit0 = Opened
+0x7e = Closed
+0x7f = Opened
+
+0x000dc3: Stage 9 Chest
+
+0x000dc7: soldier position beginning of lv22
+
+0x000dd3: soldier position beginning of lv22
+
+0x000e41: Stage 15 Chest
+
+0x000e80: Stage 7 QA
+
+0x000e85: Map Stage 7
+
+0x000e87: soldier position beginning of lv22
+
+0x000e8d: rag position beginning of lv22
+
+0x000e8e: Map Stage 7
+
+0x000e93: soldier position beginning of lv22
+
+0x000ec2: Stage 13 Chest
+
+0x000f25: Stage 9 Chest
+
+0x000f2d: hero position beginning of lv22
+
+0x000fe0: Stage 4 QA Check
+
+0x001021: [8-bit] Game State
+When loading a save, this stays at 0x00 until you leave the village, then it updates.
+0x00 = Title Menu
+0x01 = In game
+
+0x0016ab: [8-bit] Cursor Position X
+Stores the horizontal position of the cursor
+Range: 0x00 to 0x17
+
+0x0016ac: [8-bit] Cursor Position Y
+Stores the vertical position of the cursor
+Range: 0x00 to 0x17
+
+0x0016ad: [8-bit] Active Unit - Movement
+Indicates which unit is currently being moved
+
+// Party Members
+0x00 = Nick
+0x01 = Roose
+0x02 = Shade
+0x03 = Shig
+0x04 = Wendy
+0x05 = Apis
+0x06 = Clay
+0x07 = Bally
+0x08 = Stock
+0x09 = Mayfair
+0x0a = Isha
+0x0b = Teddy
+0x0c = Domingo
+0x0e = Gates
+0x11 = Amigo
+
+// Monsters
+0x80 = Dark Mage, Dwarf, Dandom
+0x81 = Monster 1
+0x82 = Monster 2
+0x83 = Monster 3
+0x84 = Monster 4
+0x85 = Monster 5
+0x86 = Monster 6
+0x87 = Monster 7
+0x88 = Monster 8
+
+0x0016df: [8-bit] [Bitfield] Party Members Present
+Each bit represents a specific party member (1 = present/alive, 0 = dead/absent)
+Bit0 = Party Member 1
+Bit1 = Party Member 2
+Bit2 = Party Member 3
+Bit3 = Party Member 4
+Bit4 = Party Member 5
+Bit5 = Party Member 6
+
+0x0016e1: [8-bit] [Bitfield] Active Monsters - Screen 1
+Each bit represents a specific monster active on screen 1 (1 = active, 0 = inactive/defeated)
+Bit0 = Monster 1
+Bit1 = Monster 2
+Bit2 = Monster 3
+Bit3 = Monster 4
+Bit4 = Boss Battle
+Bit5 = Monster 6
+Bit6 = Monster 7
+Bit7 = Monster 8
+
+0x0016e2: [8-bit] [Bitfield] Active Monsters - Screen 2
+Bit0 = Monster 1
+Bit1 = Monster 2
+Bit2 = Monster 3
+Bit3 = Monster 4
+Bit4 = Monster 5
+Bit5 = Monster 6
+Bit6 = Monster 7
+Bit7 = Monster 8
+
+0x001db2: PortraitB
+
+0x001e36: PortraitA
+
+0x001ed0: TextA
+
+0x001ed7: TextB
+
+0x001ee6: [8-bit] Selected Unit - Status Screen
+Indicates which monster or character's status sheet is currently being viewed
+
+0x001efc: using this value to identify you're in level (value is different when in camp)
+
+0x001efd: using this value to identify you're in level (value is different when in camp)
+
+0x00200a: [8-bit] Nick - Class
+0x00 = Swordsman
+0x01 = Hero / Brave
+0x02 = Knight / Swordfighter
+0x03 = Paladin
+0x04 = Soldier
+0x05 = Warrior
+0x06 = Mage
+0x07 = Sorcerer
+0x08 = Healer
+0x09 = Priest
+0x0a = Archer
+0x0b = Sniper
+0x0c = Master Monk
+0x0d = Birdman
+0x0e = Monk
+0x0f = Monk Master
+0x13 = Bow Knight
+
+0x00200b: [8-bit] Nick - Level
+
+0x00200c: [8-bit] Nick - EXP Slot 1
+
+0x00200d: [8-bit] Nick - EXP Slot 2
+
+0x00200e: [8-bit] Nick - Current HP
+
+0x00200f: [8-bit] Nick - Total MP
+
+0x002010: [8-bit] Nick - Current MP
+
+0x002012: [8-bit] Nick - Attack
+
+0x002013: [8-bit] Nick - Movement Range
+Indicates how many tiles Nick can move per turn
+
+0x002014: [8-bit] Nick - Defense
+
+0x002016: [8-bit] Nick - Speed
+
+0x002026: [8-bit] Nick - Map Position X
+Stores horizontal coordinate on the map
+
+0x002027: [8-bit] Nick - Map Position Y
+Stores vertical coordinate on the map
+
+0x002032: [8-bit] Roose - Class
+0x00 = Swordsman
+0x01 = Hero / Brave
+0x02 = Knight / Swordfighter
+0x03 = Paladin
+0x04 = Soldier
+0x05 = Warrior
+0x06 = Mage
+0x07 = Sorcerer
+0x08 = Healer
+0x09 = Priest
+0x0a = Archer
+0x0b = Sniper
+0x0c = Master Monk
+0x0d = Birdman
+0x0e = Monk
+0x0f = Monk Master
+0x13 = Bow Knight
+
+0x002033: [8-bit] Roose - Level
+
+0x002034: [8-bit] Roose - EXP Slot 1
+
+0x002035: [8-bit] Roose - EXP Slot 2
+
+0x002036: [8-bit] Roose - Current HP
+
+0x002037: [8-bit] Roose - Total MP
+
+0x002038: [8-bit] Roose - Current MP
+
+0x00203a: [8-bit] Roose - Attack
+
+0x00203b: [8-bit] Roose - Movement Range
+
+0x00203c: [8-bit] Roose - Defense
+
+0x00203e: [8-bit] Roose - Speed
+
+0x00204e: [8-bit] Roose - Map Position X
+Stores horizontal coordinate on the map
+
+0x00204f: [8-bit] Roose - Map Position Y
+Stores vertical coordinate on the map
+
+0x00205a: [8-bit] Shade - Class
+0x00 = Swordsman
+0x01 = Hero / Brave
+0x02 = Knight / Swordfighter
+0x03 = Paladin
+0x04 = Soldier
+0x05 = Warrior
+0x06 = Mage
+0x07 = Sorcerer
+0x08 = Healer
+0x09 = Priest
+0x0a = Archer
+0x0b = Sniper
+0x0c = Master Monk
+0x0d = Birdman
+0x0e = Monk
+0x0f = Monk Master
+0x13 = Bow Knight
+
+0x00205b: [8-bit] Shade - Level
+
+0x00205c: [8-bit] Shade - EXP Slot 1
+
+0x00205d: [8-bit] Shade - EXP Slot 2
+
+0x00205e: [8-bit] Shade - Current HP
+
+0x00205f: [8-bit] Shade - Total MP
+
+0x002060: [8-bit] Shade - Current MP
+
+0x002062: [8-bit] Shade - Attack
+
+0x002063: [8-bit] Shade - Movement Range
+
+0x002064: [8-bit] Shade - Defense
+
+0x002066: [8-bit] Shade - Speed
+
+0x002076: [8-bit] Shade - Map Position X
+Stores horizontal coordinate on the map
+
+0x002077: [8-bit] Shade - Map Position Y
+Stores vertical coordinate on the map
+
+0x002082: [8-bit] Shig - Class
+0x00 = Swordsman
+0x01 = Hero / Brave
+0x02 = Knight / Swordfighter
+0x03 = Paladin
+0x04 = Soldier
+0x05 = Warrior
+0x06 = Mage
+0x07 = Sorcerer
+0x08 = Healer
+0x09 = Priest
+0x0a = Archer
+0x0b = Sniper
+0x0c = Master Monk
+0x0d = Birdman
+0x0e = Monk
+0x0f = Monk Master
+0x13 = Bow Knight
+
+0x002083: [8-bit] Shig  - Level
+
+0x002084: [8-bit] Shig - EXP Slot 1
+
+0x002085: [8-bit] Shig - EXP Slot 2
+
+0x002086: [8-bit] Shig - Current HP
+
+0x002087: [8-bit] Shig - Total MP
+
+0x002088: [8-bit] Shig - Current MP
+
+0x00208a: [8-bit] Shig - Attack
+
+0x00208b: [8-bit] Shig - Movement Range
+
+0x00208c: [8-bit] Shig - Defense
+
+0x00208e: [8-bit] Shig - Speed
+
+0x00209e: [8-bit] Shig - Map Position X
+Stores horizontal coordinate on the map
+
+0x00209f: [8-bit] Shig - Map Position Y
+Stores vertical coordinate on the map
+
+0x0020aa: [8-bit] Wendy - Class
+0x00 = Swordsman
+0x01 = Hero / Brave
+0x02 = Knight / Swordfighter
+0x03 = Paladin
+0x04 = Soldier
+0x05 = Warrior
+0x06 = Mage
+0x07 = Sorcerer
+0x08 = Healer
+0x09 = Priest
+0x0a = Archer
+0x0b = Sniper
+0x0c = Master Monk
+0x0d = Birdman
+0x0e = Monk
+0x0f = Monk Master
+0x13 = Bow Knight
+
+0x0020ab: [8-bit] Wendy - Level
+
+0x0020ac: [8-bit] Wendy - EXP Slot 1
+
+0x0020ad: [8-bit] Wendy - EXP Slot 2
+
+0x0020ae: [8-bit] Wendy - Current HP
+
+0x0020af: [8-bit] Wendy - Total MP
+
+0x0020b0: [8-bit] Wendy - Current MP
+
+0x0020b2: [8-bit] Wendy - Attack
+
+0x0020b3: [8-bit] Wendy - Movement Range
+
+0x0020b4: [8-bit] Wendy - Defense
+
+0x0020b6: [8-bit] Wendy - Speed
+
+0x0020c6: [8-bit] Wendy - Map Position X
+Stores horizontal coordinate on the map
+
+0x0020c7: [8-bit] Wendy - Map Position Y
+Stores vertical coordinate on the map
+
+0x0020d2: [8-bit] Apis - Class
+0x00 = Swordsman
+0x01 = Hero / Brave
+0x02 = Knight / Swordfighter
+0x03 = Paladin
+0x04 = Soldier
+0x05 = Warrior
+0x06 = Mage
+0x07 = Sorcerer
+0x08 = Healer
+0x09 = Priest
+0x0a = Archer
+0x0b = Sniper
+0x0c = Master Monk
+0x0d = Birdman
+0x0e = Monk
+0x0f = Monk Master
+0x13 = Bow Knight
+
+0x0020d3: [8-bit] Apis - Level
+
+0x0020d4: [8-bit] Apis - EXP Slot 1
+
+0x0020d5: [8-bit] Apis - EXP Slot 2
+
+0x0020d6: [8-bit] Apis - Currenr HP
+
+0x0020d7: [8-bit] Apis - Total MP
+
+0x0020d8: [8-bit] Apis - Current MP
+
+0x0020da: [8-bit] Apis - Attack
+
+0x0020db: [8-bit] Apis - Movement Range
+
+0x0020dc: [8-bit] Apis - Defense
+
+0x0020de: [8-bit] Apis - Speed
+
+0x0020ee: [8-bit] Apis - Map Position X
+Stores horizontal coordinate on the map
+
+0x0020ef: [8-bit] Apis - Map Position Y
+Stores vertical coordinate on the map
+
+0x0020fa: [8-bit] Clay - Class
+0x00 = Swordsman
+0x01 = Hero / Brave
+0x02 = Knight / Swordfighter
+0x03 = Paladin
+0x04 = Soldier
+0x05 = Warrior
+0x06 = Mage
+0x07 = Sorcerer
+0x08 = Healer
+0x09 = Priest
+0x0a = Archer
+0x0b = Sniper
+0x0c = Master Monk
+0x0d = Birdman
+0x0e = Monk
+0x0f = Monk Master
+0x13 = Bow Knight
+
+0x0020fb: [8-bit] Clay - Level
+
+0x0020fc: [8-bit] Clay - EXP Slot 1
+
+0x0020fd: [8-bit] Clay - EXP Slot 1
+
+0x0020fe: [8-bit] Clay - Current HP
+
+0x0020ff: [8-bit] Clay - Total MP
+
+0x002100: [8-bit] Clay - Current MP
+
+0x002102: [8-bit] Clay - Attack
+
+0x002103: [8-bit] Clay - Movement Range
+
+0x002104: [8-bit] Clay - Defense
+
+0x002106: [8-bit] Clay - Speed
+
+0x002116: [8-bit] Clay - Map Position X
+Stores horizontal coordinate on the map
+
+0x002117: [8-bit] Clay - Map Position Y
+Stores vertical coordinate on the map
+
+0x002122: [8-bit] Bally - Class
+0x00 = Swordsman
+0x01 = Hero / Brave
+0x02 = Knight / Swordfighter
+0x03 = Paladin
+0x04 = Soldier
+0x05 = Warrior
+0x06 = Mage
+0x07 = Sorcerer
+0x08 = Healer
+0x09 = Priest
+0x0a = Archer
+0x0b = Sniper
+0x0c = Master Monk
+0x0d = Birdman
+0x0e = Monk
+0x0f = Monk Master
+0x13 = Bow Knight
+
+0x002123: [8-bit] Bally - Level
+
+0x002124: [8-bit] Bally - EXP Slot 1
+
+0x002125: [8-bit] Bally - EXP Slot 2
+
+0x002126: [8-bit] Bally - Current HP
+
+0x002127: [8-bit] Bally - Total MP
+
+0x002128: [8-bit] Bally - Current MP
+
+0x00212a: [8-bit] Bally - Attack
+
+0x00212b: [8-bit] Bally - Movement Range
+
+0x00212c: [8-bit] Bally - Defense
+
+0x00212e: [8-bit] Bally - Speed
+
+0x00213e: [8-bit] Bally - Map Position X
+Stores horizontal coordinate on the map
+
+0x00213f: [8-bit] Bally - Map Position Y
+Stores vertical coordinate on the map
+
+0x00214a: [8-bit] Stock - Class
+0x00 = Swordsman
+0x01 = Hero / Brave
+0x02 = Knight / Swordfighter
+0x03 = Paladin
+0x04 = Soldier
+0x05 = Warrior
+0x06 = Mage
+0x07 = Sorcerer
+0x08 = Healer
+0x09 = Priest
+0x0a = Archer
+0x0b = Sniper
+0x0c = Master Monk
+0x0d = Birdman
+0x0e = Monk
+0x0f = Monk Master
+0x13 = Bow Knight
+
+0x00214b: [8-bit] Stock - Level
+
+0x00214c: [8-bit] Stock - EXP Slot 1
+
+0x00214d: [8-bit] Stock - EXP Slot 2
+
+0x00214e: [8-bit] Stock - Current HP
+
+0x00214f: [8-bit] Stock - Total MP
+
+0x002150: [8-bit] Stock - Current MP
+
+0x002152: [8-bit] Stock - Attack
+
+0x002153: [8-bit] Stock - Movement Range
+
+0x002154: [8-bit] Stock - Defense
+
+0x002156: [8-bit] Stock - Speed
+
+0x002166: [8-bit] Stock - Map Position X
+Stores horizontal coordinate on the map
+
+0x002167: [8-bit] Stock - Map Position Y
+Stores vertical coordinate on the map
+
+0x002642: [16-bit] Gold Amount
+Tracks the player's current amount of gold
+
+0x002645: [8-bit] Battle ID
+0x00 = Battle 1
+0x01 = Battle 2
+0x02 = Battle 3
+0x03 = Battle 4
+0x04 = Battle 5
+0x05 = Battle 6
+0x06 = Battle 7
+0x07 = Battle 8
+0x08 = Battle 9
+0x09 = Battle 10
+0x0a = Battle 11
+0x0b = Battle 12
+0x0c = Battle 13
+0x0d = Battle 14
+0x0e = Battle 15
+0x0f = Battle 16
+0x10 = Battle 17
+0x11 = Battle 18
+0x12 = Battle 19
+0x13 = Battle 20
+0x14 = Battle 21
+0x15 = Battle 22
